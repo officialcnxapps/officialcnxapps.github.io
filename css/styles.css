@@ -1,0 +1,134 @@
+/* Default Template Styles */
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background: rgba(0,0,0, 0.25);
+}
+
+@font-face {
+  font-family: "Nova Flat";
+  src: url('../font/nova_flat_regular-webfont.woff2') format('woff2'),
+         url('../font/nova_flat_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.cnx-primary{
+  background-color: #0a2e6d;
+}
+
+.cnx-secondary{
+  background-color: #d3c724;
+}
+
+.cnx-tertiary{
+  background-color: #1a202b;
+}
+
+.cnx-color-primary{
+  color: #0a2e6d;
+}
+
+.cnx-color-secondary{
+  color: #d3c724;
+}
+
+.cnx-color-tertiary{
+  color: #1a202b;
+}
+
+.cnx-font{
+  font-family: 'Nova Flat', cursive;
+}
+
+.logo-menu-mobile{
+  padding: 16px 24px;
+  margin: auto;
+  max-width:  48px;
+}
+
+#top-menu-holder{
+  border-bottom: 0.5px solid #fff;
+}
+
+.holder-title-main{
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  min-height: 220px;
+}
+
+.holder-products{
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.products-title{
+  font-size: 42px;
+}
+
+.holder-products-boxes{
+  display: flex;
+  flex-wrap: wrap;
+  padding:12px;
+}
+
+.title{
+  font-size: 72px;
+  margin:  0;
+  color: #fff;
+  text-align: center;
+}
+
+.subtitle{
+  color: #ddd;
+  font-size: 28px;
+  text-align: center;
+}
+
+.btn-center-main{
+  margin: 10px auto;
+  text-align: center;
+}
+
+.btn-center-main-text{
+  font-size: 20px;
+  color: #eee !important;
+}
+
+.topnav-img-logo{
+  max-width: 120px;
+  max-height: 120px;
+  align-self: "center";
+}
+
+.line{
+  background-color: fff;
+}
+
+.image-header{
+  width: 100%;  
+}
+
+.topnav-a-link{
+  padding: 1rem;
+  font-size: 18px;
+  color:#fff;
+}
+
+.produto-imagem{
+  width: 256px;
+  height: 256px;
+  border-radius:6px;
+}
+
+@media screen and (max-width:768px) {
+  
+}
+@media screen and (max-width: 480px) {
+  
+}    

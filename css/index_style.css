@@ -1,0 +1,105 @@
+body {
+	background: rgba(0, 0, 0, 0.05);
+	color: #1a202b;
+}
+
+#top-menu-holder {
+	border-bottom: 0.5px solid #fff;
+}
+
+.cnx-primary {
+	background-color: #1f66d1 !important;
+}
+
+.cnx-secondary {
+	background-color: #eb821a !important;
+}
+
+.cnx-tertiary {
+	background-color: #f1f1f1 !important;
+}
+
+.cnx-color-primary {
+	color: #1f66d1 !important;
+}
+
+.cnx-color-secondary {
+	color: #eb821a !important;
+}
+
+.cnx-color-tertiary {
+	color: #f1f1f1 !important;
+}
+
+.cnx-color-clear {
+	color: #dddddd !important;
+}
+
+.cnx-font {
+	font-family: "Dosis", normal;
+}
+
+.holder-products {
+	margin: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.products-title {
+	font-size: 42px;
+}
+
+#about_section_text {
+	color: #064db7;
+}
+
+.box-display-app {
+	width: 30%;
+	min-width: 300px;
+	height: 340px;
+	margin: 1%;
+	text-align: center;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition: ease-in 0.5s all;
+	border: 3px solid rgba(0, 0, 0, 0);
+}
+
+.box-display-app:hover {
+	box-shadow: 1px 3px 16px rgba(235, 130, 26, 0.9);
+	background: rgba(235, 130, 26, 0.15);
+	border: 3px solid rgba(235, 130, 26, 0.75);
+	border-radius: 8px;
+}
+
+.box-display-app > a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.descricao-app {
+	margin-top: 16px;
+	font-size: 1.2rem;
+}
+
+.a_email,
+.a_email:hover,
+.a_email:visited,
+.a_email:link {
+	color: #1a202b;
+	font-family: "Dosis", cursive;
+}
+
+@media screen and (max-width: 768px) {
+	.top-nav,
+	.top-nav li a {
+		background: #000835;
+	}
+}
+@media screen and (max-width: 480px) {
+}

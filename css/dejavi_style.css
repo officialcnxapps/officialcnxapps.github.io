@@ -1,0 +1,85 @@
+/* Default Template Styles */
+@font-face {
+  font-family: "Aldrich";
+  src: url('../font/aldrich-webfont.woff2') format('woff2'),
+         url('../font/aldrich-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background: #ededed;
+  color: #181818;
+}
+
+hr{
+  background: #0E2E5E;
+  opacity: 0.25;
+}
+
+#top-menu-holder{
+  border-bottom: 0.5px solid #000835;
+}
+
+.dejavi-primary{
+  background-color: #000835;
+}
+
+.dejavi-secondary{
+  background-color: #0E2E5E;
+}
+
+.dejavi-tertiary{
+  background-color: #ededed;
+}
+
+.dejavi-color-primary{
+  color: #000835;
+}
+
+.dejavi-color-secondary{
+  color: #0E2E5E;
+}
+
+.dejavi-color-tertiary{
+  color: #ededed;
+}
+
+.dejavi-color-clear{
+  color: #fafafa;
+}
+
+.dejavi-font{
+  font-family: 'Aldrich';
+}
+
+.box-display-img{
+  width:30%;
+  height: auto;
+  margin: 1%;
+  border-radius: 6px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.a_email, .a_email:hover, .a_email:visited, .a_email:link{
+  color: #181818;
+  font-family: 'Aldrich';
+}
+
+@media screen and (max-width:768px) {
+  .top-nav, .top-nav li a {
+    background: #0E2E5E;
+  }
+}
+@media screen and (max-width: 480px) {
+  
+}    
+

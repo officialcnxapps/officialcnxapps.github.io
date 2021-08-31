@@ -1,0 +1,202 @@
+body {
+	background: rgba(245, 245, 245, 1);
+	color: #1f66d1;
+}
+
+#top-menu-holder {
+	border-bottom: 0.5px solid #fff;
+}
+
+.cnx-sites-primary {
+	background-color: #e46318 !important;
+}
+
+.cnx-sites-secondary {
+	background-color: #1f66d1 !important;
+}
+
+.cnx-sites-tertiary {
+	background-color: #f1f1f1 !important;
+}
+
+.cnx-sites-color-primary {
+	color: #1f66d1 !important;
+}
+
+.cnx-sites-color-secondary {
+	color: #e46318 !important;
+}
+
+.cnx-sites-color-tertiary {
+	color: #f1f1f1 !important;
+}
+
+.cnx-sites-color-clear {
+	color: #dddddd !important;
+}
+
+.cnx-sites-font {
+	font-family: "Dosis", normal;
+}
+
+.app-image-logo {
+	max-width: 170px;
+}
+
+.banner-sites {
+	background-image: url(../img/banner.jpg);
+}
+
+.section {
+	margin-top: 56px;
+}
+
+.holder-products {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.products-title {
+	font-size: 42px;
+}
+
+.box-display-img {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	transition: ease-in 0.5s all;
+	border-radius: 8px;
+}
+
+.box-display-img:hover .site-galeria-imagem {
+	border: 3px solid rgba(235, 130, 26, 0.75);
+	box-shadow: 1px 3px 16px rgba(235, 130, 26, 0.9);
+}
+
+.site-galeria-imagem {
+	width: 100%;
+	height: 320px;
+	box-shadow: 1px 3px 16px #777777;
+	border: 3px solid rgba(0, 0, 0, 0);
+	transition: ease-in 0.5s all;
+}
+
+.descricao-app {
+	margin-top: 16px;
+}
+
+#sites-caracteristicas {
+	display: flex;
+	flex-direction: column;
+	margin: 5px auto;
+	text-align: center;
+}
+
+.caracteristica-box {
+	margin: 10px 0;
+}
+
+.caracteristica-box > div {
+	min-width: 100px;
+	font-weight: bold;
+}
+
+#sites-caracteristicas i {
+	margin-right: 10px;
+}
+
+.a_email,
+.a_email:hover,
+.a_email:visited,
+.a_email:link {
+	color: #1a505b;
+	font-family: "Dosis", normal;
+}
+
+#input-tipo {
+	width: 220px;
+}
+
+#oracamento_form {
+	background-color: rgba(70, 70, 70, 0.03);
+	border-radius: 4px;
+	box-shadow: 0 1px 18px rgba(0, 0, 0, 0.08);
+	padding: 16px;
+}
+
+#oracamento_form form {
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+form .form-box {
+	width: 100%;
+	margin: 10px 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+#tipo-info {
+	margin: 12px 0;
+	width: 100%;
+}
+
+#input-pages {
+	width: 50px;
+}
+
+form .form-box label {
+	font-size: 14px;
+	margin: 0;
+	margin-right: 8px;
+	width: 180px;
+}
+
+#oracamento_form input {
+	border-radius: 4px;
+	min-width: 50x;
+}
+
+#oracamento_form input[type="checkbox"] {
+	height: 20px;
+	width: 20px;
+}
+
+#btn-orcar {
+	margin: 10px 0;
+	min-width: 150px;
+}
+
+.holder-orcamento-result p {
+	text-align: center;
+	font-size: 20px;
+}
+
+#valor-aprox-orcamento {
+	color: #118822;
+}
+
+.info-orcamento {
+	font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+	.site-galeria-imagem {
+		height: 220px;
+	}
+
+	.top-nav,
+	.top-nav li a {
+		background: #002855;
+	}
+}
+@media screen and (max-width: 480px) {
+}

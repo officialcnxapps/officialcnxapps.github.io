@@ -1,0 +1,299 @@
+/* Default Template Styles */
+@font-face {
+	font-family: "Dosis";
+	font-style: normal;
+	font-weight: 400;
+	src: local(""), url("../font/dosis-v19-latin-regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("../font/dosis-v19-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* dosis-700 - latin */
+@font-face {
+	font-family: "Dosis";
+	font-style: bold;
+	font-weight: 700;
+	src: local(""), url("../font/dosis-v19-latin-700.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("../font/dosis-v19-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+html,
+body {
+	overflow: hidden !important;
+}
+
+.site-body {
+	overflow-y: auto;
+	overflow-x: hidden;
+	min-height: 100vh;
+	height: 100vh;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.nav-text {
+	right: 0;
+	left: unset;
+	background: none;
+	padding-top: 0;
+	top: -10px;
+}
+
+.menu-lateral-lista {
+	float: right;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none !important;
+}
+
+.link_tag:hover,
+.link_tag:visited {
+	text-decoration: none !important;
+	filter: grayscale(0.1px);
+	color: #0a2e6d;
+}
+
+#top-menu-holder {
+	padding: 0 5rem;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	height: 50px;
+}
+
+.banner-page {
+	height: 280px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.banner-main {
+	background-image: url("../img/bannerLogo.jpg");
+}
+
+.section {
+	min-height: 280px;
+	margin-top: 30px;
+}
+
+p {
+	font-size: 1rem;
+}
+
+.logo-menu-mobile {
+	padding: 16px 24px;
+	margin: auto;
+	max-width: 48px;
+}
+
+.top-nav li a {
+	padding: 5px 1.25rem;
+	font-size: 1.1rem;
+}
+
+.topnav-a-link {
+	color: #ececec;
+	transition: ease-in 0.5s all;
+}
+
+.topnav-a-link:hover {
+	transition: ease-in 0.5s all;
+	color: #eb821a;
+}
+
+.topnav-a-link:hover {
+	border-radius: 8px;
+	opacity: 0.9;
+	background: none !important;
+}
+
+.top-nav .active-item a {
+	background: none;
+	color: #eb821a;
+}
+
+.holder-title-main {
+	display: flex;
+	flex-direction: column;
+	padding-top: 20px;
+	min-height: 200px;
+}
+
+#about_section_text {
+	max-width: 640px;
+	text-align: center;
+	margin: auto;
+	font-size: 1.25rem;
+}
+
+.h2_title {
+	font-size: 42px;
+	min-width: 100%;
+}
+
+.title {
+	font-size: 72px;
+	margin: 0;
+	color: #fff;
+	text-align: center;
+}
+
+.subtitle {
+	color: #ddd;
+	font-size: 28px;
+	text-align: center;
+}
+
+.btn-center-main {
+	margin: 10px auto;
+	text-align: center;
+}
+
+.btn-center-main-text {
+	font-size: 20px;
+	color: #eee !important;
+}
+
+.topnav-img-logo {
+	max-width: 48px;
+	max-height: 48px;
+	align-self: center;
+}
+
+.line {
+	background-color: fff;
+}
+
+.image-header {
+	width: 100%;
+}
+
+.topnav-a-link {
+	padding: 1rem;
+	font-size: 18px;
+	color: #fff;
+}
+
+.produto-imagem {
+	width: 256px;
+	height: auto;
+	max-height: 256px;
+	border-radius: 6px;
+}
+
+.a_email {
+	font-size: 20px;
+}
+
+.holder_copyright {
+	text-align: center;
+	width: 100%;
+}
+
+.holder_copyright > .a_email {
+	font-size: 14px;
+}
+
+.app-galeria-imagem {
+	width: 256px;
+	height: auto;
+	border-radius: 6px;
+	border: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+.badge_download {
+	width: 256px;
+	height: auto;
+	margin: auto;
+}
+
+.holder-display-boxes {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 12px;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.holder-logo-main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.app-image-logo {
+	width: 100%;
+	height: auto;
+	max-width: 256px;
+	margin: 10px auto;
+}
+
+.box-display-img {
+	min-width: 280px;
+}
+
+@media screen and (max-width: 768px) {
+	.banner-main {
+		background-image: url("../img/bannerLogo_mobile.jpg");
+	}
+
+	#top-menu-holder {
+		padding: 0 10px;
+	}
+
+	.nav-text {
+		top: 0;
+		right: 6px;
+		height: 48px;
+		width: 48px;
+		line-height: 48px;
+		margin-bottom: 0;
+	}
+
+	.nav-text::before {
+		display: none;
+	}
+
+	.menu-lateral-lista {
+		float: none;
+	}
+
+	.topnav-img-logo {
+		max-width: 46px;
+		max-height: 46px;
+		align-self: "center";
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.banner-main {
+		background-image: url("../img/bannerLogo_smart.jpg");
+		background-size: contain;
+	}
+
+	.title {
+		font-size: 56px;
+		word-break: break-word;
+		white-space: pre-wrap;
+	}
+
+	.topnav-img-logo {
+		max-width: 42px;
+		max-height: 42px;
+		align-self: "center";
+	}
+
+	.descricao-app {
+		margin-top: 8px;
+		font-size: 1rem;
+	}
+
+	.section {
+		min-height: 210px;
+		margin-top: 20px;
+	}
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CNX - Privacy</title>
+		<link rel="stylesheet" href="../css/icons.css" />
+		<link rel="stylesheet" href="../css/responsee.css" />
+		<link rel="stylesheet" href="../css/bootstrap_4.4.1.min.css" />
+		<link rel="stylesheet" href="../css/main_style.css" />
+		<link rel="stylesheet" href="../css/index_style.css" />
+		<script src="../js/jquery-3.4.1.min.js"></script>
+	</head>
+
+	<body class="size-1140">
+		<div class="site-body">
+			<!-- HEADER -->
+			<header id="inicio">
+				<nav id="top-menu-holder" class="cnx-primary">
+					<div class="s-12 l-2">
+						<a href="index.html" class="logo">
+							<!-- Logo -->
+							<img class="logo-white topnav-img-logo" src="../img/logo-white.png" alt="Endless Tales" />
+						</a>
+					</div>
+
+					<div class="top-nav s-12 l-10">
+						<ul class="center chevron menu-lateral-lista">
+							<li><img class="logo-menu-mobile" src="../img/logo.png" alt="CNX" /></li>
+							<li><a id="toolbar_inicio" class="topnav-a-link cnx-font" href="../index.html">Home</a></li>
+							<li><a id="toolbar_apps" class="topnav-a-link cnx-font" href="../index.html#produtos">Apps</a></li>
+							<li><a id="toolbar_sobre" class="topnav-a-link cnx-font" href="../index.html#sobre">About</a></li>
+							<li><a id="toolbar_contato" class="topnav-a-link cnx-font" href="#contato">Contact</a></li>
+							<li><a id="toolbar_privacidade" class="topnav-a-link cnx-font" href="#inicio">Privacy</a></li>
+						</ul>
+					</div>
+				</nav>
+			</header>
+
+			<!-- MAIN -->
+			<main>
+				<header>
+					<div class="holder-title-main cnx-primary">
+						<!-- Titulo -->
+						<h1 id="titulo_politica" class="title cnx-font">Política de Privacidade</h1>
+					</div>
+				</header>
+
+				<!-- texto Politica -->
+				<div class="line">
+					<br />
+					<p id="privacidade_text" class="cnx-font"></p>
+				</div>
+
+				<div class="line">
+					<br />
+					<p id="privacidade_endless_text" class="cnx-font"></p>
+				</div>
+
+				<div class="line">
+					<br />
+					<p id="privacidade_dejavi_text" class="cnx-font"></p>
+				</div>
+			</main>
+
+			<!-- FOOTER -->
+			<footer id="footer">
+				<section class="section" id="contato">
+					<!-- CONTATO -->
+					<div class="line">
+						<h2 id="contact_us_title" class="text-center h2_title cnx-font cnx-color-secondary">Contato</h2>
+						<hr class="" />
+					</div>
+
+					<!-- Coluna contatos -->
+					<div class="">
+						<div class="line text-center">
+							<i class="icon-sli-envelope-open text-primary icon3x"></i>
+							<h3 class="">E-mail</h3>
+							<a class="link_tag a_email" href="mailto:cnxapps2020@gmail.com" title="CNX Apps">cnxapps2020@gmail.com</a><br />
+						</div>
+					</div>
+				</section>
+				<hr class="" style="border-color: rgba(0, 38, 51, 0.8)" />
+
+				<!-- info dev -->
+				<div class="cnx-primary">
+					<hr class="" style="border-color: rgba(0, 38, 51, 0.8)" />
+					<div class="holder_copyright">
+						<p class="cnx-color-clear">Copyright 2020 - <b>CNX Apps - Calvin R. Nunes</b></p>
+						<a class="link_tag a_email cnx-color-clear" href=" mailto:calvin_nunes13@hotmail.com" title="CNX Apps Representant">calvin_nunes13@hotmail.com</a>
+						<br />
+						<a class="link_tag a_email cnx-color-clear" href="https://www.linkedin.com/in/calvinnunes13/">LinkedIn</a>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<script src="../js/translator.js"></script>
+		<script src="../js/bootstrap_4.4.1.min.js"></script>
+		<script src="../js/responsee.js"></script>
+		<script src="../js/main_script.js"></script>
+
+		<script>
+			jQuery(document).ready(function ($) {
+				document.getElementById("titulo_politica").textContent = Traduzir("Titulo_Politica");
+				document.getElementById("privacidade_text").innerHTML = Traduzir("Texto_Privacidade");
+				document.getElementById("privacidade_endless_text").innerHTML = Traduzir("Texto_Privacidade_Endless");
+				document.getElementById("privacidade_dejavi_text").innerHTML = Traduzir("Texto_Privacidade_Dejavi");
+			});
+		</script>
+	</body>
+</html>

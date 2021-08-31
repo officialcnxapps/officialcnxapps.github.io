@@ -1,1 +1,159 @@
 <!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CNX Apps</title>
+		<meta name="description" content="CNX Apps desenvolvimento de apps para Android e WebApps." />
+		<meta name="keywords" content="sites, apps, games, mobile, android, rpg, endless, applications, device, jogos, software, webapp" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="apple-mobile-web-app-title" content="CNX Sites" />
+		<meta name="theme-color" content="#084e7c" />
+		<meta name="author" content="Calvin Nunes - CNX" />
+		<meta data-hid="og:type" name="og:type" property="og:type" content="website" />
+		<meta data-hid="og:title" name="og:title" property="og:title" content="CNX Sites" />
+		<meta data-hid="og:site_name" name="og:site_name" property="og:site_name" content="CNX Sites" />
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<link rel="manifest" href="manifest.webmanifest" />
+		<link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+		<link rel="apple-touch-icon" href="img/icon-152x152.png" sizes="152x152" />
+		<link rel="apple-touch-icon" href="img/icon-180x180.png" sizes="180x180" />
+		<link rel="apple-touch-icon" href="img/icon-167x167.png" sizes="167x167" />
+		<link rel="icon" type="image/png" href="img/icon-16x16.png" sizes="16x16" />
+		<link rel="icon" type="image/png" href="img/icon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="img/icon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/png" href="img/icon-192x192.png" sizes="192x192" />
+		<link data-hid="shortcut-icon" rel="shortcut icon" href="favicon.ico" />
+
+		<link rel="stylesheet" href="css/icons.css" />
+		<link rel="stylesheet" href="css/responsee.css" />
+		<link rel="stylesheet" href="css/bootstrap_4.4.1.min.css" />
+		<link rel="stylesheet" href="css/index_style.css" />
+		<link rel="stylesheet" href="css/main_style.css" />
+		<link href="font/nova_flat_regular.ttf" rel="stylesheet" />
+		<script src="js/jquery-3.4.1.min.js"></script>
+	</head>
+
+	<body class="size-1140">
+		<div class="site-body">
+			<!-- HEADER -->
+			<header id="inicio">
+				<nav id="top-menu-holder" class="cnx-primary">
+					<div class="s-12 l-2">
+						<a href="index.html" class="logo">
+							<!-- Logo -->
+							<img class="logo-white topnav-img-logo" src="img/logo-white.png" alt="CNX" />
+						</a>
+					</div>
+
+					<div class="top-nav s-12 l-10">
+						<ul class="center chevron menu-lateral-lista">
+							<li><img class="logo-menu-mobile" src="img/logo.png" alt="CNX Apps" /></li>
+							<li><a id="toolbar_inicio" class="topnav-a-link cnx-font" href="#inicio">Home</a></li>
+							<li><a id="toolbar_sites" class="topnav-a-link cnx-font" href="pages/sites.html">Sites</a></li>
+							<li><a id="toolbar_apps" class="topnav-a-link cnx-font" href="#produtos">Apps</a></li>
+							<li><a id="toolbar_sobre" class="topnav-a-link cnx-font" href="#sobre">About</a></li>
+							<li><a id="toolbar_contato" class="topnav-a-link cnx-font" href="#contato">Contact</a></li>
+							<li><a id="toolbar_privacidade" class="topnav-a-link cnx-font" href="pages/politica.html">Privacy</a></li>
+						</ul>
+					</div>
+				</nav>
+			</header>
+
+			<!-- MAIN -->
+			<main>
+				<header>
+					<div class="holder-title-main cnx-primary banner-page banner-main"></div>
+				</header>
+
+				<!-- PRODUTOS -->
+				<section class="holder-products" id="produtos">
+					<div class="line">
+						<h2 id="nossos_apps_title" class="text-center h2_title cnx-font cnx-color-secondary">Sites e Apps</h2>
+						<hr class="" />
+					</div>
+					<div class="holder-display-boxes">
+						<div class="padding-2x box-display-app">
+							<a href="pages/sites.html" title="Sites">
+								<img src="img/sites_img.png" alt="Sites" class="produto-imagem" />
+								<p id="sites_descricao" class="cnx-font cnx-color-primary descricao-app"></p>
+							</a>
+						</div>
+						<div class="padding-2x box-display-app">
+							<a href="pages/endless_tales.html" title="Endless Tales">
+								<img src="img/apps/endless_tales_logo.png" alt="Endless Tales" class="produto-imagem" />
+								<p id="endless_tales_descricao" class="cnx-font cnx-color-primary descricao-app"></p>
+							</a>
+						</div>
+						<div class="padding-2x box-display-app">
+							<a href="pages/dejavi.html" title="DejaVi">
+								<img src="img/apps/dejavi_logo.png" alt="DejaVi" class="produto-imagem text-dark" />
+								<p id="dejavi_descricao" class="cnx-font cnx-color-primary descricao-app"></p>
+							</a>
+						</div>
+					</div>
+				</section>
+
+				<!-- Sobre -->
+				<section class="section" id="sobre">
+					<div class="line">
+						<h2 id="about_section_title" class="text-center h2_title cnx-font cnx-color-secondary">Sobre</h2>
+						<hr class="" />
+					</div>
+					<div class="line">
+						<div class="">
+							<p id="about_section_text" class="cnx-font"></p>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			<!-- FOOTER -->
+			<footer id="footer">
+				<section class="section" id="contato">
+					<!-- CONTATO -->
+					<div class="line">
+						<h2 id="contact_us_title" class="text-center h2_title cnx-font cnx-color-secondary">Contato</h2>
+						<hr class="" />
+					</div>
+
+					<!-- Coluna contatos -->
+					<div class="">
+						<div class="line text-center">
+							<div class="row">
+								<div class="col-sm-6 col-xs-12">
+									<i class="icon-sli-screen-smartphone cnx-color-primary icon3x"></i>
+									<h3 class="">Whatsapp</h3>
+									<a class="a_email" href="https://wa.me/5551984029317?text=Oi%20tenho%20interesse%20em%20um%20site%20para%20minha%20empresa" title="Clique para contatar" target="_blank"> 051 9 8402-9317</a>
+								</div>
+								<div class="col-sm-6 col-xs-12">
+									<i class="icon-sli-envelope-open cnx-color-primary icon3x"></i>
+									<h3 class="">E-mail</h3>
+									<a class="a_email" href="mailto:cnxapps@cnxapps.com.br" title="Email">cnxapps@cnxapps.com.br </a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- info dev -->
+				<div class="cnx-primary">
+					<hr class="" style="border-color: rgba(0, 38, 51, 0.8)" />
+					<div class="holder_copyright">
+						<p class="cnx-color-clear">Copyright 2020 - <b>CNX Apps - Calvin R. Nunes</b></p>
+						<a class="a_email cnx-color-clear" href=" mailto:calvin_nunes13@hotmail.com" title="CNX Apps Representant">calvin_nunes13@hotmail.com</a>
+						<br />
+						<a class="a_email cnx-color-clear" href="https://www.linkedin.com/in/calvinnunes13/">LinkedIn</a>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<script src="js/translator.js"></script>
+		<script src="js/bootstrap_4.4.1.min.js"></script>
+		<script src="js/responsee.js"></script>
+		<script src="js/main_script.js"></script>
+		<script src="js/index_script.js"></script>
+	</body>
+</html>
