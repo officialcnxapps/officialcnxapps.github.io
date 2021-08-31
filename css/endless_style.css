@@ -1,89 +1,92 @@
 /* Default Template Styles */
 @font-face {
-  font-family: "Germania_One";
-  src: url('../font/germaniaone_regular-webfont.woff2') format('woff2'),
-         url('../font/germaniaone_regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "Vecna";
-    src: url('../font/vecna-webfont.woff2') format('woff2'),
-           url('../font/vecna-webfont.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-    }
-
-  
-*{
-  box-sizing: border-box;
+	font-family: "Germania_One";
+	src: url("../font/germaniaone_regular-webfont.woff2") format("woff2"), url("../font/germaniaone_regular-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
 }
 
-body{
-  background: #303030;
-  color: #ededed;
+@font-face {
+	font-family: "Vecna";
+	src: url("../font/vecna-webfont.woff2") format("woff2"), url("../font/vecna-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
 }
 
-hr{
-  background: #98570f;
-  opacity: 0.25;
+* {
+	box-sizing: border-box;
 }
 
-#top-menu-holder{
-  border-bottom: 0.5px solid #98570f;
+body {
+	background: #303030;
+	color: #ededed;
 }
 
-.endless-primary{
-  background-color: #98570f;
+hr {
+	background: #98570f;
+	opacity: 0.25;
 }
 
-.endless-secondary{
-  background-color: #7d1b0d;
+#top-menu-holder {
+	border-bottom: 0.5px solid #98570f;
 }
 
-.endless-tertiary{
-  background-color: #ededed;
+.endless-primary {
+	background-color: #98570f;
 }
 
-.endless-color-primary{
-  color: #98570f;
+.endless-secondary {
+	background-color: #7d1b0d;
 }
 
-.endless-color-secondary{
-  color: #7d1b0d;
+.endless-tertiary {
+	background-color: #ededed;
 }
 
-.endless-color-tertiary{
-  color: #ededed;
+.endless-color-primary {
+	color: #98570f;
 }
 
-.endless-font{
-  font-family: 'Germania_One';
+.endless-color-secondary {
+	color: #7d1b0d;
 }
 
-.box-display-img{
-  width:30%;
-  height: auto;
-  margin: 1%;
-  border-radius: 6px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.endless-color-tertiary {
+	color: #ededed;
 }
 
-.a_email, .a_email:hover, .a_email:visited, .a_email:link{
-  color: #ededed;
-  font-family: 'Germania_One', cursive;
+.endless-font {
+	font-family: "Germania_One";
 }
 
-@media screen and (max-width:768px) {
-  .top-nav, .top-nav li a {
-    background: #7d1b0d;
-  }
+.box-display-img {
+	width: 30%;
+	height: auto;
+	margin: 1%;
+	border-radius: 6px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.endless_version_box {
+	font-family: "Germania_One", cursive;
+}
+
+.a_email,
+.a_email:hover,
+.a_email:visited,
+.a_email:link {
+	color: #ededed;
+	font-family: "Germania_One", cursive;
+}
+
+@media screen and (max-width: 768px) {
+	.top-nav,
+	.top-nav li a {
+		background: #7d1b0d;
+	}
 }
 @media screen and (max-width: 480px) {
-  
-}    
-
+}

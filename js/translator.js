@@ -10,6 +10,7 @@ jQuery(document).ready(function ($) {
 			lang = "en-us";
 		}
 	}
+	window.CURRENT_LANGUAGE = lang;
 
 	const dicionario = {
 		"pt-br": {
