@@ -40,29 +40,29 @@ jQuery(document).ready(function ($) {
 		downloadTitulo.innerHTML = Traduzir("Download_Jogo");
 		contatoTitulo.innerHTML = Traduzir("Contato");
 
-		// let novidadesTitulo = document.getElementById("novidades_section_title");
-		// let lang = CURRENT_LANGUAGE;
+		let novidadesTitulo = document.getElementById("novidades_section_title");
+		let lang = CURRENT_LANGUAGE;
 
-		// novidadesTitulo.innerHTML = EndlessArena.DICT_NOVIDADES[lang].Novidades;
+		novidadesTitulo.innerHTML = EndlessArena.DICT_NOVIDADES[lang].Novidades;
 
-		// let versoes = EndlessArena.DICT_NOVIDADES[lang].Versoes;
-		// let versoesElem = document.getElementById("endless_novidades_container");
-		// for (let i = 0; i < versoes.length; i++) {
-		// 	let versao = versoes[i];
-		// 	let holder = document.createElement("div");
-		// 	holder.className = "endless_version_box";
+		let versoes = EndlessArena.DICT_NOVIDADES[lang].Versoes;
+		let versoesElem = document.getElementById("endless_novidades_container");
+		for (let i = 0; i < versoes.length; i++) {
+			let versao = versoes[i];
+			let holder = document.createElement("div");
+			holder.className = "endless_version_box";
 
-		// 	let versionTitle = document.createElement("h5");
-		// 	versionTitle.className = "endless_version_title";
-		// 	versionTitle.innerHTML = versao.Numero + " - " + versao.DataDisplay;
+			let versionTitle = document.createElement("h5");
+			versionTitle.className = "endless_version_title";
+			versionTitle.innerHTML = versao.Numero + " - " + versao.DataDisplay;
 
-		// 	let versionDesc = document.createElement("p");
-		// 	versionDesc.className = "endless_version_description";
-		// 	versionDesc.innerHTML = versao.Descricao;
+			let versionDesc = document.createElement("p");
+			versionDesc.className = "endless_version_description";
+			versionDesc.innerHTML = versao.Descricao;
 
-		// 	holder.appendChild(versionTitle);
-		// 	holder.appendChild(versionDesc);
-		// 	versoesElem.appendChild(holder);
-		// }
+			holder.appendChild(versionTitle);
+			holder.appendChild(versionDesc);
+			versoesElem.appendChild(holder);
+		}
 	})();
 });

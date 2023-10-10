@@ -2,7 +2,7 @@ jQuery(document).ready(function ($) {
 	MontarGaleria = (function () {
 		let holder = document.getElementById("holder-display-boxes");
 		holder.innerHTML = "";
-		let imgs = ["../img/apps/endless/galeria_1.jpg", "../img/apps/endless/galeria_2.jpg", "../img/apps/endless/galeria_3.jpg", "../img/apps/endless/galeria_4.jpg", "../img/apps/endless/galeria_5.jpg"];
+		let imgs = ["../img/apps/endless/galeria_1.png", "../img/apps/endless/galeria_2.png", "../img/apps/endless/galeria_3.png", "../img/apps/endless/galeria_4.png", "../img/apps/endless/galeria_5.png", "../img/apps/endless/galeria_6.png"];
 
 		for (let i = 0; i < imgs.length; i++) {
 			let source = imgs[i];

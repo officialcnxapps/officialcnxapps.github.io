@@ -36,7 +36,7 @@ hr {
 }
 
 .endless-secondary {
-	background-color: #333333;
+	background-color: #111111;
 }
 
 .endless-tertiary {
@@ -48,7 +48,7 @@ hr {
 }
 
 .endless-color-secondary {
-	color: #333333;
+	color: #111111;
 }
 
 .endless-color-tertiary {
@@ -85,7 +85,7 @@ hr {
 @media screen and (max-width: 768px) {
 	.top-nav,
 	.top-nav li a {
-		background: #333333;
+		background: #111111;
 	}
 }
 @media screen and (max-width: 480px) {
