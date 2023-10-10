@@ -1,0 +1,92 @@
+/* Default Template Styles */
+@font-face {
+	font-family: "Germania_One";
+	src: url("../font/germaniaone_regular-webfont.woff2") format("woff2"), url("../font/germaniaone_regular-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Vecna";
+	src: url("../font/vecna-webfont.woff2") format("woff2"), url("../font/vecna-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #303030;
+	color: #ededed;
+}
+
+hr {
+	background: #9B9BA0;
+	opacity: 0.25;
+}
+
+#top-menu-holder {
+	border-bottom: 0.5px solid #9B9BA0;
+}
+
+.endless-primary {
+	background-color: #9B9BA0;
+}
+
+.endless-secondary {
+	background-color: #333333;
+}
+
+.endless-tertiary {
+	background-color: #2F98CC;
+}
+
+.endless-color-primary {
+	color: #9B9BA0;
+}
+
+.endless-color-secondary {
+	color: #333333;
+}
+
+.endless-color-tertiary {
+	color: #2F98CC;
+}
+
+.endless-font {
+	font-family: "Germania_One";
+}
+
+.box-display-img {
+	width: 30%;
+	height: auto;
+	margin: 1%;
+	border-radius: 6px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.endless_version_box {
+	font-family: "Germania_One", cursive;
+}
+
+.a_email,
+.a_email:hover,
+.a_email:visited,
+.a_email:link {
+	color: #ededed;
+	font-family: "Germania_One", cursive;
+}
+
+@media screen and (max-width: 768px) {
+	.top-nav,
+	.top-nav li a {
+		background: #333333;
+	}
+}
+@media screen and (max-width: 480px) {
+}

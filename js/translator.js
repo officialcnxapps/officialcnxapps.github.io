@@ -22,9 +22,10 @@ jQuery(document).ready(function ($) {
 			Contato: "Contato",
 			Privacidade: "Privacidade",
 			Descricao_Endless: "Um RPG imersivo e inacabável, onde você cria sua história e evolui sua personalidade.",
+			Descricao_Endless_Arena: "",
 			Descricao_Sites: "Fazemos um site rápido, simples e eficiente para você divulgar sua marca e seus produtos na web",
 			Descricao_Dejavi: "DejaVi permite que você crie listas de séries e filmes que você ainda quer assistir e adicione lembretes como notificações no celular.",
-			Texto_Sobre: "A CNX Apps cria e desenvolve websites e aplicativos mobiles para Android desde 2019, utilizando diferentes plataformas e tecnologias, sempre focando em programar o melhor resultado para nossos usuários e players.<br><br>" + "Desenvolvemos webApps e sites focados em informação rápida ao usuário final, com designs modernos e eficientes.<br><br>" + "Também temos atualmente temos 2 aplicativos em pleno funcionamento na Play Store, nosso jogo, Endless Tales, um ótimo RPG e o aplicativo DejaVi, para listar suas séries e filmes.<br>",
+			Texto_Sobre: "A CNX Apps cria e desenvolve websites e aplicativos mobiles para Android desde 2019, utilizando diferentes plataformas e tecnologias, sempre focando em programar o melhor resultado para nossos usuários e players.<br><br>" + "Desenvolvemos webApps e sites focados em informação rápida ao usuário final, com designs modernos e eficientes.<br><br>" + "Também temos atualmente temos 3 aplicativos em pleno funcionamento na Play Store, nosso jogo, Endless Tales, um ótimo RPG. Endless Arena e também o aplicativo DejaVi, para listar suas séries e filmes.<br>",
 			Sobre_Jogo_Titulo: "O Jogo",
 			Sobre_App_Titulo: "O App",
 			Sobre_Sites_Titulo: "Nossos Sites",
@@ -33,12 +34,14 @@ jQuery(document).ready(function ($) {
 			Download_Jogo: "Jogue Agora!",
 			Download_App: "Baixe Agora!",
 			Sobre_Endless: "Endless Tales é um jogo de Role-Playing (RPG) situado em uma era medieval fantasiosa. Desde o início já se pode personalizar suas características e evoluir seus atributos.<br>" + "Endless Tales é imersivo e infinito, permitindo que você explore todos os cantos do mundo enfrentando todas criaturas e vivendo diferentes e incríveis aventuras.<br>" + "Crie, evolua, faça suas escolhas (e sofra as consequências), enfrente criaturas e entre na fantasia deste RPG de escolhas.",
+			Sobre_Endless_Arena: "",
 			Sobre_Dejavi: "Nunca lembra daquela série que te indicaram? Aquele filme que ainda não lançou mas não quer esquecer de assitir?<br>" + "DejaVi permite que você crie listas de séries e filmes que você ainda quer assistir e adicione lembretes como notificações no celular.<br>" + "Também é possível listar os que já assistiu, dando uma nota para eles.<br>" + "Assim fica fácil manter suas séries sempre em dia!",
 			Sobre_Sites: "Ter um site é primordial na era da informação; de forma rápida e simples, você pode ter o seu.<br>Desenvolvemos um site rápido, simples e eficiente para você divulgar sua marca e seus produtos na web.<br>Saiba mais e entre em contato, iremos criar para você um site personalizado e profissional para você turbinar o seu negócio através da internet!",
 			Titulo_Politica: "Política de Privacidade",
 			Texto_Privacidade: GetTextoPrivacidadePortugues(),
 			Texto_Privacidade_Dejavi: "<h2>Privacidade - Dejavi</h2>" + "<p>Além de toda política citada nos termos acima, também informamos que o aplicativo DejaVi não coleta informações pessoais e é livre para todos os públicos.</p>",
-			Texto_Privacidade_Endless: "<h2>Privacidade - Endless Tales</h2>" + "<p>Além de toda política citada nos termos acima, também informamos que o aplicativo Endless Tales não coleta informações pessoais, somente armazena dados do próprio aplicativo, que sejam necessários para seu funcionamento. É sugerido que os usuários tenham idade igual ou superior a 10 anos.</p>",
+			Texto_Privacidade_Endless: "<h2>Privacidade - Endless Tales</h2>" + "<p>Além de toda política citada nos termos acima, também informamos que o aplicativo Endless Tales não coleta informações pessoais, somente armazena dados do próprio aplicativo, que sejam necessários para seu funcionamento. É sugerido que os usuários tenham idade igual ou superior a 13 anos.</p>",
+			Texto_Privacidade_Endless_Arena: "<h2>Privacidade - Endless Aerna</h2>" + "<p>Além de toda política citada nos termos acima, também informamos que o aplicativo Endless Arena não coleta informações pessoais, somente armazena dados do próprio aplicativo, que sejam necessários para seu funcionamento. É sugerido que os usuários tenham idade igual ou superior a 13 anos.</p>",
 		},
 		"en-us": {
 			Home: "Home",
@@ -49,9 +52,10 @@ jQuery(document).ready(function ($) {
 			Contato: "Contact",
 			Privacidade: "Privacy",
 			Descricao_Endless: "An endless and immersive RPG, where you create your own history and evolves your personality",
+			Descricao_Endless_Arena: "",
 			Descricao_Sites: "We have develop a fast, simple and efficient website for you to advertise your brand and your products on the web",
 			Descricao_Dejavi: "DejaVi allows you to create lists of series and movies that you want to watch and lets you add reminders such as notifications on your device.",
-			Texto_Sobre: "CNX Apps creates and develops websites and mobile applications for Android since 2019, using different platforms and technologies, always focusing on programming the best result for our users and players.<br><br>" + "We develop webApps and websites focused on quick information to the final user, with modern and efficient designs.<br><br>" + "We also currently have 2 fully functioning apps on the Play Store, our game, Endless Tales, a great RPG and the DejaVi app, to list your series and movies.<br>",
+			Texto_Sobre: "CNX Apps creates and develops websites and mobile applications for Android since 2019, using different platforms and technologies, always focusing on programming the best result for our users and players.<br><br>" + "We develop webApps and websites focused on quick information to the final user, with modern and efficient designs.<br><br>" + "We also currently have 2 fully functioning apps on the Play Store, our game, Endless Tales, a great RPG. Endless Arena and also the DejaVi app, to list your series and movies.<br>",
 			Sobre_Jogo_Titulo: "The Game",
 			Sobre_App_Titulo: "The App",
 			Sobre_Sites_Titulo: "Our Websites",
@@ -61,11 +65,13 @@ jQuery(document).ready(function ($) {
 			Download_App: "Get it Now!",
 			Sobre_Sites: "Having a website is essential in the information age; quickly and simply, you can have yours. <br> We develop a website quickly, simply and efficienttly for you to advertise your brand and products on the web.<br>Learn more and contact us, we will create a personalized and professional website for you, so you can boost your business over the internet!",
 			Sobre_Endless: "Endless Tales is a Role-Playing Game (RPG) set in a fantasy medieval era. From the beginning, you can customize your characteristics and evolve your attributes.<br>" + "Endless Tales is immersive and infinite, allowing you to explore all corners of the world facing all creatures and living different and incredible adventures.<br>" + "Create, evolve, make your choices (and suffer the consequences), face creatures and dive into the fantasy of this RPG of choices.",
+			Sobre_Endless_Arena: "",
 			Sobre_Dejavi: "Do you always forget the series that friends told you about? A movie is not yet released but you want to remember to watch it?<br>" + "DejaVi lets you create lists of series and movies that you still want to watch and add reminders like notifications on your mobile.<br>" + "You can also list the ones you've already watched, giving them a score.<br>" + "That way it's easy to keep your series up-to-date!",
 			Titulo_Politica: "Privacy Policy",
 			Texto_Privacidade: GetTextoPrivacidadeIngles(),
 			Texto_Privacidade_Dejavi: "<h2>Privacidade - Dejavi</h2>" + "<p>In addition to the policy mentioned in the above terms, we also inform that the 'DejaVi' application does not collect personal information and is free for all audiences.</p>",
-			Texto_Privacidade_Endless: "<h2>Privacidade - Endless Tales</h2>" + "<p>In addition to the policy mentioned in the above terms, we also inform that the 'Endless Tales' application does not collect personal information, it only stores data from the application itself, which are necessary for its operation. It is suggested that users are 10 years old or older.</p>",
+			Texto_Privacidade_Endless: "<h2>Privacidade - Endless Tales</h2>" + "<p>In addition to the policy mentioned in the above terms, we also inform that the 'Endless Tales' application does not collect personal information, it only stores data from the application itself, which are necessary for its operation. It is suggested that users are 13 years old or older.</p>",
+			Texto_Privacidade_Endless_Arena: "<h2>Privacidade - Endless Arena</h2>" + "<p>In addition to the policy mentioned in the above terms, we also inform that the 'Endless Arena' application does not collect personal information, it only stores data from the application itself, which are necessary for its operation. It is suggested that users are 13 years old or older.</p>",
 		},
 	};
 
@@ -78,14 +84,14 @@ jQuery(document).ready(function ($) {
 		return (
 			"A sua privacidade é importante para nós. É política da CNX Apps respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar em nosso site " +
 			"<a href=https://cnxapps.com.br>CNX Apps</a>, e outros sites que possuímos e operamos." +
-			"<p>Estas políticas listadas aqui se aplicam também para nossos aplicativos: <a href=https://cnxapps.com.br/endless_tales>Endless Tales</a> e <a href=https://cnxapps.com.br/dejavi>DejaVi</a></p><br>" +
+			"<p>Estas políticas listadas aqui se aplicam também para nossos aplicativos: <a href=https://cnxapps.com.br/endless_tales>Endless Tales</a>, <a href=https://cnxapps.com.br/endless_arena>Endless Arena</a> e <a href=https://cnxapps.com.br/dejavi>DejaVi</a></p><br>" +
 			"<p>Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Também informamos por que estamos coletando e como será usado. </p>" +
 			"<p>Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado. Quando armazenamos dados, protegemos dentro de meios comercialmente aceitáveis ​​para evitar perdas e roubos, bem como acesso, divulgação, cópia, uso ou modificação não autorizados.</p>" +
 			"<p>Não compartilhamos informações de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei.</p>" +
 			"<p>O nosso site pode ter links para sites externos que não são operados por nós. Esteja ciente de que não temos controle sobre o conteúdo e práticas desses sites e não podemos aceitar responsabilidade por suas respectivas <a href='https://politicaprivacidade.com' target='_BLANK'>políticas de privacidade</a>. </p>" +
 			"<p>Você é livre para recusar a nossa solicitação de informações pessoais, entendendo que talvez não possamos fornecer alguns dos serviços desejados.</p>" +
 			"<p>O uso continuado de nosso site será considerado como aceitação de nossas práticas em torno de privacidade e informações pessoais. Se você tiver alguma dúvida sobre como lidamos com dados do usuário e informações pessoais, entre em contacto connosco.</p>" +
-			"<br><p>A política acima é válida também para nossos aplicativos, tais como: Endless Tales e Dejavi, ambos podem ser adquiridos na loja de aplicativos Google, respeitando todas diretrizes.</p>" +
+			"<br><p>A política acima é válida também para nossos aplicativos, tais como: Endless Tales, Endless Arena e Dejavi, ambos podem ser adquiridos na loja de aplicativos Google, respeitando todas diretrizes.</p>" +
 			"<h2 style='text-align:center'>Política de Cookies CNX Apps</h2>" +
 			"<h3>O que são cookies?</h3>" +
 			"<p>Como é prática comum em quase todos os sites profissionais, este site usa cookies, que são pequenos arquivos baixados no seu computador, para melhorar sua experiência. Esta página descreve quais informações eles coletam, como as usamos e por que às vezes precisamos armazenar esses cookies. Também compartilharemos como você pode impedir que esses cookies sejam armazenados, no entanto, isso pode fazer o downgrade ou 'quebrar' certos elementos da funcionalidade do site.</p>" +
@@ -121,14 +127,14 @@ jQuery(document).ready(function ($) {
 		return (
 			"Your privacy is important to us. It is the policy of CNX Apps to respect your privacy in relation to any information about you that we may collect on the site" +
 			"<a href=https://cnxapps.com.br>CNX Apps</a>, and other sites that we own and operate." +
-			"<p>These policies listed here also apply to our applications: <a href=https://cnxapps.com.br/endless_tales>Endless Tales</a> and <a href=https://cnxapps.com.br/dejavi>DejaVi</a></p><br>" +
+			"<p>These policies listed here also apply to our applications: <a href=https://cnxapps.com.br/endless_tales>Endless Tales</a>, <a href=https://cnxapps.com.br/endless_arena>Endless Arena</a> and <a href=https://cnxapps.com.br/dejavi>DejaVi</a></p><br>" +
 			"<p>We request personal information only when we really need it to provide you with a service. We do so by fair and legal means, with your knowledge and consent. We also inform you why we are collecting it and how it will be used. </p>" +
 			"<p>We only retain the information collected for the time necessary to provide the requested service. When we store data, we protect it within commercially acceptable means to prevent loss and theft, as well as unauthorized access, disclosure, copying, use or modification. </p> " +
 			"<p>We do not share personally identifiable information publicly or with third parties, except as required by law.</p>" +
 			"<p>Our site may have links to external sites that are not operated by us. Please be aware that we have no control over the content and practices of those sites and cannot accept responsibility for their respective <a href = 'https: / /politicaprivácia.com 'target =' _ BLANK '> privacy policies </a>. </p> " +
 			"<p>You are free to refuse our request for personal information, understanding that we may not be able to provide some of the desired services.</p>" +
 			"<p>The continued use of our website will be considered acceptance of our practices around privacy and personal information. If you have any questions about how we handle user data and personal information, please contact us. </p> " +
-			"<br><p> The above policy is also valid for our apps, such as: Endless Tales and Dejavi, both can be purchased at the Google app store, respecting all guidelines. </p>" +
+			"<br><p> The above policy is also valid for our apps, such as: Endless Tales, Endless Arena and Dejavi, both can be purchased at the Google app store, respecting all guidelines. </p>" +
 			"<h2 style='text-align: center'>CNX Apps Cookies Policy</h2>" +
 			"<h3>What are cookies?</h3>" +
 			"<p>As is common practice on almost all professional sites, this site uses cookies, which are small files downloaded to your computer, to improve your experience. This page describes what information they collect, how we use it and why sometimes we need to store these cookies. We will also share how you can prevent these cookies from being stored, however, this may downgrade or 'break' certain elements of the website's functionality. </p> " +
