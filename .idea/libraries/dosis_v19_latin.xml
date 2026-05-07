@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="dosis-v19-latin">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/font/dosis-v19-latin.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
