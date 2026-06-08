@@ -54,7 +54,7 @@ ul { list-style: none; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  padding: 1rem 2.5rem;
+  padding: 0.75rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -66,7 +66,7 @@ ul { list-style: none; }
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   box-shadow: 0 1px 0 rgba(240,192,64,0.18), 0 4px 24px rgba(0,0,0,0.5);
-  padding: 0.65rem 2.5rem;
+  padding: 0.6rem 1rem;
 }
 .nav-brand {
   display: flex;
@@ -83,7 +83,7 @@ ul { list-style: none; }
   color: var(--gold);
 }
 .nav-links {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 0.25rem;
 }
@@ -111,7 +111,7 @@ ul { list-style: none; }
 .nav-links a:hover { color: var(--gold); }
 .nav-links a:hover::after { left: 15%; right: 15%; }
 .nav-toggle {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 5px;
   background: none;
@@ -623,7 +623,7 @@ footer {
   border-top: 1px solid rgba(240,192,64,0.12);
 }
 .footer-main {
-  padding: 5rem 0 2.5rem;
+  padding: 3rem 0 1.5rem;
 }
 .footer-brand img { height: 44px; width: auto; margin-bottom: 1rem; }
 .footer-brand p {
@@ -725,7 +725,7 @@ footer {
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: 120px 1.5rem 5rem;
+  padding: 80px 1rem 3rem;
   max-width: 860px;
   width: 100%;
 }
@@ -815,11 +815,11 @@ footer {
    APP DETAIL SECTIONS
 ======================================= */
 .app-sec {
-  padding: 6rem 0;
+  padding: 3.5rem 0;
   background: var(--bg-dark);
 }
 .app-sec-alt {
-  padding: 6rem 0;
+  padding: 3.5rem 0;
   background: var(--bg-medium);
 }
 .app-sec-alt + .app-sec-alt,
@@ -838,8 +838,8 @@ footer {
 /* Features / highlights */
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 .feature-item {
   background: var(--bg-card);
@@ -878,8 +878,8 @@ footer {
 /* Gallery */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 0.85rem;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
 }
 .gallery-item {
   border-radius: 10px;
@@ -912,7 +912,7 @@ footer {
 
 /* Download / CTA */
 .download-sec {
-  padding: 5rem 0;
+  padding: 3rem 0;
   background: var(--bg-dark);
   position: relative;
   overflow: hidden;
@@ -928,7 +928,7 @@ footer {
   pointer-events: none;
 }
 .gplay-img {
-  height: 68px;
+  height: 52px;
   width: auto;
   margin: 1.5rem auto 0;
   display: block;
@@ -938,6 +938,69 @@ footer {
 .gplay-img:hover {
   transform: scale(1.05) translateY(-2px);
   filter: drop-shadow(0 6px 24px rgba(0,0,0,0.7));
+}
+
+/* Wiki tables */
+.wiki-table-wrap { overflow-x: auto; margin-bottom: 2rem; }
+.wiki-table {
+  width: 100%; border-collapse: collapse;
+  font-size: 0.82rem; color: var(--text-secondary);
+}
+.wiki-table th {
+  text-align: left; padding: 0.5rem 0.6rem;
+  font-family: 'Cinzel', serif; font-size: 0.65rem;
+  letter-spacing: 1px; text-transform: uppercase;
+  color: var(--gold); border-bottom: 1px solid rgba(240,192,64,0.2);
+  white-space: nowrap;
+}
+.wiki-table td { padding: 0.45rem 0.6rem; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.wiki-table tr:hover { background: rgba(139,92,246,0.05); }
+.wiki-table .td-img { width: 44px; padding: 0.4rem; }
+.wiki-table .td-img img { width: 36px; height: 36px; object-fit: contain; border-radius: 6px; background: var(--bg-card); }
+.wiki-table .td-name strong { color: var(--text-primary); }
+.wiki-table .rarity-uncommon .td-name strong { color: #4ade80; }
+.wiki-table .rarity-rare .td-name strong { color: #60a5fa; }
+.wiki-table .rarity-special .td-name strong { color: #f0c040; }
+.res-badge { display: inline-block; font-size: 0.75rem; padding: 0.15rem 0.5rem; border-radius: 4px; margin: 0.1rem; }
+.res-badge.res { background: rgba(74,222,128,0.12); color: #4ade80; }
+.res-badge.weak { background: rgba(248,113,113,0.12); color: #f87171; }
+.class-badge { display: inline-block; font-size: 0.7rem; padding: 0.15rem 0.5rem; border-radius: 4px; margin: 0.1rem; background: rgba(139,92,246,0.12); color: var(--et2-light); font-weight: 600; }
+.class-badge.all { background: rgba(148,148,168,0.12); color: var(--text-secondary); }
+.wiki-table th.sortable:hover { color: var(--gold-light); }
+.sort-icon { font-size: 0.65rem; opacity: 0.4; margin-left: 0.3rem; }
+.sort-icon.active { opacity: 1; color: var(--gold); }
+
+/* Wiki grid */
+.wiki-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.wiki-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem;
+  text-align: center;
+  transition: border-color var(--transition), transform var(--transition);
+  width: 100%;
+  max-width: 320px;
+}
+.wiki-card:hover { transform: translateY(-4px); }
+.wiki-card-et2:hover { border-color: rgba(139,92,246,0.4); }
+.wiki-card i { font-size: 2rem; color: var(--et2); margin-bottom: 0.75rem; }
+.wiki-card h4 {
+  font-family: 'Cinzel', serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+.wiki-card p {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
 
 /* Version changelog */
@@ -965,6 +1028,16 @@ footer {
   font-weight: 700;
   color: var(--gold);
   margin-bottom: 0.25rem;
+}
+.version-list {
+  list-style: disc;
+  padding-left: 1.2rem;
+}
+.version-list li {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 0.3rem;
 }
 .version-desc {
   font-size: 0.9rem;
@@ -1101,37 +1174,169 @@ footer {
 .float-anim { animation: float-updown 4.5s ease-in-out infinite; }
 
 /* =======================================
-   RESPONSIVE
+   RESPONSIVE — Mobile First
+   Mobile: < 600px | Tablet: 600–976px | Desktop: > 976px
 ======================================= */
-@media (max-width: 992px) {
-  .about-stats { gap: 3rem; }
-  .app-hero-content { padding-top: 100px; }
-}
 
-@media (max-width: 768px) {
-  #navbar { padding: 0.9rem 1.25rem; }
-  #navbar.scrolled { padding: 0.65rem 1.25rem; }
-  .nav-links { display: none; }
-  .nav-toggle { display: flex; }
+/* --- MOBILE (base styles, < 600px) --- */
+#navbar { padding: 0.75rem 1rem; }
+#navbar.scrolled { padding: 0.6rem 1rem; }
+.nav-links { display: none; }
+.nav-toggle { display: flex; }
+.nav-brand img { height: 30px; }
+.nav-brand-name { font-size: 0.95rem; letter-spacing: 2px; }
 
-  .hero-title { letter-spacing: 2px; }
-  .hero-btns { flex-direction: column; align-items: center; }
+.hero-title { letter-spacing: 0; font-size: clamp(2.5rem, 12vw, 4rem); }
+.hero-btns { flex-direction: column; align-items: center; }
+.hero-subtitle { font-size: 0.95rem; margin: 1.25rem auto 2rem; }
 
-  .app-hero-content { padding-top: 90px; }
+.app-hero-content { padding: 80px 1rem 3rem; }
+.app-hero-logo-img { max-width: 200px; }
+.app-hero-title { letter-spacing: 2px; }
+.app-hero-subtitle { font-size: 0.92rem; }
+
+.sec-container { padding: 0 1rem; }
+.sec-title { font-size: 1.6rem; }
+.sec-header { margin-bottom: 2.5rem; }
+.sec-desc { font-size: 0.92rem; }
+.app-sec { padding: 3.5rem 0; }
+.app-sec-alt { padding: 3.5rem 0; }
+
+.features-grid { grid-template-columns: 1fr; gap: 1rem; }
+.gallery-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+
+.about-game-text { font-size: 0.95rem; }
+.about-stats { gap: 2rem; }
+.stat-number { font-size: 2rem; }
+
+.btn-play { padding: 0.85rem 1.8rem; font-size: 0.78rem; }
+
+.download-sec { padding: 3rem 0; }
+.gplay-img { height: 52px; }
+
+/* Wiki */
+.wiki-grid { flex-direction: column; align-items: center; gap: 1rem; }
+.wiki-card { width: 100%; max-width: 320px; padding: 1.25rem; }
+.wiki-sub-nav { gap: 0.4rem; }
+.wiki-sub-nav a { padding: 0.4rem 0.8rem; font-size: 0.7rem; }
+
+/* Wiki tables — card layout on mobile */
+.wiki-table-wrap { margin-bottom: 1.5rem; }
+.wiki-table { font-size: 0.82rem; }
+.wiki-table th { padding: 0.5rem 0.6rem; font-size: 0.65rem; letter-spacing: 1px; }
+.wiki-table td { padding: 0.45rem 0.6rem; }
+.wiki-table .td-img { min-width: 44px; }
+.wiki-table .td-img img { width: 36px; height: 36px; }
+.res-badge { font-size: 0.65rem; padding: 0.1rem 0.35rem; }
+.class-badge { font-size: 0.6rem; padding: 0.1rem 0.35rem; }
+
+/* Changelog */
+.changelog-wrapper { max-width: 100%; }
+.version-item { padding-left: 1rem; }
+.version-num { font-size: 0.8rem; }
+.version-list li { font-size: 0.85rem; }
+
+/* Footer */
+.footer-main { padding: 3rem 0 1.5rem; }
+.footer-main .row > * { margin-bottom: 2rem; }
+.footer-brand p { max-width: 100%; }
+
+/* Privacy */
+.privacy-hero h1 { font-size: 1.8rem; }
+
+/* Nav overlay mobile */
+.nav-overlay a { font-size: 1.1rem; letter-spacing: 2px; }
+.nav-overlay { gap: 1.8rem; }
+
+/* --- TABLET (600px – 976px) --- */
+@media (min-width: 600px) {
+  #navbar { padding: 0.85rem 1.5rem; }
+  #navbar.scrolled { padding: 0.6rem 1.5rem; }
+  .nav-brand img { height: 34px; }
+  .nav-brand-name { font-size: 1.05rem; }
+
+  .app-hero-content { padding: 100px 1.5rem 4rem; }
+  .app-hero-logo-img { max-width: 250px; }
+
+  .sec-container { padding: 0 1.5rem; }
+  .sec-title { font-size: 2rem; }
+  .sec-header { margin-bottom: 3rem; }
+  .app-sec { padding: 4.5rem 0; }
+  .app-sec-alt { padding: 4.5rem 0; }
 
   .features-grid { grid-template-columns: 1fr 1fr; }
-  .gallery-grid   { grid-template-columns: 1fr 1fr; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; }
 
-  .footer-main .row > * { margin-bottom: 2rem; }
+  .btn-play { padding: 0.9rem 2.2rem; font-size: 0.82rem; }
+  .gplay-img { height: 60px; }
+
+  /* Wiki */
+  .wiki-grid { flex-direction: row; flex-wrap: wrap; }
+  .wiki-card { width: calc(50% - 0.75rem); max-width: none; }
+
+  /* Tables */
+  .wiki-table { font-size: 0.88rem; }
+  .wiki-table th { padding: 0.6rem 0.8rem; font-size: 0.7rem; }
+  .wiki-table td { padding: 0.5rem 0.8rem; }
+  .wiki-table .td-img { width: 52px; }
+  .wiki-table .td-img img { width: 44px; height: 44px; }
+
+  /* Changelog */
+  .changelog-wrapper { max-width: 600px; }
+
+  .nav-overlay a { font-size: 1.3rem; }
+  .nav-overlay { gap: 2.2rem; }
 }
 
-@media (max-width: 480px) {
-  .hero-title { letter-spacing: 0; font-size: clamp(2.8rem, 14vw, 5rem); }
-  .sec-title  { font-size: 1.8rem; }
-  .features-grid { grid-template-columns: 1fr; }
-  .gallery-grid   { grid-template-columns: 1fr; }
-  .about-stats { gap: 2rem; }
-  .stat-number { font-size: 2.2rem; }
-  .privacy-hero h1 { font-size: 2rem; }
+/* --- DESKTOP (> 976px) --- */
+@media (min-width: 976px) {
+  #navbar { padding: 1rem 2.5rem; }
+  #navbar.scrolled { padding: 0.65rem 2.5rem; }
+  .nav-links { display: flex; }
+  .nav-toggle { display: none; }
+  .nav-brand img { height: 38px; }
+  .nav-brand-name { font-size: 1.15rem; letter-spacing: 3px; }
+
+  .hero-title { letter-spacing: 6px; font-size: clamp(3.5rem, 9vw, 8rem); }
+  .hero-subtitle { font-size: 1.1rem; margin: 1.75rem auto 3rem; }
+  .hero-btns { flex-direction: row; }
+
+  .app-hero-content { padding: 120px 1.5rem 5rem; }
+  .app-hero-logo-img { max-width: 300px; }
+
+  .sec-container { padding: 0 1.5rem; }
+  .sec-title { font-size: clamp(2rem, 4.5vw, 3.2rem); }
+  .sec-header { margin-bottom: 4rem; }
+  .app-sec { padding: 6rem 0; }
+  .app-sec-alt { padding: 6rem 0; }
+
+  .features-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+  .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+
+  .btn-play { padding: 1rem 2.8rem; font-size: 0.9rem; }
+  .gplay-img { height: 68px; }
+
+  /* Wiki */
+  .wiki-grid { flex-wrap: nowrap; }
+  .wiki-card { width: 220px; }
+
+  /* Tables */
+  .wiki-table { font-size: 0.92rem; }
+  .wiki-table th { padding: 0.75rem 1rem; font-size: 0.75rem; }
+  .wiki-table td { padding: 0.6rem 1rem; }
+  .wiki-table .td-img { width: 60px; }
+  .wiki-table .td-img img { min-width: 52px; min-height: 52px; }
+  .res-badge { font-size: 0.75rem; padding: 0.15rem 0.5rem; }
+  .class-badge { font-size: 0.7rem; padding: 0.15rem 0.5rem; }
+
+  /* Changelog */
+  .changelog-wrapper { max-width: 680px; }
+  .version-item { padding-left: 1.5rem; }
+  .version-num { font-size: 0.85rem; }
+  .version-list li { font-size: 0.9rem; }
+
+  /* Footer */
+  .footer-main { padding: 5rem 0 2.5rem; }
+  .footer-main .row > * { margin-bottom: 0; }
 }
 

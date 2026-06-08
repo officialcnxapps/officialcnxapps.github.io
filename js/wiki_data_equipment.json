@@ -1,0 +1,3380 @@
+{
+  "weapons": [
+    {
+      "name_en": "Harvest Scythe",
+      "name_pt": "Foice de Colheita",
+      "img": "item_harvest_scythe",
+      "minDamage": 1,
+      "maxDamage": 3,
+      "critical": 1,
+      "defense": 0,
+      "type": "WEAPON",
+      "slot": "HAND_1",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "A simple scythe used by peasants on their farms.",
+      "desc_pt": "Uma simples foice usada por camponeses em suas fazendas.",
+      "classes": [],
+      "weight": 1,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Woodcutter's Axe",
+      "name_pt": "Machado de Lenhador",
+      "img": "item_woodcutters_axe",
+      "minDamage": 1,
+      "maxDamage": 3,
+      "critical": 7,
+      "defense": 0,
+      "type": "WEAPON",
+      "slot": "HAND_1",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "A heavy simple axe used by woodcutters to chop down trees.",
+      "desc_pt": "Um machado simples e pesado usado por lenhadores para derrubar árvores.",
+      "classes": [],
+      "weight": 2,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Iron Sword",
+      "name_pt": "Espada de Ferro",
+      "img": "item_iron_sword",
+      "minDamage": 2,
+      "maxDamage": 4,
+      "critical": 4,
+      "defense": 0,
+      "type": "WEAPON",
+      "slot": "HAND_1",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "If you are a beginner soldier, this simple iron sword is for you.",
+      "desc_pt": "Se você é um soldado iniciante, essa espada simples de ferro é para você.",
+      "classes": [
+        "WARRIOR",
+        "THIEF"
+      ],
+      "weight": 0.7,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Oak Staff",
+      "name_pt": "Cajado de Carvalho",
+      "img": "item_oak_staff",
+      "minDamage": 1,
+      "maxDamage": 4,
+      "critical": 3,
+      "defense": 0,
+      "type": "MAGICAL_WEAPON",
+      "slot": "HAND_1",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "Crafted with aged oak by experienced wizards for novice wizards.",
+      "desc_pt": "Feito com carvalho envelhecido por feiticeiros experientes para feiticeiros novatos.",
+      "classes": [
+        "DRUID",
+        "SORCERER"
+      ],
+      "weight": 0.5,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Wooden Spear",
+      "name_pt": "Lança de Madeira",
+      "img": "item_wooden_spear",
+      "minDamage": 1,
+      "maxDamage": 4,
+      "critical": 9,
+      "defense": 0,
+      "type": "WEAPON",
+      "slot": "HAND_1",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "A long wooden stick with a carved tip.",
+      "desc_pt": "Uma vara longa de madeira com a ponta esculpida.",
+      "classes": [
+        "ARCHER"
+      ],
+      "weight": 0.4,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Copper Sword",
+      "name_pt": "Espada de Cobre",
+      "img": "item_copper_sword",
+      "minDamage": 2,
+      "maxDamage": 6,
+      "critical": 6,
+      "defense": 0,
+      "type": "WEAPON",
+      "slot": "HAND_1",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "A cutting weapon with good resistance and sharpness. All copper, except the handle.",
+      "desc_pt": "Uma arma de corte com boa resistência e afiamento. Toda em cobre, exceto a empunhadura.",
+      "classes": [
+        "WARRIOR",
+        "THIEF"
+      ],
+      "weight": 0.8,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Magic Rod",
+      "name_pt": "Bastão Mágico",
+      "img": "item_magic_rod",
+      "minDamage": 2,
+      "maxDamage": 3,
+      "critical": 3,
+      "defense": 0,
+      "type": "MAGICAL_WEAPON",
+      "slot": "HAND_1",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "MP_MODIFIER",
+          "value": 2,
+          "decrease": false
+        }
+      ],
+      "desc_en": "An advanced magical rod for wizards that are not novices anymore.",
+      "desc_pt": "Uma vara mágica avançada para bruxos que não são mais novatos.",
+      "classes": [
+        "DRUID",
+        "SORCERER"
+      ],
+      "weight": 0.5,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Throwing Knives",
+      "name_pt": "Facas de Arremesso",
+      "img": "item_throwing_knives",
+      "minDamage": 1,
+      "maxDamage": 5,
+      "critical": 10,
+      "defense": 0,
+      "type": "WEAPON",
+      "slot": "HAND_1",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "Knives with a specific handle and size to be thrown.",
+      "desc_pt": "Facas com cabo e tamanho específicos para serem arremessadas.",
+      "classes": [
+        "ARCHER"
+      ],
+      "weight": 0.4,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Heavy Mace",
+      "name_pt": "Maça Pesada",
+      "img": "item_heavy_mace",
+      "minDamage": 3,
+      "maxDamage": 7,
+      "critical": 11,
+      "defense": 0,
+      "type": "WEAPON",
+      "slot": "HAND_1",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "An iron cable and a steel ball at the end, ideal for crushing and breaking.",
+      "desc_pt": "Um cabo de ferro e uma bola de aço na ponta, ideal para esmagar e quebrar.",
+      "classes": [
+        "WARRIOR"
+      ],
+      "weight": 2.5,
+      "levelReq": 4
+    },
+    {
+      "name_en": "Long Dagger",
+      "name_pt": "Adaga Longa",
+      "img": "item_long_dagger",
+      "minDamage": 3,
+      "maxDamage": 5,
+      "critical": 13,
+      "defense": 0,
+      "type": "WEAPON",
+      "slot": "HAND_1",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "A longer and thinner dagger, easy to handle and stab at the enemy.",
+      "desc_pt": "Uma adaga mais longa e fina, fácil de manusear e estocar no inimigo.",
+      "classes": [
+        "THIEF"
+      ],
+      "weight": 0.8,
+      "levelReq": 4
+    },
+    {
+      "name_en": "Spellwand of Sorcery",
+      "name_pt": "Cajado da Feitiçaria",
+      "img": "item_spellwand_of_sorcery",
+      "minDamage": 3,
+      "maxDamage": 5,
+      "critical": 5,
+      "defense": 0,
+      "type": "MAGICAL_WEAPON",
+      "slot": "HAND_1",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "MAGIC",
+          "value": 1,
+          "decrease": false
+        },
+        {
+          "attr": "MP_MODIFIER",
+          "value": 2,
+          "decrease": false
+        }
+      ],
+      "desc_en": "The magical effect applied to this wand made it a great option for magicians.",
+      "desc_pt": "O efeito mágico aplicado a esta varinha a tornou uma ótima opção para mágicos.",
+      "classes": [
+        "DRUID",
+        "SORCERER"
+      ],
+      "weight": 0.9,
+      "levelReq": 4
+    },
+    {
+      "name_en": "Long Oak Bow",
+      "name_pt": "Arco Longo de Carvalho",
+      "img": "item_long_oak_bow",
+      "minDamage": 4,
+      "maxDamage": 7,
+      "critical": 7,
+      "defense": 0,
+      "type": "WEAPON",
+      "slot": "TWO_HANDS",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "The oak branch used here is perfect to increase the unleash power of arrows.",
+      "desc_pt": "O galho de carvalho usado aqui é perfeito para aumentar o poder de disparo das flechas.",
+      "classes": [
+        "ARCHER"
+      ],
+      "weight": 0.7,
+      "levelReq": 4
+    },
+    {
+      "name_en": "Steel Battle Axe",
+      "name_pt": "Machado de Batalha de Aço",
+      "img": "item_steel_battle_axe",
+      "minDamage": 6,
+      "maxDamage": 11,
+      "critical": 12,
+      "defense": 0,
+      "type": "WEAPON",
+      "slot": "HAND_1",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "It is heavy, with dual bladed sides, perfect for powerful warriors.",
+      "desc_pt": "É pesado, com lados de lâmina dupla, perfeito para guerreiros poderosos.",
+      "classes": [
+        "WARRIOR"
+      ],
+      "weight": 2.5,
+      "levelReq": 6
+    },
+    {
+      "name_en": "Giant Sword",
+      "name_pt": "Espada Gigante",
+      "img": "item_giant_sword",
+      "minDamage": 7,
+      "maxDamage": 11,
+      "critical": 18,
+      "defense": 0,
+      "type": "WEAPON",
+      "slot": "TWO_HANDS",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "A big large blade that requires skill and strength to handle.",
+      "desc_pt": "Uma lâmina grande e grande que requer habilidade e força para manusear.",
+      "classes": [
+        "WARRIOR"
+      ],
+      "weight": 3.2,
+      "levelReq": 6
+    },
+    {
+      "name_en": "Copper Hammer",
+      "name_pt": "Martelo de Cobre",
+      "img": "item_copper_hammer",
+      "minDamage": 6,
+      "maxDamage": 10,
+      "critical": 16,
+      "defense": 0,
+      "type": "WEAPON",
+      "slot": "TWO_HANDS",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "A heavy weapon that can smash almost anything with its copper head.",
+      "desc_pt": "Uma arma pesada que pode destruir quase tudo com sua cabeça de cobre.",
+      "classes": [
+        "WARRIOR"
+      ],
+      "weight": 2.7,
+      "levelReq": 5
+    },
+    {
+      "name_en": "Shadow Dagger",
+      "name_pt": "Adaga Sombria",
+      "img": "item_shadow_dagger",
+      "minDamage": 4,
+      "maxDamage": 9,
+      "critical": 9,
+      "defense": 0,
+      "type": "WEAPON",
+      "slot": "HAND_1",
+      "element": "DARK",
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "AGILITY",
+          "value": 1,
+          "decrease": false
+        },
+        {
+          "attr": "ALIGNMENT",
+          "value": 2,
+          "decrease": true
+        }
+      ],
+      "desc_en": "An small dark blade. Easy to handle and hide. Just for bad kinds.",
+      "desc_pt": "Uma pequena lâmina escura. Fácil de manusear e esconder. Só para tipos ruins.",
+      "classes": [
+        "THIEF"
+      ],
+      "weight": 0.5,
+      "levelReq": 6
+    },
+    {
+      "name_en": "Wand of Fortitude",
+      "name_pt": "Bastão da Vitalidade",
+      "img": "item_wand_of_fortitude",
+      "minDamage": 3,
+      "maxDamage": 6,
+      "critical": 9,
+      "defense": 0,
+      "type": "MAGICAL_WEAPON",
+      "slot": "HAND_1",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "HP_MODIFIER",
+          "value": 2,
+          "decrease": false
+        },
+        {
+          "attr": "MP_MODIFIER",
+          "value": 3,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Mages that look for more vitality should use this mystic wand.",
+      "desc_pt": "Magos que buscam mais vitalidade devem usar esta varinha mística.",
+      "classes": [
+        "DRUID",
+        "SORCERER"
+      ],
+      "weight": 0.9,
+      "levelReq": 6
+    },
+    {
+      "name_en": "Heavy Crossbow",
+      "name_pt": "Besta Pesada",
+      "img": "item_heavy_crossbow",
+      "minDamage": 7,
+      "maxDamage": 10,
+      "critical": 20,
+      "defense": 0,
+      "type": "WEAPON",
+      "slot": "TWO_HANDS",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "Very well crafted crossbow that can shoot a bolt with lots of power.",
+      "desc_pt": "Besta muito bem feita que pode disparar um dardo com muita potência.",
+      "classes": [
+        "ARCHER"
+      ],
+      "weight": 2.4,
+      "levelReq": 6
+    },
+    {
+      "name_en": "Caltranium Sword",
+      "name_pt": "Espada de Caltranio",
+      "img": "item_caltranium_sword",
+      "minDamage": 16,
+      "maxDamage": 22,
+      "critical": 15,
+      "defense": 0,
+      "type": "WEAPON",
+      "slot": "HAND_1",
+      "element": null,
+      "rarity": "RARE",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "Caltranium is easy to sharpen making this sword an incredible tool for battling.",
+      "desc_pt": "O caltranium é fácil de afiar, o que torna esta espada uma ferramenta incrível para batalhas.",
+      "classes": [
+        "WARRIOR"
+      ],
+      "weight": 2.5,
+      "levelReq": 12
+    },
+    {
+      "name_en": "Gold Dagger",
+      "name_pt": "Adaga de Ouro",
+      "img": "item_gold_dagger",
+      "minDamage": 10,
+      "maxDamage": 14,
+      "critical": 8,
+      "defense": 0,
+      "type": "WEAPON",
+      "slot": "HAND_1",
+      "element": null,
+      "rarity": "RARE",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "CHARISMA",
+          "value": 1,
+          "decrease": false
+        },
+        {
+          "attr": "AGILITY",
+          "value": 1,
+          "decrease": false
+        },
+        {
+          "attr": "LUCK",
+          "value": 1,
+          "decrease": false
+        }
+      ],
+      "desc_en": "A hand made long knive with gold details and a very sharp blade.",
+      "desc_pt": "Uma faca longa feita à mão com detalhes dourados e uma lâmina muito afiada.",
+      "classes": [
+        "WARRIOR",
+        "THIEF"
+      ],
+      "weight": 0.5,
+      "levelReq": 6
+    },
+    {
+      "name_en": "Skillful's Staff",
+      "name_pt": "Bastão do Habilidoso",
+      "img": "item_skillfuls_staff",
+      "minDamage": 9,
+      "maxDamage": 13,
+      "critical": 16,
+      "defense": 0,
+      "type": "MAGICAL_WEAPON",
+      "slot": "TWO_HANDS",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "AGILITY",
+          "value": 1,
+          "decrease": false
+        },
+        {
+          "attr": "MAGIC",
+          "value": 1,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Besides its magical power it is also perfect for handling and agile movements.",
+      "desc_pt": "Além do seu poder mágico, ele também é perfeito para manobras e movimentos ágeis.",
+      "classes": [
+        "THIEF",
+        "DRUID",
+        "SORCERER"
+      ],
+      "weight": 0.8,
+      "levelReq": 8
+    },
+    {
+      "name_en": "Rod of Masters",
+      "name_pt": "Cajado dos Mestres",
+      "img": "item_rod_of_masters",
+      "minDamage": 8,
+      "maxDamage": 12,
+      "critical": 9,
+      "defense": 0,
+      "type": "MAGICAL_WEAPON",
+      "slot": "HAND_1",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "MAGIC",
+          "value": 2,
+          "decrease": false
+        },
+        {
+          "attr": "MP_MODIFIER",
+          "value": 5,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Made by master magicians to master magicians. Powerful.",
+      "desc_pt": "Feito por mestres mágicos para mestres mágicos. Poderoso.",
+      "classes": [
+        "DRUID",
+        "SORCERER"
+      ],
+      "weight": 0.8,
+      "levelReq": 12
+    },
+    {
+      "name_en": "Elven Bow",
+      "name_pt": "Arco Élfico",
+      "img": "item_elven_bow",
+      "minDamage": 15,
+      "maxDamage": 20,
+      "critical": 14,
+      "defense": 0,
+      "type": "WEAPON",
+      "slot": "TWO_HANDS",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "Probably the more precise bow ever. Crafted by elder elves.",
+      "desc_pt": "Provavelmente o arco mais preciso de todos. Feito por elfos anciões.",
+      "classes": [
+        "ARCHER"
+      ],
+      "weight": 1.2,
+      "levelReq": 11
+    },
+    {
+      "name_en": "Knives of Breeze",
+      "name_pt": "Facas da Brisa",
+      "img": "item_knives_of_breeze",
+      "minDamage": 5,
+      "maxDamage": 8,
+      "critical": 8,
+      "defense": 0,
+      "type": "MAGICAL_WEAPON",
+      "slot": "HAND_1",
+      "element": "WIND",
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "AGILITY",
+          "value": 1,
+          "decrease": false
+        }
+      ],
+      "desc_en": "",
+      "desc_pt": "",
+      "classes": [
+        "ARCHER",
+        "THIEF"
+      ],
+      "weight": 1.1,
+      "levelReq": 4
+    },
+    {
+      "name_en": "Fire Sword",
+      "name_pt": "Espada de Fogo",
+      "img": "item_fire_sword",
+      "minDamage": 4,
+      "maxDamage": 7,
+      "critical": 10,
+      "defense": 0,
+      "type": "MAGICAL_WEAPON",
+      "slot": "HAND_1",
+      "element": "FIRE",
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "",
+      "desc_pt": "",
+      "classes": [
+        "WARRIOR"
+      ],
+      "weight": 1.6,
+      "levelReq": 4
+    },
+    {
+      "name_en": "Blade of Flames",
+      "name_pt": "Lâmina de Fogo",
+      "img": "item_blade_of_flames",
+      "minDamage": 10,
+      "maxDamage": 14,
+      "critical": 15,
+      "defense": 0,
+      "type": "MAGICAL_WEAPON",
+      "slot": "TWO_HANDS",
+      "element": "FIRE",
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "",
+      "desc_pt": "",
+      "classes": [
+        "WARRIOR"
+      ],
+      "weight": 3.6,
+      "levelReq": 12
+    },
+    {
+      "name_en": "Glacier Mace",
+      "name_pt": "Maça Glacial",
+      "img": "item_glacier_mace",
+      "minDamage": 7,
+      "maxDamage": 11,
+      "critical": 18,
+      "defense": 0,
+      "type": "MAGICAL_WEAPON",
+      "slot": "TWO_HANDS",
+      "element": "WATER",
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "",
+      "desc_pt": "",
+      "classes": [
+        "WARRIOR"
+      ],
+      "weight": 2.7,
+      "levelReq": 5
+    },
+    {
+      "name_en": "Steel Spear",
+      "name_pt": "Lança de Aço",
+      "img": "item_steel_spear",
+      "minDamage": 4,
+      "maxDamage": 8,
+      "critical": 11,
+      "defense": 0,
+      "type": "WEAPON",
+      "slot": "HAND_1",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "",
+      "desc_pt": "",
+      "classes": [
+        "ARCHER"
+      ],
+      "weight": 1.5,
+      "levelReq": 3
+    },
+    {
+      "name_en": "Mace of Ordenance",
+      "name_pt": "Maça da Ordenança",
+      "img": "item_mace_of_ordenance",
+      "minDamage": 9,
+      "maxDamage": 12,
+      "critical": 25,
+      "defense": 0,
+      "type": "WEAPON",
+      "slot": "HAND_1",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "STRENGTH",
+          "value": 2,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Made to gladiators, but soldiers are now using since it is powerful and scary.",
+      "desc_pt": "Feito para gladiadores, mas agora é usado por soldados porque é poderoso e assustador.",
+      "classes": [
+        "WARRIOR"
+      ],
+      "weight": 1.8,
+      "levelReq": 3
+    },
+    {
+      "name_en": "Rod of Righteous",
+      "name_pt": "Cajado dos Justos",
+      "img": "item_rod_of_righteous",
+      "minDamage": 5,
+      "maxDamage": 8,
+      "critical": 10,
+      "defense": 0,
+      "type": "MAGICAL_WEAPON",
+      "slot": "HAND_1",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "MAGIC",
+          "value": 1,
+          "decrease": false
+        },
+        {
+          "attr": "LUCK",
+          "value": 3,
+          "decrease": false
+        },
+        {
+          "attr": "ALIGNMENT",
+          "value": 3,
+          "decrease": false
+        }
+      ],
+      "desc_en": "The wizards that look for justice and magical power should wield this.",
+      "desc_pt": "Os magos que buscam justiça e poder mágico devem usar isso.",
+      "classes": [
+        "DRUID",
+        "SORCERER"
+      ],
+      "weight": 1.5,
+      "levelReq": 3
+    },
+    {
+      "name_en": "Rod of Unjust",
+      "name_pt": "Cajado dos Injustos",
+      "img": "item_rod_of_unjust",
+      "minDamage": 5,
+      "maxDamage": 8,
+      "critical": 10,
+      "defense": 0,
+      "type": "MAGICAL_WEAPON",
+      "slot": "HAND_1",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "AGILITY",
+          "value": 1,
+          "decrease": false
+        },
+        {
+          "attr": "CHARISMA",
+          "value": 1,
+          "decrease": true
+        },
+        {
+          "attr": "LUCK",
+          "value": 3,
+          "decrease": false
+        },
+        {
+          "attr": "ALIGNMENT",
+          "value": 3,
+          "decrease": true
+        }
+      ],
+      "desc_en": "The wizards that are on the dark side and looking for power should wield this.",
+      "desc_pt": "Os magos que estão no lado negro e buscam poder devem usar isso.",
+      "classes": [
+        "DRUID",
+        "SORCERER"
+      ],
+      "weight": 1.5,
+      "levelReq": 3
+    },
+    {
+      "name_en": "Automatic Crossbow",
+      "name_pt": "Besta Automática",
+      "img": "item_automatic_crossbow",
+      "minDamage": 7,
+      "maxDamage": 12,
+      "critical": 24,
+      "defense": 0,
+      "type": "WEAPON",
+      "slot": "HAND_1",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "AGILITY",
+          "value": 2,
+          "decrease": false
+        }
+      ],
+      "desc_en": "A great piece of engineering that can shoot be easily handled.",
+      "desc_pt": "Uma grande peça de engenharia que pode ser facilmente manuseada.",
+      "classes": [
+        "ARCHER"
+      ],
+      "weight": 1.8,
+      "levelReq": 3
+    },
+    {
+      "name_en": "Endless Sword",
+      "name_pt": "Espada Endless",
+      "img": "item_endless_sword",
+      "minDamage": 20,
+      "maxDamage": 25,
+      "critical": 21,
+      "defense": 0,
+      "type": "WEAPON",
+      "slot": "HAND_1",
+      "element": null,
+      "rarity": "SPECIAL",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "STRENGTH",
+          "value": 2,
+          "decrease": false
+        },
+        {
+          "attr": "HP_MODIFIER",
+          "value": 3,
+          "decrease": false
+        }
+      ],
+      "desc_en": "It is so unique that its price is priceless. It is mystical and very powerful.",
+      "desc_pt": "É tão único que seu preço é quase inestimável. É místico e muito poderoso.",
+      "classes": [
+        "WARRIOR",
+        "THIEF"
+      ],
+      "weight": 1.5,
+      "levelReq": 5
+    },
+    {
+      "name_en": "Endless Wand",
+      "name_pt": "Cajado Endless",
+      "img": "item_endless_wand",
+      "minDamage": 10,
+      "maxDamage": 13,
+      "critical": 12,
+      "defense": 0,
+      "type": "MAGICAL_WEAPON",
+      "slot": "HAND_1",
+      "element": null,
+      "rarity": "SPECIAL",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "AGILITY",
+          "value": 1,
+          "decrease": false
+        },
+        {
+          "attr": "MAGIC",
+          "value": 3,
+          "decrease": false
+        },
+        {
+          "attr": "MP_MODIFIER",
+          "value": 3,
+          "decrease": false
+        }
+      ],
+      "desc_en": "It is so unique that its price is priceless. It is mystical and very powerful.",
+      "desc_pt": "É tão único que seu preço é quase inestimável. É místico e muito poderoso.",
+      "classes": [
+        "DRUID",
+        "SORCERER"
+      ],
+      "weight": 0.8,
+      "levelReq": 5
+    },
+    {
+      "name_en": "Endless Bow",
+      "name_pt": "Arco Endless",
+      "img": "item_endless_bow",
+      "minDamage": 18,
+      "maxDamage": 23,
+      "critical": 18,
+      "defense": 0,
+      "type": "WEAPON",
+      "slot": "TWO_HANDS",
+      "element": null,
+      "rarity": "SPECIAL",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "AGILITY",
+          "value": 3,
+          "decrease": false
+        },
+        {
+          "attr": "CHARISMA",
+          "value": 2,
+          "decrease": false
+        },
+        {
+          "attr": "LUCK",
+          "value": 1,
+          "decrease": false
+        }
+      ],
+      "desc_en": "It is so unique that its price is priceless. It is mystical and very powerful.",
+      "desc_pt": "É tão único que seu preço é quase inestimável. É místico e muito poderoso.",
+      "classes": [
+        "ARCHER"
+      ],
+      "weight": 1,
+      "levelReq": 5
+    },
+    {
+      "name_en": "Torch",
+      "name_pt": "Tocha",
+      "img": "item_torch",
+      "minDamage": 1,
+      "maxDamage": 2,
+      "critical": 1,
+      "defense": 0,
+      "type": "WEAPON",
+      "slot": "HAND_1",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "A small piece of wood with a tissue soaked in a combustible liquid. Used to generate light and some heat.",
+      "desc_pt": "Um pequeno pedaço de madeira com um lenço embebido em líquido combustível. Usado para gerar luz e algum calor.",
+      "classes": [],
+      "weight": 0.4,
+      "levelReq": 0
+    }
+  ],
+  "shields": [
+    {
+      "name_en": "Plank Shield",
+      "name_pt": "Escudo de Tábua",
+      "img": "item_plank_shield",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 1,
+      "type": "SHIELD",
+      "slot": "HAND_2",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "If you are poor, you can use some small planks as shield.",
+      "desc_pt": "Se você for pobre, pode usar algumas tábuas pequenas como escudo.",
+      "classes": [],
+      "weight": 0.8,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Wooden Shield",
+      "name_pt": "Escudo de Madeira",
+      "img": "item_wooden_shield",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 2,
+      "type": "SHIELD",
+      "slot": "HAND_2",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "A good simple shield made of wood with an iron hoop around.",
+      "desc_pt": "Um escudo simples e bom feito de madeira com um arco de ferro ao redor.",
+      "classes": [],
+      "weight": 1,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Iron Shield",
+      "name_pt": "Escudo de Ferro",
+      "img": "item_iron_shield",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 3,
+      "type": "SHIELD",
+      "slot": "HAND_2",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "Made with pure iron, heavy but efficient.",
+      "desc_pt": "Feito de ferro puro, pesado, mas eficiente.",
+      "classes": [],
+      "weight": 1.6,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Copper Shield",
+      "name_pt": "Escudo de Cobre",
+      "img": "item_copper_shield",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 4,
+      "type": "SHIELD",
+      "slot": "HAND_2",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "A thick plate of copper shaped as a good shield.",
+      "desc_pt": "Uma placa grossa de cobre moldada como um bom escudo.",
+      "classes": [],
+      "weight": 1.6,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Gold Shield",
+      "name_pt": "Escudo de Ouro",
+      "img": "item_gold_shield",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 3,
+      "type": "SHIELD",
+      "slot": "HAND_2",
+      "element": null,
+      "rarity": "UNCOMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "CHARISMA",
+          "value": 2,
+          "decrease": false
+        }
+      ],
+      "desc_en": "It seems ridiculous to use gold to protect against dangerous hits.",
+      "desc_pt": "Parece ridículo usar ouro para se proteger contra ataques perigosos.",
+      "classes": [],
+      "weight": 1.3,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Steel Shield",
+      "name_pt": "Escudo de Aço",
+      "img": "item_steel_shield",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 5,
+      "type": "SHIELD",
+      "slot": "HAND_2",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "Perfect balance between weight and protection efficiency.",
+      "desc_pt": "Equilíbrio perfeito entre peso e eficiência de proteção.",
+      "classes": [],
+      "weight": 2,
+      "levelReq": 6
+    },
+    {
+      "name_en": "Large Shield",
+      "name_pt": "Escudo Longo",
+      "img": "item_large_shield",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 4,
+      "type": "SHIELD",
+      "slot": "HAND_2",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "AGILITY",
+          "value": 1,
+          "decrease": true
+        }
+      ],
+      "desc_en": "It is really heavy and hard to handle, but protects almost the entire body.",
+      "desc_pt": "É muito pesado e difícil de manusear, mas protege quase todo o corpo.",
+      "classes": [
+        "WARRIOR",
+        "THIEF"
+      ],
+      "weight": 3.5,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Caltranium Shield",
+      "name_pt": "Escudo de Caltranio",
+      "img": "item_caltranium_shield",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 6,
+      "type": "SHIELD",
+      "slot": "HAND_2",
+      "element": null,
+      "rarity": "RARE",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "Caltranium is moldable and resistant enough to make a great shield.",
+      "desc_pt": "O Caltranio é moldável e resistente o suficiente para formar um ótimo escudo.",
+      "classes": [],
+      "weight": 1.8,
+      "levelReq": 10
+    },
+    {
+      "name_en": "Endless Shield",
+      "name_pt": "Escudo Endless",
+      "img": "item_endless_shield",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 7,
+      "type": "SHIELD",
+      "slot": "HAND_2",
+      "element": null,
+      "rarity": "SPECIAL",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "STRENGTH",
+          "value": 2,
+          "decrease": false
+        },
+        {
+          "attr": "MAGIC",
+          "value": 2,
+          "decrease": false
+        }
+      ],
+      "desc_en": "It is so unique that its price is priceless. It is mystical and very resistant.",
+      "desc_pt": "É tão único que seu preço é quase inestimável. É místico e muito resistente.",
+      "classes": [],
+      "weight": 1.5,
+      "levelReq": 3
+    },
+    {
+      "name_en": "Blaze Shield",
+      "name_pt": "Escudo das Chamas",
+      "img": "item_blaze_shield",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 3,
+      "type": "SHIELD",
+      "slot": "HAND_2",
+      "element": null,
+      "rarity": "UNCOMMON",
+      "resistances": [
+        {
+          "element": "FIRE",
+          "value": 25
+        }
+      ],
+      "weaknesses": [
+        {
+          "element": "WATER",
+          "value": 25
+        }
+      ],
+      "modifiers": [],
+      "desc_en": "Forged by the gods of fire. (25% Fire resistance) (25% Water weakness)",
+      "desc_pt": "Forjado pelos deuses do fogo. (25% de resistência ao fogo) (25% de fraqueza à água)",
+      "classes": [],
+      "weight": 1.5,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Glacier Shield",
+      "name_pt": "Escudo Glacial",
+      "img": "item_glacier_shield",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 3,
+      "type": "SHIELD",
+      "slot": "HAND_2",
+      "element": null,
+      "rarity": "UNCOMMON",
+      "resistances": [
+        {
+          "element": "WATER",
+          "value": 25
+        }
+      ],
+      "weaknesses": [
+        {
+          "element": "FIRE",
+          "value": 25
+        }
+      ],
+      "modifiers": [],
+      "desc_en": "Forged by the gods of waters. (25% Water resistance) (25% Fire weakness)",
+      "desc_pt": "Forjado pelos deuses das águas. (25% de resistência à água) (25% de fraqueza ao fogo)",
+      "classes": [],
+      "weight": 1.5,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Darkness Shield",
+      "name_pt": "Escudo da Escuridão",
+      "img": "item_darkness_shield",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 3,
+      "type": "SHIELD",
+      "slot": "HAND_2",
+      "element": null,
+      "rarity": "RARE",
+      "resistances": [
+        {
+          "element": "LIGHT",
+          "value": 25
+        }
+      ],
+      "weaknesses": [
+        {
+          "element": "DARK",
+          "value": 25
+        }
+      ],
+      "modifiers": [],
+      "desc_en": "Forged by the devils. (25% Light resistance) (25% Dark weakness)",
+      "desc_pt": "Forjado pelos demônios. (25% de resistência à luz) (25% de fraqueza à escuridão)",
+      "classes": [],
+      "weight": 1.5,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Celestial Shield",
+      "name_pt": "Escudo Celestial",
+      "img": "item_celestial_shield",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 3,
+      "type": "SHIELD",
+      "slot": "HAND_2",
+      "element": null,
+      "rarity": "RARE",
+      "resistances": [
+        {
+          "element": "DARK",
+          "value": 25
+        }
+      ],
+      "weaknesses": [
+        {
+          "element": "LIGHT",
+          "value": 25
+        }
+      ],
+      "modifiers": [],
+      "desc_en": "Forged by the angels. (25% Dark resistance) (25% Light weakness)",
+      "desc_pt": "Forjado pelos anjos. (25% de resistência à escuridão) (25% de fraqueza à luz)",
+      "classes": [],
+      "weight": 1.5,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Nature Shield",
+      "name_pt": "Escudo da Natureza",
+      "img": "item_nature_shield",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 3,
+      "type": "SHIELD",
+      "slot": "HAND_2",
+      "element": null,
+      "rarity": "UNCOMMON",
+      "resistances": [
+        {
+          "element": "EARTH",
+          "value": 25
+        },
+        {
+          "element": "WIND",
+          "value": 25
+        }
+      ],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "Forged by the ancient druids. (25% Earth resistance) (25% Wind resistance)",
+      "desc_pt": "Forjado pelos antigos druidas. (25% de resistência à Terra) (25% de resistência ao Vento)",
+      "classes": [],
+      "weight": 1.5,
+      "levelReq": 0
+    }
+  ],
+  "armors": [
+    {
+      "name_en": "Peasant Shirt",
+      "name_pt": "Camisa Camponesa",
+      "img": "item_peasant_shirt",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 0,
+      "type": "ARMOR",
+      "slot": "CHEST",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "For everyday use, made with the simplest fabric.",
+      "desc_pt": "Para uso no dia a dia, feita com o tecido mais simples.",
+      "classes": [],
+      "weight": 0.2,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Leather Jacket",
+      "name_pt": "Jaqueta de Couro",
+      "img": "item_leather_jacket",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 1,
+      "type": "ARMOR",
+      "slot": "CHEST",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "Good against the cold, but not very good against hits.",
+      "desc_pt": "Boa contra o frio, mas não muito boa contra golpes.",
+      "classes": [],
+      "weight": 0.3,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Reinforced Leather Jacket",
+      "name_pt": "Jaqueta de Couro Reforçada",
+      "img": "item_reinforced_leather_jacket",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 2,
+      "type": "ARMOR",
+      "slot": "CHEST",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "An extra tier of wool and tissue makes this a good beginner armor.",
+      "desc_pt": "Uma camada extra de lã e tecido torna esta armadura uma boa armadura para iniciantes.",
+      "classes": [],
+      "weight": 0.6,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Iron Chest Plate",
+      "name_pt": "Peitoral de Ferro",
+      "img": "item_iron_chest_plate",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 2,
+      "type": "ARMOR",
+      "slot": "CHEST",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "Good armor despite not protecting the arms. It's heavier than it looks.",
+      "desc_pt": "Uma boa armadura apesar de não proteger os braços. É mais pesada do que parece.",
+      "classes": [],
+      "weight": 1.5,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Iron Armor",
+      "name_pt": "Armadura de Ferro",
+      "img": "item_iron_armor",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 3,
+      "type": "ARMOR",
+      "slot": "CHEST",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "The best value for money armor for soldiers. Molded with iron.",
+      "desc_pt": "A armadura de melhor custo benefício para soldados. Moldada com ferro.",
+      "classes": [],
+      "weight": 2.1,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Copper Armor",
+      "name_pt": "Armadura de Cobre",
+      "img": "item_copper_armor",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 4,
+      "type": "ARMOR",
+      "slot": "CHEST",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "Looks a bit fancy to wear a copper armor, but it is efficient and protective.",
+      "desc_pt": "Parece um pouco extravagante usar uma armadura de cobre, mas é eficiente e protetora.",
+      "classes": [
+        "WARRIOR",
+        "ARCHER",
+        "THIEF"
+      ],
+      "weight": 2.4,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Steel Armor",
+      "name_pt": "Armadura de Aço",
+      "img": "item_steel_armor",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 5,
+      "type": "ARMOR",
+      "slot": "CHEST",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "Robust, heavy and very protective.",
+      "desc_pt": "Robusta, pesada e muito protetora.",
+      "classes": [
+        "WARRIOR",
+        "ARCHER",
+        "THIEF"
+      ],
+      "weight": 3.3,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Golden Armor",
+      "name_pt": "Armadura de Ouro",
+      "img": "item_golden_armor",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 4,
+      "type": "ARMOR",
+      "slot": "CHEST",
+      "element": null,
+      "rarity": "UNCOMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "CHARISMA",
+          "value": 1,
+          "decrease": false
+        }
+      ],
+      "desc_en": "It is extremely extravagant to use gold on battle armor and will certainly attract everyone's attention.",
+      "desc_pt": "Extremamente extravagante usar ouro em uma armadura de batalha e certamente atrirá a atenção de todos.",
+      "classes": [
+        "WARRIOR",
+        "ARCHER",
+        "THIEF"
+      ],
+      "weight": 2.4,
+      "levelReq": 7
+    },
+    {
+      "name_en": "Caltranium Armor",
+      "name_pt": "Armadura de Caltranio",
+      "img": "item_caltranium_armor",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 6,
+      "type": "ARMOR",
+      "slot": "CHEST",
+      "element": null,
+      "rarity": "RARE",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "The rarest and most resistant metal makes this armor one of the best in the world.",
+      "desc_pt": "O metal mais raro e resistente faz desta armadura uma das melhores do mundo.",
+      "classes": [
+        "WARRIOR",
+        "ARCHER",
+        "THIEF"
+      ],
+      "weight": 2.5,
+      "levelReq": 10
+    },
+    {
+      "name_en": "Supreme Chest Plate",
+      "name_pt": "Peitoral Supremo",
+      "img": "item_supreme_chest_plate",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 4,
+      "type": "ARMOR",
+      "slot": "CHEST",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "STRENGTH",
+          "value": 1,
+          "decrease": false
+        },
+        {
+          "attr": "MAGIC",
+          "value": 1,
+          "decrease": false
+        },
+        {
+          "attr": "AGILITY",
+          "value": 1,
+          "decrease": false
+        }
+      ],
+      "desc_en": "It is said that only the oldest blacksmiths knew how to make this perfection of armor that mixes the best metals.",
+      "desc_pt": "É dito que somente os mais antigos ferreiros sabiam como fazer esta perfeição de armadura que mistura os melhores metais.",
+      "classes": [
+        "WARRIOR",
+        "ARCHER",
+        "THIEF"
+      ],
+      "weight": 2.5,
+      "levelReq": 3
+    },
+    {
+      "name_en": "Endless Armor",
+      "name_pt": "Armadura Endless",
+      "img": "item_endless_armor",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 6,
+      "type": "ARMOR",
+      "slot": "CHEST",
+      "element": null,
+      "rarity": "SPECIAL",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "HP_MODIFIER",
+          "value": 4,
+          "decrease": false
+        },
+        {
+          "attr": "MP_MODIFIER",
+          "value": 4,
+          "decrease": false
+        },
+        {
+          "attr": "AGILITY",
+          "value": 3,
+          "decrease": false
+        },
+        {
+          "attr": "LUCK",
+          "value": 3,
+          "decrease": false
+        }
+      ],
+      "desc_en": "It is so unique that its price is priceless. It is mystical and very resistant.",
+      "desc_pt": "É tão única que seu preço é quase inestimável. É mística e muito resistente.",
+      "classes": [
+        "WARRIOR",
+        "ARCHER",
+        "THIEF"
+      ],
+      "weight": 3,
+      "levelReq": 5
+    },
+    {
+      "name_en": "Spellcrafter Tunic",
+      "name_pt": "Túnica do Feiticeiro",
+      "img": "item_spellcrafter_tunic",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 2,
+      "type": "ARMOR",
+      "slot": "CHEST",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "MAGIC",
+          "value": 1,
+          "decrease": false
+        }
+      ],
+      "desc_en": "A self-respecting sorcerer will wear this silk tunic in his days as a beginner.",
+      "desc_pt": "Um feiticeiro que se preze irá usar esta túnica de seda nos seus dias como iniciante.",
+      "classes": [
+        "DRUID",
+        "SORCERER"
+      ],
+      "weight": 0.8,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Heavy Robe",
+      "name_pt": "Manto Pesado",
+      "img": "item_heavy_robe",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 3,
+      "type": "ARMOR",
+      "slot": "CHEST",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "A cloak with several layers that help protect.",
+      "desc_pt": "Um manto com diversas camadas que ajudam a proteger.",
+      "classes": [
+        "DRUID",
+        "SORCERER"
+      ],
+      "weight": 2.2,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Ornate Cloak",
+      "name_pt": "Manto Ornamentado",
+      "img": "item_ornate_cloak",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 3,
+      "type": "ARMOR",
+      "slot": "CHEST",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "MAGIC",
+          "value": 2,
+          "decrease": false
+        },
+        {
+          "attr": "CHARISMA",
+          "value": 1,
+          "decrease": false
+        }
+      ],
+      "desc_en": "The fabric and jewels of this robe seem to have a mystical aura.",
+      "desc_pt": "O tecido e as jóias deste manto parecem ter uma aura mística.",
+      "classes": [
+        "DRUID",
+        "SORCERER"
+      ],
+      "weight": 1,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Cape of Fortitude",
+      "name_pt": "Capa da Resistência",
+      "img": "item_cape_of_fortitude",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 3,
+      "type": "ARMOR",
+      "slot": "CHEST",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "HP_MODIFIER",
+          "value": 2,
+          "decrease": false
+        },
+        {
+          "attr": "MP_MODIFIER",
+          "value": 1,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Made with special and magical fabrics. Provides mystical protection.",
+      "desc_pt": "Elaborada com tecidos especiais e mágicos. Fornece uma proteção mística.",
+      "classes": [
+        "DRUID",
+        "SORCERER"
+      ],
+      "weight": 1,
+      "levelReq": 5
+    },
+    {
+      "name_en": "Magical Light Plate",
+      "name_pt": "Peitoral Leve Mágico",
+      "img": "item_magical_light_plate",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 4,
+      "type": "ARMOR",
+      "slot": "CHEST",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "MP_MODIFIER",
+          "value": 2,
+          "decrease": false
+        },
+        {
+          "attr": "MAGIC",
+          "value": 3,
+          "decrease": false
+        },
+        {
+          "attr": "AGILITY",
+          "value": 2,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Light armor with a magical aura. Made with Caltranium and jewels.",
+      "desc_pt": "Uma armadura leve com aura mágica. Feita com Caltranio e jóias.",
+      "classes": [
+        "DRUID",
+        "SORCERER"
+      ],
+      "weight": 1.5,
+      "levelReq": 8
+    },
+    {
+      "name_en": "Endless Cloak",
+      "name_pt": "Túnica Endless",
+      "img": "item_endless_cloak",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 5,
+      "type": "ARMOR",
+      "slot": "CHEST",
+      "element": null,
+      "rarity": "SPECIAL",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "HP_MODIFIER",
+          "value": 3,
+          "decrease": false
+        },
+        {
+          "attr": "MP_MODIFIER",
+          "value": 5,
+          "decrease": false
+        },
+        {
+          "attr": "CHARISMA",
+          "value": 5,
+          "decrease": false
+        },
+        {
+          "attr": "LUCK",
+          "value": 3,
+          "decrease": false
+        }
+      ],
+      "desc_en": "It is so unique that its price is priceless. It is mystical and very resistant.",
+      "desc_pt": "É tão única que seu preço é quase inestimável. É mística e muito resistente.",
+      "classes": [
+        "DRUID",
+        "SORCERER"
+      ],
+      "weight": 1.8,
+      "levelReq": 3
+    },
+    {
+      "name_en": "Shadow Cloak",
+      "name_pt": "Manto Sombrio",
+      "img": "item_shadow_cloak",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 2,
+      "type": "ARMOR",
+      "slot": "CHEST",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "AGILITY",
+          "value": 2,
+          "decrease": false
+        }
+      ],
+      "desc_en": "dark and mysterious cloak. It emanates an obscure magic.",
+      "desc_pt": "Manto negro e misterioso. Emana uma magia sombria.",
+      "classes": [
+        "THIEF",
+        "SORCERER"
+      ],
+      "weight": 0.8,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Robe of Divinity",
+      "name_pt": "Manto da Divindade",
+      "img": "item_robe_of_divinity",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 2,
+      "type": "ARMOR",
+      "slot": "CHEST",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [
+        {
+          "element": "LIGHT",
+          "value": 25
+        }
+      ],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "ALIGNMENT",
+          "value": 3,
+          "decrease": false
+        },
+        {
+          "attr": "AGILITY",
+          "value": 1,
+          "decrease": false
+        },
+        {
+          "attr": "CHARISMA",
+          "value": 1,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Clear and shiny mantle. Emanates pure and clean magic. (25% Light resistance)",
+      "desc_pt": "Manto claro e brilhoso. Emana uma magia pura e limpa. (25% resistência à Luz)",
+      "classes": [
+        "ARCHER",
+        "DRUID"
+      ],
+      "weight": 0.6,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Breastplate of Fire",
+      "name_pt": "Peitoral do Fogo",
+      "img": "item_breastplate_of_fire",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 2,
+      "type": "ARMOR",
+      "slot": "CHEST",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [
+        {
+          "element": "FIRE",
+          "value": 30
+        }
+      ],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "Magically produced to protect against fire. (30% Fire resistance)",
+      "desc_pt": "Produzida magicamente para proteger contra o fogo. (30% resistência ao Fogo)",
+      "classes": [],
+      "weight": 1.5,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Breastplate of Shadows",
+      "name_pt": "Peitoral das Sombras",
+      "img": "item_breastplate_of_shadows",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 2,
+      "type": "ARMOR",
+      "slot": "CHEST",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [
+        {
+          "element": "DARK",
+          "value": 30
+        }
+      ],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "Magically produced to protect against dark. (30% Dark resistance)",
+      "desc_pt": "Produzida magicamente para proteger contra escuro. (30% resistência a Escuridão)",
+      "classes": [],
+      "weight": 1.5,
+      "levelReq": 0
+    }
+  ],
+  "helmets": [
+    {
+      "name_en": "Leather Cap",
+      "name_pt": "Boina de Couro",
+      "img": "item_leather_cap",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 1,
+      "type": "HELMET",
+      "slot": "HEAD",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "A simple piece of clothing made of leather to wear in the head.",
+      "desc_pt": "Uma peça simples de roupa feita de couro para usar na cabeça.",
+      "classes": [],
+      "weight": 0.2,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Iron Helmet",
+      "name_pt": "Elmo de Ferro",
+      "img": "item_iron_helmet",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 2,
+      "type": "HELMET",
+      "slot": "HEAD",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "If you want a cheap and efficient head protection, this is the helmet for you.",
+      "desc_pt": "Se você quer uma proteção de cabeça barata e eficiente, este é o capacete para você.",
+      "classes": [],
+      "weight": 0.6,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Copper Helmet",
+      "name_pt": "Elmo de Cobre",
+      "img": "item_copper_helmet",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 3,
+      "type": "HELMET",
+      "slot": "HEAD",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "The copper color give to this well shaped helmet a nice appearance.",
+      "desc_pt": "A cor cobre dá a este capacete bem moldado uma aparência agradável.",
+      "classes": [],
+      "weight": 0.5,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Steel Helmet",
+      "name_pt": "Elmo de Aço",
+      "img": "item_steel_helmet",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 4,
+      "type": "HELMET",
+      "slot": "HEAD",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "Not comfortable to put this in your head, it is heavy and limit a little bit the movement, but for sure it protects well.",
+      "desc_pt": "Não é confortável colocar isso na cabeça, é pesado e limita um pouco os movimentos, mas com certeza protege bem.",
+      "classes": [],
+      "weight": 0.7,
+      "levelReq": 6
+    },
+    {
+      "name_en": "Golden Helmet",
+      "name_pt": "Elmo de Oro",
+      "img": "item_golden_helmet",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 3,
+      "type": "HELMET",
+      "slot": "HEAD",
+      "element": null,
+      "rarity": "UNCOMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "CHARISMA",
+          "value": 1,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Who is fancy enough to wear a helmet made of gold? Well, it protects but gets all the attention.",
+      "desc_pt": "Quem é chique o suficiente para usar um capacete feito de ouro? Bem, ele protege, mas recebe toda a atenção.",
+      "classes": [],
+      "weight": 0.4,
+      "levelReq": 5
+    },
+    {
+      "name_en": "Caltranium Helmet",
+      "name_pt": "Elmo de Caltranio",
+      "img": "item_caltranium_helmet",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 5,
+      "type": "HELMET",
+      "slot": "HEAD",
+      "element": null,
+      "rarity": "RARE",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "Hard enough to save your head from a direct cut or smash. Very well shaped.",
+      "desc_pt": "Duro o bastante para salvar sua cabeça de um corte direto ou esmagamento. Muito bem moldado.",
+      "classes": [],
+      "weight": 0.7,
+      "levelReq": 10
+    },
+    {
+      "name_en": "Endless Helmet",
+      "name_pt": "Elmo Endless",
+      "img": "item_endless_helmet",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 6,
+      "type": "HELMET",
+      "slot": "HEAD",
+      "element": null,
+      "rarity": "SPECIAL",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "CHARISMA",
+          "value": 1,
+          "decrease": false
+        },
+        {
+          "attr": "LUCK",
+          "value": 2,
+          "decrease": false
+        }
+      ],
+      "desc_en": "It is so unique that its price is priceless. It is mystical and very resistant.",
+      "desc_pt": "É tão único que seu preço é quase inestimável. É místico e muito resistente.",
+      "classes": [],
+      "weight": 0.5,
+      "levelReq": 3
+    },
+    {
+      "name_en": "Helm of Focus",
+      "name_pt": "Capacete do Foco",
+      "img": "item_helm_of_focus",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 6,
+      "defense": 2,
+      "type": "HELMET",
+      "slot": "HEAD",
+      "element": null,
+      "rarity": "UNCOMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "CRITICAL_CHANCE",
+          "value": 6,
+          "decrease": false
+        }
+      ],
+      "desc_en": "The shape is perfect for the head and its mystical power grants a mental bonus.",
+      "desc_pt": "O formato é perfeito para a cabeça e seu poder místico concede um bônus mental.",
+      "classes": [],
+      "weight": 0.5,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Hood of Magician",
+      "name_pt": "Capuz dos Magos",
+      "img": "item_hood_of_magician",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 2,
+      "type": "HELMET",
+      "slot": "HEAD",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "MAGIC",
+          "value": 1,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Sewn with good threads and thick fabrics. It has some magical force.",
+      "desc_pt": "Costurado com bons fios e tecidos grossos. Tem alguma força mágica.",
+      "classes": [
+        "SORCERER",
+        "DRUID"
+      ],
+      "weight": 0.2,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Hat of Wise",
+      "name_pt": "Chapéu do Sábio",
+      "img": "item_hat_of_wise",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 1,
+      "type": "HELMET",
+      "slot": "HEAD",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "MAGIC",
+          "value": 2,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Made by experienced magicians of the wizards guild. It has its charm and magic.",
+      "desc_pt": "Feito por mágicos experientes da guilda dos bruxos. Tem seu charme e magia.",
+      "classes": [
+        "SORCERER",
+        "DRUID"
+      ],
+      "weight": 0.2,
+      "levelReq": 3
+    },
+    {
+      "name_en": "Supreme Helm",
+      "name_pt": "Capacete Supremo",
+      "img": "item_supreme_helm",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 4,
+      "type": "HELMET",
+      "slot": "HEAD",
+      "element": null,
+      "rarity": "RARE",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "STRENGTH",
+          "value": 2,
+          "decrease": false
+        },
+        {
+          "attr": "MAGIC",
+          "value": 2,
+          "decrease": false
+        }
+      ],
+      "desc_en": "The majority of the people can't say what was used to forge this helmet. It is special and unique.",
+      "desc_pt": "A maioria das pessoas não sabem dizer o que foi usado para forjar este capacete. Ele é especial e único.",
+      "classes": [],
+      "weight": 0.4,
+      "levelReq": 7
+    },
+    {
+      "name_en": "Hood of Fortitude",
+      "name_pt": "Capuz da Resistência",
+      "img": "item_hood_of_fortitude",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 2,
+      "type": "HELMET",
+      "slot": "HEAD",
+      "element": null,
+      "rarity": "UNCOMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "HP_MODIFIER",
+          "value": 3,
+          "decrease": false
+        }
+      ],
+      "desc_en": "A special and mystic aura can be felt around this very well sewn hood.",
+      "desc_pt": "Uma aura especial e mística pode ser sentida em torno deste capuz muito bem costurado.",
+      "classes": [
+        "SORCERER",
+        "DRUID",
+        "ARCHER",
+        "THIEF"
+      ],
+      "weight": 0.2,
+      "levelReq": 3
+    }
+  ],
+  "boots": [
+    {
+      "name_en": "Leather Boots",
+      "name_pt": "Botas de Couro",
+      "img": "item_leather_boots",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 1,
+      "type": "BOOTS",
+      "slot": "FEET",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "Simple. Protects, but probably causes stinky feet.",
+      "desc_pt": "Simples. Protege, mas provavelmente causa chulé.",
+      "classes": [],
+      "weight": 0.3,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Iron Boots",
+      "name_pt": "Botas de Ferro",
+      "img": "item_iron_boots",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 2,
+      "type": "BOOTS",
+      "slot": "FEET",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "You can't imagine walking everywhere wearing these heavy iron boots.",
+      "desc_pt": "Você não consegue imaginar andar por aí usando essas pesadas botas de ferro.",
+      "classes": [],
+      "weight": 0.7,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Copper Boots",
+      "name_pt": "Botas de Cobre",
+      "img": "item_copper_boots",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 3,
+      "type": "BOOTS",
+      "slot": "FEET",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "Its interior is filled with cloth and the exterior made of copper to reinforce the protection.",
+      "desc_pt": "Seu interior é preenchido com tecido e o exterior feito de cobre para reforçar a proteção.",
+      "classes": [],
+      "weight": 0.7,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Steel Boots",
+      "name_pt": "Botas de Aço",
+      "img": "item_steel_boots",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 4,
+      "type": "BOOTS",
+      "slot": "FEET",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "Heavy and very efficient protection for your feet.",
+      "desc_pt": "Proteção pesada e muito eficiente para seus pés.",
+      "classes": [
+        "WARRIOR",
+        "ARCHER",
+        "THIEF"
+      ],
+      "weight": 1,
+      "levelReq": 5
+    },
+    {
+      "name_en": "Golden Boots",
+      "name_pt": "Botas de Ouro",
+      "img": "item_golden_boots",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 3,
+      "type": "BOOTS",
+      "slot": "FEET",
+      "element": null,
+      "rarity": "UNCOMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "CHARISMA",
+          "value": 1,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Really, who wears gold in the feet?",
+      "desc_pt": "Sério, quem usa ouro nos pés?",
+      "classes": [],
+      "weight": 0.5,
+      "levelReq": 5
+    },
+    {
+      "name_en": "Caltranium Boots",
+      "name_pt": "Botas de Caltranio",
+      "img": "item_caltranium_boots",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 5,
+      "type": "BOOTS",
+      "slot": "FEET",
+      "element": null,
+      "rarity": "RARE",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "The perfect metal for your protection. Best shape for feet protection.",
+      "desc_pt": "O metal perfeito para sua proteção. Melhor formato para proteção dos pés.",
+      "classes": [],
+      "weight": 0.9,
+      "levelReq": 10
+    },
+    {
+      "name_en": "Endless Boots",
+      "name_pt": "Botas Endless",
+      "img": "item_endless_boots",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 6,
+      "type": "BOOTS",
+      "slot": "FEET",
+      "element": null,
+      "rarity": "SPECIAL",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "AGILITY",
+          "value": 2,
+          "decrease": false
+        },
+        {
+          "attr": "LUCK",
+          "value": 3,
+          "decrease": false
+        }
+      ],
+      "desc_en": "It is so unique that its price is priceless. It is mystical and very resistant.",
+      "desc_pt": "É tão único que seu preço é quase inestimável. É místico e muito resistente.",
+      "classes": [],
+      "weight": 0.9,
+      "levelReq": 3
+    },
+    {
+      "name_en": "Supreme Boots",
+      "name_pt": "Botas Supremas",
+      "img": "item_supreme_boots",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 4,
+      "type": "BOOTS",
+      "slot": "FEET",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "STRENGTH",
+          "value": 1,
+          "decrease": false
+        },
+        {
+          "attr": "MAGIC",
+          "value": 1,
+          "decrease": false
+        },
+        {
+          "attr": "AGILITY",
+          "value": 1,
+          "decrease": false
+        }
+      ],
+      "desc_en": "It is soft to wear and its magical force will grant defense and power.",
+      "desc_pt": "É macio de usar e sua força mágica concederá defesa e poder.",
+      "classes": [],
+      "weight": 0.9,
+      "levelReq": 5
+    },
+    {
+      "name_en": "Shoes of Agile",
+      "name_pt": "Sapatos da Agilidade",
+      "img": "item_shoes_of_agile",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 2,
+      "type": "BOOTS",
+      "slot": "FEET",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "AGILITY",
+          "value": 2,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Magical leather and really light materials make this shoes the perfect for easy motion.",
+      "desc_pt": "Couro mágico e materiais realmente leves fazem deste calçado o calçado perfeito para movimentos fáceis.",
+      "classes": [],
+      "weight": 0.2,
+      "levelReq": 3
+    }
+  ],
+  "legs": [
+    {
+      "name_en": "Peasant Trousers",
+      "name_pt": "Calça Camponesa",
+      "img": "item_peasant_trousers",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 0,
+      "type": "LEGS",
+      "slot": "LEGS",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "For everyday use, made with the simplest fabric.",
+      "desc_pt": "Para uso no dia a dia, feita com o tecido mais simples.",
+      "classes": [],
+      "weight": 0.2,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Reinforced Trousers",
+      "name_pt": "Calça Reforçada",
+      "img": "item_reinforced_trousers",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 1,
+      "type": "LEGS",
+      "slot": "LEGS",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "A simple pair of pants with leather reinforcements.",
+      "desc_pt": "Uma calça simples com reforços de couro.",
+      "classes": [],
+      "weight": 0.4,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Iron Legs Armor",
+      "name_pt": "Calças de Ferro",
+      "img": "item_iron_legs_armor",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 2,
+      "type": "LEGS",
+      "slot": "LEGS",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "Made of leather and reinforced with iron plates, ideal for soldiers.",
+      "desc_pt": "Fabricada com couro e reforçada com chapas de ferro, ideal para soldados.",
+      "classes": [],
+      "weight": 1.3,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Copper Legs Armor",
+      "name_pt": "Calças de Cobre",
+      "img": "item_copper_legs_armor",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 3,
+      "type": "LEGS",
+      "slot": "LEGS",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "Copper plates are more efficient than iron and protect these pants well.",
+      "desc_pt": "As chapas de cobre são mais eficientes que o ferro e protegem bem nestas calças.",
+      "classes": [
+        "WARRIOR",
+        "ARCHER",
+        "THIEF"
+      ],
+      "weight": 1.5,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Steel Legs Armor",
+      "name_pt": "Armadura de Pernas de Aço",
+      "img": "item_steel_legs_armor",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 4,
+      "type": "LEGS",
+      "slot": "LEGS",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "Heavy leg armor made from strong steel plates.",
+      "desc_pt": "Uma pesada armadura para as pernas feita com placas de aço resistentes.",
+      "classes": [
+        "WARRIOR",
+        "ARCHER",
+        "THIEF"
+      ],
+      "weight": 2,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Golden Trousers",
+      "name_pt": "Calças de Ouro",
+      "img": "item_golden_trousers",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 3,
+      "type": "LEGS",
+      "slot": "LEGS",
+      "element": null,
+      "rarity": "UNCOMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "CHARISMA",
+          "value": 1,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Really brilliant and extravagant to wear pants like this. Protects and attracts attention.",
+      "desc_pt": "Realmente brilhante e extravagante usar calças como esta. Protege e chama atenção.",
+      "classes": [],
+      "weight": 1.8,
+      "levelReq": 5
+    },
+    {
+      "name_en": "Caltranium Legs",
+      "name_pt": "Calças de Caltranio",
+      "img": "item_caltranium_legs",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 5,
+      "type": "LEGS",
+      "slot": "LEGS",
+      "element": null,
+      "rarity": "RARE",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "The rarest and most resistant metal makes this protection one of the best in the world.",
+      "desc_pt": "O metal mais raro e resistente faz desta proteção uma das melhores do mundo.",
+      "classes": [
+        "WARRIOR",
+        "ARCHER",
+        "THIEF"
+      ],
+      "weight": 2.8,
+      "levelReq": 10
+    },
+    {
+      "name_en": "Endless Legs Armor",
+      "name_pt": "Armadura Pernas Endless",
+      "img": "item_endless_legs_armor",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 6,
+      "type": "LEGS",
+      "slot": "LEGS",
+      "element": null,
+      "rarity": "SPECIAL",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "STRENGTH",
+          "value": 2,
+          "decrease": false
+        },
+        {
+          "attr": "MAGIC",
+          "value": 2,
+          "decrease": false
+        },
+        {
+          "attr": "AGILITY",
+          "value": 2,
+          "decrease": false
+        },
+        {
+          "attr": "LUCK",
+          "value": 2,
+          "decrease": false
+        }
+      ],
+      "desc_en": "It is so unique that it is priceless. It is mystical and very resistant.",
+      "desc_pt": "É tão única que seu preço é quase inestimável. É mística e muito resistente.",
+      "classes": [],
+      "weight": 2,
+      "levelReq": 3
+    },
+    {
+      "name_en": "Trousers of Agile",
+      "name_pt": "Calças da Agilidade",
+      "img": "item_trousers_of_agile",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 3,
+      "type": "LEGS",
+      "slot": "LEGS",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "AGILITY",
+          "value": 3,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Very light and smooth. Perfectly well crafted to protect and allow for supple movement.",
+      "desc_pt": "Muito leve e suave. Perfeitamente bem elaborada para proteger e permitir movimentos maleáveis.",
+      "classes": [
+        "ARCHER",
+        "THIEF"
+      ],
+      "weight": 0.5,
+      "levelReq": 0
+    }
+  ],
+  "jewels": [
+    {
+      "name_en": "Necklace of Focus",
+      "name_pt": "Colar do Foco",
+      "img": "item_necklace_of_focus",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 4,
+      "defense": 0,
+      "type": "JEWEL",
+      "slot": "JEWEL",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "A necklace that emits a calm aura to the mind.",
+      "desc_pt": "Um colar que emite uma aura calma para a mente.",
+      "classes": [],
+      "weight": 0.1,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Necklace of Flames",
+      "name_pt": "Colar das Chamas",
+      "img": "item_necklace_of_flames",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 0,
+      "type": "JEWEL",
+      "slot": "JEWEL",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [
+        {
+          "element": "FIRE",
+          "value": 15
+        }
+      ],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "A piece of jewelry that emits an orange light. (15% Fire resistance)",
+      "desc_pt": "Uma peça de joalheria que emite uma luz laranja. (15% de resistência ao fogo)",
+      "classes": [],
+      "weight": 0.1,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Necklace of Ocean",
+      "name_pt": "Colar do Oceano",
+      "img": "item_necklace_of_ocean",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 0,
+      "type": "JEWEL",
+      "slot": "JEWEL",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [
+        {
+          "element": "WATER",
+          "value": 15
+        }
+      ],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "A piece of jewelry that emits a cyan light. (15% Water resistance)",
+      "desc_pt": "Uma peça de joalheria que emite uma luz ciana. (15% de resistência à água)",
+      "classes": [],
+      "weight": 0.1,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Nature Necklace",
+      "name_pt": "Colar da Natureza",
+      "img": "item_nature_necklace",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 0,
+      "type": "JEWEL",
+      "slot": "JEWEL",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [
+        {
+          "element": "WIND",
+          "value": 15
+        },
+        {
+          "element": "EARTH",
+          "value": 15
+        }
+      ],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "A piece of jewelry that emits a green light. (15% Wind resistance) (15% Earth resistance)",
+      "desc_pt": "Uma peça de joalheria que emite uma luz verde. (15% de resistência ao vento) (15% de resistência à terra)",
+      "classes": [],
+      "weight": 0.1,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Celestial Amulet",
+      "name_pt": "Amuleto Celestial",
+      "img": "item_celestial_amulet",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 0,
+      "type": "JEWEL",
+      "slot": "JEWEL",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [
+        {
+          "element": "DARK",
+          "value": 15
+        }
+      ],
+      "weaknesses": [
+        {
+          "element": "LIGHT",
+          "value": 15
+        }
+      ],
+      "modifiers": [],
+      "desc_en": "Amulet of angels. (15% Dark resistance) (15% Light weakness)",
+      "desc_pt": "Amuleto dos anjos. (15% de resistência à escuridão) (15% de fraqueza à luz)",
+      "classes": [],
+      "weight": 0.1,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Darkness Amulet",
+      "name_pt": "Amuleto Sombrio",
+      "img": "item_darkness_amulet",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 0,
+      "type": "JEWEL",
+      "slot": "JEWEL",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [
+        {
+          "element": "LIGHT",
+          "value": 15
+        }
+      ],
+      "weaknesses": [
+        {
+          "element": "DARK",
+          "value": 15
+        }
+      ],
+      "modifiers": [],
+      "desc_en": "Amulet of devils. (15% Light resistance) (15% Dark weakness)",
+      "desc_pt": "Amuleto dos demônios. (15% de resistência à luz) (15% de fraqueza à escuridão)",
+      "classes": [],
+      "weight": 0.1,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Amulet of Fortitude",
+      "name_pt": "Amuleto da Resistência",
+      "img": "item_amulet_of_fortitude",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 0,
+      "type": "JEWEL",
+      "slot": "JEWEL",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "HP_MODIFIER",
+          "value": 2,
+          "decrease": false
+        },
+        {
+          "attr": "MP_MODIFIER",
+          "value": 2,
+          "decrease": false
+        }
+      ],
+      "desc_en": "A mystic piece of jewelry that emits vitality.",
+      "desc_pt": "Uma joia mística que emite vitalidade.",
+      "classes": [],
+      "weight": 0.1,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Ring of Power",
+      "name_pt": "Anel da Força",
+      "img": "item_ring_of_power",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 0,
+      "type": "JEWEL",
+      "slot": "JEWEL",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "STRENGTH",
+          "value": 2,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Forge by ancient blacksmiths to provide power.",
+      "desc_pt": "Forjada por antigos ferreiros para fornecer energia.",
+      "classes": [],
+      "weight": 0.1,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Ring of Spellcrafters",
+      "name_pt": "Anel dos Feiticeiros",
+      "img": "item_ring_of_spellcrafters",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 0,
+      "type": "JEWEL",
+      "slot": "JEWEL",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "MAGIC",
+          "value": 2,
+          "decrease": false
+        },
+        {
+          "attr": "MP_MODIFIER",
+          "value": 2,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Forge by ancient sorcerers to provide magical power.",
+      "desc_pt": "Forjada por antigos feiticeiros para fornecer poder mágico.",
+      "classes": [],
+      "weight": 0.1,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Endless Ring",
+      "name_pt": "Anel Endless",
+      "img": "item_endless_ring",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 0,
+      "type": "JEWEL",
+      "slot": "JEWEL",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "HP_MODIFIER",
+          "value": 2,
+          "decrease": false
+        },
+        {
+          "attr": "MP_MODIFIER",
+          "value": 2,
+          "decrease": false
+        },
+        {
+          "attr": "LUCK",
+          "value": 1,
+          "decrease": false
+        },
+        {
+          "attr": "STRENGTH",
+          "value": 1,
+          "decrease": false
+        },
+        {
+          "attr": "MAGIC",
+          "value": 1,
+          "decrease": false
+        }
+      ],
+      "desc_en": "It is so unique that its price is priceless. It is mystical and very powerful.",
+      "desc_pt": "É tão único que seu preço é quase inestimável. É místico e muito poderoso.",
+      "classes": [],
+      "weight": 0.1,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Supreme Necklace",
+      "name_pt": "Jóia Suprema",
+      "img": "item_supreme_necklace",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 1,
+      "type": "JEWEL",
+      "slot": "JEWEL",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "LUCK",
+          "value": 1,
+          "decrease": false
+        },
+        {
+          "attr": "AGILITY",
+          "value": 1,
+          "decrease": false
+        }
+      ],
+      "desc_en": "The most noble gems mixed with magical powers made this a special piece of jewelry.",
+      "desc_pt": "As pedras preciosas mais nobres misturadas com poderes mágicos fizeram desta uma joia especial.",
+      "classes": [],
+      "weight": 0.1,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Ring of Crafter",
+      "name_pt": "Anel do Artesão",
+      "img": "item_ring_of_crafter",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 0,
+      "type": "JEWEL",
+      "slot": "JEWEL",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "CRAFT",
+          "value": 100,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Notable crafters wear this special ring. Increase 10 levels of Craft.",
+      "desc_pt": "Artesãos notáveis usam este anel especial. Aumenta 10 níveis de Artesão.",
+      "classes": [],
+      "weight": 0.1,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Ring of Alchemist",
+      "name_pt": "Anel do Alquimista",
+      "img": "item_ring_of_alchemist",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 0,
+      "type": "JEWEL",
+      "slot": "JEWEL",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "ALCHEMY",
+          "value": 100,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Notable alchemists wear this special ring. Increase 10 levels of alchemy.",
+      "desc_pt": "Alquimistas notáveis usam este anel especial. Aumenta 10 níveis de Alquimia.",
+      "classes": [],
+      "weight": 0.1,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Jewel of Righteous",
+      "name_pt": "Jóia dos Justos",
+      "img": "item_jewel_of_righteous",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 0,
+      "type": "JEWEL",
+      "slot": "JEWEL",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "ALIGNMENT",
+          "value": 10,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Only the honored people have this jewel.",
+      "desc_pt": "Somente pessoas honradas possuem esta joia.",
+      "classes": [],
+      "weight": 0.1,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Jewel of Unjust",
+      "name_pt": "Jóia dos Injustos",
+      "img": "item_jewel_of_unjust",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 0,
+      "type": "JEWEL",
+      "slot": "JEWEL",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "ALIGNMENT",
+          "value": 10,
+          "decrease": true
+        }
+      ],
+      "desc_en": "Only the bad character people have this jewel.",
+      "desc_pt": "Somente pessoas de mau caráter possuem esta joia.",
+      "classes": [],
+      "weight": 0.1,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Leather Bag",
+      "name_pt": "Saco de Couro",
+      "img": "item_leather_bag",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 0,
+      "type": "BAG",
+      "slot": "BAG",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "Allows you to carry 3kg (6.6lbs) more.",
+      "desc_pt": "Permite carregar 3kg a mais.",
+      "classes": [],
+      "weight": 0.1,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Great Leather Bag",
+      "name_pt": "Bolsa de Couro",
+      "img": "item_great_leather_bag",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 0,
+      "type": "BAG",
+      "slot": "BAG",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "Allows you to carry 6kg (13.2lbs) more.",
+      "desc_pt": "Permite carregar 6kg a mais.",
+      "classes": [],
+      "weight": 0.3,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Magical Backpack",
+      "name_pt": "Mochila Mágica",
+      "img": "item_magical_backpack",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 0,
+      "type": "BAG",
+      "slot": "BAG",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "Allows you to carry 12kg (26.4lbs) more.",
+      "desc_pt": "Permite carregar 12kg a mais.",
+      "classes": [],
+      "weight": 0.3,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Endless Backpack",
+      "name_pt": "Mochila Endless",
+      "img": "item_endless_backpack",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 0,
+      "type": "BAG",
+      "slot": "BAG",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "Allows you to carry 20kg (44lbs) more.",
+      "desc_pt": "Permite carregar 20kg a mais.",
+      "classes": [],
+      "weight": 0.3,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Cursed Amulet",
+      "name_pt": "Amuleto Amaldiçoado",
+      "img": "item_cursed_amulet",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 0,
+      "type": "JEWEL",
+      "slot": "JEWEL",
+      "element": null,
+      "rarity": "SPECIAL",
+      "resistances": [
+        {
+          "element": "DARK",
+          "value": 25
+        }
+      ],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "MAGIC",
+          "value": 1,
+          "decrease": false
+        },
+        {
+          "attr": "STRENGTH",
+          "value": 1,
+          "decrease": false
+        }
+      ],
+      "desc_en": "A cursed amulet glowing with dark energy. (25% Dark resistance)",
+      "desc_pt": "Um amuleto amaldiçoado brilhando com energia sombria. (25% resistência Escuridão)",
+      "classes": [],
+      "weight": 0.3,
+      "levelReq": 0
+    }
+  ],
+  "other": []
+}

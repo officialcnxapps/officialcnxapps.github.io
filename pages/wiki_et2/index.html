@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wiki — Endless Tales 2 | CNX Apps</title>
+  <meta name="description" content="Wiki completa do Endless Tales 2: criaturas, cidades, itens, crafts e mais." />
+  <meta name="theme-color" content="#07070f" />
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Raleway:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../../css/cnx_new.css" />
+  <style>
+    .sec-divider-et2 { background: linear-gradient(90deg, transparent, var(--et2), transparent); }
+    .wiki-hero { padding: 7rem 1.5rem 4rem; text-align: center; background: var(--bg-medium); }
+    .wiki-hero h1 { font-family: 'Cinzel', serif; font-size: clamp(2rem, 5vw, 3.5rem); color: var(--text-primary); margin-bottom: 1rem; }
+    .wiki-hero p { color: var(--text-secondary); max-width: 560px; margin: 0 auto; line-height: 1.8; }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <a href="../../index.html" class="nav-brand">
+      <img src="../../img/logo-white.png" alt="CNX Apps" />
+      <span class="nav-brand-name">CNX Apps</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../endless_tales_2.html" data-i18n="nav.back_to_game">← Voltar ao Jogo</a></li>
+      <li><a href="criaturas.html" data-i18n="nav.creatures">Criaturas</a></li>
+      <li><a href="cidades.html" data-i18n="nav.cities">Cidades</a></li>
+      <li><a href="itens.html" data-i18n="nav.items">Itens</a></li>
+      <li><a href="crafts.html" data-i18n="nav.crafts">Crafts</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="nav-overlay" id="navOverlay">
+    <button class="nav-close" id="navClose">&times;</button>
+    <a href="../endless_tales_2.html" onclick="closeNav()" data-i18n="nav.back_to_game">← Voltar ao Jogo</a>
+    <a href="criaturas.html" onclick="closeNav()" data-i18n="nav.creatures">Criaturas</a>
+    <a href="cidades.html" onclick="closeNav()" data-i18n="nav.cities">Cidades</a>
+    <a href="itens.html" onclick="closeNav()" data-i18n="nav.items">Itens</a>
+    <a href="crafts.html" onclick="closeNav()" data-i18n="nav.crafts">Crafts</a>
+  </div>
+
+  <section class="wiki-hero">
+    <div class="sec-container" data-aos="fade-up">
+      <span class="sec-tag">Wiki</span>
+      <h1>Endless Tales 2 — Wiki</h1>
+      <hr class="sec-divider sec-divider-et2" />
+      <p data-i18n="wiki.hero_desc">Biblioteca completa de informações sobre o mundo de Endless Tales 2.</p>
+    </div>
+  </section>
+
+  <hr class="section-sep" />
+  <section class="app-sec">
+    <div class="sec-container">
+      <div class="wiki-grid" data-aos="fade-up">
+        <a href="criaturas.html" class="wiki-card wiki-card-et2">
+          <i class="fa-solid fa-dragon"></i>
+          <h4 data-i18n="nav.creatures">Criaturas</h4>
+          <p data-i18n="wiki.card_creatures_desc">Bestiário completo com todas as criaturas do jogo.</p>
+        </a>
+        <a href="cidades.html" class="wiki-card wiki-card-et2">
+          <i class="fa-solid fa-city"></i>
+          <h4 data-i18n="nav.cities">Cidades</h4>
+          <p data-i18n="wiki.card_cities_desc">Todas as cidades e locais exploráveis.</p>
+        </a>
+        <a href="itens.html" class="wiki-card wiki-card-et2">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <h4 data-i18n="nav.items">Itens</h4>
+          <p data-i18n="wiki.card_items_desc">Equipamentos, consumíveis, valiosos e outros.</p>
+        </a>
+        <a href="crafts.html" class="wiki-card wiki-card-et2">
+          <i class="fa-solid fa-hammer"></i>
+          <h4 data-i18n="nav.crafts">Crafts</h4>
+          <p data-i18n="wiki.card_crafts_desc">Receitas e combinações de crafting.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-sep" />
+  <footer>
+    <div class="footer-bottom">
+      <div class="sec-container">
+        <p>Copyright &copy; 2025 &mdash; <strong>CNX Apps</strong> &middot; Calvin R. Nunes</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/jquery-3.4.1.min.js"></script>
+  <script src="../../js/translator.js"></script>
+  <script src="../../js/i18n.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" crossorigin="anonymous"></script>
+  <script>
+    AOS.init({ duration: 700, once: true, offset: 60 });
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 60));
+    document.getElementById('navToggle').addEventListener('click', () => document.getElementById('navOverlay').classList.add('open'));
+    document.getElementById('navClose').addEventListener('click', () => document.getElementById('navOverlay').classList.remove('open'));
+    function closeNav() { document.getElementById('navOverlay').classList.remove('open'); }
+  </script>
+</body>
+</html>

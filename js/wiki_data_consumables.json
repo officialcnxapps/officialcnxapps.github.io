@@ -1,0 +1,719 @@
+{
+  "foods": [
+    {
+      "name_en": "Pomegranate",
+      "name_pt": "Romã",
+      "img": "item_pomegranate",
+      "type": "FOOD",
+      "satiety": 60,
+      "weight": 0.1,
+      "value": 1,
+      "inBattle": false,
+      "effects": [
+        {
+          "attr": "HP",
+          "min": 2,
+          "max": 2,
+          "decrease": false
+        },
+        {
+          "attr": "MP",
+          "min": 1,
+          "max": 1,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Its interior is filled with thin transparent arils of reddish, juicy pulp.",
+      "desc_pt": "Seu interior é preenchido com finos arilos transparentes de polpa avermelhada e suculenta."
+    },
+    {
+      "name_en": "Carrot",
+      "name_pt": "Cenoura",
+      "img": "item_carrot",
+      "type": "FOOD",
+      "satiety": 45,
+      "weight": 0.1,
+      "value": 1,
+      "inBattle": false,
+      "effects": [
+        {
+          "attr": "HP",
+          "min": 1,
+          "max": 1,
+          "decrease": false
+        },
+        {
+          "attr": "MP",
+          "min": 1,
+          "max": 1,
+          "decrease": false
+        }
+      ],
+      "desc_en": "An edible, orange colored root.",
+      "desc_pt": "Uma raíz comestível de cor alaranjada."
+    },
+    {
+      "name_en": "White Mushroom",
+      "name_pt": "Cogumelo Branco",
+      "img": "item_white_mushroom",
+      "type": "FOOD",
+      "satiety": 20,
+      "weight": 0.1,
+      "value": 2,
+      "inBattle": false,
+      "effects": [
+        {
+          "attr": "MP",
+          "min": 3,
+          "max": 3,
+          "decrease": false
+        }
+      ],
+      "desc_en": "An edible, white nature mushroom.",
+      "desc_pt": "Um cogumelo natural comestível e branco."
+    },
+    {
+      "name_en": "Brown Mushroom",
+      "name_pt": "Cogumelo Marrom",
+      "img": "item_brown_mushroom",
+      "type": "FOOD",
+      "satiety": 20,
+      "weight": 0.1,
+      "value": 2,
+      "inBattle": false,
+      "effects": [
+        {
+          "attr": "HP",
+          "min": 3,
+          "max": 3,
+          "decrease": false
+        }
+      ],
+      "desc_en": "An edible, brown nature mushroom.",
+      "desc_pt": "Um cogumelo natural comestível e marrom."
+    },
+    {
+      "name_en": "Dark Mushroom",
+      "name_pt": "Cogumelo Negro",
+      "img": "item_dark_mushroom",
+      "type": "FOOD",
+      "satiety": 120,
+      "weight": 0.1,
+      "value": 8,
+      "inBattle": false,
+      "effects": [
+        {
+          "attr": "HP",
+          "min": 2,
+          "max": 2,
+          "decrease": true
+        },
+        {
+          "attr": "MP",
+          "min": 1,
+          "max": 1,
+          "decrease": true
+        }
+      ],
+      "desc_en": "A poisonous dark nature mushroom.",
+      "desc_pt": "um cogumelo escuro e venenoso."
+    },
+    {
+      "name_en": "Egg",
+      "name_pt": "Ovo",
+      "img": "item_egg",
+      "type": "FOOD",
+      "satiety": 120,
+      "weight": 0.1,
+      "value": 1,
+      "inBattle": false,
+      "effects": [],
+      "desc_en": "Very nutritive and easy to obtain from chickens and ducks.",
+      "desc_pt": "Muito nutritivo e fácil de obter em galinhas e patos."
+    },
+    {
+      "name_en": "Raw Meat",
+      "name_pt": "Carne Crua",
+      "img": "item_raw_meat",
+      "type": "FOOD",
+      "satiety": 60,
+      "weight": 0.2,
+      "value": 1,
+      "inBattle": false,
+      "effects": [
+        {
+          "attr": "HP",
+          "min": 1,
+          "max": 1,
+          "decrease": false
+        },
+        {
+          "attr": "MP",
+          "min": 1,
+          "max": 1,
+          "decrease": false
+        }
+      ],
+      "desc_en": "A piece of animal flesh. Can be cooked.",
+      "desc_pt": "Um pedaço de carne animal. Pode ser cozido."
+    },
+    {
+      "name_en": "Cooked Meat",
+      "name_pt": "Carne Assada",
+      "img": "item_cooked_meat",
+      "type": "FOOD",
+      "satiety": 240,
+      "weight": 0.2,
+      "value": 2,
+      "inBattle": false,
+      "effects": [
+        {
+          "attr": "HP",
+          "min": 3,
+          "max": 3,
+          "decrease": false
+        },
+        {
+          "attr": "MP",
+          "min": 2,
+          "max": 2,
+          "decrease": false
+        }
+      ],
+      "desc_en": "A piece of cooked animal flesh. Very Appetizing.",
+      "desc_pt": "Um pedaço de carne animal assada. Muito apetitosa."
+    },
+    {
+      "name_en": "Soup",
+      "name_pt": "Sopa",
+      "img": "item_soup",
+      "type": "FOOD",
+      "satiety": 180,
+      "weight": 0.1,
+      "value": 2,
+      "inBattle": false,
+      "effects": [
+        {
+          "attr": "HP",
+          "min": 1,
+          "max": 1,
+          "decrease": false
+        },
+        {
+          "attr": "MP",
+          "min": 3,
+          "max": 3,
+          "decrease": false
+        }
+      ],
+      "desc_en": "A broth of water, seasonings and vegetables",
+      "desc_pt": "Um caldo de água temperos e legumes."
+    },
+    {
+      "name_en": "Special Soup",
+      "name_pt": "Sopa Especial",
+      "img": "item_special_soup",
+      "type": "FOOD",
+      "satiety": 420,
+      "weight": 0.1,
+      "value": 6,
+      "inBattle": false,
+      "effects": [
+        {
+          "attr": "HP",
+          "min": 4,
+          "max": 4,
+          "decrease": false
+        },
+        {
+          "attr": "MP",
+          "min": 5,
+          "max": 5,
+          "decrease": false
+        }
+      ],
+      "desc_en": "A broth of water and a mix of mushrooms. Delicious.",
+      "desc_pt": "Um caldo de água e uma mistura de cogumelos. Delicioso."
+    },
+    {
+      "name_en": "Seasoned Meat",
+      "name_pt": "Carne Temperada",
+      "img": "item_seasoned_meat",
+      "type": "FOOD",
+      "satiety": 540,
+      "weight": 0.2,
+      "value": 4,
+      "inBattle": false,
+      "effects": [
+        {
+          "attr": "HP",
+          "min": 4,
+          "max": 4,
+          "decrease": false
+        },
+        {
+          "attr": "MP",
+          "min": 3,
+          "max": 3,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Roast meat with herbs. It has a great smell and taste.",
+      "desc_pt": "Carne assada com ervas. Tem um ótimo cheiro e sabor."
+    },
+    {
+      "name_en": "Tuna",
+      "name_pt": "Atum",
+      "img": "item_tuna",
+      "type": "FOOD",
+      "satiety": 360,
+      "weight": 2.4,
+      "value": 6,
+      "inBattle": false,
+      "effects": [
+        {
+          "attr": "HP",
+          "min": 3,
+          "max": 3,
+          "decrease": false
+        },
+        {
+          "attr": "MP",
+          "min": 3,
+          "max": 3,
+          "decrease": false
+        }
+      ],
+      "desc_en": "It has an elongated body and a large elongated mouth. Generally bluish in color. A big fish.",
+      "desc_pt": "possui um corpo alongado, e uma grande boca alongada. Geralmente de cor azulada. Um grande peixe."
+    },
+    {
+      "name_en": "Cooked Tuna",
+      "name_pt": "Atum Assado",
+      "img": "item_cooked_tuna",
+      "type": "FOOD",
+      "satiety": 600,
+      "weight": 2.2,
+      "value": 8,
+      "inBattle": false,
+      "effects": [
+        {
+          "attr": "HP",
+          "min": 6,
+          "max": 6,
+          "decrease": false
+        },
+        {
+          "attr": "MP",
+          "min": 4,
+          "max": 4,
+          "decrease": false
+        }
+      ],
+      "desc_en": "A large, meaty fish, now roasted.",
+      "desc_pt": "Um peixe grande e carnudo, agora assado."
+    },
+    {
+      "name_en": "Sardine",
+      "name_pt": "Sardinha",
+      "img": "item_sardine",
+      "type": "FOOD",
+      "satiety": 120,
+      "weight": 0.2,
+      "value": 2,
+      "inBattle": false,
+      "effects": [
+        {
+          "attr": "HP",
+          "min": 1,
+          "max": 1,
+          "decrease": false
+        },
+        {
+          "attr": "MP",
+          "min": 2,
+          "max": 2,
+          "decrease": false
+        }
+      ],
+      "desc_en": "A small fish, found in large schools.",
+      "desc_pt": "Um pequeno peixe, encontrado em grandes cardumes."
+    },
+    {
+      "name_en": "Cooked Sardine",
+      "name_pt": "Sardinha Assada",
+      "img": "item_cooked_sardine",
+      "type": "FOOD",
+      "satiety": 240,
+      "weight": 0.2,
+      "value": 3,
+      "inBattle": false,
+      "effects": [
+        {
+          "attr": "HP",
+          "min": 2,
+          "max": 2,
+          "decrease": false
+        },
+        {
+          "attr": "MP",
+          "min": 3,
+          "max": 3,
+          "decrease": false
+        }
+      ],
+      "desc_en": "This small fish is delicious when roasted.",
+      "desc_pt": "Este pequeno peixe fica saboroso quando assado."
+    },
+    {
+      "name_en": "Cooked Crab",
+      "name_pt": "Caranguejo Cozido",
+      "img": "item_cooked_crab",
+      "type": "FOOD",
+      "satiety": 240,
+      "weight": 0.3,
+      "value": 5,
+      "inBattle": false,
+      "effects": [
+        {
+          "attr": "HP",
+          "min": 3,
+          "max": 3,
+          "decrease": false
+        },
+        {
+          "attr": "MP",
+          "min": 3,
+          "max": 3,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Despite its hard shell, the inner meat is soft and appetizing.",
+      "desc_pt": "Apesar da sua casca dura, a carne interior é suave e apetitosa."
+    },
+    {
+      "name_en": "Bread",
+      "name_pt": "Pão",
+      "img": "item_bread",
+      "type": "FOOD",
+      "satiety": 180,
+      "weight": 0.1,
+      "value": 2,
+      "inBattle": false,
+      "effects": [
+        {
+          "attr": "HP",
+          "min": 2,
+          "max": 2,
+          "decrease": false
+        },
+        {
+          "attr": "MP",
+          "min": 2,
+          "max": 2,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Flour bread is one of the easiest foods to produce and the most consumed.",
+      "desc_pt": "O pão de farinha é um dos alimentos mais fáceis de produzir e o mais consumido."
+    },
+    {
+      "name_en": "Beer",
+      "name_pt": "Cerveja",
+      "img": "item_beer",
+      "type": "FOOD",
+      "satiety": 15,
+      "weight": 0.2,
+      "value": 2,
+      "inBattle": false,
+      "effects": [
+        {
+          "attr": "HP",
+          "min": 1,
+          "max": 1,
+          "decrease": true
+        },
+        {
+          "attr": "MP",
+          "min": 2,
+          "max": 2,
+          "decrease": false
+        }
+      ],
+      "desc_en": "The favorite alcoholic drink of tavern goers.",
+      "desc_pt": "A bebida álcoolica preferida dos frequentadores de tavernas."
+    },
+    {
+      "name_en": "Wine",
+      "name_pt": "Vinho",
+      "img": "item_wine",
+      "type": "FOOD",
+      "satiety": 18,
+      "weight": 0.2,
+      "value": 2,
+      "inBattle": false,
+      "effects": [
+        {
+          "attr": "MP",
+          "min": 1,
+          "max": 1,
+          "decrease": true
+        },
+        {
+          "attr": "HP",
+          "min": 1,
+          "max": 1,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Smashed and fermented grapes that results in an alcoholic beverage.",
+      "desc_pt": "Uvas esmagadas e fermentadas que resultam em uma bebida alcoólica."
+    },
+    {
+      "name_en": "Water",
+      "name_pt": "Água",
+      "img": "item_water",
+      "type": "FOOD",
+      "satiety": 10,
+      "weight": 0.3,
+      "value": 1,
+      "inBattle": false,
+      "effects": [
+        {
+          "attr": "MP",
+          "min": 1,
+          "max": 1,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Everybody needs water.",
+      "desc_pt": "Todo mundo precisa de água."
+    },
+    {
+      "name_en": "Nuts",
+      "name_pt": "Nozes",
+      "img": "item_nuts",
+      "type": "FOOD",
+      "satiety": 25,
+      "weight": 0.1,
+      "value": 1,
+      "inBattle": false,
+      "effects": [
+        {
+          "attr": "MP",
+          "min": 1,
+          "max": 1,
+          "decrease": false
+        },
+        {
+          "attr": "HP",
+          "min": 1,
+          "max": 1,
+          "decrease": false
+        }
+      ],
+      "desc_en": "A kind of seed, oily and tasty.",
+      "desc_pt": "Uma espécie de semente, oleaginosa e saborosa."
+    }
+  ],
+  "potions": [
+    {
+      "name_en": "Simple HP Potion",
+      "name_pt": "Poção PV Simples",
+      "img": "item_simple_hp_potion",
+      "type": "POTION",
+      "satiety": 0,
+      "weight": 0.1,
+      "value": 4,
+      "inBattle": true,
+      "effects": [
+        {
+          "attr": "HP",
+          "min": 7,
+          "max": 11,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Restores between 7 and 11 HP.",
+      "desc_pt": "Recupera entre 7 e 11 PV."
+    },
+    {
+      "name_en": "HP Potion",
+      "name_pt": "Poção PV",
+      "img": "item_hp_potion",
+      "type": "POTION",
+      "satiety": 0,
+      "weight": 0.3,
+      "value": 8,
+      "inBattle": true,
+      "effects": [
+        {
+          "attr": "HP",
+          "min": 14,
+          "max": 21,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Restores between 14 and 21 HP.",
+      "desc_pt": "Recupera entre 14 e 21 PV."
+    },
+    {
+      "name_en": "Special HP Potion",
+      "name_pt": "Poção PV Especial",
+      "img": "item_special_hp_potion",
+      "type": "POTION",
+      "satiety": 0,
+      "weight": 0.5,
+      "value": 18,
+      "inBattle": true,
+      "effects": [
+        {
+          "attr": "HP",
+          "min": 36,
+          "max": 45,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Restores between 36 and 45 HP.",
+      "desc_pt": "Recupera entre 36 e 45 PV."
+    },
+    {
+      "name_en": "Simple MP Potion",
+      "name_pt": "Poção PM Simples",
+      "img": "item_simple_mp_potion",
+      "type": "POTION",
+      "satiety": 0,
+      "weight": 0.1,
+      "value": 4,
+      "inBattle": true,
+      "effects": [
+        {
+          "attr": "MP",
+          "min": 7,
+          "max": 11,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Restores between 7 and 11 MP.",
+      "desc_pt": "Recupera entre 7 e 11 PM."
+    },
+    {
+      "name_en": "MP Potion",
+      "name_pt": "Poção PM",
+      "img": "item_mp_potion",
+      "type": "POTION",
+      "satiety": 0,
+      "weight": 0.3,
+      "value": 8,
+      "inBattle": true,
+      "effects": [
+        {
+          "attr": "MP",
+          "min": 14,
+          "max": 21,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Restores between 14 and 21 MP.",
+      "desc_pt": "Recupera entre 14 e 21 PM."
+    },
+    {
+      "name_en": "Special MP Potion",
+      "name_pt": "Poção PM Especial",
+      "img": "item_special_mp_potion",
+      "type": "POTION",
+      "satiety": 0,
+      "weight": 0.5,
+      "value": 18,
+      "inBattle": true,
+      "effects": [
+        {
+          "attr": "MP",
+          "min": 36,
+          "max": 45,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Restores between 36 and 45 MP.",
+      "desc_pt": "Recupera entre 36 e 45 PM."
+    },
+    {
+      "name_en": "Mead Potion",
+      "name_pt": "Poção Hidromel",
+      "img": "item_mead_potion",
+      "type": "POTION",
+      "satiety": 0,
+      "weight": 0.2,
+      "value": 7,
+      "inBattle": true,
+      "effects": [
+        {
+          "attr": "HP",
+          "min": 6,
+          "max": 9,
+          "decrease": false
+        },
+        {
+          "attr": "MP",
+          "min": 6,
+          "max": 9,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Restores between 6 and 9 HP and MP.",
+      "desc_pt": "Recupera entre 6 e 9 PV e PM."
+    },
+    {
+      "name_en": "Elixir Potion",
+      "name_pt": "Poção Elixir",
+      "img": "item_elixir_potion",
+      "type": "POTION",
+      "satiety": 0,
+      "weight": 0.2,
+      "value": 14,
+      "inBattle": true,
+      "effects": [
+        {
+          "attr": "HP",
+          "min": 18,
+          "max": 25,
+          "decrease": false
+        },
+        {
+          "attr": "MP",
+          "min": 18,
+          "max": 25,
+          "decrease": false
+        }
+      ],
+      "desc_en": "Restores between 18 and 25 HP and MP.",
+      "desc_pt": "Recupera entre 18 e 25 PV e PM."
+    },
+    {
+      "name_en": "Antidote",
+      "name_pt": "Antídoto",
+      "img": "item_antidote",
+      "type": "POTION",
+      "satiety": 0,
+      "weight": 0.1,
+      "value": 4,
+      "inBattle": true,
+      "effects": [],
+      "desc_en": "Removes poison status",
+      "desc_pt": "Remove o status de envenenamento"
+    },
+    {
+      "name_en": "Expertise Potion",
+      "name_pt": "Poção da Expertise",
+      "img": "item_expertise_potion",
+      "type": "POTION",
+      "satiety": 0,
+      "weight": 0.6,
+      "value": 5,
+      "inBattle": false,
+      "effects": [],
+      "desc_en": "Grants you wisdom. Adds 15 experience.",
+      "desc_pt": "Lhe garante sabedoria. Adiciona 15 de experiência."
+    }
+  ]
+}

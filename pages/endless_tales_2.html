@@ -35,12 +35,14 @@
       <span class="nav-brand-name">CNX Apps</span>
     </a>
     <ul class="nav-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="#sobre">O Jogo</a></li>
-      <li><a href="#galeria">Galeria</a></li>
-      <li><a href="#download">Download</a></li>
-      <li><a href="#contact">Contato</a></li>
-      <li><a href="politica.html">Privacidade</a></li>
+      <li><a href="../index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="#sobre" data-i18n="nav.the_game">O Jogo</a></li>
+      <li><a href="#galeria" data-i18n="nav.gallery">Galeria</a></li>
+      <li><a href="#download" data-i18n="nav.download">Download</a></li>
+      <li><a href="#wiki" data-i18n="nav.wiki">Wiki</a></li>
+      <li><a href="#changelog" data-i18n="nav.news">Novidades</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contato</a></li>
+      <li><a href="politica.html" data-i18n="nav.privacy">Privacidade</a></li>
     </ul>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -49,12 +51,14 @@
 
   <div class="nav-overlay" id="navOverlay">
     <button class="nav-close" id="navClose">&times;</button>
-    <a href="../index.html" onclick="closeNav()">Home</a>
-    <a href="#sobre"        onclick="closeNav()">O Jogo</a>
-    <a href="#galeria"      onclick="closeNav()">Galeria</a>
-    <a href="#download"     onclick="closeNav()">Download</a>
-    <a href="#contact"      onclick="closeNav()">Contato</a>
-    <a href="politica.html" onclick="closeNav()">Privacidade</a>
+    <a href="../index.html" onclick="closeNav()" data-i18n="nav.home">Home</a>
+    <a href="#sobre" onclick="closeNav()" data-i18n="nav.the_game">O Jogo</a>
+    <a href="#galeria" onclick="closeNav()" data-i18n="nav.gallery">Galeria</a>
+    <a href="#download" onclick="closeNav()" data-i18n="nav.download">Download</a>
+    <a href="#wiki" onclick="closeNav()" data-i18n="nav.wiki">Wiki</a>
+    <a href="#changelog" onclick="closeNav()" data-i18n="nav.news">Novidades</a>
+    <a href="#contact" onclick="closeNav()" data-i18n="nav.contact">Contato</a>
+    <a href="politica.html" onclick="closeNav()" data-i18n="nav.privacy">Privacidade</a>
   </div>
 
   <section class="app-hero" id="inicio">
@@ -71,7 +75,7 @@
           style="text-shadow:0 0 40px rgba(139,92,246,0.5),0 2px 24px rgba(0,0,0,0.6);">
         Endless Tales 2
       </h1>
-      <p class="app-hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+      <p class="app-hero-subtitle" data-aos="fade-up" data-aos-delay="200" data-i18n="et2.hero_subtitle">
         100 anos antes dos eventos do primeiro jogo. Um mundo mais vasto,
         gráficos fluídos e uma história rica em magia sombria e intrigas nobres.
       </p>
@@ -79,16 +83,16 @@
         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
         <i class="fa-solid fa-star"></i>
-        <span>Disponível na Google Play</span>
+        <span data-i18n="et2.hero_rating">Disponível na Google Play</span>
       </div>
       <div data-aos="fade-up" data-aos-delay="350">
         <a href="https://play.google.com/store/apps/details?id=com.cnx.endlesstalestwo"
            target="_blank" rel="noopener" class="btn-play btn-play-et2">
-          <i class="fa-brands fa-google-play"></i> Jogar Agora — Grátis
+          <i class="fa-brands fa-google-play"></i> <span data-i18n="et2.hero_btn">Jogar Agora — Grátis</span>
         </a>
       </div>
     </div>
-    <div class="hero-scroll"><span>Explorar</span><i class="fa-solid fa-chevron-down"></i></div>
+    <div class="hero-scroll"><span data-i18n="et2.hero_scroll">Explorar</span><i class="fa-solid fa-chevron-down"></i></div>
   </section>
 
   <hr class="section-sep" />
@@ -100,13 +104,13 @@
                style="max-width:280px; filter:drop-shadow(0 0 30px rgba(139,92,246,0.4));" />
         </div>
         <div class="col-lg-7" data-aos="fade-left">
-          <span class="sec-tag">O Jogo</span>
-          <h2 class="sec-title" style="font-size:2.2rem;text-align:left;margin-bottom:0.75rem;">100 Anos Antes</h2>
+          <span class="sec-tag" data-i18n="et2.about_tag">O Jogo</span>
+          <h2 class="sec-title" style="font-size:2.2rem;text-align:left;margin-bottom:0.75rem;" data-i18n="et2.about_title">100 Anos Antes</h2>
           <hr class="sec-divider sec-divider-et2" style="margin-left:0;" />
           <div class="about-game-text">
-            <p><strong style="color:var(--et2)">Endless Tales 2</strong> se passa cerca de <strong>100 anos antes</strong> dos eventos do primeiro jogo, revelando as origens do mundo que você já conhece — com uma história nunca contada.</p>
-            <p>Explore novas terras habitadas por povos e culturas completamente diferentes, envolva-se em intrigas de famílias nobres pelo poder e desvende os segredos das magias sombrias que ameaçam rasgar o tecido da realidade.</p>
-            <p>Com gráficos muito mais fluídos e detalhados, novas mecânicas de jogo, uma vasta seleção de itens e equipamentos, e uma narrativa profunda cheia de reviravoltas, <strong style="color:var(--et2)">Endless Tales 2</strong> é a experiência definitiva da série.</p>
+            <p data-i18n="et2.about_p1" data-i18n-html><strong style="color:var(--et2)">Endless Tales 2</strong> se passa cerca de <strong>100 anos antes</strong> dos eventos do primeiro jogo, revelando as origens do mundo que você já conhece — com uma história nunca contada.</p>
+            <p data-i18n="et2.about_p2">Explore novas terras habitadas por povos e culturas completamente diferentes, envolva-se em intrigas de famílias nobres pelo poder e desvende os segredos das magias sombrias que ameaçam rasgar o tecido da realidade.</p>
+            <p data-i18n="et2.about_p3" data-i18n-html>Com gráficos muito mais fluídos e detalhados, novas mecânicas de jogo, uma vasta seleção de itens e equipamentos, e uma narrativa profunda cheia de reviravoltas, <strong style="color:var(--et2)">Endless Tales 2</strong> é a experiência definitiva da série.</p>
           </div>
         </div>
       </div>
@@ -117,30 +121,30 @@
   <section class="app-sec-alt">
     <div class="sec-container">
       <div class="sec-header" data-aos="fade-up">
-        <span class="sec-tag">Destaques</span>
-        <h2 class="sec-title">O Que Há de Novo?</h2>
+        <span class="sec-tag" data-i18n="et2.highlights_tag">Destaques</span>
+        <h2 class="sec-title" data-i18n="et2.highlights_title">O Que Há de Novo?</h2>
         <hr class="sec-divider sec-divider-et2" />
       </div>
       <div class="features-grid">
         <div class="feature-item feat-et2" data-aos="fade-up" data-aos-delay="0">
           <div class="feature-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
-          <h4 class="feature-name">Prequel do Universo</h4>
-          <p class="feature-desc">Uma história inédita ambientada 100 anos antes do ET1, revelando as origens do mundo e seus povos.</p>
+          <h4 class="feature-name" data-i18n="et2.feat1_name">Prequel do Universo</h4>
+          <p class="feature-desc" data-i18n="et2.feat1_desc">Uma história inédita ambientada 100 anos antes do ET1, revelando as origens do mundo e seus povos.</p>
         </div>
         <div class="feature-item feat-et2" data-aos="fade-up" data-aos-delay="80">
           <div class="feature-icon"><i class="fa-solid fa-paintbrush"></i></div>
-          <h4 class="feature-name">Gráficos Aprimorados</h4>
-          <p class="feature-desc">Visual muito mais fluído e detalhado com novas animações e ilustrações de alta qualidade.</p>
+          <h4 class="feature-name" data-i18n="et2.feat2_name">Gráficos Aprimorados</h4>
+          <p class="feature-desc" data-i18n="et2.feat2_desc">Visual muito mais fluído e detalhado com novas animações e ilustrações de alta qualidade.</p>
         </div>
         <div class="feature-item feat-et2" data-aos="fade-up" data-aos-delay="160">
           <div class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-          <h4 class="feature-name">Magias Sombrias</h4>
-          <p class="feature-desc">Descubra artes arcanas proibidas e intrigas entre poderosas famílias nobres pelo controle do reino.</p>
+          <h4 class="feature-name" data-i18n="et2.feat3_name">Magias Sombrias</h4>
+          <p class="feature-desc" data-i18n="et2.feat3_desc">Descubra artes arcanas proibidas e intrigas entre poderosas famílias nobres pelo controle do reino.</p>
         </div>
         <div class="feature-item feat-et2" data-aos="fade-up" data-aos-delay="240">
           <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
-          <h4 class="feature-name">Mais Itens e Mecânicas</h4>
-          <p class="feature-desc">Novas terras, novos povos, novas mecânicas de jogo e uma vasta seleção de equipamentos para explorar.</p>
+          <h4 class="feature-name" data-i18n="et2.feat4_name">Mais Itens e Mecânicas</h4>
+          <p class="feature-desc" data-i18n="et2.feat4_desc">Novas terras, novos povos, novas mecânicas de jogo e uma vasta seleção de equipamentos para explorar.</p>
         </div>
       </div>
     </div>
@@ -150,8 +154,8 @@
   <section id="galeria" class="app-sec">
     <div class="sec-container">
       <div class="sec-header" data-aos="fade-up">
-        <span class="sec-tag">Screenshots</span>
-        <h2 class="sec-title">Galeria</h2>
+        <span class="sec-tag" data-i18n="et2.gallery_tag">Screenshots</span>
+        <h2 class="sec-title" data-i18n="et2.gallery_title">Galeria</h2>
         <hr class="sec-divider sec-divider-et2" />
       </div>
       <div class="gallery-grid" id="et2-gallery"></div>
@@ -162,14 +166,60 @@
   <section id="download" class="download-sec">
     <div class="sec-container">
       <div data-aos="fade-up">
-        <span class="sec-tag">Disponível Agora</span>
-        <h2 class="sec-title">Jogue Agora — Grátis</h2>
+        <span class="sec-tag" data-i18n="et2.download_tag">Disponível Agora</span>
+        <h2 class="sec-title" data-i18n="et2.download_title">Jogue Agora — Grátis</h2>
         <hr class="sec-divider sec-divider-et2" />
-        <p class="sec-desc">Endless Tales 2 está disponível gratuitamente na Google Play Store para todos os dispositivos Android.</p>
+        <p class="sec-desc" data-i18n="et2.download_desc">Endless Tales 2 está disponível gratuitamente na Google Play Store para todos os dispositivos Android.</p>
         <a href="https://play.google.com/store/apps/details?id=com.cnx.endlesstalestwo" target="_blank" rel="noopener">
           <img class="gplay-img" src="../img/apps/endlesstales2/googleplay_banner_logo_en.png"
                alt="Google Play" style="max-width:260px;" />
         </a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-sep" />
+  <section id="wiki" class="app-sec">
+    <div class="sec-container">
+      <div data-aos="fade-up" style="text-align:center;">
+        <span class="sec-tag">Wiki</span>
+        <h2 class="sec-title" data-i18n="et2.wiki_title">Saiba tudo sobre o jogo!</h2>
+        <hr class="sec-divider sec-divider-et2" />
+        <p class="sec-desc" data-i18n="et2.wiki_desc">Explore a biblioteca completa de informações do Endless Tales 2 — criaturas, cidades, itens, crafts e muito mais.</p>
+        <a href="wiki_et2/index.html" class="btn-play btn-play-et2" style="margin-top:2rem;">
+          <i class="fa-solid fa-book"></i> <span data-i18n="et2.wiki_btn">Acessar a Wiki</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-sep" />
+  <section id="changelog" class="app-sec-alt">
+    <div class="sec-container">
+      <div class="sec-header" data-aos="fade-up">
+        <span class="sec-tag" data-i18n="et2.changelog_tag">Novidades</span>
+        <h2 class="sec-title" data-i18n="et2.changelog_title">Últimas Alterações</h2>
+        <hr class="sec-divider sec-divider-et2" />
+      </div>
+      <div class="changelog-wrapper" data-aos="fade-up">
+        <div class="version-item">
+          <p class="version-num">v1.1.0.0</p>
+          <ul class="version-list" data-i18n="et2.changelog_1100">
+            <li>Arenas!</li>
+            <li>5 novas criaturas</li>
+            <li>5 novas Quests</li>
+            <li>Novos eventos aleatórios</li>
+            <li>1 Novo Conhecimento (Análise de Traços)</li>
+            <li>Visão de mapa na tela principal</li>
+            <li>Novas armas e possibilidades de Crafts</li>
+          </ul>
+        </div>
+        <div class="version-item">
+          <p class="version-num">v1.0.1.0</p>
+          <ul class="version-list">
+            <li>—</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -182,19 +232,19 @@
           <div class="col-lg-4 col-md-6">
             <div class="footer-brand">
               <img src="../img/logo-white.png" alt="CNX Apps" />
-              <p>Jogo criado pela CNX Apps — aventuras épicas de RPG para Android.</p>
+              <p data-i18n="footer.brand_desc">Jogo criado pela CNX Apps — aventuras épicas para Android.</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
-            <p class="footer-col-title">Mais Jogos</p>
+            <p class="footer-col-title" data-i18n="footer.more_games">Mais Jogos</p>
             <ul class="footer-links-list">
               <li><a href="endless_tales.html"><i class="fa-solid fa-chevron-right"></i> Endless Tales</a></li>
               <li><a href="endless_arena.html"><i class="fa-solid fa-chevron-right"></i> Endless Arena</a></li>
-              <li><a href="../index.html">      <i class="fa-solid fa-chevron-right"></i> Todos os Jogos</a></li>
+              <li><a href="../index.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.all_games">Todos os Jogos</span></a></li>
             </ul>
           </div>
           <div class="col-lg-4 col-md-6">
-            <p class="footer-col-title">Contato</p>
+            <p class="footer-col-title" data-i18n="footer.contact">Contato</p>
             <div class="footer-contact-line">
               <i class="fa-solid fa-envelope"></i>
               <a href="mailto:cnxapps2020@gmail.com">cnxapps2020@gmail.com</a>
@@ -225,6 +275,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" crossorigin="anonymous"></script>
   <script src="../js/jquery-3.4.1.min.js"></script>
   <script src="../js/translator.js"></script>
+  <script src="../js/i18n.js"></script>
   <script>
     AOS.init({ duration: 700, once: true, offset: 60 });
     const navbar = document.getElementById('navbar');

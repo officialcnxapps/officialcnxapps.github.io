@@ -1,0 +1,111 @@
+{
+  "nav": {
+    "home": { "pt": "Home", "en": "Home" },
+    "the_game": { "pt": "O Jogo", "en": "The Game" },
+    "gallery": { "pt": "Galeria", "en": "Gallery" },
+    "download": { "pt": "Download", "en": "Download" },
+    "wiki": { "pt": "Wiki", "en": "Wiki" },
+    "news": { "pt": "Novidades", "en": "What's New" },
+    "contact": { "pt": "Contato", "en": "Contact" },
+    "privacy": { "pt": "Privacidade", "en": "Privacy" },
+    "back_to_game": { "pt": "← Voltar ao Jogo", "en": "← Back to Game" },
+    "creatures": { "pt": "Criaturas", "en": "Creatures" },
+    "cities": { "pt": "Cidades", "en": "Cities" },
+    "items": { "pt": "Itens", "en": "Items" },
+    "crafts": { "pt": "Crafts", "en": "Crafts" },
+    "equipment": { "pt": "Equipamentos", "en": "Equipment" },
+    "consumables": { "pt": "Consumíveis", "en": "Consumables" },
+    "valuables": { "pt": "Valiosos", "en": "Valuables" },
+    "others": { "pt": "Outros", "en": "Others" }
+  },
+  "et2": {
+    "hero_subtitle": {
+      "pt": "100 anos antes dos eventos do primeiro jogo. Um mundo mais vasto, gráficos fluídos e uma história rica em magia sombria e intrigas nobres.",
+      "en": "100 years before the events of the first game. A vaster world, fluid graphics and a story rich in dark magic and noble intrigues."
+    },
+    "hero_rating": { "pt": "Disponível na Google Play", "en": "Available on Google Play" },
+    "hero_btn": { "pt": "Jogar Agora — Grátis", "en": "Play Now — Free" },
+    "hero_scroll": { "pt": "Explorar", "en": "Explore" },
+    "about_tag": { "pt": "O Jogo", "en": "The Game" },
+    "about_title": { "pt": "100 Anos Antes", "en": "100 Years Before" },
+    "about_p1": {
+      "pt": "<strong style=\"color:var(--et2)\">Endless Tales 2</strong> se passa cerca de <strong>100 anos antes</strong> dos eventos do primeiro jogo, revelando as origens do mundo que você já conhece — com uma história nunca contada.",
+      "en": "<strong style=\"color:var(--et2)\">Endless Tales 2</strong> takes place about <strong>100 years before</strong> the events of the first game, revealing the origins of the world you already know — with a never-told story."
+    },
+    "about_p2": {
+      "pt": "Explore novas terras habitadas por povos e culturas completamente diferentes, envolva-se em intrigas de famílias nobres pelo poder e desvende os segredos das magias sombrias que ameaçam rasgar o tecido da realidade.",
+      "en": "Explore new lands inhabited by completely different peoples and cultures, get involved in noble family intrigues for power and uncover the secrets of dark magics that threaten to tear the fabric of reality."
+    },
+    "about_p3": {
+      "pt": "Com gráficos muito mais fluídos e detalhados, novas mecânicas de jogo, uma vasta seleção de itens e equipamentos, e uma narrativa profunda cheia de reviravoltas, <strong style=\"color:var(--et2)\">Endless Tales 2</strong> é a experiência definitiva da série.",
+      "en": "With much more fluid and detailed graphics, new game mechanics, a vast selection of items and equipment, and a deep narrative full of twists, <strong style=\"color:var(--et2)\">Endless Tales 2</strong> is the definitive experience of the series."
+    },
+    "highlights_tag": { "pt": "Destaques", "en": "Highlights" },
+    "highlights_title": { "pt": "O Que Há de Novo?", "en": "What's New?" },
+    "feat1_name": { "pt": "Prequel do Universo", "en": "Universe Prequel" },
+    "feat1_desc": { "pt": "Uma história inédita ambientada 100 anos antes do ET1, revelando as origens do mundo e seus povos.", "en": "An original story set 100 years before ET1, revealing the origins of the world and its peoples." },
+    "feat2_name": { "pt": "Gráficos Aprimorados", "en": "Enhanced Graphics" },
+    "feat2_desc": { "pt": "Visual muito mais fluído e detalhado com novas animações e ilustrações de alta qualidade.", "en": "Much more fluid and detailed visuals with new animations and high-quality illustrations." },
+    "feat3_name": { "pt": "Magias Sombrias", "en": "Dark Magics" },
+    "feat3_desc": { "pt": "Descubra artes arcanas proibidas e intrigas entre poderosas famílias nobres pelo controle do reino.", "en": "Discover forbidden arcane arts and intrigues among powerful noble families for control of the kingdom." },
+    "feat4_name": { "pt": "Mais Itens e Mecânicas", "en": "More Items & Mechanics" },
+    "feat4_desc": { "pt": "Novas terras, novos povos, novas mecânicas de jogo e uma vasta seleção de equipamentos para explorar.", "en": "New lands, new peoples, new game mechanics and a vast selection of equipment to explore." },
+    "gallery_tag": { "pt": "Screenshots", "en": "Screenshots" },
+    "gallery_title": { "pt": "Galeria", "en": "Gallery" },
+    "download_tag": { "pt": "Disponível Agora", "en": "Available Now" },
+    "download_title": { "pt": "Jogue Agora — Grátis", "en": "Play Now — Free" },
+    "download_desc": {
+      "pt": "Endless Tales 2 está disponível gratuitamente na Google Play Store para todos os dispositivos Android.",
+      "en": "Endless Tales 2 is available for free on the Google Play Store for all Android devices."
+    },
+    "wiki_title": { "pt": "Saiba tudo sobre o jogo!", "en": "Learn everything about the game!" },
+    "wiki_desc": {
+      "pt": "Explore a biblioteca completa de informações do Endless Tales 2 — criaturas, cidades, itens, crafts e muito mais.",
+      "en": "Explore the complete information library of Endless Tales 2 — creatures, cities, items, crafts and more."
+    },
+    "wiki_btn": { "pt": "Acessar a Wiki", "en": "Access the Wiki" },
+    "changelog_tag": { "pt": "Novidades", "en": "What's New" },
+    "changelog_title": { "pt": "Últimas Alterações", "en": "Latest Changes" },
+    "changelog_1100": {
+      "pt": ["5 novas criaturas", "5 novas Quests", "Novos eventos aleatórios", "1 Novo Conhecimento (Análise de Traços)", "Visão de mapa na tela principal", "Novas armas e possibilidades de Crafts"],
+      "en": ["5 new creatures", "5 new Quests", "New random events", "1 New Knowledge (Trace Analysis)", "Map view on main screen", "New weapons and Craft possibilities"]
+    }
+  },
+  "wiki": {
+    "hero_desc": {
+      "pt": "Biblioteca completa de informações sobre o mundo de Endless Tales 2.",
+      "en": "Complete library of information about the world of Endless Tales 2."
+    },
+    "card_creatures_desc": { "pt": "Bestiário completo com todas as criaturas do jogo.", "en": "Complete bestiary with all game creatures." },
+    "card_cities_desc": { "pt": "Todas as cidades e locais exploráveis.", "en": "All cities and explorable locations." },
+    "card_items_desc": { "pt": "Equipamentos, consumíveis, valiosos e outros.", "en": "Equipment, consumables, valuables and others." },
+    "card_crafts_desc": { "pt": "Receitas e combinações de crafting.", "en": "Crafting recipes and combinations." },
+    "creatures_desc": { "pt": "Bestiário completo com todas as criaturas do mundo de Endless Tales 2.", "en": "Complete bestiary with all creatures from the world of Endless Tales 2." },
+    "cities_desc": { "pt": "Todas as cidades e locais exploráveis do mundo de Endless Tales 2.", "en": "All cities and explorable locations in the world of Endless Tales 2." },
+    "items_desc": { "pt": "Todos os itens disponíveis em Endless Tales 2.", "en": "All items available in Endless Tales 2." },
+    "items_equip_desc": { "pt": "Conteúdo em breve — Armas, armaduras e acessórios.", "en": "Content coming soon — Weapons, armor and accessories." },
+    "items_consum_desc": { "pt": "Conteúdo em breve — Poções, comidas e itens de uso.", "en": "Content coming soon — Potions, food and usable items." },
+    "items_valua_desc": { "pt": "Conteúdo em breve — Tesouros, gemas e itens raros.", "en": "Content coming soon — Treasures, gems and rare items." },
+    "items_other_desc": { "pt": "Conteúdo em breve — Materiais, chaves e itens diversos.", "en": "Content coming soon — Materials, keys and miscellaneous items." },
+    "other_items": { "pt": "Outros Itens", "en": "Other Items" },
+    "crafts_desc": { "pt": "Receitas e combinações de crafting em Endless Tales 2.", "en": "Crafting recipes and combinations in Endless Tales 2." },
+    "placeholder_creatures": { "pt": "Conteúdo em breve — Adicione as criaturas aqui.", "en": "Content coming soon — Add creatures here." },
+    "placeholder_cities": { "pt": "Conteúdo em breve — Adicione as cidades aqui.", "en": "Content coming soon — Add cities here." },
+    "placeholder_crafts": { "pt": "Conteúdo em breve — Adicione as receitas de craft aqui.", "en": "Content coming soon — Add craft recipes here." },
+    "weapons_title": { "pt": "Armas", "en": "Weapons" },
+    "shields_title": { "pt": "Escudos", "en": "Shields" },
+    "armors_title": { "pt": "Armaduras", "en": "Armors" },
+    "helmets_title": { "pt": "Elmos", "en": "Helmets" },
+    "boots_title": { "pt": "Botas", "en": "Boots" },
+    "legs_title": { "pt": "Calças", "en": "Legs" },
+    "jewels_title": { "pt": "Jóias & Acessórios", "en": "Jewels & Accessories" },
+    "foods_title": { "pt": "Comidas", "en": "Foods" },
+    "potions_title": { "pt": "Poções", "en": "Potions" }
+  },
+  "footer": {
+    "brand_desc": { "pt": "Jogo criado pela CNX Apps — aventuras épicas para Android.", "en": "Game created by CNX Apps — epic adventures for Android." },
+    "more_games": { "pt": "Mais Jogos", "en": "More Games" },
+    "all_games": { "pt": "Todos os Jogos", "en": "All Games" },
+    "contact": { "pt": "Contato", "en": "Contact" }
+  }
+}
