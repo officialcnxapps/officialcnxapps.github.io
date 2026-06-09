@@ -59,17 +59,20 @@
       <h1 data-i18n="nav.items">Itens</h1>
       <hr class="sec-divider sec-divider-et2" />
       <p data-i18n="wiki.items_desc">Todos os itens disponíveis em Endless Tales 2.</p>
+      <p id="wiki-total-count" class="wiki-table-count" style="margin-top:0.5rem;"></p>
       <div class="wiki-sub-nav">
         <a href="#equipamentos" data-i18n="nav.equipment">Equipamentos</a>
         <a href="#consumiveis" data-i18n="nav.consumables">Consumíveis</a>
         <a href="#valiosos" data-i18n="nav.valuables">Valiosos</a>
+        <a href="#ores" data-i18n="wiki.ores_title">Minérios & Lingotes</a>
+        <a href="#tools" data-i18n="wiki.tools_title">Ferramentas</a>
         <a href="#outros" data-i18n="nav.others">Outros</a>
       </div>
     </div>
   </section>
 
   <hr class="section-sep" />
-  <section id="equipamentos" class="wiki-content">
+  <section id="equipamentos" class="wiki-content wiki-content-wide">
     <div class="sec-container">
       <div class="sec-header" data-aos="fade-up">
         <span class="sec-tag"><i class="fa-solid fa-sword"></i></span>
@@ -94,7 +97,7 @@
   </section>
 
   <hr class="section-sep" />
-  <section id="consumiveis" class="wiki-content">
+  <section id="consumiveis" class="wiki-content wiki-content-wide">
     <div class="sec-container">
       <div class="sec-header" data-aos="fade-up">
         <span class="sec-tag"><i class="fa-solid fa-flask"></i></span>
@@ -109,7 +112,7 @@
   </section>
 
   <hr class="section-sep" />
-  <section id="valiosos" class="wiki-content">
+  <section id="valiosos" class="wiki-content wiki-content-wide">
     <div class="sec-container">
       <div class="sec-header" data-aos="fade-up">
         <span class="sec-tag"><i class="fa-solid fa-gem"></i></span>
@@ -121,7 +124,31 @@
   </section>
 
   <hr class="section-sep" />
-  <section id="outros" class="wiki-content">
+  <section id="ores" class="wiki-content wiki-content-wide">
+    <div class="sec-container">
+      <div class="sec-header" data-aos="fade-up">
+        <span class="sec-tag"><i class="fa-solid fa-mountain"></i></span>
+        <h2 class="sec-title" data-i18n="wiki.ores_title">Minérios & Lingotes</h2>
+        <hr class="sec-divider sec-divider-et2" />
+      </div>
+      <div id="wiki-table-ores" data-aos="fade-up"></div>
+    </div>
+  </section>
+
+  <hr class="section-sep" />
+  <section id="tools" class="wiki-content wiki-content-wide">
+    <div class="sec-container">
+      <div class="sec-header" data-aos="fade-up">
+        <span class="sec-tag"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+        <h2 class="sec-title" data-i18n="wiki.tools_title">Ferramentas</h2>
+        <hr class="sec-divider sec-divider-et2" />
+      </div>
+      <div id="wiki-table-tools" data-aos="fade-up"></div>
+    </div>
+  </section>
+
+  <hr class="section-sep" />
+  <section id="outros" class="wiki-content wiki-content-wide">
     <div class="sec-container">
       <div class="sec-header" data-aos="fade-up">
         <span class="sec-tag"><i class="fa-solid fa-box-open"></i></span>
@@ -137,6 +164,7 @@
   <script src="../../js/jquery-3.4.1.min.js"></script>
   <script src="../../js/translator.js"></script>
   <script src="../../js/i18n.js"></script>
+  <script src="../../js/wiki-lightbox.js"></script>
   <script src="../../js/wiki-equipment.js"></script>
   <script src="../../js/wiki-consumables.js"></script>
   <script src="../../js/wiki-other.js"></script>

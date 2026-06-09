@@ -1,0 +1,2438 @@
+{
+  "common": [
+    {
+      "name_en": "Cave Bat",
+      "name_pt": "Morcego de Caverna",
+      "img": "enemy_cave_bat",
+      "hp": 9,
+      "mp": 3,
+      "defense": 0,
+      "agility": 12,
+      "strength": 5,
+      "exp": 3,
+      "gold": 0,
+      "minDamage": 0,
+      "maxDamage": 2,
+      "weaknesses": [],
+      "resistances": [],
+      "skills": [],
+      "loot": []
+    },
+    {
+      "name_en": "Crocodile",
+      "name_pt": "Crocodilo",
+      "img": "enemy_crocodile",
+      "hp": 19,
+      "mp": 4,
+      "defense": 6,
+      "agility": 15,
+      "strength": 11,
+      "exp": 7,
+      "gold": 0,
+      "minDamage": 1,
+      "maxDamage": 3,
+      "weaknesses": [],
+      "resistances": [],
+      "skills": [],
+      "loot": [
+        {
+          "name_en": "Leather",
+          "name_pt": "Couro",
+          "qty": 1,
+          "chance": 55
+        },
+        {
+          "name_en": "Raw Meat",
+          "name_pt": "Carne Crua",
+          "qty": 1,
+          "chance": 45
+        },
+        {
+          "name_en": "Algae",
+          "name_pt": "Algas",
+          "qty": 1,
+          "chance": 36
+        }
+      ]
+    },
+    {
+      "name_en": "Dungeon Imp",
+      "name_pt": "Imp das Cavernas",
+      "img": "enemy_dungeon_imp",
+      "hp": 14,
+      "mp": 3,
+      "defense": 1,
+      "agility": 11,
+      "strength": 7,
+      "exp": 6,
+      "gold": 0,
+      "minDamage": 1,
+      "maxDamage": 2,
+      "weaknesses": [],
+      "resistances": [],
+      "skills": [
+        {
+          "name_en": "Fire Touch",
+          "name_pt": "Toque de Fogo",
+          "chance": 35
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Coal",
+          "name_pt": "Carvão",
+          "qty": 1,
+          "chance": 35
+        },
+        {
+          "name_en": "Brown Mushroom",
+          "name_pt": "Cogumelo Marrom",
+          "qty": 1,
+          "chance": 28
+        }
+      ]
+    },
+    {
+      "name_en": "Forest Wolf",
+      "name_pt": "Lobo da Floresta",
+      "img": "enemy_forest_wolf",
+      "hp": 13,
+      "mp": 4,
+      "defense": 1,
+      "agility": 10,
+      "strength": 8,
+      "exp": 5,
+      "gold": 0,
+      "minDamage": 1,
+      "maxDamage": 3,
+      "weaknesses": [],
+      "resistances": [],
+      "skills": [],
+      "loot": [
+        {
+          "name_en": "Leather",
+          "name_pt": "Couro",
+          "qty": 1,
+          "chance": 55
+        },
+        {
+          "name_en": "Raw Meat",
+          "name_pt": "Carne Crua",
+          "qty": 1,
+          "chance": 45
+        }
+      ]
+    },
+    {
+      "name_en": "Grove Goblin",
+      "name_pt": "Goblin do Bosque",
+      "img": "enemy_grove_goblin",
+      "hp": 14,
+      "mp": 5,
+      "defense": 1,
+      "agility": 9,
+      "strength": 7,
+      "exp": 4,
+      "gold": 2,
+      "minDamage": 1,
+      "maxDamage": 2,
+      "weaknesses": [],
+      "resistances": [],
+      "skills": [],
+      "loot": []
+    },
+    {
+      "name_en": "Lion",
+      "name_pt": "Leão",
+      "img": "enemy_lion",
+      "hp": 19,
+      "mp": 4,
+      "defense": 5,
+      "agility": 15,
+      "strength": 11,
+      "exp": 7,
+      "gold": 0,
+      "minDamage": 1,
+      "maxDamage": 3,
+      "weaknesses": [],
+      "resistances": [],
+      "skills": [],
+      "loot": [
+        {
+          "name_en": "Leather",
+          "name_pt": "Couro",
+          "qty": 1,
+          "chance": 55
+        },
+        {
+          "name_en": "Raw Meat",
+          "name_pt": "Carne Crua",
+          "qty": 1,
+          "chance": 45
+        }
+      ]
+    },
+    {
+      "name_en": "Mountain Troll",
+      "name_pt": "Troll da Montanha",
+      "img": "enemy_mountain_troll",
+      "hp": 28,
+      "mp": 8,
+      "defense": 3,
+      "agility": 6,
+      "strength": 12,
+      "exp": 12,
+      "gold": 1,
+      "minDamage": 3,
+      "maxDamage": 5,
+      "weaknesses": [
+        {
+          "element": "FIRE",
+          "value": 25
+        }
+      ],
+      "resistances": [
+        {
+          "element": "EARTH",
+          "value": 25
+        }
+      ],
+      "skills": [],
+      "loot": [
+        {
+          "name_en": "Rock",
+          "name_pt": "Pedra",
+          "qty": 1,
+          "chance": 50
+        },
+        {
+          "name_en": "Copper Hammer",
+          "name_pt": "Martelo de Cobre",
+          "qty": 1,
+          "chance": 3
+        }
+      ]
+    },
+    {
+      "name_en": "Swashbuckler Pirate",
+      "name_pt": "Pirata Espadachim",
+      "img": "enemy_swashbuckler_pirate",
+      "hp": 22,
+      "mp": 10,
+      "defense": 2,
+      "agility": 12,
+      "strength": 9,
+      "exp": 7,
+      "gold": 5,
+      "minDamage": 2,
+      "maxDamage": 3,
+      "weaknesses": [],
+      "resistances": [],
+      "skills": [
+        {
+          "name_en": "Hard Hit",
+          "name_pt": "Golpe Forte",
+          "chance": 32
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Iron Sword",
+          "name_pt": "Espada de Ferro",
+          "qty": 1,
+          "chance": 7
+        }
+      ]
+    },
+    {
+      "name_en": "Spider",
+      "name_pt": "Aranha",
+      "img": "enemy_spider",
+      "hp": 10,
+      "mp": 4,
+      "defense": 0,
+      "agility": 7,
+      "strength": 6,
+      "exp": 4,
+      "gold": 0,
+      "minDamage": 0,
+      "maxDamage": 2,
+      "weaknesses": [
+        {
+          "element": "FIRE",
+          "value": 25
+        }
+      ],
+      "resistances": [
+        {
+          "element": "EARTH",
+          "value": 25
+        }
+      ],
+      "skills": [],
+      "loot": [
+        {
+          "name_en": "Spider Web",
+          "name_pt": "Teia de Aranha",
+          "qty": 1,
+          "chance": 39
+        }
+      ]
+    },
+    {
+      "name_en": "Venom Spider",
+      "name_pt": "Aranha Venenosa",
+      "img": "enemy_venom_spider",
+      "hp": 12,
+      "mp": 5,
+      "defense": 1,
+      "agility": 7,
+      "strength": 7,
+      "exp": 6,
+      "gold": 0,
+      "minDamage": 1,
+      "maxDamage": 2,
+      "weaknesses": [
+        {
+          "element": "FIRE",
+          "value": 25
+        }
+      ],
+      "resistances": [
+        {
+          "element": "EARTH",
+          "value": 50
+        }
+      ],
+      "skills": [
+        {
+          "name_en": "Poison Bite",
+          "name_pt": "Mordida Venenosa",
+          "chance": 45
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Spider Web",
+          "name_pt": "Teia de Aranha",
+          "qty": 1,
+          "chance": 51
+        }
+      ]
+    },
+    {
+      "name_en": "Wild Boar",
+      "name_pt": "Javali Selvagem",
+      "img": "enemy_wild_boar",
+      "hp": 16,
+      "mp": 5,
+      "defense": 2,
+      "agility": 7,
+      "strength": 9,
+      "exp": 6,
+      "gold": 0,
+      "minDamage": 1,
+      "maxDamage": 3,
+      "weaknesses": [],
+      "resistances": [],
+      "skills": [],
+      "loot": [
+        {
+          "name_en": "Raw Meat",
+          "name_pt": "Carne Crua",
+          "qty": 1,
+          "chance": 65
+        },
+        {
+          "name_en": "Leather",
+          "name_pt": "Couro",
+          "qty": 1,
+          "chance": 40
+        }
+      ]
+    }
+  ],
+  "orcs": [
+    {
+      "name_en": "Orc Battler",
+      "name_pt": "Orc Guerreiro",
+      "img": "enemy_orc_battler",
+      "hp": 16,
+      "mp": 4,
+      "defense": 2,
+      "agility": 8,
+      "strength": 9,
+      "exp": 8,
+      "gold": 2,
+      "minDamage": 2,
+      "maxDamage": 4,
+      "weaknesses": [
+        {
+          "element": "FIRE",
+          "value": 25
+        }
+      ],
+      "resistances": [
+        {
+          "element": "EARTH",
+          "value": 25
+        }
+      ],
+      "skills": [],
+      "loot": [
+        {
+          "name_en": "Orc Tooth",
+          "name_pt": "Dente de Orc",
+          "qty": 1,
+          "chance": 65
+        },
+        {
+          "name_en": "Wooden Spear",
+          "name_pt": "Lança de Madeira",
+          "qty": 1,
+          "chance": 35
+        }
+      ]
+    },
+    {
+      "name_en": "Orc Master",
+      "name_pt": "Orc Mestre",
+      "img": "enemy_orc_master",
+      "hp": 21,
+      "mp": 45,
+      "defense": 5,
+      "agility": 11,
+      "strength": 12,
+      "exp": 10,
+      "gold": 5,
+      "minDamage": 2,
+      "maxDamage": 4,
+      "weaknesses": [],
+      "resistances": [
+        {
+          "element": "EARTH",
+          "value": 25
+        },
+        {
+          "element": "WIND",
+          "value": 25
+        },
+        {
+          "element": "DARK",
+          "value": 25
+        }
+      ],
+      "skills": [
+        {
+          "name_en": "Disable",
+          "name_pt": "Desabilitar",
+          "chance": 42
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Orc Tooth",
+          "name_pt": "Dente de Orc",
+          "qty": 1,
+          "chance": 75
+        },
+        {
+          "name_en": "Mead Potion",
+          "name_pt": "Poção Hidromel",
+          "qty": 1,
+          "chance": 50
+        }
+      ]
+    },
+    {
+      "name_en": "Peasant Orc",
+      "name_pt": "Orc Aldeão",
+      "img": "enemy_peasant_orc",
+      "hp": 11,
+      "mp": 4,
+      "defense": 0,
+      "agility": 6,
+      "strength": 6,
+      "exp": 4,
+      "gold": 1,
+      "minDamage": 0,
+      "maxDamage": 2,
+      "weaknesses": [
+        {
+          "element": "FIRE",
+          "value": 25
+        }
+      ],
+      "resistances": [
+        {
+          "element": "EARTH",
+          "value": 25
+        }
+      ],
+      "skills": [],
+      "loot": [
+        {
+          "name_en": "Orc Tooth",
+          "name_pt": "Dente de Orc",
+          "qty": 1,
+          "chance": 60
+        }
+      ]
+    }
+  ],
+  "humanoids": [
+    {
+      "name_en": "Army Guard",
+      "name_pt": "Guarda do Exército",
+      "img": "enemy_army_guard",
+      "hp": 22,
+      "mp": 16,
+      "defense": 3,
+      "agility": 11,
+      "strength": 10,
+      "exp": 8,
+      "gold": 2,
+      "minDamage": 2,
+      "maxDamage": 3,
+      "weaknesses": [],
+      "resistances": [],
+      "skills": [
+        {
+          "name_en": "Hard Hit",
+          "name_pt": "Golpe Forte",
+          "chance": 38
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Iron Sword",
+          "name_pt": "Espada de Ferro",
+          "qty": 1,
+          "chance": 6
+        },
+        {
+          "name_en": "Bread",
+          "name_pt": "Pão",
+          "qty": 1,
+          "chance": 32
+        }
+      ]
+    },
+    {
+      "name_en": "Bandit",
+      "name_pt": "Bandido",
+      "img": "enemy_bandit",
+      "hp": 15,
+      "mp": 5,
+      "defense": 1,
+      "agility": 9,
+      "strength": 7,
+      "exp": 6,
+      "gold": 2,
+      "minDamage": 1,
+      "maxDamage": 4,
+      "weaknesses": [],
+      "resistances": [],
+      "skills": [],
+      "loot": [
+        {
+          "name_en": "Throwing Knives",
+          "name_pt": "Facas de Arremesso",
+          "qty": 1,
+          "chance": 7
+        }
+      ]
+    },
+    {
+      "name_en": "Barbarian",
+      "name_pt": "Bárbaro",
+      "img": "enemy_barbarian",
+      "hp": 22,
+      "mp": 25,
+      "defense": 3,
+      "agility": 16,
+      "strength": 10,
+      "exp": 8,
+      "gold": 1,
+      "minDamage": 2,
+      "maxDamage": 3,
+      "weaknesses": [],
+      "resistances": [],
+      "skills": [
+        {
+          "name_en": "Weak Spot",
+          "name_pt": "Ponto Fraco",
+          "chance": 42
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Heavy Mace",
+          "name_pt": "Maça Pesada",
+          "qty": 1,
+          "chance": 1
+        },
+        {
+          "name_en": "Cooked Meat",
+          "name_pt": "Carne Assada",
+          "qty": 1,
+          "chance": 21
+        }
+      ]
+    },
+    {
+      "name_en": "Letow Guard",
+      "name_pt": "Guarda de Letow",
+      "img": "enemy_letow_guard",
+      "hp": 18,
+      "mp": 10,
+      "defense": 2,
+      "agility": 9,
+      "strength": 8,
+      "exp": 6,
+      "gold": 1,
+      "minDamage": 2,
+      "maxDamage": 4,
+      "weaknesses": [],
+      "resistances": [],
+      "skills": [],
+      "loot": [
+        {
+          "name_en": "Plank Shield",
+          "name_pt": "Escudo de Tábua",
+          "qty": 1,
+          "chance": 18
+        }
+      ]
+    },
+    {
+      "name_en": "Malignant Elf",
+      "name_pt": "Elfo Maligno",
+      "img": "enemy_malignant_elf",
+      "hp": 23,
+      "mp": 25,
+      "defense": 3,
+      "agility": 16,
+      "strength": 10,
+      "exp": 9,
+      "gold": 1,
+      "minDamage": 2,
+      "maxDamage": 3,
+      "weaknesses": [],
+      "resistances": [],
+      "skills": [
+        {
+          "name_en": "Arrow Rain",
+          "name_pt": "Chuva de Flechas",
+          "chance": 42
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Long Oak Bow",
+          "name_pt": "Arco Longo de Carvalho",
+          "qty": 1,
+          "chance": 3
+        },
+        {
+          "name_en": "Pomegranate",
+          "name_pt": "Romã",
+          "qty": 1,
+          "chance": 21
+        },
+        {
+          "name_en": "Simple MP Potion",
+          "name_pt": "Poção PM Simples",
+          "qty": 1,
+          "chance": 23
+        }
+      ]
+    },
+    {
+      "name_en": "Monelix City Guard",
+      "name_pt": "Guarda de Monelix",
+      "img": "enemy_army_guard",
+      "hp": 27,
+      "mp": 16,
+      "defense": 3,
+      "agility": 12,
+      "strength": 10,
+      "exp": 10,
+      "gold": 1,
+      "minDamage": 3,
+      "maxDamage": 5,
+      "weaknesses": [],
+      "resistances": [],
+      "skills": [],
+      "loot": [
+        {
+          "name_en": "Iron Sword",
+          "name_pt": "Espada de Ferro",
+          "qty": 1,
+          "chance": 8
+        },
+        {
+          "name_en": "Bread",
+          "name_pt": "Pão",
+          "qty": 1,
+          "chance": 30
+        }
+      ]
+    },
+    {
+      "name_en": "Pickpocketer",
+      "name_pt": "Salteador",
+      "img": "enemy_pickpocketer",
+      "hp": 18,
+      "mp": 6,
+      "defense": 2,
+      "agility": 10,
+      "strength": 8,
+      "exp": 7,
+      "gold": 2,
+      "minDamage": 2,
+      "maxDamage": 4,
+      "weaknesses": [],
+      "resistances": [],
+      "skills": [],
+      "loot": [
+        {
+          "name_en": "Throwing Knives",
+          "name_pt": "Facas de Arremesso",
+          "qty": 1,
+          "chance": 13
+        },
+        {
+          "name_en": "Simple HP Potion",
+          "name_pt": "Poção PV Simples",
+          "qty": 1,
+          "chance": 15
+        }
+      ]
+    },
+    {
+      "name_en": "Pirate Ghost",
+      "name_pt": "Pirata Fantasma",
+      "img": "enemy_pirate_ghost",
+      "hp": 30,
+      "mp": 0,
+      "defense": 3,
+      "agility": 15,
+      "strength": 11,
+      "exp": 12,
+      "gold": 3,
+      "minDamage": 3,
+      "maxDamage": 4,
+      "weaknesses": [
+        {
+          "element": "LIGHT",
+          "value": 50
+        },
+        {
+          "element": "WIND",
+          "value": 25
+        }
+      ],
+      "resistances": [
+        {
+          "element": "DARK",
+          "value": 50
+        },
+        {
+          "element": "PHYSICAL",
+          "value": 50
+        },
+        {
+          "element": "EARTH",
+          "value": 25
+        }
+      ],
+      "skills": [],
+      "loot": []
+    },
+    {
+      "name_en": "Swashbuckler Pirate",
+      "name_pt": "Pirata Espadachim",
+      "img": "enemy_swashbuckler_pirate",
+      "hp": 22,
+      "mp": 10,
+      "defense": 2,
+      "agility": 12,
+      "strength": 9,
+      "exp": 7,
+      "gold": 5,
+      "minDamage": 2,
+      "maxDamage": 3,
+      "weaknesses": [],
+      "resistances": [],
+      "skills": [
+        {
+          "name_en": "Hard Hit",
+          "name_pt": "Golpe Forte",
+          "chance": 32
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Iron Sword",
+          "name_pt": "Espada de Ferro",
+          "qty": 1,
+          "chance": 7
+        }
+      ]
+    },
+    {
+      "name_en": "Torment Pirate",
+      "name_pt": "Pirata da Tormenta",
+      "img": "enemy_torment_pirate",
+      "hp": 27,
+      "mp": 35,
+      "defense": 4,
+      "agility": 15,
+      "strength": 9,
+      "exp": 13,
+      "gold": 3,
+      "minDamage": 2,
+      "maxDamage": 4,
+      "weaknesses": [
+        {
+          "element": "EARTH",
+          "value": 50
+        },
+        {
+          "element": "LIGHT",
+          "value": 25
+        }
+      ],
+      "resistances": [
+        {
+          "element": "WATER",
+          "value": 50
+        },
+        {
+          "element": "WIND",
+          "value": 25
+        }
+      ],
+      "skills": [
+        {
+          "name_en": "Water Strike",
+          "name_pt": "Pancada de Água",
+          "chance": 40
+        },
+        {
+          "name_en": "Frozen Shield",
+          "name_pt": "Escudo de Gelo",
+          "chance": 38
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Algae",
+          "name_pt": "Algas",
+          "qty": 1,
+          "chance": 37
+        },
+        {
+          "name_en": "Beer",
+          "name_pt": "Cerveja",
+          "qty": 1,
+          "chance": 47
+        },
+        {
+          "name_en": "Wine",
+          "name_pt": "Vinho",
+          "qty": 1,
+          "chance": 35
+        },
+        {
+          "name_en": "Mead Potion",
+          "name_pt": "Poção Hidromel",
+          "qty": 1,
+          "chance": 57
+        },
+        {
+          "name_en": "Tuna",
+          "name_pt": "Atum",
+          "qty": 1,
+          "chance": 35
+        }
+      ]
+    }
+  ],
+  "dark": [
+    {
+      "name_en": "Dark Cultist",
+      "name_pt": "Cultista das Trevas",
+      "img": "enemy_dark_cultist",
+      "hp": 55,
+      "mp": 75,
+      "defense": 4,
+      "agility": 18,
+      "strength": 15,
+      "exp": 28,
+      "gold": 10,
+      "minDamage": 5,
+      "maxDamage": 9,
+      "weaknesses": [
+        {
+          "element": "LIGHT",
+          "value": 25
+        }
+      ],
+      "resistances": [
+        {
+          "element": "DARK",
+          "value": 50
+        }
+      ],
+      "skills": [
+        {
+          "name_en": "Dark Missile",
+          "name_pt": "Míssil Negro",
+          "chance": 42
+        },
+        {
+          "name_en": "Obscure Aid",
+          "name_pt": "Ajuda Obscura",
+          "chance": 25
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Dark Blood",
+          "name_pt": "Sangue Negro",
+          "qty": 1,
+          "chance": 100
+        },
+        {
+          "name_en": "Dark Mushroom",
+          "name_pt": "Cogumelo Negro",
+          "qty": 1,
+          "chance": 40
+        },
+        {
+          "name_en": "MP Potion",
+          "name_pt": "Poção PM",
+          "qty": 1,
+          "chance": 30
+        }
+      ]
+    },
+    {
+      "name_en": "Dark Specter",
+      "name_pt": "Espectro Sombrio",
+      "img": "enemy_dark_specter",
+      "hp": 38,
+      "mp": 58,
+      "defense": 2,
+      "agility": 18,
+      "strength": 12,
+      "exp": 35,
+      "gold": 6,
+      "minDamage": 4,
+      "maxDamage": 7,
+      "weaknesses": [
+        {
+          "element": "LIGHT",
+          "value": 25
+        }
+      ],
+      "resistances": [
+        {
+          "element": "DARK",
+          "value": 50
+        }
+      ],
+      "skills": [
+        {
+          "name_en": "Obscure Aid",
+          "name_pt": "Ajuda Obscura",
+          "chance": 42
+        },
+        {
+          "name_en": "Surprise Strike",
+          "name_pt": "Ataque Surpresa",
+          "chance": 50
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Darkness Amulet",
+          "name_pt": "Amuleto Sombrio",
+          "qty": 1,
+          "chance": 42
+        }
+      ]
+    },
+    {
+      "name_en": "Desert Ghoul",
+      "name_pt": "Carniçal do Deserto",
+      "img": "enemy_desert_ghoul",
+      "hp": 48,
+      "mp": 58,
+      "defense": 3,
+      "agility": 10,
+      "strength": 17,
+      "exp": 24,
+      "gold": 5,
+      "minDamage": 4,
+      "maxDamage": 7,
+      "weaknesses": [],
+      "resistances": [],
+      "skills": [
+        {
+          "name_en": "Weak Spot",
+          "name_pt": "Ponto Fraco",
+          "chance": 42
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Dark Mushroom",
+          "name_pt": "Cogumelo Negro",
+          "qty": 1,
+          "chance": 35
+        },
+        {
+          "name_en": "Brown Mushroom",
+          "name_pt": "Cogumelo Marrom",
+          "qty": 1,
+          "chance": 45
+        },
+        {
+          "name_en": "Raw Meat",
+          "name_pt": "Carne Crua",
+          "qty": 1,
+          "chance": 48
+        }
+      ]
+    },
+    {
+      "name_en": "Shadow Wraith",
+      "name_pt": "Espectro das Sombras",
+      "img": "enemy_shadow_wraith",
+      "hp": 38,
+      "mp": 30,
+      "defense": 2,
+      "agility": 18,
+      "strength": 11,
+      "exp": 16,
+      "gold": 0,
+      "minDamage": 3,
+      "maxDamage": 6,
+      "weaknesses": [],
+      "resistances": [],
+      "skills": [
+        {
+          "name_en": "Dark Missile",
+          "name_pt": "Míssil Negro",
+          "chance": 38
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Dark Mushroom",
+          "name_pt": "Cogumelo Negro",
+          "qty": 1,
+          "chance": 42
+        },
+        {
+          "name_en": "Elixir Potion",
+          "name_pt": "Poção Elixir",
+          "qty": 1,
+          "chance": 46
+        },
+        {
+          "name_en": "HP Potion",
+          "name_pt": "Poção PV",
+          "qty": 1,
+          "chance": 62
+        }
+      ]
+    },
+    {
+      "name_en": "Skeleton Guardian",
+      "name_pt": "Esqueleto Guardião",
+      "img": "enemy_skeleton_guardian",
+      "hp": 36,
+      "mp": 20,
+      "defense": 0,
+      "agility": 15,
+      "strength": 16,
+      "exp": 16,
+      "gold": 3,
+      "minDamage": 3,
+      "maxDamage": 5,
+      "weaknesses": [],
+      "resistances": [],
+      "skills": [
+        {
+          "name_en": "Rage",
+          "name_pt": "Furor",
+          "chance": 36
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Tissue",
+          "name_pt": "Tecido",
+          "qty": 1,
+          "chance": 35
+        },
+        {
+          "name_en": "String",
+          "name_pt": "Cordão",
+          "qty": 1,
+          "chance": 31
+        }
+      ]
+    },
+    {
+      "name_en": "Succubus",
+      "name_pt": "Súcubo",
+      "img": "enemy_succubus",
+      "hp": 32,
+      "mp": 58,
+      "defense": 3,
+      "agility": 20,
+      "strength": 12,
+      "exp": 18,
+      "gold": 4,
+      "minDamage": 3,
+      "maxDamage": 5,
+      "weaknesses": [
+        {
+          "element": "LIGHT",
+          "value": 25
+        }
+      ],
+      "resistances": [
+        {
+          "element": "DARK",
+          "value": 25
+        },
+        {
+          "element": "FIRE",
+          "value": 25
+        }
+      ],
+      "skills": [
+        {
+          "name_en": "Disable",
+          "name_pt": "Desabilitar",
+          "chance": 30
+        },
+        {
+          "name_en": "Dark Missile",
+          "name_pt": "Míssil Negro",
+          "chance": 32
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Leather Boots",
+          "name_pt": "Botas de Couro",
+          "qty": 1,
+          "chance": 22
+        },
+        {
+          "name_en": "HP Potion",
+          "name_pt": "Poção PV",
+          "qty": 1,
+          "chance": 20
+        },
+        {
+          "name_en": "Wine",
+          "name_pt": "Vinho",
+          "qty": 1,
+          "chance": 48
+        }
+      ]
+    },
+    {
+      "name_en": "Void Stalker",
+      "name_pt": "Caçador do Vazio",
+      "img": "enemy_void_stalker",
+      "hp": 32,
+      "mp": 30,
+      "defense": 2,
+      "agility": 15,
+      "strength": 11,
+      "exp": 16,
+      "gold": 0,
+      "minDamage": 3,
+      "maxDamage": 7,
+      "weaknesses": [],
+      "resistances": [],
+      "skills": [
+        {
+          "name_en": "Blood Rain",
+          "name_pt": "Chuva de Sangue",
+          "chance": 38
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Dark Mushroom",
+          "name_pt": "Cogumelo Negro",
+          "qty": 1,
+          "chance": 55
+        },
+        {
+          "name_en": "Jewel of Unjust",
+          "name_pt": "Jóia dos Injustos",
+          "qty": 1,
+          "chance": 16
+        },
+        {
+          "name_en": "HP Potion",
+          "name_pt": "Poção PV",
+          "qty": 1,
+          "chance": 62
+        }
+      ]
+    }
+  ],
+  "earth": [
+    {
+      "name_en": "Crawling Worm",
+      "name_pt": "Verme Rastejante",
+      "img": "enemy_crawling_worm",
+      "hp": 22,
+      "mp": 4,
+      "defense": 4,
+      "agility": 10,
+      "strength": 14,
+      "exp": 8,
+      "gold": 0,
+      "minDamage": 2,
+      "maxDamage": 4,
+      "weaknesses": [
+        {
+          "element": "FIRE",
+          "value": 25
+        },
+        {
+          "element": "WATER",
+          "value": 25
+        }
+      ],
+      "resistances": [
+        {
+          "element": "EARTH",
+          "value": 50
+        }
+      ],
+      "skills": [],
+      "loot": [
+        {
+          "name_en": "Carrot",
+          "name_pt": "Cenoura",
+          "qty": 1,
+          "chance": 30
+        }
+      ]
+    },
+    {
+      "name_en": "Desert Scorpion",
+      "name_pt": "Escorpião do Deserto",
+      "img": "enemy_desert_scorpion",
+      "hp": 22,
+      "mp": 6,
+      "defense": 3,
+      "agility": 8,
+      "strength": 9,
+      "exp": 8,
+      "gold": 0,
+      "minDamage": 2,
+      "maxDamage": 3,
+      "weaknesses": [
+        {
+          "element": "WATER",
+          "value": 25
+        }
+      ],
+      "resistances": [
+        {
+          "element": "EARTH",
+          "value": 25
+        }
+      ],
+      "skills": [
+        {
+          "name_en": "Poison Sting",
+          "name_pt": "Agulhas Venenosas",
+          "chance": 35
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Yellow Herb",
+          "name_pt": "Erva Amarela",
+          "qty": 1,
+          "chance": 20
+        },
+        {
+          "name_en": "Antidote",
+          "name_pt": "Antídoto",
+          "qty": 1,
+          "chance": 15
+        }
+      ]
+    },
+    {
+      "name_en": "Forest Predator",
+      "name_pt": "Predador da Floresta",
+      "img": "enemy_forest_predator",
+      "hp": 25,
+      "mp": 24,
+      "defense": 2,
+      "agility": 12,
+      "strength": 9,
+      "exp": 12,
+      "gold": 0,
+      "minDamage": 2,
+      "maxDamage": 4,
+      "weaknesses": [
+        {
+          "element": "FIRE",
+          "value": 50
+        }
+      ],
+      "resistances": [
+        {
+          "element": "EARTH",
+          "value": 50
+        },
+        {
+          "element": "WATER",
+          "value": 25
+        },
+        {
+          "element": "DARK",
+          "value": 25
+        }
+      ],
+      "skills": [
+        {
+          "name_en": "Poison Bite",
+          "name_pt": "Mordida Venenosa",
+          "chance": 45
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Branch",
+          "name_pt": "Galho",
+          "qty": 1,
+          "chance": 37
+        },
+        {
+          "name_en": "Green Herb",
+          "name_pt": "Erva Verde",
+          "qty": 1,
+          "chance": 37
+        },
+        {
+          "name_en": "Yellow Herb",
+          "name_pt": "Erva Amarela",
+          "qty": 1,
+          "chance": 22
+        }
+      ]
+    },
+    {
+      "name_en": "Sand Demon",
+      "name_pt": "Demônio da Areia",
+      "img": "enemy_sand_demon",
+      "hp": 26,
+      "mp": 45,
+      "defense": 2,
+      "agility": 15,
+      "strength": 12,
+      "exp": 16,
+      "gold": 3,
+      "minDamage": 3,
+      "maxDamage": 6,
+      "weaknesses": [
+        {
+          "element": "WIND",
+          "value": 25
+        },
+        {
+          "element": "WATER",
+          "value": 25
+        }
+      ],
+      "resistances": [
+        {
+          "element": "EARTH",
+          "value": 75
+        },
+        {
+          "element": "FIRE",
+          "value": 25
+        }
+      ],
+      "skills": [
+        {
+          "name_en": "Quicksand",
+          "name_pt": "Areia Movediça",
+          "chance": 38
+        },
+        {
+          "name_en": "Earth Vines",
+          "name_pt": "Videiras da Terra",
+          "chance": 38
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Sapphire",
+          "name_pt": "Safira",
+          "qty": 1,
+          "chance": 38
+        }
+      ]
+    }
+  ],
+  "fire": [
+    {
+      "name_en": "Infernal Hound",
+      "name_pt": "Cão Infernal",
+      "img": "enemy_infernal_hound",
+      "hp": 30,
+      "mp": 24,
+      "defense": 2,
+      "agility": 20,
+      "strength": 12,
+      "exp": 20,
+      "gold": 6,
+      "minDamage": 4,
+      "maxDamage": 6,
+      "weaknesses": [
+        {
+          "element": "WATER",
+          "value": 50
+        },
+        {
+          "element": "LIGHT",
+          "value": 25
+        }
+      ],
+      "resistances": [
+        {
+          "element": "FIRE",
+          "value": 50
+        },
+        {
+          "element": "DARK",
+          "value": 25
+        }
+      ],
+      "skills": [
+        {
+          "name_en": "Hard Hit",
+          "name_pt": "Golpe Forte",
+          "chance": 50
+        },
+        {
+          "name_en": "Fire Rain",
+          "name_pt": "Chuva de Fogo",
+          "chance": 35
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Leather",
+          "name_pt": "Couro",
+          "qty": 1,
+          "chance": 51
+        },
+        {
+          "name_en": "Ash",
+          "name_pt": "Cinzas",
+          "qty": 1,
+          "chance": 65
+        }
+      ]
+    },
+    {
+      "name_en": "Spirit of Fire",
+      "name_pt": "Espírito do Fogo",
+      "img": "enemy_spirit_of_fire",
+      "hp": 28,
+      "mp": 120,
+      "defense": 6,
+      "agility": 20,
+      "strength": 12,
+      "exp": 15,
+      "gold": 0,
+      "minDamage": 2,
+      "maxDamage": 5,
+      "weaknesses": [
+        {
+          "element": "WATER",
+          "value": 50
+        },
+        {
+          "element": "EARTH",
+          "value": 25
+        }
+      ],
+      "resistances": [
+        {
+          "element": "FIRE",
+          "value": 100
+        },
+        {
+          "element": "PHYSICAL",
+          "value": 25
+        }
+      ],
+      "skills": [
+        {
+          "name_en": "Fire Touch",
+          "name_pt": "Toque de Fogo",
+          "chance": 48
+        },
+        {
+          "name_en": "Fire Bomb",
+          "name_pt": "Bomba de Fogo",
+          "chance": 50
+        },
+        {
+          "name_en": "Fire Rain",
+          "name_pt": "Chuva de Fogo",
+          "chance": 35
+        },
+        {
+          "name_en": "Fire Torment",
+          "name_pt": "Tormenta de Fogo",
+          "chance": 25
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Fire Sword",
+          "name_pt": "Espada de Fogo",
+          "qty": 1,
+          "chance": 2
+        },
+        {
+          "name_en": "Ruby",
+          "name_pt": "Rubi",
+          "qty": 1,
+          "chance": 6
+        },
+        {
+          "name_en": "HP Potion",
+          "name_pt": "Poção PV",
+          "qty": 1,
+          "chance": 26
+        },
+        {
+          "name_en": "Ash",
+          "name_pt": "Cinzas",
+          "qty": 1,
+          "chance": 75
+        }
+      ]
+    }
+  ],
+  "waterIce": [
+    {
+      "name_en": "Frost Wraith",
+      "name_pt": "Aparição Gélida",
+      "img": "enemy_frost_wraith",
+      "hp": 26,
+      "mp": 12,
+      "defense": 1,
+      "agility": 13,
+      "strength": 7,
+      "exp": 10,
+      "gold": 0,
+      "minDamage": 2,
+      "maxDamage": 4,
+      "weaknesses": [
+        {
+          "element": "FIRE",
+          "value": 50
+        }
+      ],
+      "resistances": [
+        {
+          "element": "WATER",
+          "value": 50
+        },
+        {
+          "element": "WIND",
+          "value": 25
+        },
+        {
+          "element": "PHYSICAL",
+          "value": 25
+        }
+      ],
+      "skills": [
+        {
+          "name_en": "Ice Ray",
+          "name_pt": "Raio Gelado",
+          "chance": 40
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Sapphire",
+          "name_pt": "Safira",
+          "qty": 1,
+          "chance": 8
+        },
+        {
+          "name_en": "White Mushroom",
+          "name_pt": "Cogumelo Branco",
+          "qty": 1,
+          "chance": 25
+        }
+      ]
+    },
+    {
+      "name_en": "Medusa",
+      "name_pt": "Medusa",
+      "img": "enemy_medusa",
+      "hp": 32,
+      "mp": 50,
+      "defense": 6,
+      "agility": 17,
+      "strength": 9,
+      "exp": 18,
+      "gold": 6,
+      "minDamage": 4,
+      "maxDamage": 7,
+      "weaknesses": [
+        {
+          "element": "EARTH",
+          "value": 50
+        },
+        {
+          "element": "LIGHT",
+          "value": 25
+        }
+      ],
+      "resistances": [
+        {
+          "element": "WATER",
+          "value": 50
+        },
+        {
+          "element": "EARTH",
+          "value": 25
+        }
+      ],
+      "skills": [
+        {
+          "name_en": "Water Strike",
+          "name_pt": "Pancada de Água",
+          "chance": 40
+        },
+        {
+          "name_en": "Earth Vines",
+          "name_pt": "Videiras da Terra",
+          "chance": 38
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Water",
+          "name_pt": "Água",
+          "qty": 1,
+          "chance": 65
+        },
+        {
+          "name_en": "Emerald Powder",
+          "name_pt": "Pó de Esmeralda",
+          "qty": 1,
+          "chance": 20
+        }
+      ]
+    },
+    {
+      "name_en": "Swamp Toad",
+      "name_pt": "Sapo do Pântano",
+      "img": "enemy_swamp_toad",
+      "hp": 17,
+      "mp": 4,
+      "defense": 2,
+      "agility": 6,
+      "strength": 7,
+      "exp": 5,
+      "gold": 0,
+      "minDamage": 1,
+      "maxDamage": 2,
+      "weaknesses": [
+        {
+          "element": "FIRE",
+          "value": 25
+        }
+      ],
+      "resistances": [
+        {
+          "element": "WATER",
+          "value": 50
+        }
+      ],
+      "skills": [
+        {
+          "name_en": "Poison Bite",
+          "name_pt": "Mordida Venenosa",
+          "chance": 30
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Algae",
+          "name_pt": "Algas",
+          "qty": 1,
+          "chance": 40
+        },
+        {
+          "name_en": "Green Herb",
+          "name_pt": "Erva Verde",
+          "qty": 1,
+          "chance": 35
+        }
+      ]
+    }
+  ],
+  "air": [
+    {
+      "name_en": "Spirit of Air",
+      "name_pt": "Espírito de Ar",
+      "img": "enemy_spirit_of_air",
+      "hp": 33,
+      "mp": 30,
+      "defense": 3,
+      "agility": 24,
+      "strength": 10,
+      "exp": 15,
+      "gold": 0,
+      "minDamage": 2,
+      "maxDamage": 4,
+      "weaknesses": [
+        {
+          "element": "EARTH",
+          "value": 50
+        }
+      ],
+      "resistances": [
+        {
+          "element": "WIND",
+          "value": 75
+        }
+      ],
+      "skills": [
+        {
+          "name_en": "Air Spikes",
+          "name_pt": "Pontas de Ar",
+          "chance": 42
+        },
+        {
+          "name_en": "Cyclone",
+          "name_pt": "Ciclone",
+          "chance": 37
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Magic Rod",
+          "name_pt": "Bastão Mágico",
+          "qty": 1,
+          "chance": 38
+        },
+        {
+          "name_en": "Simple MP Potion",
+          "name_pt": "Poção PM Simples",
+          "qty": 1,
+          "chance": 72
+        }
+      ]
+    }
+  ],
+  "light": [
+    {
+      "name_en": "Corrupted Wizard",
+      "name_pt": "Mago Corrompido",
+      "img": "enemy_corrupted_wizard",
+      "hp": 27,
+      "mp": 58,
+      "defense": 4,
+      "agility": 12,
+      "strength": 6,
+      "exp": 16,
+      "gold": 3,
+      "minDamage": 2,
+      "maxDamage": 5,
+      "weaknesses": [
+        {
+          "element": "DARK",
+          "value": 25
+        }
+      ],
+      "resistances": [
+        {
+          "element": "LIGHT",
+          "value": 50
+        },
+        {
+          "element": "FIRE",
+          "value": 25
+        }
+      ],
+      "skills": [
+        {
+          "name_en": "Mystical Stun",
+          "name_pt": "Atordoamento Místico",
+          "chance": 47
+        },
+        {
+          "name_en": "Thunder Ray",
+          "name_pt": "Raio Trovão",
+          "chance": 47
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Cape of Fortitude",
+          "name_pt": "Capa da Resistência",
+          "qty": 1,
+          "chance": 1
+        },
+        {
+          "name_en": "Heavy Robe",
+          "name_pt": "Manto Pesado",
+          "qty": 1,
+          "chance": 20
+        },
+        {
+          "name_en": "Simple HP Potion",
+          "name_pt": "Poção PV Simples",
+          "qty": 1,
+          "chance": 50
+        }
+      ]
+    },
+    {
+      "name_en": "Spirit of Light",
+      "name_pt": "Espírito de Luz",
+      "img": "enemy_spirit_of_light",
+      "hp": 33,
+      "mp": 85,
+      "defense": 4,
+      "agility": 24,
+      "strength": 8,
+      "exp": 15,
+      "gold": 0,
+      "minDamage": 1,
+      "maxDamage": 4,
+      "weaknesses": [
+        {
+          "element": "DARK",
+          "value": 25
+        }
+      ],
+      "resistances": [
+        {
+          "element": "LIGHT",
+          "value": 50
+        }
+      ],
+      "skills": [
+        {
+          "name_en": "Magic Healing",
+          "name_pt": "Cura Mágica",
+          "chance": 52
+        },
+        {
+          "name_en": "Magic Missile",
+          "name_pt": "Míssil Mágico",
+          "chance": 50
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Elixir Potion",
+          "name_pt": "Poção Elixir",
+          "qty": 1,
+          "chance": 20
+        },
+        {
+          "name_en": "Hat of Wise",
+          "name_pt": "Chapéu do Sábio",
+          "qty": 1,
+          "chance": 6
+        }
+      ]
+    }
+  ],
+  "golems": [
+    {
+      "name_en": "Forest Golem",
+      "name_pt": "Golem da Floresta",
+      "img": "enemy_forest_golem",
+      "hp": 38,
+      "mp": 28,
+      "defense": 4,
+      "agility": 7,
+      "strength": 14,
+      "exp": 18,
+      "gold": 0,
+      "minDamage": 2,
+      "maxDamage": 5,
+      "weaknesses": [
+        {
+          "element": "FIRE",
+          "value": 50
+        }
+      ],
+      "resistances": [
+        {
+          "element": "EARTH",
+          "value": 50
+        },
+        {
+          "element": "WATER",
+          "value": 25
+        }
+      ],
+      "skills": [],
+      "loot": [
+        {
+          "name_en": "Living Mosswood",
+          "name_pt": "Madeira Viva Musgosa",
+          "qty": 1,
+          "chance": 70
+        },
+        {
+          "name_en": "Log",
+          "name_pt": "Tora",
+          "qty": 2,
+          "chance": 41
+        },
+        {
+          "name_en": "Green Herb",
+          "name_pt": "Erva Verde",
+          "qty": 2,
+          "chance": 45
+        }
+      ]
+    },
+    {
+      "name_en": "Ice Golem",
+      "name_pt": "Golem de Gelo",
+      "img": "enemy_ice_golem",
+      "hp": 43,
+      "mp": 25,
+      "defense": 6,
+      "agility": 9,
+      "strength": 15,
+      "exp": 27,
+      "gold": 0,
+      "minDamage": 4,
+      "maxDamage": 7,
+      "weaknesses": [
+        {
+          "element": "FIRE",
+          "value": 50
+        }
+      ],
+      "resistances": [
+        {
+          "element": "WATER",
+          "value": 50
+        },
+        {
+          "element": "WIND",
+          "value": 25
+        }
+      ],
+      "skills": [
+        {
+          "name_en": "Ice Ray",
+          "name_pt": "Raio Gelado",
+          "chance": 50
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Eternal Ice Crystal",
+          "name_pt": "Cristal de Gelo Eterno",
+          "qty": 1,
+          "chance": 70
+        },
+        {
+          "name_en": "White Herb",
+          "name_pt": "Erva Branca",
+          "qty": 1,
+          "chance": 35
+        },
+        {
+          "name_en": "Sapphire",
+          "name_pt": "Safira",
+          "qty": 1,
+          "chance": 11
+        },
+        {
+          "name_en": "MP Potion",
+          "name_pt": "Poção PM",
+          "qty": 1,
+          "chance": 20
+        },
+        {
+          "name_en": "Glacier Mace",
+          "name_pt": "Maça Glacial",
+          "qty": 1,
+          "chance": 2
+        }
+      ]
+    },
+    {
+      "name_en": "Mountain Golem",
+      "name_pt": "Golem da Montanha",
+      "img": "enemy_mountain_golem",
+      "hp": 43,
+      "mp": 35,
+      "defense": 4,
+      "agility": 5,
+      "strength": 16,
+      "exp": 22,
+      "gold": 0,
+      "minDamage": 3,
+      "maxDamage": 7,
+      "weaknesses": [
+        {
+          "element": "WIND",
+          "value": 50
+        }
+      ],
+      "resistances": [
+        {
+          "element": "EARTH",
+          "value": 50
+        }
+      ],
+      "skills": [
+        {
+          "name_en": "Rock Rain",
+          "name_pt": "Chuva de Rochas",
+          "chance": 40
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Runic Stone Fragment",
+          "name_pt": "Fragmento de Pedra Rúnica",
+          "qty": 1,
+          "chance": 70
+        },
+        {
+          "name_en": "Rock",
+          "name_pt": "Pedra",
+          "qty": 2,
+          "chance": 60
+        },
+        {
+          "name_en": "Iron Ore",
+          "name_pt": "Minério de Ferro",
+          "qty": 1,
+          "chance": 40
+        }
+      ]
+    },
+    {
+      "name_en": "Sand Golem",
+      "name_pt": "Golem de Areia",
+      "img": "enemy_sand_golem",
+      "hp": 48,
+      "mp": 22,
+      "defense": 4,
+      "agility": 8,
+      "strength": 16,
+      "exp": 24,
+      "gold": 0,
+      "minDamage": 3,
+      "maxDamage": 5,
+      "weaknesses": [
+        {
+          "element": "WIND",
+          "value": 25
+        },
+        {
+          "element": "WATER",
+          "value": 50
+        }
+      ],
+      "resistances": [
+        {
+          "element": "FIRE",
+          "value": 50
+        },
+        {
+          "element": "EARTH",
+          "value": 25
+        }
+      ],
+      "skills": [],
+      "loot": [
+        {
+          "name_en": "Enchanted Desert Sand",
+          "name_pt": "Areia do Deserto Encantada",
+          "qty": 1,
+          "chance": 70
+        },
+        {
+          "name_en": "Rock",
+          "name_pt": "Pedra",
+          "qty": 2,
+          "chance": 40
+        },
+        {
+          "name_en": "Yellow Herb",
+          "name_pt": "Erva Amarela",
+          "qty": 1,
+          "chance": 25
+        },
+        {
+          "name_en": "Gold Ore",
+          "name_pt": "Minério de Ouro",
+          "qty": 1,
+          "chance": 29
+        }
+      ]
+    }
+  ],
+  "bosses": [
+    {
+      "name_en": "Casiel Corrupted",
+      "name_pt": "Casiel Corrompido",
+      "img": "enemy_casiel_corrupted",
+      "hp": 60,
+      "mp": 75,
+      "defense": 5,
+      "agility": 17,
+      "strength": 12,
+      "exp": 35,
+      "gold": 0,
+      "minDamage": 4,
+      "maxDamage": 8,
+      "weaknesses": [],
+      "resistances": [
+        {
+          "element": "DARK",
+          "value": 25
+        },
+        {
+          "element": "EARTH",
+          "value": 25
+        },
+        {
+          "element": "LIGHT",
+          "value": 25
+        }
+      ],
+      "skills": [
+        {
+          "name_en": "Earth Vines",
+          "name_pt": "Videiras da Terra",
+          "chance": 35
+        },
+        {
+          "name_en": "Dark Missile",
+          "name_pt": "Míssil Negro",
+          "chance": 40
+        },
+        {
+          "name_en": "Magic Healing",
+          "name_pt": "Cura Mágica",
+          "chance": 37
+        },
+        {
+          "name_en": "Bark Skin",
+          "name_pt": "Pele de Casca",
+          "chance": 37
+        },
+        {
+          "name_en": "Shadow Scam",
+          "name_pt": "Golpe das Sombras",
+          "chance": 30
+        }
+      ],
+      "loot": []
+    },
+    {
+      "name_en": "Casiel Death King",
+      "name_pt": "Casiel Rei da Morte",
+      "img": "enemy_casiel_death_king",
+      "hp": 90,
+      "mp": 150,
+      "defense": 9,
+      "agility": 25,
+      "strength": 23,
+      "exp": 60,
+      "gold": 20,
+      "minDamage": 7,
+      "maxDamage": 11,
+      "weaknesses": [
+        {
+          "element": "LIGHT",
+          "value": 25
+        }
+      ],
+      "resistances": [
+        {
+          "element": "DARK",
+          "value": 50
+        },
+        {
+          "element": "EARTH",
+          "value": 25
+        }
+      ],
+      "skills": [
+        {
+          "name_en": "Death Portal",
+          "name_pt": "Portal da Morte",
+          "chance": 42
+        },
+        {
+          "name_en": "God of Chaos",
+          "name_pt": "Deus do Caos",
+          "chance": 35
+        },
+        {
+          "name_en": "Obscure Aid",
+          "name_pt": "Ajuda Obscura",
+          "chance": 38
+        },
+        {
+          "name_en": "Fire Torment",
+          "name_pt": "Tormenta de Fogo",
+          "chance": 40
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Golden Boots",
+          "name_pt": "Botas de Ouro",
+          "qty": 1,
+          "chance": 60
+        },
+        {
+          "name_en": "Wand of Fortitude",
+          "name_pt": "Bastão da Vitalidade",
+          "qty": 1,
+          "chance": 67
+        },
+        {
+          "name_en": "Elixir Potion",
+          "name_pt": "Poção Elixir",
+          "qty": 2,
+          "chance": 75
+        }
+      ]
+    },
+    {
+      "name_en": "Octuman",
+      "name_pt": "Octuman",
+      "img": "enemy_octuman",
+      "hp": 35,
+      "mp": 20,
+      "defense": 3,
+      "agility": 15,
+      "strength": 11,
+      "exp": 16,
+      "gold": 0,
+      "minDamage": 4,
+      "maxDamage": 8,
+      "weaknesses": [],
+      "resistances": [],
+      "skills": [
+        {
+          "name_en": "Water Strike",
+          "name_pt": "Pancada de Água",
+          "chance": 38
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Tuna",
+          "name_pt": "Atum",
+          "qty": 1,
+          "chance": 67
+        },
+        {
+          "name_en": "Crab",
+          "name_pt": "Caranguejo",
+          "qty": 2,
+          "chance": 55
+        },
+        {
+          "name_en": "Algae",
+          "name_pt": "Algas",
+          "qty": 4,
+          "chance": 50
+        }
+      ]
+    },
+    {
+      "name_en": "Targon",
+      "name_pt": "Targon",
+      "img": "enemy_targon",
+      "hp": 70,
+      "mp": 70,
+      "defense": 4,
+      "agility": 20,
+      "strength": 18,
+      "exp": 50,
+      "gold": 0,
+      "minDamage": 5,
+      "maxDamage": 9,
+      "weaknesses": [
+        {
+          "element": "LIGHT",
+          "value": 25
+        }
+      ],
+      "resistances": [
+        {
+          "element": "FIRE",
+          "value": 25
+        },
+        {
+          "element": "DARK",
+          "value": 75
+        },
+        {
+          "element": "WATER",
+          "value": 25
+        }
+      ],
+      "skills": [
+        {
+          "name_en": "Fire Torment",
+          "name_pt": "Tormenta de Fogo",
+          "chance": 35
+        },
+        {
+          "name_en": "Death Portal",
+          "name_pt": "Portal da Morte",
+          "chance": 16
+        },
+        {
+          "name_en": "Obscure Aid",
+          "name_pt": "Ajuda Obscura",
+          "chance": 30
+        },
+        {
+          "name_en": "God of Chaos",
+          "name_pt": "Deus do Caos",
+          "chance": 15
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Darkness Shield",
+          "name_pt": "Escudo da Escuridão",
+          "qty": 1,
+          "chance": 40
+        },
+        {
+          "name_en": "Caltranium Ingot",
+          "name_pt": "Lingote de Caltranio",
+          "qty": 1,
+          "chance": 90
+        },
+        {
+          "name_en": "Special HP Potion",
+          "name_pt": "Poção PV Especial",
+          "qty": 1,
+          "chance": 52
+        },
+        {
+          "name_en": "Elixir Potion",
+          "name_pt": "Poção Elixir",
+          "qty": 1,
+          "chance": 60
+        },
+        {
+          "name_en": "Gold Ore",
+          "name_pt": "Minério de Ouro",
+          "qty": 1,
+          "chance": 65
+        },
+        {
+          "name_en": "Ring of Power",
+          "name_pt": "Anel da Força",
+          "qty": 1,
+          "chance": 48
+        }
+      ]
+    },
+    {
+      "name_en": "Mutant Insect Swarm",
+      "name_pt": "Enxame de Insetos Mutantes",
+      "img": "enemy_insect_swarm",
+      "hp": 39,
+      "mp": 48,
+      "defense": 2,
+      "agility": 18,
+      "strength": 8,
+      "exp": 17,
+      "gold": 0,
+      "minDamage": 3,
+      "maxDamage": 6,
+      "weaknesses": [
+        {
+          "element": "FIRE",
+          "value": 50
+        }
+      ],
+      "resistances": [
+        {
+          "element": "EARTH",
+          "value": 50
+        },
+        {
+          "element": "PHYSICAL",
+          "value": 25
+        }
+      ],
+      "skills": [
+        {
+          "name_en": "Poisonous Polen",
+          "name_pt": "Pólen Venenoso",
+          "chance": 45
+        },
+        {
+          "name_en": "Poison Sting",
+          "name_pt": "Agulhas Venenosas",
+          "chance": 48
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Nuts",
+          "name_pt": "Nozes",
+          "qty": 2,
+          "chance": 51
+        },
+        {
+          "name_en": "Wheat",
+          "name_pt": "Trigo",
+          "qty": 3,
+          "chance": 67
+        }
+      ]
+    }
+  ]
+}

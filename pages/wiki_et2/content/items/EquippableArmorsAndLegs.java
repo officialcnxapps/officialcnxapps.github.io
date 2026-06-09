@@ -130,7 +130,7 @@ public class EquippableArmorsAndLegs extends DataHelper {
         equipItem.type = Enums.ItemType.ARMOR;
         equipItem.defense = 3;
         equipItem.marketValue = 25;
-        equipItem.weight = 2.1f;
+        equipItem.weight = 3.5f;
 
         equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "The best value for money armor for soldiers. Molded with iron.");
         equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "A armadura de melhor custo benefício para soldados. Moldada com ferro.");
@@ -152,7 +152,7 @@ public class EquippableArmorsAndLegs extends DataHelper {
         equipItem.classes.add(ClassesIds.THIEF);
         equipItem.defense = 4;
         equipItem.marketValue = 55;
-        equipItem.weight = 2.4f;
+        equipItem.weight = 3.2f;
 
         equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "Looks a bit fancy to wear a copper armor, but it is efficient and protective.");
         equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Parece um pouco extravagante usar uma armadura de cobre, mas é eficiente e protetora.");
@@ -174,7 +174,7 @@ public class EquippableArmorsAndLegs extends DataHelper {
         equipItem.classes.add(ClassesIds.THIEF);
         equipItem.defense = 5;
         equipItem.marketValue = 90;
-        equipItem.weight = 3.3f;
+        equipItem.weight = 5.3f;
 
         equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "Robust, heavy and very protective.");
         equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Robusta, pesada e muito protetora.");
@@ -196,7 +196,7 @@ public class EquippableArmorsAndLegs extends DataHelper {
         equipItem.classes.add(ClassesIds.THIEF);
         equipItem.defense = 4;
         equipItem.marketValue = 80;
-        equipItem.weight = 2.4f;
+        equipItem.weight = 2.8f;
         equipItem.modifiers.add(new AttributeModifierValue(Enums.AttributeName.CHARISMA, 1));
         equipItem.rarity = Enums.Rarity.UNCOMMON;
 
@@ -227,7 +227,7 @@ public class EquippableArmorsAndLegs extends DataHelper {
         equipItem.classes.add(ClassesIds.THIEF);
         equipItem.defense = 6;
         equipItem.marketValue = 150;
-        equipItem.weight = 2.5f;
+        equipItem.weight = 4.2f;
         equipItem.rarity = Enums.Rarity.RARE;
 
         equipItem.requirementValidations = (chara, ctx) -> {
@@ -291,7 +291,7 @@ public class EquippableArmorsAndLegs extends DataHelper {
         equipItem.defense = 6;
         equipItem.marketValue = 200;
         equipItem.gemCost = 25;
-        equipItem.weight = 3f;
+        equipItem.weight = 4f;
         equipItem.rarity = Enums.Rarity.SPECIAL;
         equipItem.modifiers.add(new AttributeModifierValue(Enums.AttributeName.HP_MODIFIER, 4));
         equipItem.modifiers.add(new AttributeModifierValue(Enums.AttributeName.MP_MODIFIER, 4));

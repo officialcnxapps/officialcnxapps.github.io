@@ -22,7 +22,7 @@ import com.cnx.endlesstalestwo.data.enemies.common.GroveGoblin;
 import com.cnx.endlesstalestwo.data.enemies.common.Lion;
 import com.cnx.endlesstalestwo.data.enemies.common.MountainTroll;
 import com.cnx.endlesstalestwo.data.enemies.bosses.Octuman;
-import com.cnx.endlesstalestwo.data.enemies.common.PirateSwashbuckler;
+import com.cnx.endlesstalestwo.data.enemies.humanoids.PirateSwashbuckler;
 import com.cnx.endlesstalestwo.data.enemies.common.Spider;
 import com.cnx.endlesstalestwo.data.enemies.waterIce.Medusa;
 import com.cnx.endlesstalestwo.data.enemies.waterIce.SwampToad;

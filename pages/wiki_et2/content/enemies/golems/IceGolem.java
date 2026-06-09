@@ -52,6 +52,7 @@ public class IceGolem {
         enemy.givenLoot.add(new ItemReference(ItemsIds.WHITE_HERB, 1, 35));
         enemy.givenLoot.add(new ItemReference(ItemsIds.SAPPHIRE, 1, 11));
         enemy.givenLoot.add(new ItemReference(ItemsIds.MP_POTION, 1, 20));
+        enemy.givenLoot.add(new ItemReference(ItemsIds.GLACIER_MACE, 1, 2));
 
         return enemy;
     }

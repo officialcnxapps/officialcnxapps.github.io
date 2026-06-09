@@ -5,6 +5,7 @@ import com.cnx.endlesstalestwo.data.items.ItemsIds;
 import com.cnx.endlesstalestwo.data.skills.SkillsIds;
 import com.cnx.endlesstalestwo.entities.Enemy;
 import com.cnx.endlesstalestwo.entities.ItemReference;
+import com.cnx.endlesstalestwo.enums.Enums;
 
 public class Succubus {
 
@@ -24,6 +25,10 @@ public class Succubus {
         enemy.maxDamage = 5;
         enemy.damageModifier = 2;
         enemy.levelToDynamicBalance = 9;
+
+        enemy.weaknesses.put(Enums.Elements.LIGHT, 25);
+        enemy.resistances.put(Enums.Elements.DARK, 25);
+        enemy.resistances.put(Enums.Elements.FIRE, 25);
 
         enemy.skills.put(SkillsIds.DISABLE, 30);
         enemy.skills.put(SkillsIds.DARK_MISSILE, 32);

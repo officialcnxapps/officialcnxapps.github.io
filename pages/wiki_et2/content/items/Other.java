@@ -475,6 +475,7 @@ public final class Other extends DataHelper {
         item.outBattleUsage = true;
         item.rarity = Enums.Rarity.RARE;
         item.imgFile = "item_gold_bag";
+        item.canBeIngredient = false;
 
         item.listener = () -> App.getPlayerChar().addGold(25);
 
@@ -555,6 +556,7 @@ public final class Other extends DataHelper {
 
         item.weight = .4f;
         item.marketValue = 16;
+        item.canBeIngredient = false;
 
         return item;
     }
@@ -616,7 +618,8 @@ public final class Other extends DataHelper {
         item.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Ideal para cazar animales de forma más eficiente.");
 
         item.weight = 1.6f;
-        item.marketValue = 4;
+        item.marketValue = 3;
+        item.canBeIngredient = false;
 
         return item;
     }
@@ -869,8 +872,6 @@ public final class Other extends DataHelper {
 
         item.weight = 0.1f;
         item.marketValue = 8;
-        item.sellable = false;
-        item.discardable = false;
         item.imgFile = "item_map";
         item.canBeIngredient = false;
 
@@ -984,6 +985,7 @@ public final class Other extends DataHelper {
         item.marketValue = 25;
         item.sellable = false;
         item.discardable = false;
+        item.canBeIngredient = false;
         return item;
     }
 

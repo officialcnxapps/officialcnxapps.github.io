@@ -103,7 +103,7 @@ public class EquippableHelmetsAndBoots extends DataHelper {
         equipItem.slotPart = Enums.SlotPart.HEAD;
         equipItem.defense = 4;
         equipItem.marketValue = 95;
-        equipItem.weight = .7f;
+        equipItem.weight = 1.1f;
         equipItem.type = Enums.ItemType.HELMET;
 
         equipItem.requirementValidations = (chara, ctx) -> {

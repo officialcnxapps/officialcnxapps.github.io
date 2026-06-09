@@ -244,7 +244,7 @@ public enum ItemsIds {
     JARDS_LOVE_LETTER,
     FIRE_SWORD,
     GLACIER_MACE,
-    BALDES_OF_FLAMES,
+    BLADE_OF_FLAMES,
     KNIVES_OF_BREEZE,
     ASH,
     STEEL_SPEAR,

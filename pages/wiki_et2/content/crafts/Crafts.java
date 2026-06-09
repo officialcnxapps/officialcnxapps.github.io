@@ -96,6 +96,11 @@ public class Crafts extends DataHelper {
         App.DataManager.add(Enums.DataTypes.CRAFT_RECIPE, natureShield());
         App.DataManager.add(Enums.DataTypes.CRAFT_RECIPE, beer());
         App.DataManager.add(Enums.DataTypes.CRAFT_RECIPE, wine());
+        App.DataManager.add(Enums.DataTypes.CRAFT_RECIPE, ash());
+        App.DataManager.add(Enums.DataTypes.CRAFT_RECIPE, glacierMace());
+        App.DataManager.add(Enums.DataTypes.CRAFT_RECIPE, fireSword());
+        App.DataManager.add(Enums.DataTypes.CRAFT_RECIPE, steelSpear());
+        App.DataManager.add(Enums.DataTypes.CRAFT_RECIPE, knivesOfBreeze());
 
         if (App.getPlayerChar() != null
                 && (
@@ -139,9 +144,9 @@ public class Crafts extends DataHelper {
     }
 
     CraftRecipe specialSoup() {
-        CraftRecipe recipe = new CraftRecipe(15, ItemsIds.SPECIAL_SOUP, ItemsIds.WHITE_MUSHROOM, ItemsIds.BROWN_MUSHROOM, ItemsIds.CARROT);
+        CraftRecipe recipe = new CraftRecipe(20, ItemsIds.SPECIAL_SOUP, ItemsIds.WHITE_MUSHROOM, ItemsIds.BROWN_MUSHROOM, ItemsIds.CARROT);
         recipe.type = Enums.CraftTypes.COOKING;
-        recipe.successRate = 55;
+        recipe.successRate = 70;
 
         return recipe;
     }
@@ -171,9 +176,9 @@ public class Crafts extends DataHelper {
     }
 
     CraftRecipe cookedTuna() {
-        CraftRecipe recipe = new CraftRecipe(15, ItemsIds.COOKED_TUNA, ItemsIds.TUNA);
+        CraftRecipe recipe = new CraftRecipe(25, ItemsIds.COOKED_TUNA, ItemsIds.TUNA);
         recipe.type = Enums.CraftTypes.COOKING;
-        recipe.successRate = 98;
+        recipe.successRate = 86;
 
         return recipe;
     }
@@ -395,7 +400,7 @@ public class Crafts extends DataHelper {
     }
 
     CraftRecipe emeraldPowder() {
-        CraftRecipe recipe = new CraftRecipe(12, ItemsIds.EMERALD_POWDER, ItemsIds.EMERALD, ItemsIds.COAL);
+        CraftRecipe recipe = new CraftRecipe(12, ItemsIds.EMERALD_POWDER, ItemsIds.EMERALD, ItemsIds.ASH, ItemsIds.COAL);
         recipe.type = Enums.CraftTypes.GENERAL;
         recipe.successRate = 35;
 
@@ -707,7 +712,7 @@ public class Crafts extends DataHelper {
     }
 
     public CraftRecipe blazeShield() {
-        CraftRecipe recipe = new CraftRecipe(60, ItemsIds.BLAZE_SHIELD, ItemsIds.IRON_SHIELD, ItemsIds.RED_HERB, ItemsIds.WINE);
+        CraftRecipe recipe = new CraftRecipe(60, ItemsIds.BLAZE_SHIELD, ItemsIds.IRON_SHIELD, ItemsIds.ASH, ItemsIds.WINE);
         recipe.type = Enums.CraftTypes.ALCHEMY;
         recipe.successRate = 25;
 
@@ -763,7 +768,7 @@ public class Crafts extends DataHelper {
     }
 
     public CraftRecipe ash() {
-        CraftRecipe recipe = new CraftRecipe(40, ItemsIds.ASH, ItemsIds.COAL, ItemsIds.LOG);
+        CraftRecipe recipe = new CraftRecipe(25, ItemsIds.ASH, ItemsIds.COAL, ItemsIds.LOG);
         recipe.type = Enums.CraftTypes.GENERAL;
         recipe.successRate = 100;
 
@@ -790,6 +795,14 @@ public class Crafts extends DataHelper {
         CraftRecipe recipe = new CraftRecipe(50, ItemsIds.STEEL_SPEAR, ItemsIds.STEEL_INGOT, ItemsIds.PLANK, ItemsIds.PLANK);
         recipe.type = Enums.CraftTypes.GENERAL;
         recipe.successRate = 22;
+
+        return recipe;
+    }
+
+    public CraftRecipe knivesOfBreeze() {
+        CraftRecipe recipe = new CraftRecipe(50, ItemsIds.KNIVES_OF_BREEZE, ItemsIds.THROWING_KNIVES, ItemsIds.ASH, ItemsIds.WHITE_HERB);
+        recipe.type = Enums.CraftTypes.ALCHEMY;
+        recipe.successRate = 16;
 
         return recipe;
     }

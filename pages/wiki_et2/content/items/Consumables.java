@@ -146,6 +146,8 @@ public class Consumables extends DataHelper {
         consumable.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Muito nutritivo e fácil de obter em galinhas e patos.");
         consumable.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Muy nutritivo y fácil de obtener de pollos y patos.");
 
+        consumable.modifiers.add(new AttributeModifierValue(Enums.AttributeName.HP, 1, Enums.StatusModifier.INCREASE));
+
         consumable.type = Enums.ItemType.FOOD;
         consumable.hungryTimeRecover = 120;
         consumable.weight = .1f;

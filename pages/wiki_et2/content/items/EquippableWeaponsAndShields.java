@@ -33,6 +33,11 @@ public class EquippableWeaponsAndShields extends DataHelper {
         App.DataManager.add(Enums.DataTypes.ITEM, heavyCrossbow());//
         App.DataManager.add(Enums.DataTypes.ITEM, caltraniumSword());//
         App.DataManager.add(Enums.DataTypes.ITEM, goldDagger());//
+        App.DataManager.add(Enums.DataTypes.ITEM, fireSword());//
+        App.DataManager.add(Enums.DataTypes.ITEM, knivesOfBreeze());//
+        App.DataManager.add(Enums.DataTypes.ITEM, glacierMace());//
+        App.DataManager.add(Enums.DataTypes.ITEM, bladeOfFlames());//
+        App.DataManager.add(Enums.DataTypes.ITEM, steelSpear());//
         App.DataManager.add(Enums.DataTypes.ITEM, skillfulsStaff());//
         App.DataManager.add(Enums.DataTypes.ITEM, rodOfmasters());//
         App.DataManager.add(Enums.DataTypes.ITEM, elvenBow());//
@@ -390,7 +395,7 @@ public class EquippableWeaponsAndShields extends DataHelper {
         equipItem.maxDamage = 11;
         equipItem.criticalChanceIncrease = 18;
         equipItem.marketValue = 90;
-        equipItem.weight = 3.2f;
+        equipItem.weight = 3.7f;
         equipItem.classes.add(ClassesIds.WARRIOR);
         equipItem.type = Enums.ItemType.WEAPON;
 
@@ -735,7 +740,7 @@ public class EquippableWeaponsAndShields extends DataHelper {
         return equipItem;
     }
 
-    EquippableItem BladeOfFlames() {
+    EquippableItem bladeOfFlames() {
         EquippableItem equipItem = new EquippableItem("Blade of Flames");
         equipItem.addNameTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Lâmina de Fogo");
         equipItem.addNameTranslation(CoreEnums.AvailableLanguages.SPANISH, "Hoja de Fuego");
@@ -760,7 +765,7 @@ public class EquippableWeaponsAndShields extends DataHelper {
         return equipItem;
     }
 
-    EquippableItem GlacierMace() {
+    EquippableItem glacierMace() {
         EquippableItem equipItem = new EquippableItem("Glacier Mace");
         equipItem.addNameTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Maça Glacial");
         equipItem.addNameTranslation(CoreEnums.AvailableLanguages.SPANISH, "Maza Glaciar");
@@ -769,7 +774,7 @@ public class EquippableWeaponsAndShields extends DataHelper {
         equipItem.minDamage = 7;
         equipItem.maxDamage = 11;
         equipItem.criticalChanceIncrease = 18;
-        equipItem.marketValue = 82;
+        equipItem.marketValue = 95;
         equipItem.weight = 2.7f;
         equipItem.element = Enums.Elements.WATER;
         equipItem.classes.add(ClassesIds.WARRIOR);
@@ -1072,7 +1077,7 @@ public class EquippableWeaponsAndShields extends DataHelper {
         equipItem.slotPart = Enums.SlotPart.HAND_2;
         equipItem.marketValue = 7;
         equipItem.defense = 1;
-        equipItem.weight = .8f;
+        equipItem.weight = 1f;
         equipItem.type = Enums.ItemType.SHIELD;
 
         equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "If you are poor, you can use some small planks as shield.");
@@ -1091,7 +1096,7 @@ public class EquippableWeaponsAndShields extends DataHelper {
         equipItem.slotPart = Enums.SlotPart.HAND_2;
         equipItem.marketValue = 18;
         equipItem.defense = 2;
-        equipItem.weight = 1f;
+        equipItem.weight = 1.3f;
         equipItem.type = Enums.ItemType.SHIELD;
 
         equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "A good simple shield made of wood with an iron hoop around.");
@@ -1110,7 +1115,7 @@ public class EquippableWeaponsAndShields extends DataHelper {
         equipItem.slotPart = Enums.SlotPart.HAND_2;
         equipItem.marketValue = 40;
         equipItem.defense = 3;
-        equipItem.weight = 1.6f;
+        equipItem.weight = 2.2f;
         equipItem.type = Enums.ItemType.SHIELD;
 
         equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "Made with pure iron, heavy but efficient.");
@@ -1129,7 +1134,7 @@ public class EquippableWeaponsAndShields extends DataHelper {
         equipItem.slotPart = Enums.SlotPart.HAND_2;
         equipItem.marketValue = 95;
         equipItem.defense = 4;
-        equipItem.weight = 1.6f;
+        equipItem.weight = 2f;
         equipItem.type = Enums.ItemType.SHIELD;
 
         equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "A thick plate of copper shaped as a good shield.");
@@ -1148,7 +1153,7 @@ public class EquippableWeaponsAndShields extends DataHelper {
         equipItem.slotPart = Enums.SlotPart.HAND_2;
         equipItem.marketValue = 90;
         equipItem.defense = 3;
-        equipItem.weight = 1.3f;
+        equipItem.weight = 1.7f;
         equipItem.type = Enums.ItemType.SHIELD;
         equipItem.modifiers.add(new AttributeModifierValue(Enums.AttributeName.CHARISMA, 2));
         equipItem.rarity = Enums.Rarity.UNCOMMON;
@@ -1169,7 +1174,7 @@ public class EquippableWeaponsAndShields extends DataHelper {
         equipItem.slotPart = Enums.SlotPart.HAND_2;
         equipItem.marketValue = 125;
         equipItem.defense = 5;
-        equipItem.weight = 2f;
+        equipItem.weight = 2.7f;
         equipItem.type = Enums.ItemType.SHIELD;
 
         equipItem.requirementValidations = (chara, ctx) -> {
@@ -1195,7 +1200,7 @@ public class EquippableWeaponsAndShields extends DataHelper {
         equipItem.slotPart = Enums.SlotPart.HAND_2;
         equipItem.marketValue = 75;
         equipItem.defense = 4;
-        equipItem.weight = 3.5f;
+        equipItem.weight = 4.7f;
         equipItem.type = Enums.ItemType.SHIELD;
         equipItem.modifiers.add(new AttributeModifierValue(Enums.AttributeName.AGILITY, 1, Enums.StatusModifier.DECREASE));
         equipItem.classes.add(ClassesIds.WARRIOR);
@@ -1217,7 +1222,7 @@ public class EquippableWeaponsAndShields extends DataHelper {
         equipItem.slotPart = Enums.SlotPart.HAND_2;
         equipItem.marketValue = 180;
         equipItem.defense = 6;
-        equipItem.weight = 1.8f;
+        equipItem.weight = 2.5f;
         equipItem.type = Enums.ItemType.SHIELD;
         equipItem.rarity = Enums.Rarity.RARE;
 
@@ -1245,7 +1250,7 @@ public class EquippableWeaponsAndShields extends DataHelper {
         equipItem.marketValue = 50;
         equipItem.gemCost = 20;
         equipItem.defense = 7;
-        equipItem.weight = 1.5f;
+        equipItem.weight = 2.4f;
         equipItem.type = Enums.ItemType.SHIELD;
         equipItem.modifiers.add(new AttributeModifierValue(Enums.AttributeName.STRENGTH, 2));
         equipItem.modifiers.add(new AttributeModifierValue(Enums.AttributeName.MAGIC, 2));

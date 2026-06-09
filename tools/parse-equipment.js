@@ -330,9 +330,13 @@ for (const file of OTHER_FILES) {
   }
 }
 const valuables = allOther.filter(i => i.type === 'VALUABLE');
-const misc = allOther.filter(i => i.type !== 'VALUABLE');
+const tools = allOther.filter(i => i.type === 'TOOL');
+const ores = allOther.filter(i => i.type !== 'VALUABLE' && i.type !== 'TOOL' && (/ore|ingot/i.test(i.name_en)));
+const misc = allOther.filter(i => i.type !== 'VALUABLE' && i.type !== 'TOOL' && !(/ore|ingot/i.test(i.name_en)));
 console.log(`  Valuables: ${valuables.length}`);
-console.log(`  Misc/Tools: ${misc.length}`);
+console.log(`  Ores & Ingots: ${ores.length}`);
+console.log(`  Tools: ${tools.length}`);
+console.log(`  Misc: ${misc.length}`);
 const OTHER_OUTPUT = path.join(__dirname, '..', 'js', 'wiki_data_other.json');
-fs.writeFileSync(OTHER_OUTPUT, JSON.stringify({ valuables, misc }, null, 2), 'utf-8');
+fs.writeFileSync(OTHER_OUTPUT, JSON.stringify({ valuables, ores, tools, misc }, null, 2), 'utf-8');
 console.log(`Output: ${OTHER_OUTPUT}`);

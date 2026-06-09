@@ -179,7 +179,7 @@
       ? tableRegistry[containerId].state
       : { col: options.defaultSort || 'name', dir: options.defaultDir || 'desc' };
 
-    container.innerHTML = buildTableHTML(items, options, state, lang);
+    container.innerHTML = '<p class="wiki-table-count">' + items.length + (lang === 'pt' ? ' itens' : ' items') + '</p>' + buildTableHTML(items, options, state, lang);
 
     // Store in registry for event delegation
     tableRegistry[containerId] = { items: items, options: options, state: state };
@@ -207,7 +207,7 @@
     }
 
     var lang = getLang();
-    container.innerHTML = buildTableHTML(reg.items, reg.options, reg.state, lang);
+    container.innerHTML = '<p class="wiki-table-count">' + reg.items.length + (lang === 'pt' ? ' itens' : ' items') + '</p>' + buildTableHTML(reg.items, reg.options, reg.state, lang);
   });
 
   // Public API
@@ -226,6 +226,11 @@
         renderTable('wiki-table-boots', data.boots, { showDefense: true, defaultSort: 'defense', defaultDir: 'asc' });
         renderTable('wiki-table-legs', data.legs, { showDefense: true, defaultSort: 'defense', defaultDir: 'asc' });
         renderTable('wiki-table-jewels', data.jewels, { defaultSort: 'name', defaultDir: 'asc' });
+        var total = (data.weapons||[]).length + (data.shields||[]).length + (data.armors||[]).length + (data.helmets||[]).length + (data.boots||[]).length + (data.legs||[]).length + (data.jewels||[]).length;
+        window._wikiItemTotal = (window._wikiItemTotal || 0) + total;
+        var lang = getLang();
+        var el = document.getElementById('wiki-total-count');
+        if (el) el.textContent = window._wikiItemTotal + (lang === 'pt' ? ' itens no total' : ' items total');
       };
       xhr.send();
     }

@@ -1,0 +1,2187 @@
+{
+  "cooking": [
+    {
+      "result": {
+        "name_en": "Flour",
+        "name_pt": "Farinha",
+        "img": "item_flour"
+      },
+      "ingredients": [
+        {
+          "name_en": "Wheat",
+          "name_pt": "Trigo",
+          "img": "item_wheat"
+        },
+        {
+          "name_en": "Wheat",
+          "name_pt": "Trigo",
+          "img": "item_wheat"
+        }
+      ],
+      "time": 8,
+      "successRate": 90,
+      "type": "COOKING"
+    },
+    {
+      "result": {
+        "name_en": "Cooked Meat",
+        "name_pt": "Carne Assada",
+        "img": "item_cooked_meat"
+      },
+      "ingredients": [
+        {
+          "name_en": "Raw Meat",
+          "name_pt": "Carne Crua",
+          "img": "item_raw_meat"
+        }
+      ],
+      "time": 15,
+      "successRate": 99,
+      "type": "COOKING"
+    },
+    {
+      "result": {
+        "name_en": "Soup",
+        "name_pt": "Sopa",
+        "img": "item_soup"
+      },
+      "ingredients": [
+        {
+          "name_en": "Carrot",
+          "name_pt": "Cenoura",
+          "img": "item_carrot"
+        },
+        {
+          "name_en": "Water",
+          "name_pt": "Água",
+          "img": "item_water"
+        },
+        {
+          "name_en": "Egg",
+          "name_pt": "Ovo",
+          "img": "item_egg"
+        }
+      ],
+      "time": 15,
+      "successRate": 90,
+      "type": "COOKING"
+    },
+    {
+      "result": {
+        "name_en": "Special Soup",
+        "name_pt": "Sopa Especial",
+        "img": "item_special_soup"
+      },
+      "ingredients": [
+        {
+          "name_en": "White Mushroom",
+          "name_pt": "Cogumelo Branco",
+          "img": "item_white_mushroom"
+        },
+        {
+          "name_en": "Brown Mushroom",
+          "name_pt": "Cogumelo Marrom",
+          "img": "item_brown_mushroom"
+        },
+        {
+          "name_en": "Carrot",
+          "name_pt": "Cenoura",
+          "img": "item_carrot"
+        }
+      ],
+      "time": 20,
+      "successRate": 70,
+      "type": "COOKING"
+    },
+    {
+      "result": {
+        "name_en": "Seasoned Meat",
+        "name_pt": "Carne Temperada",
+        "img": "item_seasoned_meat"
+      },
+      "ingredients": [
+        {
+          "name_en": "Cooked Meat",
+          "name_pt": "Carne Assada",
+          "img": "item_cooked_meat"
+        },
+        {
+          "name_en": "Green Herb",
+          "name_pt": "Erva Verde",
+          "img": "item_green_herb"
+        },
+        {
+          "name_en": "Carrot",
+          "name_pt": "Cenoura",
+          "img": "item_carrot"
+        }
+      ],
+      "time": 20,
+      "successRate": 85,
+      "type": "COOKING"
+    },
+    {
+      "result": {
+        "name_en": "Cooked Tuna",
+        "name_pt": "Atum Assado",
+        "img": "item_cooked_tuna"
+      },
+      "ingredients": [
+        {
+          "name_en": "Tuna",
+          "name_pt": "Atum",
+          "img": "item_tuna"
+        }
+      ],
+      "time": 25,
+      "successRate": 86,
+      "type": "COOKING"
+    },
+    {
+      "result": {
+        "name_en": "Cooked Sardine",
+        "name_pt": "Sardinha Assada",
+        "img": "item_cooked_sardine"
+      },
+      "ingredients": [
+        {
+          "name_en": "Sardine",
+          "name_pt": "Sardinha",
+          "img": "item_sardine"
+        }
+      ],
+      "time": 12,
+      "successRate": 99,
+      "type": "COOKING"
+    },
+    {
+      "result": {
+        "name_en": "Cooked Crab",
+        "name_pt": "Caranguejo Cozido",
+        "img": "item_cooked_crab"
+      },
+      "ingredients": [
+        {
+          "name_en": "Crab",
+          "name_pt": "Caranguejo",
+          "img": "item_crab"
+        }
+      ],
+      "time": 15,
+      "successRate": 98,
+      "type": "COOKING"
+    },
+    {
+      "result": {
+        "name_en": "Bread",
+        "name_pt": "Pão",
+        "img": "item_bread"
+      },
+      "ingredients": [
+        {
+          "name_en": "Flour",
+          "name_pt": "Farinha",
+          "img": "item_flour"
+        },
+        {
+          "name_en": "Water",
+          "name_pt": "Água",
+          "img": "item_water"
+        }
+      ],
+      "time": 20,
+      "successRate": 85,
+      "type": "COOKING"
+    }
+  ],
+  "general": [
+    {
+      "result": {
+        "name_en": "Coal",
+        "name_pt": "Carvão",
+        "img": "item_coal"
+      },
+      "ingredients": [
+        {
+          "name_en": "Branch",
+          "name_pt": "Galho",
+          "img": "item_branch"
+        },
+        {
+          "name_en": "Log",
+          "name_pt": "Tora",
+          "img": "item_log"
+        }
+      ],
+      "time": 15,
+      "successRate": 85,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "String",
+        "name_pt": "Cordão",
+        "img": "item_string"
+      },
+      "ingredients": [
+        {
+          "name_en": "Wool",
+          "name_pt": "Lã",
+          "img": "item_wool"
+        }
+      ],
+      "time": 8,
+      "successRate": 95,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "String",
+        "name_pt": "Cordão",
+        "img": "item_string"
+      },
+      "ingredients": [
+        {
+          "name_en": "Spider Web",
+          "name_pt": "Teia de Aranha",
+          "img": "item_spider_web"
+        },
+        {
+          "name_en": "Spider Web",
+          "name_pt": "Teia de Aranha",
+          "img": "item_spider_web"
+        },
+        {
+          "name_en": "Spider Web",
+          "name_pt": "Teia de Aranha",
+          "img": "item_spider_web"
+        }
+      ],
+      "time": 10,
+      "successRate": 95,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Pickaxe",
+        "name_pt": "Picareta",
+        "img": "item_pickaxe"
+      },
+      "ingredients": [
+        {
+          "name_en": "Rock",
+          "name_pt": "Pedra",
+          "img": "item_rock"
+        },
+        {
+          "name_en": "String",
+          "name_pt": "Cordão",
+          "img": "item_string"
+        },
+        {
+          "name_en": "Branch",
+          "name_pt": "Galho",
+          "img": "item_branch"
+        }
+      ],
+      "time": 30,
+      "successRate": 75,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Steel Pickaxe",
+        "name_pt": "Picareta de Aço",
+        "img": "item_steel_pickaxe"
+      },
+      "ingredients": [
+        {
+          "name_en": "Pickaxe",
+          "name_pt": "Picareta",
+          "img": "item_pickaxe"
+        },
+        {
+          "name_en": "Steel Ingot",
+          "name_pt": "Lingote de Aço",
+          "img": "item_steel_ingot"
+        }
+      ],
+      "time": 45,
+      "successRate": 55,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Woodcutter's Axe",
+        "name_pt": "Machado de Lenhador",
+        "img": "item_woodcutters_axe"
+      },
+      "ingredients": [
+        {
+          "name_en": "Rock",
+          "name_pt": "Pedra",
+          "img": "item_rock"
+        },
+        {
+          "name_en": "String",
+          "name_pt": "Cordão",
+          "img": "item_string"
+        },
+        {
+          "name_en": "Log",
+          "name_pt": "Tora",
+          "img": "item_log"
+        }
+      ],
+      "time": 30,
+      "successRate": 78,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Iron Ingot",
+        "name_pt": "Lingote de Ferro",
+        "img": "item_iron_ingot"
+      },
+      "ingredients": [
+        {
+          "name_en": "Iron Ore",
+          "name_pt": "Minério de Ferro",
+          "img": "item_iron_ore"
+        },
+        {
+          "name_en": "Iron Ore",
+          "name_pt": "Minério de Ferro",
+          "img": "item_iron_ore"
+        }
+      ],
+      "time": 20,
+      "successRate": 80,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Copper Ingot",
+        "name_pt": "Lingote de Cobre",
+        "img": "item_copper_ingot"
+      },
+      "ingredients": [
+        {
+          "name_en": "Copper Ore",
+          "name_pt": "Minério de Cobre",
+          "img": "item_copper_ore"
+        },
+        {
+          "name_en": "Copper Ore",
+          "name_pt": "Minério de Cobre",
+          "img": "item_copper_ore"
+        }
+      ],
+      "time": 20,
+      "successRate": 76,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Gold Ingot",
+        "name_pt": "Lingote de Ouro",
+        "img": "item_gold_ingot"
+      },
+      "ingredients": [
+        {
+          "name_en": "Gold Ore",
+          "name_pt": "Minério de Ouro",
+          "img": "item_gold_ore"
+        },
+        {
+          "name_en": "Gold Ore",
+          "name_pt": "Minério de Ouro",
+          "img": "item_gold_ore"
+        }
+      ],
+      "time": 20,
+      "successRate": 72,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Steel Ingot",
+        "name_pt": "Lingote de Aço",
+        "img": "item_steel_ingot"
+      },
+      "ingredients": [
+        {
+          "name_en": "Iron Ingot",
+          "name_pt": "Lingote de Ferro",
+          "img": "item_iron_ingot"
+        },
+        {
+          "name_en": "Coal",
+          "name_pt": "Carvão",
+          "img": "item_coal"
+        },
+        {
+          "name_en": "Coal",
+          "name_pt": "Carvão",
+          "img": "item_coal"
+        }
+      ],
+      "time": 25,
+      "successRate": 72,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Caltranium Ingot",
+        "name_pt": "Lingote de Caltranio",
+        "img": "item_caltranium_ingot"
+      },
+      "ingredients": [
+        {
+          "name_en": "Caltranium Ore",
+          "name_pt": "Minério de Caltranio",
+          "img": "item_caltranium_ore"
+        },
+        {
+          "name_en": "Caltranium Ore",
+          "name_pt": "Minério de Caltranio",
+          "img": "item_caltranium_ore"
+        }
+      ],
+      "time": 30,
+      "successRate": 50,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Fishing Rod",
+        "name_pt": "Vara de Pesca",
+        "img": "item_fishing_rod"
+      },
+      "ingredients": [
+        {
+          "name_en": "Branch",
+          "name_pt": "Galho",
+          "img": "item_branch"
+        },
+        {
+          "name_en": "String",
+          "name_pt": "Cordão",
+          "img": "item_string"
+        }
+      ],
+      "time": 25,
+      "successRate": 60,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Reinforced Fishing Rod",
+        "name_pt": "Vara de Pesca Reforçada",
+        "img": "item_reinforced_fishing_rod"
+      },
+      "ingredients": [
+        {
+          "name_en": "Fishing Rod",
+          "name_pt": "Vara de Pesca",
+          "img": "item_fishing_rod"
+        },
+        {
+          "name_en": "String",
+          "name_pt": "Cordão",
+          "img": "item_string"
+        },
+        {
+          "name_en": "Iron Ore",
+          "name_pt": "Minério de Ferro",
+          "img": "item_iron_ore"
+        }
+      ],
+      "time": 35,
+      "successRate": 65,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Tissue",
+        "name_pt": "Tecido",
+        "img": "item_tissue"
+      },
+      "ingredients": [
+        {
+          "name_en": "Wool",
+          "name_pt": "Lã",
+          "img": "item_wool"
+        },
+        {
+          "name_en": "Wool",
+          "name_pt": "Lã",
+          "img": "item_wool"
+        }
+      ],
+      "time": 20,
+      "successRate": 75,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Tissue",
+        "name_pt": "Tecido",
+        "img": "item_tissue"
+      },
+      "ingredients": [
+        {
+          "name_en": "Cotton",
+          "name_pt": "Algodão",
+          "img": "item_cotton"
+        },
+        {
+          "name_en": "Cotton",
+          "name_pt": "Algodão",
+          "img": "item_cotton"
+        }
+      ],
+      "time": 20,
+      "successRate": 75,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Plank",
+        "name_pt": "Tábua",
+        "img": "item_plank"
+      },
+      "ingredients": [
+        {
+          "name_en": "Log",
+          "name_pt": "Tora",
+          "img": "item_log"
+        }
+      ],
+      "time": 25,
+      "successRate": 88,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Rope",
+        "name_pt": "Corda",
+        "img": "item_rope"
+      },
+      "ingredients": [
+        {
+          "name_en": "String",
+          "name_pt": "Cordão",
+          "img": "item_string"
+        },
+        {
+          "name_en": "String",
+          "name_pt": "Cordão",
+          "img": "item_string"
+        },
+        {
+          "name_en": "String",
+          "name_pt": "Cordão",
+          "img": "item_string"
+        }
+      ],
+      "time": 25,
+      "successRate": 60,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Torch",
+        "name_pt": "Tocha",
+        "img": "item_torch"
+      },
+      "ingredients": [
+        {
+          "name_en": "Coal",
+          "name_pt": "Carvão",
+          "img": "item_coal"
+        },
+        {
+          "name_en": "Branch",
+          "name_pt": "Galho",
+          "img": "item_branch"
+        }
+      ],
+      "time": 5,
+      "successRate": 80,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Emerald Powder",
+        "name_pt": "Pó de Esmeralda",
+        "img": "item_emerald_powder"
+      },
+      "ingredients": [
+        {
+          "name_en": "Emerald",
+          "name_pt": "Esmeralda",
+          "img": "item_emerald"
+        },
+        {
+          "name_en": "Ash",
+          "name_pt": "Cinzas",
+          "img": "item_ash"
+        },
+        {
+          "name_en": "Coal",
+          "name_pt": "Carvão",
+          "img": "item_coal"
+        }
+      ],
+      "time": 12,
+      "successRate": 35,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Wooden Spear",
+        "name_pt": "Lança de Madeira",
+        "img": "item_wooden_spear"
+      },
+      "ingredients": [
+        {
+          "name_en": "Plank",
+          "name_pt": "Tábua",
+          "img": "item_plank"
+        },
+        {
+          "name_en": "Branch",
+          "name_pt": "Galho",
+          "img": "item_branch"
+        },
+        {
+          "name_en": "Rock",
+          "name_pt": "Pedra",
+          "img": "item_rock"
+        }
+      ],
+      "time": 18,
+      "successRate": 58,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Ruby Ring",
+        "name_pt": "Anel de Rubi",
+        "img": "item_ruby_ring"
+      },
+      "ingredients": [
+        {
+          "name_en": "Gold Ring",
+          "name_pt": "Anel de ouro",
+          "img": "item_gold_ring"
+        },
+        {
+          "name_en": "Ruby",
+          "name_pt": "Rubi",
+          "img": "item_ruby"
+        }
+      ],
+      "time": 18,
+      "successRate": 40,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Gold Ring",
+        "name_pt": "Anel de ouro",
+        "img": "item_gold_ring"
+      },
+      "ingredients": [
+        {
+          "name_en": "Gold Ingot",
+          "name_pt": "Lingote de Ouro",
+          "img": "item_gold_ingot"
+        },
+        {
+          "name_en": "Steel Ingot",
+          "name_pt": "Lingote de Aço",
+          "img": "item_steel_ingot"
+        }
+      ],
+      "time": 12,
+      "successRate": 38,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Dwarven's Pickaxe",
+        "name_pt": "Picareta dos Anões",
+        "img": "item_dwarvens_pickaxe"
+      },
+      "ingredients": [
+        {
+          "name_en": "Steel Ingot",
+          "name_pt": "Lingote de Aço",
+          "img": "item_steel_ingot"
+        },
+        {
+          "name_en": "Gold Ingot",
+          "name_pt": "Lingote de Ouro",
+          "img": "item_gold_ingot"
+        },
+        {
+          "name_en": "Log",
+          "name_pt": "Tora",
+          "img": "item_log"
+        }
+      ],
+      "time": 90,
+      "successRate": 16,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Reinforced Leather Jacket",
+        "name_pt": "Jaqueta de Couro Reforçada",
+        "img": "item_reinforced_leather_jacket"
+      },
+      "ingredients": [
+        {
+          "name_en": "Leather",
+          "name_pt": "Couro",
+          "img": "item_leather"
+        },
+        {
+          "name_en": "Leather",
+          "name_pt": "Couro",
+          "img": "item_leather"
+        },
+        {
+          "name_en": "Tissue",
+          "name_pt": "Tecido",
+          "img": "item_tissue"
+        }
+      ],
+      "time": 45,
+      "successRate": 42,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Reinforced Trousers",
+        "name_pt": "Calça Reforçada",
+        "img": "item_reinforced_trousers"
+      },
+      "ingredients": [
+        {
+          "name_en": "Leather",
+          "name_pt": "Couro",
+          "img": "item_leather"
+        },
+        {
+          "name_en": "Wool",
+          "name_pt": "Lã",
+          "img": "item_wool"
+        },
+        {
+          "name_en": "String",
+          "name_pt": "Cordão",
+          "img": "item_string"
+        }
+      ],
+      "time": 45,
+      "successRate": 42,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Leather Cap",
+        "name_pt": "Boina de Couro",
+        "img": "item_leather_cap"
+      },
+      "ingredients": [
+        {
+          "name_en": "Leather",
+          "name_pt": "Couro",
+          "img": "item_leather"
+        },
+        {
+          "name_en": "String",
+          "name_pt": "Cordão",
+          "img": "item_string"
+        }
+      ],
+      "time": 30,
+      "successRate": 42,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Leather Boots",
+        "name_pt": "Botas de Couro",
+        "img": "item_leather_boots"
+      },
+      "ingredients": [
+        {
+          "name_en": "Leather",
+          "name_pt": "Couro",
+          "img": "item_leather"
+        },
+        {
+          "name_en": "Leather",
+          "name_pt": "Couro",
+          "img": "item_leather"
+        }
+      ],
+      "time": 30,
+      "successRate": 42,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Leather Bag",
+        "name_pt": "Saco de Couro",
+        "img": "item_leather_bag"
+      },
+      "ingredients": [
+        {
+          "name_en": "Leather",
+          "name_pt": "Couro",
+          "img": "item_leather"
+        },
+        {
+          "name_en": "Rope",
+          "name_pt": "Corda",
+          "img": "item_rope"
+        }
+      ],
+      "time": 45,
+      "successRate": 45,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Shoes of Agile",
+        "name_pt": "Sapatos da Agilidade",
+        "img": "item_shoes_of_agile"
+      },
+      "ingredients": [
+        {
+          "name_en": "Wool",
+          "name_pt": "Lã",
+          "img": "item_wool"
+        },
+        {
+          "name_en": "Wool",
+          "name_pt": "Lã",
+          "img": "item_wool"
+        },
+        {
+          "name_en": "String",
+          "name_pt": "Cordão",
+          "img": "item_string"
+        }
+      ],
+      "time": 60,
+      "successRate": 9,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Iron Armor",
+        "name_pt": "Armadura de Ferro",
+        "img": "item_iron_armor"
+      },
+      "ingredients": [
+        {
+          "name_en": "Armor Mold",
+          "name_pt": "Molde de Armadura",
+          "img": "item_armor_mold"
+        },
+        {
+          "name_en": "Iron Ingot",
+          "name_pt": "Lingote de Ferro",
+          "img": "item_iron_ingot"
+        },
+        {
+          "name_en": "Iron Ingot",
+          "name_pt": "Lingote de Ferro",
+          "img": "item_iron_ingot"
+        }
+      ],
+      "time": 60,
+      "successRate": 45,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Copper Armor",
+        "name_pt": "Armadura de Cobre",
+        "img": "item_copper_armor"
+      },
+      "ingredients": [
+        {
+          "name_en": "Armor Mold",
+          "name_pt": "Molde de Armadura",
+          "img": "item_armor_mold"
+        },
+        {
+          "name_en": "Copper Ingot",
+          "name_pt": "Lingote de Cobre",
+          "img": "item_copper_ingot"
+        },
+        {
+          "name_en": "Copper Ingot",
+          "name_pt": "Lingote de Cobre",
+          "img": "item_copper_ingot"
+        }
+      ],
+      "time": 60,
+      "successRate": 37,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Golden Armor",
+        "name_pt": "Armadura de Ouro",
+        "img": "item_golden_armor"
+      },
+      "ingredients": [
+        {
+          "name_en": "Armor Mold",
+          "name_pt": "Molde de Armadura",
+          "img": "item_armor_mold"
+        },
+        {
+          "name_en": "Gold Ingot",
+          "name_pt": "Lingote de Ouro",
+          "img": "item_gold_ingot"
+        },
+        {
+          "name_en": "Gold Ingot",
+          "name_pt": "Lingote de Ouro",
+          "img": "item_gold_ingot"
+        }
+      ],
+      "time": 90,
+      "successRate": 19,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Steel Armor",
+        "name_pt": "Armadura de Aço",
+        "img": "item_steel_armor"
+      },
+      "ingredients": [
+        {
+          "name_en": "Armor Mold",
+          "name_pt": "Molde de Armadura",
+          "img": "item_armor_mold"
+        },
+        {
+          "name_en": "Steel Ingot",
+          "name_pt": "Lingote de Aço",
+          "img": "item_steel_ingot"
+        },
+        {
+          "name_en": "Steel Ingot",
+          "name_pt": "Lingote de Aço",
+          "img": "item_steel_ingot"
+        }
+      ],
+      "time": 80,
+      "successRate": 23,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Iron Helmet",
+        "name_pt": "Elmo de Ferro",
+        "img": "item_iron_helmet"
+      },
+      "ingredients": [
+        {
+          "name_en": "Helmet Mold",
+          "name_pt": "Molde de Elmo",
+          "img": "item_helmet_mold"
+        },
+        {
+          "name_en": "Iron Ingot",
+          "name_pt": "Lingote de Ferro",
+          "img": "item_iron_ingot"
+        },
+        {
+          "name_en": "Iron Ingot",
+          "name_pt": "Lingote de Ferro",
+          "img": "item_iron_ingot"
+        }
+      ],
+      "time": 60,
+      "successRate": 50,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Iron Boots",
+        "name_pt": "Botas de Ferro",
+        "img": "item_iron_boots"
+      },
+      "ingredients": [
+        {
+          "name_en": "Wool",
+          "name_pt": "Lã",
+          "img": "item_wool"
+        },
+        {
+          "name_en": "Iron Ingot",
+          "name_pt": "Lingote de Ferro",
+          "img": "item_iron_ingot"
+        },
+        {
+          "name_en": "Iron Ingot",
+          "name_pt": "Lingote de Ferro",
+          "img": "item_iron_ingot"
+        }
+      ],
+      "time": 60,
+      "successRate": 35,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Copper Helmet",
+        "name_pt": "Elmo de Cobre",
+        "img": "item_copper_helmet"
+      },
+      "ingredients": [
+        {
+          "name_en": "Helmet Mold",
+          "name_pt": "Molde de Elmo",
+          "img": "item_helmet_mold"
+        },
+        {
+          "name_en": "Copper Ingot",
+          "name_pt": "Lingote de Cobre",
+          "img": "item_copper_ingot"
+        },
+        {
+          "name_en": "Copper Ingot",
+          "name_pt": "Lingote de Cobre",
+          "img": "item_copper_ingot"
+        }
+      ],
+      "time": 60,
+      "successRate": 40,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Copper Boots",
+        "name_pt": "Botas de Cobre",
+        "img": "item_copper_boots"
+      },
+      "ingredients": [
+        {
+          "name_en": "Wool",
+          "name_pt": "Lã",
+          "img": "item_wool"
+        },
+        {
+          "name_en": "Copper Ingot",
+          "name_pt": "Lingote de Cobre",
+          "img": "item_copper_ingot"
+        },
+        {
+          "name_en": "Copper Ingot",
+          "name_pt": "Lingote de Cobre",
+          "img": "item_copper_ingot"
+        }
+      ],
+      "time": 60,
+      "successRate": 30,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Golden Helmet",
+        "name_pt": "Elmo de Oro",
+        "img": "item_golden_helmet"
+      },
+      "ingredients": [
+        {
+          "name_en": "Helmet Mold",
+          "name_pt": "Molde de Elmo",
+          "img": "item_helmet_mold"
+        },
+        {
+          "name_en": "Gold Ingot",
+          "name_pt": "Lingote de Ouro",
+          "img": "item_gold_ingot"
+        },
+        {
+          "name_en": "Gold Ingot",
+          "name_pt": "Lingote de Ouro",
+          "img": "item_gold_ingot"
+        }
+      ],
+      "time": 90,
+      "successRate": 22,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Caltranium Armor",
+        "name_pt": "Armadura de Caltranio",
+        "img": "item_caltranium_armor"
+      },
+      "ingredients": [
+        {
+          "name_en": "Armor Mold",
+          "name_pt": "Molde de Armadura",
+          "img": "item_armor_mold"
+        },
+        {
+          "name_en": "Caltranium Ingot",
+          "name_pt": "Lingote de Caltranio",
+          "img": "item_caltranium_ingot"
+        },
+        {
+          "name_en": "Caltranium Ingot",
+          "name_pt": "Lingote de Caltranio",
+          "img": "item_caltranium_ingot"
+        }
+      ],
+      "time": 120,
+      "successRate": 11,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Caltranium Helmet",
+        "name_pt": "Elmo de Caltranio",
+        "img": "item_caltranium_helmet"
+      },
+      "ingredients": [
+        {
+          "name_en": "Helmet Mold",
+          "name_pt": "Molde de Elmo",
+          "img": "item_helmet_mold"
+        },
+        {
+          "name_en": "Caltranium Ingot",
+          "name_pt": "Lingote de Caltranio",
+          "img": "item_caltranium_ingot"
+        },
+        {
+          "name_en": "Caltranium Ingot",
+          "name_pt": "Lingote de Caltranio",
+          "img": "item_caltranium_ingot"
+        }
+      ],
+      "time": 100,
+      "successRate": 11,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Caltranium Legs",
+        "name_pt": "Calças de Caltranio",
+        "img": "item_caltranium_legs"
+      },
+      "ingredients": [
+        {
+          "name_en": "Steel Ingot",
+          "name_pt": "Lingote de Aço",
+          "img": "item_steel_ingot"
+        },
+        {
+          "name_en": "Caltranium Ingot",
+          "name_pt": "Lingote de Caltranio",
+          "img": "item_caltranium_ingot"
+        },
+        {
+          "name_en": "Caltranium Ingot",
+          "name_pt": "Lingote de Caltranio",
+          "img": "item_caltranium_ingot"
+        }
+      ],
+      "time": 110,
+      "successRate": 12,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Caltranium Shield",
+        "name_pt": "Escudo de Caltranio",
+        "img": "item_caltranium_shield"
+      },
+      "ingredients": [
+        {
+          "name_en": "Gold Ingot",
+          "name_pt": "Lingote de Ouro",
+          "img": "item_gold_ingot"
+        },
+        {
+          "name_en": "Caltranium Ingot",
+          "name_pt": "Lingote de Caltranio",
+          "img": "item_caltranium_ingot"
+        },
+        {
+          "name_en": "Caltranium Ingot",
+          "name_pt": "Lingote de Caltranio",
+          "img": "item_caltranium_ingot"
+        }
+      ],
+      "time": 120,
+      "successRate": 10,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Caltranium Boots",
+        "name_pt": "Botas de Caltranio",
+        "img": "item_caltranium_boots"
+      },
+      "ingredients": [
+        {
+          "name_en": "Wool",
+          "name_pt": "Lã",
+          "img": "item_wool"
+        },
+        {
+          "name_en": "Caltranium Ingot",
+          "name_pt": "Lingote de Caltranio",
+          "img": "item_caltranium_ingot"
+        },
+        {
+          "name_en": "Caltranium Ingot",
+          "name_pt": "Lingote de Caltranio",
+          "img": "item_caltranium_ingot"
+        }
+      ],
+      "time": 110,
+      "successRate": 11,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Steel Helmet",
+        "name_pt": "Elmo de Aço",
+        "img": "item_steel_helmet"
+      },
+      "ingredients": [
+        {
+          "name_en": "Helmet Mold",
+          "name_pt": "Molde de Elmo",
+          "img": "item_helmet_mold"
+        },
+        {
+          "name_en": "Steel Ingot",
+          "name_pt": "Lingote de Aço",
+          "img": "item_steel_ingot"
+        },
+        {
+          "name_en": "Steel Ingot",
+          "name_pt": "Lingote de Aço",
+          "img": "item_steel_ingot"
+        }
+      ],
+      "time": 80,
+      "successRate": 26,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Hood of Magician",
+        "name_pt": "Capuz dos Magos",
+        "img": "item_hood_of_magician"
+      },
+      "ingredients": [
+        {
+          "name_en": "Wool",
+          "name_pt": "Lã",
+          "img": "item_wool"
+        },
+        {
+          "name_en": "Tissue",
+          "name_pt": "Tecido",
+          "img": "item_tissue"
+        },
+        {
+          "name_en": "Emerald Powder",
+          "name_pt": "Pó de Esmeralda",
+          "img": "item_emerald_powder"
+        }
+      ],
+      "time": 50,
+      "successRate": 35,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Ornate Cloak",
+        "name_pt": "Manto Ornamentado",
+        "img": "item_ornate_cloak"
+      },
+      "ingredients": [
+        {
+          "name_en": "Tissue",
+          "name_pt": "Tecido",
+          "img": "item_tissue"
+        },
+        {
+          "name_en": "Emerald",
+          "name_pt": "Esmeralda",
+          "img": "item_emerald"
+        },
+        {
+          "name_en": "Diamond",
+          "name_pt": "Diamante",
+          "img": "item_diamond"
+        }
+      ],
+      "time": 50,
+      "successRate": 20,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Spellcrafter Tunic",
+        "name_pt": "Túnica do Feiticeiro",
+        "img": "item_spellcrafter_tunic"
+      },
+      "ingredients": [
+        {
+          "name_en": "Tissue",
+          "name_pt": "Tecido",
+          "img": "item_tissue"
+        },
+        {
+          "name_en": "Spider Web",
+          "name_pt": "Teia de Aranha",
+          "img": "item_spider_web"
+        },
+        {
+          "name_en": "Emerald Powder",
+          "name_pt": "Pó de Esmeralda",
+          "img": "item_emerald_powder"
+        }
+      ],
+      "time": 45,
+      "successRate": 32,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Iron Sword",
+        "name_pt": "Espada de Ferro",
+        "img": "item_iron_sword"
+      },
+      "ingredients": [
+        {
+          "name_en": "Branch",
+          "name_pt": "Galho",
+          "img": "item_branch"
+        },
+        {
+          "name_en": "Iron Ingot",
+          "name_pt": "Lingote de Ferro",
+          "img": "item_iron_ingot"
+        }
+      ],
+      "time": 45,
+      "successRate": 36,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Copper Sword",
+        "name_pt": "Espada de Cobre",
+        "img": "item_copper_sword"
+      },
+      "ingredients": [
+        {
+          "name_en": "Branch",
+          "name_pt": "Galho",
+          "img": "item_branch"
+        },
+        {
+          "name_en": "Copper Ingot",
+          "name_pt": "Lingote de Cobre",
+          "img": "item_copper_ingot"
+        }
+      ],
+      "time": 52,
+      "successRate": 23,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Heavy Mace",
+        "name_pt": "Maça Pesada",
+        "img": "item_heavy_mace"
+      },
+      "ingredients": [
+        {
+          "name_en": "Log",
+          "name_pt": "Tora",
+          "img": "item_log"
+        },
+        {
+          "name_en": "Iron Ingot",
+          "name_pt": "Lingote de Ferro",
+          "img": "item_iron_ingot"
+        },
+        {
+          "name_en": "Steel Ingot",
+          "name_pt": "Lingote de Aço",
+          "img": "item_steel_ingot"
+        }
+      ],
+      "time": 65,
+      "successRate": 19,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Long Oak Bow",
+        "name_pt": "Arco Longo de Carvalho",
+        "img": "item_long_oak_bow"
+      },
+      "ingredients": [
+        {
+          "name_en": "Branch",
+          "name_pt": "Galho",
+          "img": "item_branch"
+        },
+        {
+          "name_en": "String",
+          "name_pt": "Cordão",
+          "img": "item_string"
+        },
+        {
+          "name_en": "Orc Tooth",
+          "name_pt": "Dente de Orc",
+          "img": "item_orc_tooth"
+        }
+      ],
+      "time": 60,
+      "successRate": 12,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Skillful's Staff",
+        "name_pt": "Bastão do Habilidoso",
+        "img": "item_skillfuls_staff"
+      },
+      "ingredients": [
+        {
+          "name_en": "Log",
+          "name_pt": "Tora",
+          "img": "item_log"
+        },
+        {
+          "name_en": "Living Mosswood",
+          "name_pt": "Madeira Viva Musgosa",
+          "img": "item_forest_golem_sample"
+        },
+        {
+          "name_en": "Orc Tooth",
+          "name_pt": "Dente de Orc",
+          "img": "item_orc_tooth"
+        }
+      ],
+      "time": 60,
+      "successRate": 3,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Gold Dagger",
+        "name_pt": "Adaga de Ouro",
+        "img": "item_gold_dagger"
+      },
+      "ingredients": [
+        {
+          "name_en": "Gold Ingot",
+          "name_pt": "Lingote de Ouro",
+          "img": "item_gold_ingot"
+        },
+        {
+          "name_en": "Gold Ingot",
+          "name_pt": "Lingote de Ouro",
+          "img": "item_gold_ingot"
+        },
+        {
+          "name_en": "Steel Ingot",
+          "name_pt": "Lingote de Aço",
+          "img": "item_steel_ingot"
+        }
+      ],
+      "time": 70,
+      "successRate": 4,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Giant Sword",
+        "name_pt": "Espada Gigante",
+        "img": "item_giant_sword"
+      },
+      "ingredients": [
+        {
+          "name_en": "Steel Ingot",
+          "name_pt": "Lingote de Aço",
+          "img": "item_steel_ingot"
+        },
+        {
+          "name_en": "Iron Ingot",
+          "name_pt": "Lingote de Ferro",
+          "img": "item_iron_ingot"
+        },
+        {
+          "name_en": "Plank",
+          "name_pt": "Tábua",
+          "img": "item_plank"
+        }
+      ],
+      "time": 65,
+      "successRate": 8,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Plank Shield",
+        "name_pt": "Escudo de Tábua",
+        "img": "item_plank_shield"
+      },
+      "ingredients": [
+        {
+          "name_en": "Plank",
+          "name_pt": "Tábua",
+          "img": "item_plank"
+        },
+        {
+          "name_en": "Plank",
+          "name_pt": "Tábua",
+          "img": "item_plank"
+        },
+        {
+          "name_en": "String",
+          "name_pt": "Cordão",
+          "img": "item_string"
+        }
+      ],
+      "time": 25,
+      "successRate": 52,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Iron Shield",
+        "name_pt": "Escudo de Ferro",
+        "img": "item_iron_shield"
+      },
+      "ingredients": [
+        {
+          "name_en": "Iron Ingot",
+          "name_pt": "Lingote de Ferro",
+          "img": "item_iron_ingot"
+        },
+        {
+          "name_en": "Plank Shield",
+          "name_pt": "Escudo de Tábua",
+          "img": "item_plank_shield"
+        },
+        {
+          "name_en": "Plank",
+          "name_pt": "Tábua",
+          "img": "item_plank"
+        }
+      ],
+      "time": 60,
+      "successRate": 26,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Steel Shield",
+        "name_pt": "Escudo de Aço",
+        "img": "item_steel_shield"
+      },
+      "ingredients": [
+        {
+          "name_en": "Steel Ingot",
+          "name_pt": "Lingote de Aço",
+          "img": "item_steel_ingot"
+        },
+        {
+          "name_en": "Plank Shield",
+          "name_pt": "Escudo de Tábua",
+          "img": "item_plank_shield"
+        },
+        {
+          "name_en": "Plank",
+          "name_pt": "Tábua",
+          "img": "item_plank"
+        }
+      ],
+      "time": 60,
+      "successRate": 18,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Ash",
+        "name_pt": "Cinzas",
+        "img": "item_ash"
+      },
+      "ingredients": [
+        {
+          "name_en": "Coal",
+          "name_pt": "Carvão",
+          "img": "item_coal"
+        },
+        {
+          "name_en": "Log",
+          "name_pt": "Tora",
+          "img": "item_log"
+        }
+      ],
+      "time": 25,
+      "successRate": 100,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Steel Spear",
+        "name_pt": "Lança de Aço",
+        "img": "item_steel_spear"
+      },
+      "ingredients": [
+        {
+          "name_en": "Steel Ingot",
+          "name_pt": "Lingote de Aço",
+          "img": "item_steel_ingot"
+        },
+        {
+          "name_en": "Plank",
+          "name_pt": "Tábua",
+          "img": "item_plank"
+        },
+        {
+          "name_en": "Plank",
+          "name_pt": "Tábua",
+          "img": "item_plank"
+        }
+      ],
+      "time": 50,
+      "successRate": 22,
+      "type": "GENERAL"
+    }
+  ],
+  "alchemy": [
+    {
+      "result": {
+        "name_en": "Simple HP Potion",
+        "name_pt": "Poção PV Simples",
+        "img": "item_simple_hp_potion"
+      },
+      "ingredients": [
+        {
+          "name_en": "Red Herb",
+          "name_pt": "Erva Vermelha",
+          "img": "item_red_herb"
+        },
+        {
+          "name_en": "Red Herb",
+          "name_pt": "Erva Vermelha",
+          "img": "item_red_herb"
+        },
+        {
+          "name_en": "Water",
+          "name_pt": "Água",
+          "img": "item_water"
+        }
+      ],
+      "time": 30,
+      "successRate": 45,
+      "type": "ALCHEMY"
+    },
+    {
+      "result": {
+        "name_en": "HP Potion",
+        "name_pt": "Poção PV",
+        "img": "item_hp_potion"
+      },
+      "ingredients": [
+        {
+          "name_en": "Red Herb",
+          "name_pt": "Erva Vermelha",
+          "img": "item_red_herb"
+        },
+        {
+          "name_en": "Yellow Herb",
+          "name_pt": "Erva Amarela",
+          "img": "item_yellow_herb"
+        },
+        {
+          "name_en": "Water",
+          "name_pt": "Água",
+          "img": "item_water"
+        }
+      ],
+      "time": 30,
+      "successRate": 32,
+      "type": "ALCHEMY"
+    },
+    {
+      "result": {
+        "name_en": "Simple MP Potion",
+        "name_pt": "Poção PM Simples",
+        "img": "item_simple_mp_potion"
+      },
+      "ingredients": [
+        {
+          "name_en": "Green Herb",
+          "name_pt": "Erva Verde",
+          "img": "item_green_herb"
+        },
+        {
+          "name_en": "Green Herb",
+          "name_pt": "Erva Verde",
+          "img": "item_green_herb"
+        },
+        {
+          "name_en": "Water",
+          "name_pt": "Água",
+          "img": "item_water"
+        }
+      ],
+      "time": 30,
+      "successRate": 45,
+      "type": "ALCHEMY"
+    },
+    {
+      "result": {
+        "name_en": "MP Potion",
+        "name_pt": "Poção PM",
+        "img": "item_mp_potion"
+      },
+      "ingredients": [
+        {
+          "name_en": "Green Herb",
+          "name_pt": "Erva Verde",
+          "img": "item_green_herb"
+        },
+        {
+          "name_en": "Yellow Herb",
+          "name_pt": "Erva Amarela",
+          "img": "item_yellow_herb"
+        },
+        {
+          "name_en": "Water",
+          "name_pt": "Água",
+          "img": "item_water"
+        }
+      ],
+      "time": 30,
+      "successRate": 32,
+      "type": "ALCHEMY"
+    },
+    {
+      "result": {
+        "name_en": "Special HP Potion",
+        "name_pt": "Poção PV Especial",
+        "img": "item_special_hp_potion"
+      },
+      "ingredients": [
+        {
+          "name_en": "Yellow Herb",
+          "name_pt": "Erva Amarela",
+          "img": "item_yellow_herb"
+        },
+        {
+          "name_en": "Yellow Herb",
+          "name_pt": "Erva Amarela",
+          "img": "item_yellow_herb"
+        },
+        {
+          "name_en": "Simple HP Potion",
+          "name_pt": "Poção PV Simples",
+          "img": "item_simple_hp_potion"
+        }
+      ],
+      "time": 30,
+      "successRate": 14,
+      "type": "ALCHEMY"
+    },
+    {
+      "result": {
+        "name_en": "Special MP Potion",
+        "name_pt": "Poção PM Especial",
+        "img": "item_special_mp_potion"
+      },
+      "ingredients": [
+        {
+          "name_en": "Yellow Herb",
+          "name_pt": "Erva Amarela",
+          "img": "item_yellow_herb"
+        },
+        {
+          "name_en": "Yellow Herb",
+          "name_pt": "Erva Amarela",
+          "img": "item_yellow_herb"
+        },
+        {
+          "name_en": "Simple MP Potion",
+          "name_pt": "Poção PM Simples",
+          "img": "item_simple_mp_potion"
+        }
+      ],
+      "time": 30,
+      "successRate": 14,
+      "type": "ALCHEMY"
+    },
+    {
+      "result": {
+        "name_en": "Mead Potion",
+        "name_pt": "Poção Hidromel",
+        "img": "item_mead_potion"
+      },
+      "ingredients": [
+        {
+          "name_en": "Green Herb",
+          "name_pt": "Erva Verde",
+          "img": "item_green_herb"
+        },
+        {
+          "name_en": "Red Herb",
+          "name_pt": "Erva Vermelha",
+          "img": "item_red_herb"
+        },
+        {
+          "name_en": "Water",
+          "name_pt": "Água",
+          "img": "item_water"
+        }
+      ],
+      "time": 30,
+      "successRate": 30,
+      "type": "ALCHEMY"
+    },
+    {
+      "result": {
+        "name_en": "Elixir Potion",
+        "name_pt": "Poção Elixir",
+        "img": "item_elixir_potion"
+      },
+      "ingredients": [
+        {
+          "name_en": "Yellow Herb",
+          "name_pt": "Erva Amarela",
+          "img": "item_yellow_herb"
+        },
+        {
+          "name_en": "Yellow Herb",
+          "name_pt": "Erva Amarela",
+          "img": "item_yellow_herb"
+        },
+        {
+          "name_en": "Mead Potion",
+          "name_pt": "Poção Hidromel",
+          "img": "item_mead_potion"
+        }
+      ],
+      "time": 40,
+      "successRate": 20,
+      "type": "ALCHEMY"
+    },
+    {
+      "result": {
+        "name_en": "Antidote",
+        "name_pt": "Antídoto",
+        "img": "item_antidote"
+      },
+      "ingredients": [
+        {
+          "name_en": "Green Herb",
+          "name_pt": "Erva Verde",
+          "img": "item_green_herb"
+        },
+        {
+          "name_en": "Wine",
+          "name_pt": "Vinho",
+          "img": "item_wine"
+        }
+      ],
+      "time": 25,
+      "successRate": 85,
+      "type": "ALCHEMY"
+    },
+    {
+      "result": {
+        "name_en": "Blaze Shield",
+        "name_pt": "Escudo das Chamas",
+        "img": "item_blaze_shield"
+      },
+      "ingredients": [
+        {
+          "name_en": "Iron Shield",
+          "name_pt": "Escudo de Ferro",
+          "img": "item_iron_shield"
+        },
+        {
+          "name_en": "Ash",
+          "name_pt": "Cinzas",
+          "img": "item_ash"
+        },
+        {
+          "name_en": "Wine",
+          "name_pt": "Vinho",
+          "img": "item_wine"
+        }
+      ],
+      "time": 60,
+      "successRate": 25,
+      "type": "ALCHEMY"
+    },
+    {
+      "result": {
+        "name_en": "Glacier Shield",
+        "name_pt": "Escudo Glacial",
+        "img": "item_glacier_shield"
+      },
+      "ingredients": [
+        {
+          "name_en": "Iron Shield",
+          "name_pt": "Escudo de Ferro",
+          "img": "item_iron_shield"
+        },
+        {
+          "name_en": "Eternal Ice Crystal",
+          "name_pt": "Cristal de Gelo Eterno",
+          "img": "item_ice_golem_sample"
+        },
+        {
+          "name_en": "Wine",
+          "name_pt": "Vinho",
+          "img": "item_wine"
+        }
+      ],
+      "time": 60,
+      "successRate": 27,
+      "type": "ALCHEMY"
+    },
+    {
+      "result": {
+        "name_en": "Darkness Shield",
+        "name_pt": "Escudo da Escuridão",
+        "img": "item_darkness_shield"
+      },
+      "ingredients": [
+        {
+          "name_en": "Iron Shield",
+          "name_pt": "Escudo de Ferro",
+          "img": "item_iron_shield"
+        },
+        {
+          "name_en": "Dark Mushroom",
+          "name_pt": "Cogumelo Negro",
+          "img": "item_dark_mushroom"
+        },
+        {
+          "name_en": "Wine",
+          "name_pt": "Vinho",
+          "img": "item_wine"
+        }
+      ],
+      "time": 60,
+      "successRate": 21,
+      "type": "ALCHEMY"
+    },
+    {
+      "result": {
+        "name_en": "Celestial Shield",
+        "name_pt": "Escudo Celestial",
+        "img": "item_celestial_shield"
+      },
+      "ingredients": [
+        {
+          "name_en": "Iron Shield",
+          "name_pt": "Escudo de Ferro",
+          "img": "item_iron_shield"
+        },
+        {
+          "name_en": "Runic Stone Fragment",
+          "name_pt": "Fragmento de Pedra Rúnica",
+          "img": "item_mountain_golem_sample"
+        },
+        {
+          "name_en": "Wine",
+          "name_pt": "Vinho",
+          "img": "item_wine"
+        }
+      ],
+      "time": 60,
+      "successRate": 28,
+      "type": "ALCHEMY"
+    },
+    {
+      "result": {
+        "name_en": "Nature Shield",
+        "name_pt": "Escudo da Natureza",
+        "img": "item_nature_shield"
+      },
+      "ingredients": [
+        {
+          "name_en": "Iron Shield",
+          "name_pt": "Escudo de Ferro",
+          "img": "item_iron_shield"
+        },
+        {
+          "name_en": "Living Mosswood",
+          "name_pt": "Madeira Viva Musgosa",
+          "img": "item_forest_golem_sample"
+        },
+        {
+          "name_en": "Wine",
+          "name_pt": "Vinho",
+          "img": "item_wine"
+        }
+      ],
+      "time": 60,
+      "successRate": 30,
+      "type": "ALCHEMY"
+    },
+    {
+      "result": {
+        "name_en": "Beer",
+        "name_pt": "Cerveja",
+        "img": "item_beer"
+      },
+      "ingredients": [
+        {
+          "name_en": "Water",
+          "name_pt": "Água",
+          "img": "item_water"
+        },
+        {
+          "name_en": "Water",
+          "name_pt": "Água",
+          "img": "item_water"
+        },
+        {
+          "name_en": "Wheat",
+          "name_pt": "Trigo",
+          "img": "item_wheat"
+        }
+      ],
+      "time": 35,
+      "successRate": 85,
+      "type": "ALCHEMY"
+    },
+    {
+      "result": {
+        "name_en": "Wine",
+        "name_pt": "Vinho",
+        "img": "item_wine"
+      },
+      "ingredients": [
+        {
+          "name_en": "Water",
+          "name_pt": "Água",
+          "img": "item_water"
+        },
+        {
+          "name_en": "Pomegranate",
+          "name_pt": "Romã",
+          "img": "item_pomegranate"
+        },
+        {
+          "name_en": "Pomegranate",
+          "name_pt": "Romã",
+          "img": "item_pomegranate"
+        }
+      ],
+      "time": 40,
+      "successRate": 82,
+      "type": "ALCHEMY"
+    },
+    {
+      "result": {
+        "name_en": "Fire Sword",
+        "name_pt": "Espada de Fogo",
+        "img": "item_fire_sword"
+      },
+      "ingredients": [
+        {
+          "name_en": "Copper Sword",
+          "name_pt": "Espada de Cobre",
+          "img": "item_copper_sword"
+        },
+        {
+          "name_en": "Coal",
+          "name_pt": "Carvão",
+          "img": "item_coal"
+        },
+        {
+          "name_en": "Ash",
+          "name_pt": "Cinzas",
+          "img": "item_ash"
+        }
+      ],
+      "time": 60,
+      "successRate": 24,
+      "type": "ALCHEMY"
+    },
+    {
+      "result": {
+        "name_en": "Glacier Mace",
+        "name_pt": "Maça Glacial",
+        "img": "item_glacier_mace"
+      },
+      "ingredients": [
+        {
+          "name_en": "Heavy Mace",
+          "name_pt": "Maça Pesada",
+          "img": "item_heavy_mace"
+        },
+        {
+          "name_en": "Eternal Ice Crystal",
+          "name_pt": "Cristal de Gelo Eterno",
+          "img": "item_ice_golem_sample"
+        }
+      ],
+      "time": 65,
+      "successRate": 16,
+      "type": "ALCHEMY"
+    },
+    {
+      "result": {
+        "name_en": "Knives of Breeze",
+        "name_pt": "Facas da Brisa",
+        "img": "item_knives_of_breeze"
+      },
+      "ingredients": [
+        {
+          "name_en": "Throwing Knives",
+          "name_pt": "Facas de Arremesso",
+          "img": "item_throwing_knives"
+        },
+        {
+          "name_en": "Ash",
+          "name_pt": "Cinzas",
+          "img": "item_ash"
+        },
+        {
+          "name_en": "White Herb",
+          "name_pt": "Erva Branca",
+          "img": "item_white_herb"
+        }
+      ],
+      "time": 50,
+      "successRate": 16,
+      "type": "ALCHEMY"
+    }
+  ]
+}

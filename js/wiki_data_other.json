@@ -31,7 +31,7 @@
       "img": "item_gold_bag",
       "weight": 0.5,
       "value": 0,
-      "ingredient": true,
+      "ingredient": false,
       "rarity": "RARE",
       "desc_en": "A purse with gold coins inside, open it to become wealthier.",
       "desc_pt": "Uma bolsa com moedas de ouro dentro; abra-a para ficar mais rico."
@@ -49,20 +49,8 @@
       "desc_pt": "Uma pedra preciosa de cor esverdeada."
     },
     {
-      "name_en": "Ruby Ring",
-      "type": "VALUABLE",
-      "name_pt": "Anel de Rubi",
-      "img": "item_ruby_ring",
-      "weight": 0.1,
-      "value": 45,
-      "ingredient": true,
-      "rarity": "RARE",
-      "desc_en": "A magnificent ring adorned with a brilliant ruby gem.",
-      "desc_pt": "Um magnífico anel adornado com uma brilhante gema de rubi."
-    },
-    {
       "name_en": "Emerald Powder",
-      "type": "MISC",
+      "type": "VALUABLE",
       "name_pt": "Pó de Esmeralda",
       "img": "item_emerald_powder",
       "weight": 0.1,
@@ -121,6 +109,18 @@
       "desc_pt": "Um troféu de ouro ganho ao vencer um torneio."
     },
     {
+      "name_en": "Silver Goblet",
+      "type": "VALUABLE",
+      "name_pt": "Taça de Prata",
+      "img": "item_silver_goblet",
+      "weight": 0.3,
+      "value": 24,
+      "ingredient": false,
+      "rarity": "COMMON",
+      "desc_en": "A silver trophy earned from winning a contest.",
+      "desc_pt": "Um troféu de prata ganho ao vencer um torneio."
+    },
+    {
       "name_en": "Bronze Goblet",
       "type": "VALUABLE",
       "name_pt": "Taça de Bronze",
@@ -131,6 +131,202 @@
       "rarity": "COMMON",
       "desc_en": "A bronze trophy earned from winning a contest.",
       "desc_pt": "Um troféu de bronze ganho ao vencer um torneio."
+    }
+  ],
+  "ores": [
+    {
+      "name_en": "Iron Ore",
+      "type": "MISC",
+      "name_pt": "Minério de Ferro",
+      "img": "item_iron_ore",
+      "weight": 0.6,
+      "value": 2,
+      "ingredient": true,
+      "rarity": "COMMON",
+      "desc_en": "Iron in its raw form. Can be cast.",
+      "desc_pt": "Ferro em sua forma crua. Pode ser fundido."
+    },
+    {
+      "name_en": "Copper Ore",
+      "type": "MISC",
+      "name_pt": "Minério de Cobre",
+      "img": "item_copper_ore",
+      "weight": 0.6,
+      "value": 3,
+      "ingredient": true,
+      "rarity": "COMMON",
+      "desc_en": "Copper in its raw form. Can be cast.",
+      "desc_pt": "Cobre em sua forma crua. Pode ser fundido."
+    },
+    {
+      "name_en": "Gold Ore",
+      "type": "MISC",
+      "name_pt": "Minério de Ouro",
+      "img": "item_gold_ore",
+      "weight": 0.5,
+      "value": 7,
+      "ingredient": true,
+      "rarity": "COMMON",
+      "desc_en": "Gold in its raw form. Can be cast.",
+      "desc_pt": "Ouro em sua forma crua. Pode ser fundido."
+    },
+    {
+      "name_en": "Caltranium Ore",
+      "type": "MISC",
+      "name_pt": "Minério de Caltranio",
+      "img": "item_caltranium_ore",
+      "weight": 0.8,
+      "value": 14,
+      "ingredient": true,
+      "rarity": "UNCOMMON",
+      "desc_en": "Caltranium in its raw form. Can be cast.",
+      "desc_pt": "Caltranio em sua forma crua. Pode ser fundido."
+    },
+    {
+      "name_en": "Iron Ingot",
+      "type": "MISC",
+      "name_pt": "Lingote de Ferro",
+      "img": "item_iron_ingot",
+      "weight": 1,
+      "value": 4,
+      "ingredient": true,
+      "rarity": "COMMON",
+      "desc_en": "Casted iron ready to be shaped into a tool, weapon, etc...",
+      "desc_pt": "Ferro fundido pronto para ser moldado como uma ferramenta, arma, etc..."
+    },
+    {
+      "name_en": "Copper Ingot",
+      "type": "MISC",
+      "name_pt": "Lingote de Cobre",
+      "img": "item_copper_ingot",
+      "weight": 1,
+      "value": 7,
+      "ingredient": true,
+      "rarity": "COMMON",
+      "desc_en": "Casted copper ready to be shaped into a tool, weapon, etc...",
+      "desc_pt": "Cobre fundido pronto para ser moldado como uma ferramenta, arma, etc..."
+    },
+    {
+      "name_en": "Steel Ingot",
+      "type": "MISC",
+      "name_pt": "Lingote de Aço",
+      "img": "item_steel_ingot",
+      "weight": 1,
+      "value": 8,
+      "ingredient": true,
+      "rarity": "COMMON",
+      "desc_en": "Casted iron with coal ready to be shaped into a tool, weapon, etc...",
+      "desc_pt": "Ferro fundido com carvão prontos para serem transformados em ferramentas, armas, etc..."
+    },
+    {
+      "name_en": "Gold Ingot",
+      "type": "MISC",
+      "name_pt": "Lingote de Ouro",
+      "img": "item_gold_ingot",
+      "weight": 0.8,
+      "value": 12,
+      "ingredient": true,
+      "rarity": "COMMON",
+      "desc_en": "Casted gold ready to be shaped into a jewel, weapon, etc...",
+      "desc_pt": "Ouro fundido pronto para ser moldado como uma jóia, arma, etc..."
+    },
+    {
+      "name_en": "Caltranium Ingot",
+      "type": "MISC",
+      "name_pt": "Lingote de Caltranio",
+      "img": "item_caltranium_ingot",
+      "weight": 1.2,
+      "value": 21,
+      "ingredient": true,
+      "rarity": "UNCOMMON",
+      "desc_en": "Caltranium gold ready to be shaped into an armor, weapon, etc...",
+      "desc_pt": "Caltranio fundido pronto para ser moldado como uma armadura, arma, etc..."
+    },
+    {
+      "name_en": "Gybralar Forest Map",
+      "type": "MISC",
+      "name_pt": "Mapa da Floresta Gybralar",
+      "img": "item_map",
+      "weight": 0.1,
+      "value": 8,
+      "ingredient": false,
+      "rarity": "COMMON",
+      "desc_en": "A map of Gybralar forest region.",
+      "desc_pt": "Um mapa da região florestal de Gybralar."
+    }
+  ],
+  "tools": [
+    {
+      "name_en": "Fishing Rod",
+      "type": "TOOL",
+      "name_pt": "Vara de Pesca",
+      "img": "item_fishing_rod",
+      "weight": 0.2,
+      "value": 5,
+      "ingredient": true,
+      "rarity": "COMMON",
+      "desc_en": "A tool that makes catching fish easier.",
+      "desc_pt": "Uma ferramenta que facilita a pega de peixes."
+    },
+    {
+      "name_en": "Reinforced Fishing Rod",
+      "type": "TOOL",
+      "name_pt": "Vara de Pesca Reforçada",
+      "img": "item_reinforced_fishing_rod",
+      "weight": 0.4,
+      "value": 16,
+      "ingredient": false,
+      "rarity": "COMMON",
+      "desc_en": "The same rod, but thicker and with a double line to catch big fish. It is needed some knowledge to use a rod like that.",
+      "desc_pt": "A mesma vara, porém mais grossa e com uma linha dupla para fisgar peixes grandes. É preciso algum conhecimento para usar uma vara assim."
+    },
+    {
+      "name_en": "Pickaxe",
+      "type": "TOOL",
+      "name_pt": "Picareta",
+      "img": "item_pickaxe",
+      "weight": 1.5,
+      "value": 7,
+      "ingredient": true,
+      "rarity": "COMMON",
+      "desc_en": "The correct tool for extracting ores and stones.",
+      "desc_pt": "A ferramenta correta para extrair minérios e pedras."
+    },
+    {
+      "name_en": "Steel Pickaxe",
+      "type": "TOOL",
+      "name_pt": "Picareta de Aço",
+      "img": "item_steel_pickaxe",
+      "weight": 1.7,
+      "value": 16,
+      "ingredient": true,
+      "rarity": "COMMON",
+      "desc_en": "A better pickaxe that makes the ore extract easier.",
+      "desc_pt": "Uma picareta melhor que facilita a extração do minério."
+    },
+    {
+      "name_en": "Dwarven's Pickaxe",
+      "type": "TOOL",
+      "name_pt": "Picareta dos Anões",
+      "img": "item_dwarvens_pickaxe",
+      "weight": 2.2,
+      "value": 42,
+      "ingredient": false,
+      "rarity": "RARE",
+      "desc_en": "The most efficient pickaxe. Made by dwarves.",
+      "desc_pt": "A picareta mais eficiente. Feita pelos anões."
+    },
+    {
+      "name_en": "Hunting Trap",
+      "type": "TOOL",
+      "name_pt": "Armadilha de Caça",
+      "img": "item_hunting_trap",
+      "weight": 1.6,
+      "value": 3,
+      "ingredient": false,
+      "rarity": "COMMON",
+      "desc_en": "Great for hunting animals more efficiently.",
+      "desc_pt": "Ótima para caçar animais com mais eficiência."
     }
   ],
   "misc": [
@@ -289,186 +485,6 @@
       "rarity": "UNCOMMON",
       "desc_en": "A rare herb that is found in nature. It could be a seasoning or ingredient.",
       "desc_pt": "Uma erva mais rara que é encontrada na natureza. Pode ser um tempero ou ingrediente."
-    },
-    {
-      "name_en": "Iron Ore",
-      "type": "MISC",
-      "name_pt": "Minério de Ferro",
-      "img": "item_iron_ore",
-      "weight": 0.6,
-      "value": 2,
-      "ingredient": true,
-      "rarity": "COMMON",
-      "desc_en": "Iron in its raw form. Can be cast.",
-      "desc_pt": "Ferro em sua forma crua. Pode ser fundido."
-    },
-    {
-      "name_en": "Copper Ore",
-      "type": "MISC",
-      "name_pt": "Minério de Cobre",
-      "img": "item_copper_ore",
-      "weight": 0.6,
-      "value": 3,
-      "ingredient": true,
-      "rarity": "COMMON",
-      "desc_en": "Copper in its raw form. Can be cast.",
-      "desc_pt": "Cobre em sua forma crua. Pode ser fundido."
-    },
-    {
-      "name_en": "Gold Ore",
-      "type": "MISC",
-      "name_pt": "Minério de Ouro",
-      "img": "item_gold_ore",
-      "weight": 0.5,
-      "value": 7,
-      "ingredient": true,
-      "rarity": "COMMON",
-      "desc_en": "Gold in its raw form. Can be cast.",
-      "desc_pt": "Ouro em sua forma crua. Pode ser fundido."
-    },
-    {
-      "name_en": "Caltranium Ore",
-      "type": "MISC",
-      "name_pt": "Minério de Caltranio",
-      "img": "item_caltranium_ore",
-      "weight": 0.8,
-      "value": 14,
-      "ingredient": true,
-      "rarity": "UNCOMMON",
-      "desc_en": "Caltranium in its raw form. Can be cast.",
-      "desc_pt": "Caltranio em sua forma crua. Pode ser fundido."
-    },
-    {
-      "name_en": "Iron Ingot",
-      "type": "MISC",
-      "name_pt": "Lingote de Ferro",
-      "img": "item_iron_ingot",
-      "weight": 1,
-      "value": 4,
-      "ingredient": true,
-      "rarity": "COMMON",
-      "desc_en": "Casted iron ready to be shaped into a tool, weapon, etc...",
-      "desc_pt": "Ferro fundido pronto para ser moldado como uma ferramenta, arma, etc..."
-    },
-    {
-      "name_en": "Copper Ingot",
-      "type": "MISC",
-      "name_pt": "Lingote de Cobre",
-      "img": "item_copper_ingot",
-      "weight": 1,
-      "value": 7,
-      "ingredient": true,
-      "rarity": "COMMON",
-      "desc_en": "Casted copper ready to be shaped into a tool, weapon, etc...",
-      "desc_pt": "Cobre fundido pronto para ser moldado como uma ferramenta, arma, etc..."
-    },
-    {
-      "name_en": "Steel Ingot",
-      "type": "MISC",
-      "name_pt": "Lingote de Aço",
-      "img": "item_steel_ingot",
-      "weight": 1,
-      "value": 8,
-      "ingredient": true,
-      "rarity": "COMMON",
-      "desc_en": "Casted iron with coal ready to be shaped into a tool, weapon, etc...",
-      "desc_pt": "Ferro fundido com carvão prontos para serem transformados em ferramentas, armas, etc..."
-    },
-    {
-      "name_en": "Gold Ingot",
-      "type": "MISC",
-      "name_pt": "Lingote de Ouro",
-      "img": "item_gold_ingot",
-      "weight": 0.8,
-      "value": 12,
-      "ingredient": true,
-      "rarity": "COMMON",
-      "desc_en": "Casted gold ready to be shaped into a jewel, weapon, etc...",
-      "desc_pt": "Ouro fundido pronto para ser moldado como uma jóia, arma, etc..."
-    },
-    {
-      "name_en": "Caltranium Ingot",
-      "type": "MISC",
-      "name_pt": "Lingote de Caltranio",
-      "img": "item_caltranium_ingot",
-      "weight": 1.2,
-      "value": 21,
-      "ingredient": true,
-      "rarity": "UNCOMMON",
-      "desc_en": "Caltranium gold ready to be shaped into an armor, weapon, etc...",
-      "desc_pt": "Caltranio fundido pronto para ser moldado como uma armadura, arma, etc..."
-    },
-    {
-      "name_en": "Fishing Rod",
-      "type": "TOOL",
-      "name_pt": "Vara de Pesca",
-      "img": "item_fishing_rod",
-      "weight": 0.2,
-      "value": 5,
-      "ingredient": true,
-      "rarity": "COMMON",
-      "desc_en": "A tool that makes catching fish easier.",
-      "desc_pt": "Uma ferramenta que facilita a pega de peixes."
-    },
-    {
-      "name_en": "Reinforced Fishing Rod",
-      "type": "TOOL",
-      "name_pt": "Vara de Pesca Reforçada",
-      "img": "item_reinforced_fishing_rod",
-      "weight": 0.4,
-      "value": 16,
-      "ingredient": true,
-      "rarity": "COMMON",
-      "desc_en": "The same rod, but thicker and with a double line to catch big fish. It is needed some knowledge to use a rod like that.",
-      "desc_pt": "A mesma vara, porém mais grossa e com uma linha dupla para fisgar peixes grandes. É preciso algum conhecimento para usar uma vara assim."
-    },
-    {
-      "name_en": "Pickaxe",
-      "type": "TOOL",
-      "name_pt": "Picareta",
-      "img": "item_pickaxe",
-      "weight": 1.5,
-      "value": 7,
-      "ingredient": true,
-      "rarity": "COMMON",
-      "desc_en": "The correct tool for extracting ores and stones.",
-      "desc_pt": "A ferramenta correta para extrair minérios e pedras."
-    },
-    {
-      "name_en": "Steel Pickaxe",
-      "type": "TOOL",
-      "name_pt": "Picareta de Aço",
-      "img": "item_steel_pickaxe",
-      "weight": 1.7,
-      "value": 16,
-      "ingredient": true,
-      "rarity": "COMMON",
-      "desc_en": "A better pickaxe that makes the ore extract easier.",
-      "desc_pt": "Uma picareta melhor que facilita a extração do minério."
-    },
-    {
-      "name_en": "Dwarven's Pickaxe",
-      "type": "TOOL",
-      "name_pt": "Picareta dos Anões",
-      "img": "item_dwarvens_pickaxe",
-      "weight": 2.2,
-      "value": 42,
-      "ingredient": false,
-      "rarity": "RARE",
-      "desc_en": "The most efficient pickaxe. Made by dwarves.",
-      "desc_pt": "A picareta mais eficiente. Feita pelos anões."
-    },
-    {
-      "name_en": "Hunting Trap",
-      "type": "TOOL",
-      "name_pt": "Armadilha de Caça",
-      "img": "item_hunting_trap",
-      "weight": 1.6,
-      "value": 4,
-      "ingredient": true,
-      "rarity": "COMMON",
-      "desc_en": "Great for hunting animals more efficiently.",
-      "desc_pt": "Ótima para caçar animais com mais eficiência."
     },
     {
       "name_en": "Algae",
@@ -639,18 +655,6 @@
       "desc_pt": "Um mapa da região de Growrocks."
     },
     {
-      "name_en": "Gybralar Forest Map",
-      "type": "MISC",
-      "name_pt": "Mapa da Floresta Gybralar",
-      "img": "item_map",
-      "weight": 0.1,
-      "value": 8,
-      "ingredient": false,
-      "rarity": "COMMON",
-      "desc_en": "A map of Gybralar forest region.",
-      "desc_pt": "Um mapa da região florestal de Gybralar."
-    },
-    {
       "name_en": "Orc Tooth",
       "type": "MISC",
       "name_pt": "Dente de Orc",
@@ -661,7 +665,19 @@
       "rarity": "COMMON",
       "desc_en": "A tooth of an Orc.",
       "desc_pt": "Um dente de um Orc."
-    },    
+    },
+    {
+      "name_en": "Ruby Ring",
+      "type": "JEWEL",
+      "name_pt": "Anel de Rubi",
+      "img": "item_ruby_ring",
+      "weight": 0.1,
+      "value": 45,
+      "ingredient": true,
+      "rarity": "RARE",
+      "desc_en": "A magnificent ring adorned with a brilliant ruby gem.",
+      "desc_pt": "Um magnífico anel adornado com uma brilhante gema de rubi."
+    },
     {
       "name_en": "Repair Supplies",
       "type": "MISC",
@@ -693,7 +709,7 @@
       "img": "item_donation_goods",
       "weight": 6,
       "value": 25,
-      "ingredient": true,
+      "ingredient": false,
       "rarity": "COMMON",
       "desc_en": "Crates containing goods that church is donating to the poors.",
       "desc_pt": "Caixas contendo bens que a igreja está doando aos pobres."

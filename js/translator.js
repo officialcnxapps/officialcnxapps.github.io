@@ -1,16 +1,16 @@
-jQuery(document).ready(function ($) {
-	const info = navigator;
-	let language = info.language;
-	let lang = "en-us";
-	if (language != null) {
-		language = language.toLowerCase();
-		if (language == "pt" || language == "pt-br") {
-			lang = "pt-br";
-		} else if (language == "en" || language == "en-us") {
-			lang = "en-us";
-		}
+// Language detection — runs immediately (sync) so other scripts can use CURRENT_LANGUAGE
+(function() {
+	var language = (navigator.language || '').toLowerCase();
+	var lang = 'en-us';
+	// Portuguese locales: Brazil, Portugal, Angola, Mozambique, Cape Verde
+	if (language === 'pt' || language.startsWith('pt-')) {
+		lang = 'pt-br';
 	}
 	window.CURRENT_LANGUAGE = lang;
+})();
+
+jQuery(document).ready(function ($) {
+	var lang = window.CURRENT_LANGUAGE;
 
 	const dicionario = {
 		"pt-br": {

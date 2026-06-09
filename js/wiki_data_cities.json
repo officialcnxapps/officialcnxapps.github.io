@@ -1,0 +1,299 @@
+[
+  {
+    "name_en": "Elven Citadel",
+    "region_en": "Ayalon",
+    "region_pt": "Ayalon",
+    "name_pt": "Cidadela dos Elfos",
+    "img": "locale_elven_citadel",
+    "desc_en": "A splendid city of stone towers and green-roofed buildings lining cobblestone paths. Tall spires reach toward the sky while the mountains loom in the distance, and the warm glow of lanterns fills the streets with an enchanting elven atmosphere.",
+    "desc_pt": "Uma cidade esplêndida e espaçosa. Casas construídas com pequenas pedras brancas e telhados verdes. As ruas de pedra possuem árvores e flores. Os pássaros voam por cima das torres e ouve-se conversas élficas por todo lado. Ao fundo, as montanhas emolduram a cidade numa paisagem de tirar o fôlego.",
+    "shops": [
+      {
+        "name_en": "Elvish Market",
+        "name_pt": "Mercado Élfico"
+      }
+    ],
+    "type": "CITY"
+  },
+  {
+    "name_en": "Esperand",
+    "region_en": "Esperand",
+    "region_pt": "Esperand",
+    "name_pt": "Esperand",
+    "img": "locale_esperand",
+    "desc_en": "Even with the very low temperatures the people that live here built an incredible town. The houses are constructed with a mix of rocks and logs, the roofs are full of snow but it's visible that most of roofs are painted blue. There is a well in the city main square. Every road has a fixed lit torch to illuminate and warm.",
+    "desc_pt": "Mesmo com as baixíssimas temperaturas, as pessoas que vivem aqui construíram uma cidade incrível. As casas são construídas com uma mistura de pedras e troncos, os telhados estão cheios de neve, mas é visível que a maioria dos telhados são pintados de azul. Há um poço na praça principal da cidade. Todas as ruas têm uma tocha acesa fixa para iluminar e aquecer.",
+    "shops": [
+      {
+        "name_en": "Potions Market",
+        "name_pt": "Mercado de Poções"
+      },
+      {
+        "name_en": "Magic Protections Store",
+        "name_pt": "Loja das Proteções Mágicas"
+      },
+      {
+        "name_en": "Not Frozen Foods",
+        "name_pt": "Comidas não Congeladas"
+      },
+      {
+        "name_en": "Cold Battler",
+        "name_pt": "Guerreiro Invernal"
+      },
+      {
+        "name_en": "Common Stable",
+        "name_pt": "Estábulo Comum"
+      }
+    ],
+    "type": "CITY"
+  },
+  {
+    "name_en": "Dwarven City",
+    "region_en": "Growrocks",
+    "region_pt": "Growrocks",
+    "name_pt": "Cidade dos Anões",
+    "img": "locale_dwarven_city",
+    "desc_en": "Beautiful houses and buildings are built entirely of stone. The reddish roofs and chimneys give the city a modern appearance compared to the simpler villages. The streets are made of light cobblestones and are lit by torchlight. The environment is spacious and the dwarves move around on foot or pushing wheelbarrows filled with stones, food and other materials.",
+    "desc_pt": "Belas casas e prédios construídos inteiramente de pedras. Os telhados avermelhados e as chaminés deixam a cidade com uma aparência moderna em relação as vilas mais simples. As ruas são feitas com paralelepípedos claros e são iluminadas por postes de tochas. O ambiente é amplo e os anões circulam a pé ou empurrando carrinhos de mão com pedras, comidas e outros materiais.",
+    "shops": [
+      {
+        "name_en": "Dwarven Market",
+        "name_pt": "Mercado dos Anões"
+      }
+    ],
+    "type": "CITY"
+  },
+  {
+    "name_en": "Monelix",
+    "region_en": "Havarus North",
+    "region_pt": "Havarus Norte",
+    "name_pt": "Monelix",
+    "img": "locale_monelix",
+    "desc_en": "This city is big, very well structured. Stone houses, big tavern and stores and markets that sell enormous varieties of goods. The city is surrounded by high stone walls. The castle is located in the center of city and the the clock tower stands out on the horizon over the buildings. The city streets are made of stones and there is trees in every corner.",
+    "desc_pt": "Esta cidade é grande, muito bem estruturada. Casas de pedra, grande taverna e lojas e mercados que vendem enormes variedades de produtos. A cidade é cercada por altos muros de pedra. O castelo está localizado no centro da cidade e a torre do relógio se destaca no horizonte sobre os edifícios. As ruas da cidade são feitas de pedras e há árvores em cada esquina.",
+    "shops": [
+      {
+        "name_en": "The Great Market",
+        "name_pt": "O Grande Mercado"
+      },
+      {
+        "name_en": "The Food Tent",
+        "name_pt": "A Tenda do Alimento"
+      },
+      {
+        "name_en": "The Jeweler",
+        "name_pt": "O Joalheiro"
+      },
+      {
+        "name_en": "Tools Store",
+        "name_pt": "Loja de Ferramentas"
+      }
+    ],
+    "type": "CITY"
+  },
+  {
+    "name_en": "Letow",
+    "region_en": "Havarus North",
+    "region_pt": "Havarus Norte",
+    "name_pt": "Letow",
+    "img": "locale_letow",
+    "desc_en": "Only a few wooden houses are located in this small village. Pigs and chickens walk among the two dozens of citizens that live here. There is also some small crop fields surrounding some houses.",
+    "desc_pt": "Apenas algumas casas de madeira estão localizadas nesta pequena vila. Porcos e galinhas andam entre as duas dúzias de cidadãos que vivem aqui. Há também alguns pequenos campos de cultivo ao redor de algumas casas.",
+    "shops": [{
+        "name_en": "Johanna Goods",
+        "name_pt": "Coisas da Johanna"
+      }],
+    "type": "VILLAGE"
+  },
+  {
+    "name_en": "Farmland",
+    "region_en": "Havarus North",
+    "region_pt": "Havarus Norte",
+    "name_pt": "Farmland",
+    "img": "locale_farmland",
+    "desc_en": "Due to its fertile land, this region was chosen to be the main farms to the kingdom capital. almost all food of the kingdom come from these big crops and orchards. There is also 3 houses, a mill and a barn with some sheeps in this location.",
+    "desc_pt": "Devido à sua terra fértil, esta região foi escolhida para ser as principais fazendas da capital do reino. Quase todos os alimentos do reino vêm dessas grandes plantações e pomares. Há também 3 casas, um moinho e um celeiro com algumas ovelhas neste local.",
+    "shops": [],
+    "type": "FARM"
+  },
+  {
+    "name_en": "Bastian",
+    "region_en": "Havarus South",
+    "region_pt": "Havarus Sul",
+    "name_pt": "Bastian",
+    "img": "locale_bastian",
+    "desc_en": "A very well structured city with stone houses and buildings and narrow streets. Almost all roofs are made with planks and there is no much trees or plantes around. The people walks frenetically from the central market to other buildings. The people here seem very hard-working.",
+    "desc_pt": "Uma cidade muito bem estruturada, com casas e edifícios de pedra e ruas estreitas. Quase todos os telhados são feitos com tábuas e não há muitas árvores ou plantas ao redor. As pessoas caminham freneticamente do mercado central para outros edifícios. As pessoas aqui parecem muito trabalhadoras.",
+    "shops": [
+      {
+        "name_en": "Tools Store",
+        "name_pt": "Loja de Ferramentas"
+      },
+      {
+        "name_en": "Jewelery",
+        "name_pt": "Joalheria"
+      },
+      {
+        "name_en": "Potions Market",
+        "name_pt": "Mercado de Poções"
+      }
+    ],
+    "type": "CITY"
+  },
+  {
+    "name_en": "Apenna",
+    "region_en": "Havarus South",
+    "region_pt": "Havarus Sul",
+    "name_pt": "Apenna",
+    "img": "locale_apenna",
+    "desc_en": "This small village is the lair of the woodcutters. The houses are simple but well built, all made of wood. You can count 11 buildings including houses and some commerces. The trees at north creates a cozy scene on this place.",
+    "desc_pt": "Esta pequena vila é o covil dos lenhadores. As casas são simples, mas bem construídas, todas feitas de madeira. Você pode contar 11 edifícios, incluindo casas e alguns comércios. As árvores ao norte criam uma cena aconchegante neste lugar.",
+    "shops": [
+      {
+        "name_en": "Apenna Mead Room",
+        "name_pt": "Salão do Hidromel de Apenna"
+      },
+      {
+        "name_en": "Tools Store",
+        "name_pt": "Loja de Ferramentas"
+      }
+    ],
+    "type": "CITY"
+  },
+  {
+    "name_en": "Fisherman Ville",
+    "region_en": "Havarus South",
+    "region_pt": "Havarus Sul",
+    "name_pt": "Vila Fisherman",
+    "img": "locale_fisherman_ville",
+    "desc_en": "A long dock, two warehouses and a few houses built with logs. All those buildings are located very close to the ocean shores. The smell of fish is strong and the seagulls fly around.",
+    "desc_pt": "Um longo cais, dois armazéns e algumas casas construídas com troncos. Todos esses edifícios estão localizados muito perto da costa do oceano. O cheiro de peixe é forte e as gaivotas voam ao redor.",
+    "shops": [
+      {
+        "name_en": "Fisherman Store",
+        "name_pt": "Loja do Pescador"
+      }
+    ],
+    "type": "VILLAGE"
+  },
+  {
+    "name_en": "Helera",
+    "region_en": "Havarus South",
+    "region_pt": "Havarus Sul",
+    "name_pt": "Helera",
+    "img": "locale_helera",
+    "desc_en": "This city is very large, being the largest in the kingdom after Monelix. The city walls are made of brown stone and the houses are made of wood and stone. Most of the streets are covered with cobblestones and at the back near the southern exit there is a very large space where there are several tents for trade.",
+    "desc_pt": "Essa cidade é muito ampla, sendo a maior do reino depois de Monelix. Os muros da cidade são feitos com pedras marrons e as casas de madeira e pedra. A maioria das ruas é coberta com pequenas pedras e ao fundo perto da saída sul há um espaço muito amplo onde há varias tendas para o comércio.",
+    "shops": [
+      {
+        "name_en": "Food Store",
+        "name_pt": "Loja de Comida"
+      },
+      {
+        "name_en": "Crafter Point",
+        "name_pt": "Ponto dos Produtores"
+      },
+      {
+        "name_en": "Potions Market",
+        "name_pt": "Mercado de Poções"
+      },
+      {
+        "name_en": "Helera Garden Tents",
+        "name_pt": "Tendas do Jardim de Helera"
+      },
+      {
+        "name_en": "Common Stable",
+        "name_pt": "Estábulo Comum"
+      }
+    ],
+    "type": "CITY"
+  },
+  {
+    "name_en": "Umera",
+    "region_en": "Havarus South",
+    "region_pt": "Havarus Sul",
+    "name_pt": "Umera",
+    "img": "locale_umera",
+    "desc_en": "This village has a comfortable aura. The houses made of rocks and stones and the forest nearby creates a cozy environment even this being a village of miners.",
+    "desc_pt": "Esta vila tem uma aura confortável. As casas feitas de rochas e pedras e a floresta próxima criam um ambiente aconchegante, mesmo sendo esta uma vila de mineiros.",
+    "shops": [
+      {
+        "name_en": "Miners Warehouse",
+        "name_pt": "Galpão dos Mineradores"
+      },
+      {
+        "name_en": "The Guardian",
+        "name_pt": "O Guardião"
+      },
+      {
+        "name_en": "Common Stable",
+        "name_pt": "Estábulo Comum"
+      }
+    ],
+    "type": "VILLAGE"
+  },
+  {
+    "name_en": "Lisport",
+    "region_en": "Lisport",
+    "region_pt": "Lisport",
+    "name_pt": "Lisport",
+    "img": "locale_lisport",
+    "desc_en": "A decently structured city. Mixes wooden and stone houses. A castle stands in the background, with a central, tree-lined square for local commerce.",
+    "desc_pt": "Uma cidade decentemente estruturada. Mescla casas de madeira e pedra. Um castelo fica ao fundo, tendo uma praça central e arborizada para o comércio local.",
+    "shops": [
+      {
+        "name_en": "Food Store",
+        "name_pt": "Loja de Comida"
+      },
+      {
+        "name_en": "Potion Breeders Union",
+        "name_pt": "União dos Criadores de Poções"
+      },
+      {
+        "name_en": "Tools Store",
+        "name_pt": "Loja de Ferramentas"
+      },
+      {
+        "name_en": "Crafter Point",
+        "name_pt": "Ponto dos Produtores"
+      },
+      {
+        "name_en": "Battlers Tent",
+        "name_pt": "Tenda dos Batalhadores"
+      },
+      {
+        "name_en": "Lisport Stable",
+        "name_pt": "Estábulo de Lisport"
+      }
+    ],
+    "type": "CITY"
+  },
+  {
+    "name_en": "Wazel",
+    "region_en": "Wazel",
+    "region_pt": "Wazel",
+    "name_pt": "Wazel",
+    "img": "locale_wazel",
+    "desc_en": "The city is surrounded by high walls made of light-colored stones and clay. The houses have rounded roofs and the tents are all very colorful. There is sand everywhere but the streets are made of small stones. Tapestries are present in almost all decorations, both external and internal.",
+    "desc_pt": "A cidade é cercada por altos muros feitos com pedras claras e argila. As casas tem telhados arredondados e as tendas são todas muito coloridas. Há areia para todo lado mas as ruas são feitas com pequenas pedras. A tapeçaria é presente em quase todas decorações, externas e internas.",
+    "shops": [
+      {
+        "name_en": "Wazel Stable",
+        "name_pt": "Estábulo de Wazel"
+      },
+      {
+        "name_en": "Tools Store",
+        "name_pt": "Loja de Ferramentas"
+      },
+      {
+        "name_en": "Wazel Arsenal",
+        "name_pt": "Arsenal de Wazel"
+      },
+      {
+        "name_en": "Shine Gems",
+        "name_pt": "Jóias Brilhosas"
+      }
+    ],
+    "type": "CITY"
+  }
+]

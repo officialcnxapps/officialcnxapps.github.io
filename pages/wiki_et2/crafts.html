@@ -47,16 +47,21 @@
       <h1 data-i18n="nav.crafts">Crafts</h1>
       <hr class="sec-divider sec-divider-et2" />
       <p data-i18n="wiki.crafts_desc">Receitas e combinações de crafting em Endless Tales 2.</p>
+      <p id="wiki-total-count" class="wiki-table-count" style="margin-top:0.5rem;"></p>
     </div>
   </section>
 
   <hr class="section-sep" />
-  <section class="wiki-content">
+  <section class="wiki-content wiki-content-wide">
     <div class="sec-container">
-      <div class="wiki-placeholder" data-aos="fade-up">
-        <i class="fa-solid fa-hammer" style="font-size:3rem; color:var(--et2); margin-bottom:1rem;"></i>
-        <p data-i18n="wiki.placeholder_crafts">Conteúdo em breve — Adicione as receitas de craft aqui.</p>
-      </div>
+      <h3 style="color:var(--text-primary); font-family:'Cinzel',serif; margin-bottom:1rem;" data-aos="fade-up">🍳 <span data-i18n="wiki.cooking_title">Culinária</span></h3>
+      <div id="wiki-table-cooking" data-aos="fade-up"></div>
+
+      <h3 style="color:var(--text-primary); font-family:'Cinzel',serif; margin:2rem 0 1rem;" data-aos="fade-up">🔨 <span data-i18n="wiki.general_title">Artesanato</span></h3>
+      <div id="wiki-table-general" data-aos="fade-up"></div>
+
+      <h3 style="color:var(--text-primary); font-family:'Cinzel',serif; margin:2rem 0 1rem;" data-aos="fade-up">⚗️ <span data-i18n="wiki.alchemy_title">Alquimia</span></h3>
+      <div id="wiki-table-alchemy" data-aos="fade-up"></div>
     </div>
   </section>
 
@@ -65,6 +70,8 @@
   <script src="../../js/jquery-3.4.1.min.js"></script>
   <script src="../../js/translator.js"></script>
   <script src="../../js/i18n.js"></script>
+  <script src="../../js/wiki-lightbox.js"></script>
+  <script src="../../js/wiki-crafts.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" crossorigin="anonymous"></script>
   <script>
     AOS.init({ duration: 700, once: true, offset: 60 });
@@ -73,6 +80,9 @@
     document.getElementById('navToggle').addEventListener('click', () => document.getElementById('navOverlay').classList.add('open'));
     document.getElementById('navClose').addEventListener('click', () => document.getElementById('navOverlay').classList.remove('open'));
     function closeNav() { document.getElementById('navOverlay').classList.remove('open'); }
+    jQuery(document).ready(function() {
+      WikiCrafts.render('../../js/wiki_data_crafts.json');
+    });
   </script>
 </body>
 </html>

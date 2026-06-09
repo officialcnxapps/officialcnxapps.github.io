@@ -47,16 +47,47 @@
       <h1 data-i18n="nav.creatures">Criaturas</h1>
       <hr class="sec-divider sec-divider-et2" />
       <p data-i18n="wiki.creatures_desc">Bestiário completo com todas as criaturas do mundo de Endless Tales 2.</p>
+      <p id="wiki-total-count" class="wiki-table-count" style="margin-top:0.5rem;"></p>
     </div>
   </section>
 
   <hr class="section-sep" />
-  <section class="wiki-content">
+  <section class="wiki-content wiki-content-wide">
     <div class="sec-container">
-      <div class="wiki-placeholder" data-aos="fade-up">
-        <i class="fa-solid fa-dragon" style="font-size:3rem; color:var(--et2); margin-bottom:1rem;"></i>
-        <p data-i18n="wiki.placeholder_creatures">Conteúdo em breve — Adicione as criaturas aqui.</p>
-      </div>
+
+      <h2 class="wiki-section-title" data-aos="fade-up" data-i18n="wiki.enemies_common">Criaturas Comuns</h2>
+      <div id="wiki-table-common" data-aos="fade-up"></div>
+
+      <h2 class="wiki-section-title" data-aos="fade-up" data-i18n="wiki.enemies_orcs">Orcs</h2>
+      <div id="wiki-table-orcs" data-aos="fade-up"></div>
+
+      <h2 class="wiki-section-title" data-aos="fade-up" data-i18n="wiki.enemies_humanoids">Humanóides</h2>
+      <div id="wiki-table-humanoids" data-aos="fade-up"></div>
+
+      <h2 class="wiki-section-title" data-aos="fade-up" data-i18n="wiki.enemies_dark">Criaturas das Trevas</h2>
+      <div id="wiki-table-dark" data-aos="fade-up"></div>
+
+      <h2 class="wiki-section-title" data-aos="fade-up" data-i18n="wiki.enemies_earth">Criaturas da Terra</h2>
+      <div id="wiki-table-earth" data-aos="fade-up"></div>
+
+      <h2 class="wiki-section-title" data-aos="fade-up" data-i18n="wiki.enemies_fire">Criaturas do Fogo</h2>
+      <div id="wiki-table-fire" data-aos="fade-up"></div>
+
+      <h2 class="wiki-section-title" data-aos="fade-up" data-i18n="wiki.enemies_waterIce">Criaturas de Água/Gelo</h2>
+      <div id="wiki-table-waterIce" data-aos="fade-up"></div>
+
+      <h2 class="wiki-section-title" data-aos="fade-up" data-i18n="wiki.enemies_air">Criaturas do Ar</h2>
+      <div id="wiki-table-air" data-aos="fade-up"></div>
+
+      <h2 class="wiki-section-title" data-aos="fade-up" data-i18n="wiki.enemies_light">Criaturas da Luz</h2>
+      <div id="wiki-table-light" data-aos="fade-up"></div>
+
+      <h2 class="wiki-section-title" data-aos="fade-up" data-i18n="wiki.enemies_golems">Golems</h2>
+      <div id="wiki-table-golems" data-aos="fade-up"></div>
+
+      <h2 class="wiki-section-title" data-aos="fade-up" data-i18n="wiki.enemies_bosses">Chefões</h2>
+      <div id="wiki-table-bosses" data-aos="fade-up"></div>
+
     </div>
   </section>
 
@@ -66,6 +97,8 @@
   <script src="../../js/translator.js"></script>
   <script src="../../js/i18n.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" crossorigin="anonymous"></script>
+  <script src="../../js/wiki-lightbox.js"></script>
+  <script src="../../js/wiki-enemies.js"></script>
   <script>
     AOS.init({ duration: 700, once: true, offset: 60 });
     const navbar = document.getElementById('navbar');
@@ -73,6 +106,7 @@
     document.getElementById('navToggle').addEventListener('click', () => document.getElementById('navOverlay').classList.add('open'));
     document.getElementById('navClose').addEventListener('click', () => document.getElementById('navOverlay').classList.remove('open'));
     function closeNav() { document.getElementById('navOverlay').classList.remove('open'); }
+    WikiEnemies.render('../../js/wiki_data_enemies.json');
   </script>
 </body>
 </html>

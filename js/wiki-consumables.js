@@ -169,7 +169,8 @@
       ? tableRegistry[containerId].state
       : { col: options.defaultSort || 'name', dir: options.defaultDir || 'asc' };
     var builder = options.tableType === 'potion' ? buildPotionHTML : buildFoodHTML;
-    container.innerHTML = builder(items, state, lang);
+    var label = options.tableType === 'potion' ? (lang === 'pt' ? ' poções' : ' potions') : (lang === 'pt' ? ' comidas' : ' foods');
+    container.innerHTML = '<p class="wiki-table-count">' + items.length + label + '</p>' + builder(items, state, lang);
     tableRegistry[containerId] = { items: items, options: options, state: state };
   }
 
@@ -190,7 +191,8 @@
     }
     var lang = getLang();
     var builder = reg.options.tableType === 'potion' ? buildPotionHTML : buildFoodHTML;
-    container.innerHTML = builder(reg.items, reg.state, lang);
+    var label = reg.options.tableType === 'potion' ? (lang === 'pt' ? ' poções' : ' potions') : (lang === 'pt' ? ' comidas' : ' foods');
+    container.innerHTML = '<p class="wiki-table-count">' + reg.items.length + label + '</p>' + builder(reg.items, reg.state, lang);
   });
 
   window.WikiConsumables = {
@@ -202,6 +204,11 @@
         var data = JSON.parse(xhr.responseText);
         renderTable('wiki-table-foods', data.foods, { tableType: 'food', defaultSort: 'satiety', defaultDir: 'asc' });
         renderTable('wiki-table-potions', data.potions, { tableType: 'potion', defaultSort: 'name', defaultDir: 'asc' });
+        var total = (data.foods||[]).length + (data.potions||[]).length;
+        window._wikiItemTotal = (window._wikiItemTotal || 0) + total;
+        var lang = getLang();
+        var el = document.getElementById('wiki-total-count');
+        if (el) el.textContent = window._wikiItemTotal + (lang === 'pt' ? ' itens no total' : ' items total');
       };
       xhr.send();
     }

@@ -964,6 +964,24 @@ footer {
 .res-badge { display: inline-block; font-size: 0.75rem; padding: 0.15rem 0.5rem; border-radius: 4px; margin: 0.1rem; }
 .res-badge.res { background: rgba(74,222,128,0.12); color: #4ade80; }
 .res-badge.weak { background: rgba(248,113,113,0.12); color: #f87171; }
+.skill-tag { display: inline-block; font-size: 0.72rem; padding: 0.15rem 0.45rem; border-radius: 4px; margin: 0.1rem; background: rgba(139,92,246,0.12); color: #a78bfa; }
+.td-skills { max-width: 200px; }
+.td-loot { font-size: 0.8rem; color: var(--text-secondary); max-width: 240px; }
+.wiki-table-enemies td { vertical-align: middle; }
+.wiki-table-sticky { max-height: 70vh; overflow: auto; }
+.wiki-table-sticky thead th { position: sticky; top: 0; z-index: 2; background: var(--bg-card); box-shadow: 0 1px 0 rgba(139,92,246,0.2); }
+.wiki-section-title { font-family: 'Cinzel', serif; font-size: 1.5rem; color: var(--text-primary); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(139,92,246,0.2); }
+.wiki-content-wide .sec-container { max-width: 1600px; }
+#wiki-table-cities .td-img { width: 200px; padding: 0.5rem; }
+#wiki-table-cities .td-img img { width: 200px; height: 140px; object-fit: cover; border-radius: 8px; }
+.wiki-table-cities { font-size: 0.95rem; }
+.wiki-table-cities .td-desc { font-size: 0.85rem; color: var(--text-secondary); max-width: 400px; }
+.wiki-table .td-img img { cursor: pointer; transition: opacity 0.2s; }
+.wiki-table .td-img img:hover { opacity: 0.8; }
+.wiki-img-modal { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.85); align-items: center; justify-content: center; cursor: pointer; }
+.wiki-img-modal.open { display: flex; }
+.wiki-img-modal img { max-width: 420px; max-height: 380px; object-fit: contain; border-radius: 10px; background: var(--bg-card); padding: 8px; }
+.wiki-table-count { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem; }
 .class-badge { display: inline-block; font-size: 0.7rem; padding: 0.15rem 0.5rem; border-radius: 4px; margin: 0.1rem; background: rgba(139,92,246,0.12); color: var(--et2-light); font-weight: 600; }
 .class-badge.all { background: rgba(148,148,168,0.12); color: var(--text-secondary); }
 .wiki-table th.sortable:hover { color: var(--gold-light); }
@@ -977,6 +995,13 @@ footer {
   align-items: center;
   gap: 1rem;
 }
+
+.wiki-grid.wiki-cards{
+  display: flex;
+  align-items: stretch !important;
+  justify-content: center !important;
+}
+
 .wiki-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -1319,6 +1344,8 @@ footer {
   /* Wiki */
   .wiki-grid { flex-wrap: nowrap; }
   .wiki-card { width: 220px; }
+  .enemy-img {min-width: 86px !important; min-height: 86px !important; }
+  .enemy-img img {width: 86px !important; height: 86px !important; }
 
   /* Tables */
   .wiki-table { font-size: 0.92rem; }

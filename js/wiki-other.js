@@ -82,7 +82,7 @@
     var state = tableRegistry[containerId]
       ? tableRegistry[containerId].state
       : { col: options.defaultSort || 'value', dir: options.defaultDir || 'desc' };
-    container.innerHTML = buildTableHTML(items, state, lang);
+    container.innerHTML = '<p class="wiki-table-count">' + items.length + (lang === 'pt' ? ' itens' : ' items') + '</p>' + buildTableHTML(items, state, lang);
     tableRegistry[containerId] = { items: items, options: options, state: state };
   }
 
@@ -102,7 +102,7 @@
       reg.state.dir = col === 'name' ? 'asc' : 'desc';
     }
     var lang = getLang();
-    container.innerHTML = buildTableHTML(reg.items, reg.state, lang);
+    container.innerHTML = '<p class="wiki-table-count">' + reg.items.length + (lang === 'pt' ? ' itens' : ' items') + '</p>' + buildTableHTML(reg.items, reg.state, lang);
   });
 
   window.WikiOther = {
@@ -113,7 +113,14 @@
         if (xhr.status !== 200) return;
         var data = JSON.parse(xhr.responseText);
         renderTable('wiki-table-valuables', data.valuables, { defaultSort: 'value', defaultDir: 'desc' });
+        renderTable('wiki-table-ores', data.ores, { defaultSort: 'value', defaultDir: 'desc' });
+        renderTable('wiki-table-tools', data.tools, { defaultSort: 'name', defaultDir: 'asc' });
         renderTable('wiki-table-misc', data.misc, { defaultSort: 'name', defaultDir: 'asc' });
+        var total = (data.valuables||[]).length + (data.ores||[]).length + (data.tools||[]).length + (data.misc||[]).length;
+        window._wikiItemTotal = (window._wikiItemTotal || 0) + total;
+        var lang = getLang();
+        var el = document.getElementById('wiki-total-count');
+        if (el) el.textContent = window._wikiItemTotal + (lang === 'pt' ? ' itens no total' : ' items total');
       };
       xhr.send();
     }

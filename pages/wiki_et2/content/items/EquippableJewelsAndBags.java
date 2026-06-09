@@ -253,7 +253,7 @@ public class EquippableJewelsAndBags extends DataHelper {
         equipItem.defense = 1;
         equipItem.gemCost = 5;
         equipItem.weight = .1f;
-        equipItem.modifiers.add(new AttributeModifierValue(Enums.AttributeName.LUCK, 1));
+        equipItem.modifiers.add(new AttributeModifierValue(Enums.AttributeName.LUCK, 3));
         equipItem.modifiers.add(new AttributeModifierValue(Enums.AttributeName.AGILITY, 1));
         equipItem.canBeIngredient = false;
 
