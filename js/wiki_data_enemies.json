@@ -1729,6 +1729,10 @@
         {
           "element": "WIND",
           "value": 75
+        },
+        {
+          "element": "PHYSICAL",
+          "value": 25
         }
       ],
       "skills": [

@@ -1,5 +1,9 @@
 package com.cnx.endlesstalestwo.data.items;
 
+import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.ENGLISH;
+import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.PORTUGUESE;
+import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.SPANISH;
+
 import com.cnx.cnxgameengine.utils.CoreEnums;
 import com.cnx.endlesstalestwo.App;
 import com.cnx.endlesstalestwo.data.DataHelper;
@@ -33,6 +37,7 @@ public class EquippableArmorsAndLegs extends DataHelper {
         App.DataManager.add(Enums.DataTypes.ITEM, robeOfDivinity());//
         App.DataManager.add(Enums.DataTypes.ITEM, breastplateOfFire());//
         App.DataManager.add(Enums.DataTypes.ITEM, breastplateOfShadows());//
+        App.DataManager.add(Enums.DataTypes.ITEM, cloakOfAlchemists());
 
         App.DataManager.add(Enums.DataTypes.ITEM, peasantTrousers());//
         App.DataManager.add(Enums.DataTypes.ITEM, reinforcedTrousers());//
@@ -775,6 +780,28 @@ public class EquippableArmorsAndLegs extends DataHelper {
         equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "Very light and smooth. Perfectly well crafted to protect and allow for supple movement.");
         equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Muito leve e suave. Perfeitamente bem elaborada para proteger e permitir movimentos maleáveis.");
         equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Muy ligero y suave. Perfectamente bien elaborado para proteger y permitir un movimiento flexible.");
+
+        equipItem.setupDefaultListeners();
+        return equipItem;
+    }
+
+    EquippableItem cloakOfAlchemists() {
+        EquippableItem equipItem = new EquippableItem("Cloak of Alchemists");
+        equipItem.addNameTranslation(PORTUGUESE, "Manto dos Alquimistas");
+        equipItem.addNameTranslation(SPANISH, "Capa de Alquimista");
+
+        equipItem.slotPart = Enums.SlotPart.CHEST;
+        equipItem.type = Enums.ItemType.ARMOR;
+        equipItem.marketValue = 55;
+        equipItem.weight = 1.0f;
+        equipItem.criticalChanceIncrease = 6;
+        equipItem.defense = 1;
+        equipItem.modifiers.add(new AttributeModifierValue(Enums.AttributeName.ALCHEMY, 100));
+        equipItem.canBeIngredient = false;
+
+        equipItem.addDescriptionTranslation(ENGLISH, "A robust cloak resistant to chemical stains. Increase 10 levels of alchemy.");
+        equipItem.addDescriptionTranslation(PORTUGUESE, "Um manto robusto resistente a manchas químicas. Aumenta 10 níveis de alquimia.");
+        equipItem.addDescriptionTranslation(SPANISH, "Una capa robusta y resistente a las manchas químicas. Aumenta 10 niveles de alquimia.");
 
         equipItem.setupDefaultListeners();
         return equipItem;

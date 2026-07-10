@@ -68,11 +68,15 @@
     "changelog_title": { "pt": "Últimas Alterações", "en": "Latest Changes" },
     "changelog_1100": {
       "pt": ["5 novas criaturas", "5 novas Quests", "Novos eventos aleatórios", "1 Novo Conhecimento (Análise de Traços)", "Visão de mapa na tela principal", "Novas armas e possibilidades de Crafts"],
-      "en": ["5 new creatures", "5 new Quests", "New random events", "1 New Knowledge (Trace Analysis)", "Map view on main screen", "New weapons and Craft possibilities"]
+      "en": ["5 new creatures", "5 new Quests", "New random events", "1 New Knowledge (Traits Analysis)", "Map view on main screen", "New weapons and Craft possibilities"]
     },
     "changelog_1101": {
       "pt": ["Correções", "Mais NPCs com descrição de traços"],
       "en": ["Fixes", "More NPCs with traits descriptions"]
+    },
+    "changelog_1200": {
+      "pt": ["1 nova Arena", "2 novas Quests", "2 novos eventos aleatórios", "Animação para habilidades e ataques em batalha","Novos itens e possibilidades de Crafts"],
+      "en": ["1 new Arena", "2 new Quests", "2 new random events", "Animation for skills and attack on battle", "New items and Craft possibilities"]
     }
   },
   "wiki": {

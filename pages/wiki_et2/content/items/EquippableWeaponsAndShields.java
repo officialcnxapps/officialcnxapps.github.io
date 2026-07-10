@@ -49,6 +49,9 @@ public class EquippableWeaponsAndShields extends DataHelper {
         App.DataManager.add(Enums.DataTypes.ITEM, endlessBow());//
         App.DataManager.add(Enums.DataTypes.ITEM, endlessWand());//
         App.DataManager.add(Enums.DataTypes.ITEM, torch());//
+        App.DataManager.add(Enums.DataTypes.ITEM, dragonWand());
+        App.DataManager.add(Enums.DataTypes.ITEM, miniCrossbow());
+        App.DataManager.add(Enums.DataTypes.ITEM, dragonBlade());
 
         App.DataManager.add(Enums.DataTypes.ITEM, plankShield());//
         App.DataManager.add(Enums.DataTypes.ITEM, woodenShield());//
@@ -64,7 +67,6 @@ public class EquippableWeaponsAndShields extends DataHelper {
         App.DataManager.add(Enums.DataTypes.ITEM, darknessShield());//
         App.DataManager.add(Enums.DataTypes.ITEM, celestialShield());//
         App.DataManager.add(Enums.DataTypes.ITEM, natureShield());//
-
     }
 
     // ------------------ WEAPONS ----------------- \\
@@ -747,14 +749,15 @@ public class EquippableWeaponsAndShields extends DataHelper {
 
         equipItem.slotPart = Enums.SlotPart.TWO_HANDS;
         equipItem.minDamage = 10;
-        equipItem.maxDamage = 14;
+        equipItem.maxDamage = 15;
         equipItem.criticalChanceIncrease = 15;
-        equipItem.marketValue = 140;
+        equipItem.marketValue = 125;
         equipItem.gemCost = 8;
         equipItem.weight = 3.6f;
         equipItem.element = Enums.Elements.FIRE;
         equipItem.classes.add(ClassesIds.WARRIOR);
         equipItem.type = Enums.ItemType.MAGICAL_WEAPON;
+        equipItem.rarity = Enums.Rarity.UNCOMMON;
 
         equipItem.requirementValidations = (chara, ctx) -> {
             if (chara.level >= 12) {
@@ -983,9 +986,9 @@ public class EquippableWeaponsAndShields extends DataHelper {
         equipItem.addNameTranslation(CoreEnums.AvailableLanguages.SPANISH, "Bastón Endless");
 
         equipItem.slotPart = Enums.SlotPart.HAND_1;
-        equipItem.minDamage = 10;
-        equipItem.maxDamage = 13;
-        equipItem.criticalChanceIncrease = 12;
+        equipItem.minDamage = 11;
+        equipItem.maxDamage = 14;
+        equipItem.criticalChanceIncrease = 14;
         equipItem.marketValue = 60;
         equipItem.gemCost = 25;
         equipItem.weight = .8f;
@@ -1381,4 +1384,78 @@ public class EquippableWeaponsAndShields extends DataHelper {
         return equipItem;
     }
 
+    EquippableItem dragonWand() {
+        EquippableItem item = new EquippableItem("Dragon Wand");
+        item.addNameTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Cajado do Dragão");
+        item.addNameTranslation(CoreEnums.AvailableLanguages.SPANISH, "Varita de Dragón");
+
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "A wand with a dragon's eye at the tip. Increases magic significantly.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Um cajado com um olho de dragão na ponta. Aumenta a magia significativamente.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Una varita con un ojo de dragón en la punta. Aumenta la magia significativamente.");
+
+        item.slotPart = Enums.SlotPart.HAND_1;
+        item.type = Enums.ItemType.MAGICAL_WEAPON;
+
+        item.minDamage = 8;
+        item.maxDamage = 14;
+        item.criticalChanceIncrease = 17;
+        item.classes.add(ClassesIds.DRUID);
+        item.classes.add(ClassesIds.SORCERER);
+        item.marketValue = 175;
+        item.weight = 0.7f;
+        item.modifiers.add(new AttributeModifierValue(Enums.AttributeName.MAGIC, 3, Enums.StatusModifier.INCREASE));
+        item.rarity = Enums.Rarity.SPECIAL;
+
+        item.setupDefaultListeners();
+        return item;
+    }
+
+    EquippableItem miniCrossbow() {
+        EquippableItem item = new EquippableItem("Mini Crossbow");
+        item.addNameTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Mini Besta");
+        item.addNameTranslation(CoreEnums.AvailableLanguages.SPANISH, "Mini Ballesta");
+
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "A small but effective crossbow for quick shots.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Uma besta pequena mas eficaz para disparos rápidos.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Una ballesta pequeña pero eficaz para disparos rápidos.");
+
+        item.slotPart = Enums.SlotPart.HAND_1;
+        item.type = Enums.ItemType.WEAPON;
+        item.minDamage = 2;
+        item.maxDamage = 6;
+        item.criticalChanceIncrease = 8;
+        item.marketValue = 24;
+        item.classes.add(ClassesIds.ARCHER);
+        item.classes.add(ClassesIds.THIEF);
+        item.weight = 0.8f;
+
+        item.setupDefaultListeners();
+        return item;
+    }
+
+    EquippableItem dragonBlade() {
+        EquippableItem item = new EquippableItem("Dragon Blade");
+        item.addNameTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Lâmina do Dragão");
+        item.addNameTranslation(CoreEnums.AvailableLanguages.SPANISH, "Hoja de Dragón");
+
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "A massive two-handed sword with a blade that glows like fire.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Uma enorme espada de duas mãos com uma lâmina que brilha como fogo.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Una enorme espada de dos manos con una hoja que brilla como el fuego.");
+
+        item.minDamage = 17;
+        item.maxDamage = 22;
+        item.criticalChanceIncrease = 18;
+        item.slotPart = Enums.SlotPart.TWO_HANDS;
+        item.type = Enums.ItemType.WEAPON;
+        item.rarity = Enums.Rarity.SPECIAL;
+        item.marketValue = 230;
+        item.weight = 3.2f;
+        item.modifiers.add(new AttributeModifierValue(Enums.AttributeName.STRENGTH, 1));
+
+        item.classes.add(ClassesIds.WARRIOR);
+        item.classes.add(ClassesIds.THIEF);
+
+        item.setupDefaultListeners();
+        return item;
+    }
 }

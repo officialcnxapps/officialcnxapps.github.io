@@ -1677,6 +1677,33 @@
       "time": 50,
       "successRate": 22,
       "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Mini Crossbow",
+        "name_pt": "Mini Crossbow",
+        "img": "item_mini_crossbow"
+      },
+      "ingredients": [
+        {
+          "name_en": "Branch",
+          "name_pt": "Galho",
+          "img": "item_branch"
+        },
+        {
+          "name_en": "Iron Ingot",
+          "name_pt": "Lingote de Ferro",
+          "img": "item_iron_ingot"
+        },
+        {
+          "name_en": "String",
+          "name_pt": "Cordão",
+          "img": "item_string"
+        }
+      ],
+      "time": 50,
+      "successRate": 35,
+      "type": "GENERAL"
     }
   ],
   "alchemy": [

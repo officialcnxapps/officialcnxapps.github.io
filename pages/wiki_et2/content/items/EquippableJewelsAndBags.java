@@ -66,12 +66,12 @@ public class EquippableJewelsAndBags extends DataHelper {
         equipItem.type = Enums.ItemType.JEWEL;
         equipItem.marketValue = 20;
         equipItem.weight = .1f;
-        equipItem.resistancesModifiers.put(Enums.Elements.FIRE, 15);
+        equipItem.resistancesModifiers.put(Enums.Elements.FIRE, 25);
         equipItem.canBeIngredient = false;
 
-        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "A piece of jewelry that emits an orange light. (15% Fire resistance)");
-        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Uma peça de joalheria que emite uma luz laranja. (15% de resistência ao fogo)");
-        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Una pieza de joyería que emite una luz naranja. (15% de resistencia al fuego)");
+        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "A piece of jewelry that emits an orange light. (25% Fire resistance)");
+        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Uma peça de joalheria que emite uma luz laranja. (25% de resistência ao fogo)");
+        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Una pieza de joyería que emite una luz naranja. (25% de resistencia al fuego)");
 
         return equipItem;
     }
@@ -85,12 +85,12 @@ public class EquippableJewelsAndBags extends DataHelper {
         equipItem.type = Enums.ItemType.JEWEL;
         equipItem.marketValue = 20;
         equipItem.weight = .1f;
-        equipItem.resistancesModifiers.put(Enums.Elements.WATER, 15);
+        equipItem.resistancesModifiers.put(Enums.Elements.WATER, 25);
         equipItem.canBeIngredient = false;
 
-        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "A piece of jewelry that emits a cyan light. (15% Water resistance)");
-        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Uma peça de joalheria que emite uma luz ciana. (15% de resistência à água)");
-        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Una pieza de joyería que emite una luz cian. (15% de resistencia al agua)");
+        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "A piece of jewelry that emits a cyan light. (25% Water resistance)");
+        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Uma peça de joalheria que emite uma luz ciana. (25% de resistência à água)");
+        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Una pieza de joyería que emite una luz cian. (25% de resistencia al agua)");
 
         return equipItem;
     }
@@ -104,13 +104,13 @@ public class EquippableJewelsAndBags extends DataHelper {
         equipItem.type = Enums.ItemType.JEWEL;
         equipItem.marketValue = 25;
         equipItem.weight = .1f;
-        equipItem.resistancesModifiers.put(Enums.Elements.WIND, 15);
-        equipItem.resistancesModifiers.put(Enums.Elements.EARTH, 15);
+        equipItem.resistancesModifiers.put(Enums.Elements.WIND, 25);
+        equipItem.resistancesModifiers.put(Enums.Elements.EARTH, 25);
         equipItem.canBeIngredient = false;
 
-        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "A piece of jewelry that emits a green light. (15% Wind resistance) (15% Earth resistance)");
-        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Uma peça de joalheria que emite uma luz verde. (15% de resistência ao vento) (15% de resistência à terra)");
-        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Una pieza de joyería que emite una luz verde. (15% Resistencia al viento) (15% Resistencia a la tierra)");
+        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "A piece of jewelry that emits a green light. (25% Wind resistance) (25% Earth resistance)");
+        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Uma peça de joalheria que emite uma luz verde. (25% de resistência ao vento) (25% de resistência à terra)");
+        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Una pieza de joyería que emite una luz verde. (25% Resistencia al viento) (25% Resistencia a la tierra)");
 
         return equipItem;
     }
@@ -124,13 +124,13 @@ public class EquippableJewelsAndBags extends DataHelper {
         equipItem.type = Enums.ItemType.JEWEL;
         equipItem.marketValue = 20;
         equipItem.weight = .1f;
-        equipItem.weaknessesModifiers.put(Enums.Elements.LIGHT, 15);
-        equipItem.resistancesModifiers.put(Enums.Elements.DARK, 15);
+        equipItem.weaknessesModifiers.put(Enums.Elements.LIGHT, 25);
+        equipItem.resistancesModifiers.put(Enums.Elements.DARK, 25);
         equipItem.canBeIngredient = false;
 
-        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "Amulet of angels. (15% Dark resistance) (15% Light weakness)");
-        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Amuleto dos anjos. (15% de resistência à escuridão) (15% de fraqueza à luz)");
-        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Amuleto de ángeles. (15% Resistencia a la oscuridad) (15% Debilidad a la luz)");
+        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "Amulet of angels. (25% Dark resistance) (25% Light weakness)");
+        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Amuleto dos anjos. (25% de resistência à escuridão) (25% de fraqueza à luz)");
+        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Amuleto de ángeles. (25% Resistencia a la oscuridad) (25% Debilidad a la luz)");
 
         return equipItem;
     }
@@ -144,13 +144,13 @@ public class EquippableJewelsAndBags extends DataHelper {
         equipItem.type = Enums.ItemType.JEWEL;
         equipItem.marketValue = 20;
         equipItem.weight = .1f;
-        equipItem.resistancesModifiers.put(Enums.Elements.LIGHT, 15);
-        equipItem.weaknessesModifiers.put(Enums.Elements.DARK, 15);
+        equipItem.resistancesModifiers.put(Enums.Elements.LIGHT, 25);
+        equipItem.weaknessesModifiers.put(Enums.Elements.DARK, 25);
         equipItem.canBeIngredient = false;
 
-        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "Amulet of devils. (15% Light resistance) (15% Dark weakness)");
-        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Amuleto dos demônios. (15% de resistência à luz) (15% de fraqueza à escuridão)");
-        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Amuleto de los demonios. (15% Resistencia a la luz) (15% Debilidad a la oscuridad)");
+        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "Amulet of devils. (25% Light resistance) (25% Dark weakness)");
+        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Amuleto dos demônios. (25% de resistência à luz) (25% de fraqueza à escuridão)");
+        equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Amuleto de los demonios. (25% Resistencia a la luz) (25% Debilidad a la oscuridad)");
 
         return equipItem;
     }

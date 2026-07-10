@@ -43,6 +43,7 @@ public final class Other extends DataHelper {
         App.DataManager.add(Enums.DataTypes.ITEM, steelPickaxe());//
         App.DataManager.add(Enums.DataTypes.ITEM, dwarvensPickaxe());//
         App.DataManager.add(Enums.DataTypes.ITEM, huntingTrap());//
+        App.DataManager.add(Enums.DataTypes.ITEM, ash());//
         App.DataManager.add(Enums.DataTypes.ITEM, algae());//
         App.DataManager.add(Enums.DataTypes.ITEM, leather());//
         App.DataManager.add(Enums.DataTypes.ITEM, coal());//
@@ -88,6 +89,8 @@ public final class Other extends DataHelper {
         App.DataManager.add(Enums.DataTypes.ITEM, crateOfWeapons());
         App.DataManager.add(Enums.DataTypes.ITEM, bronzeGoblet());
         App.DataManager.add(Enums.DataTypes.ITEM, goldenGoblet());
+        App.DataManager.add(Enums.DataTypes.ITEM, rubyGoblet());
+        App.DataManager.add(Enums.DataTypes.ITEM, contractOfCattleNegotiation());
     }
 
     Item wheat() {
@@ -1163,6 +1166,7 @@ public final class Other extends DataHelper {
         item.discardable = false;
         item.canBeIngredient = false;
         item.imgFile = "item_donation_goods";
+        item.type = Enums.ItemType.MISC;
 
         return item;
     }
@@ -1179,6 +1183,7 @@ public final class Other extends DataHelper {
         item.weight = 1.0f;
         item.marketValue = 8;
         item.sellable = true;
+        item.type = Enums.ItemType.MISC;
         item.discardable = true;
         item.canBeIngredient = true;
         item.imgFile = "item_sand_golem_sample";
@@ -1198,6 +1203,7 @@ public final class Other extends DataHelper {
         item.weight = 1.0f;
         item.marketValue = 7;
         item.sellable = true;
+        item.type = Enums.ItemType.MISC;
         item.discardable = true;
         item.canBeIngredient = true;
         item.imgFile = "item_forest_golem_sample";
@@ -1238,6 +1244,7 @@ public final class Other extends DataHelper {
         item.discardable = true;
         item.canBeIngredient = true;
         item.imgFile = "item_mountain_golem_sample";
+        item.type = Enums.ItemType.MISC;
 
         return item;
     }
@@ -1257,6 +1264,7 @@ public final class Other extends DataHelper {
         item.discardable = true;
         item.canBeIngredient = true;
         item.imgFile = "item_ice_golem_sample";
+        item.type = Enums.ItemType.MISC;
 
         return item;
     }
@@ -1389,6 +1397,7 @@ public final class Other extends DataHelper {
         item.weight = 0.3f;
         item.marketValue = 32;
         item.canBeIngredient = false;
+        item.rarity = Enums.Rarity.UNCOMMON;
         return item;
     }
 
@@ -1419,6 +1428,42 @@ public final class Other extends DataHelper {
         item.weight = 0.3f;
         item.marketValue = 16;
         item.canBeIngredient = false;
+        return item;
+    }
+
+    Item rubyGoblet() {
+        Item item = new Item("Ruby Goblet", Enums.ItemType.VALUABLE);
+        item.addNameTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Taça de Rubi");
+        item.addNameTranslation(CoreEnums.AvailableLanguages.SPANISH, "Copa de Rubí");
+
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "A magnificent goblet carved from a giant ruby, awarded only to the champions of the Frozen Arena.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Uma magnífica taça esculpida em um rubi gigante, concedida apenas aos campeões da Arena Congelada.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Una magnífica copa tallada en un rubí gigante, otorgada únicamente a los campeones de la Arena Helada.");
+
+        item.weight = 0.5f;
+        item.marketValue = 48;
+        item.rarity = Enums.Rarity.SPECIAL;
+        item.canBeIngredient = false;
+        return item;
+    }
+
+    Item contractOfCattleNegotiation() {
+        Item item = new Item("Contract of Cattle Negotiation", Enums.ItemType.MISC);
+        item.addNameTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Contrato de Negociação de Gado");
+        item.addNameTranslation(CoreEnums.AvailableLanguages.SPANISH, "Contrato de Negociación de Ganado");
+
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "An official document for cattle trade between Lisport and Havarus.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Um documento oficial para o comércio de gado entre Lisport e Havarus.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Un documento oficial para el comercio de ganado entre Lisport y Havarus.");
+
+        item.weight = 0.1f;
+        item.marketValue = 0;
+        item.sellable = false;
+        item.buyable = false;
+        item.discardable = false;
+        item.imgFile = "item_generic_letter";
+        item.canBeIngredient = false;
+
         return item;
     }
 }

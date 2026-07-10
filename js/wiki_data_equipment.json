@@ -529,7 +529,7 @@
       "type": "MAGICAL_WEAPON",
       "slot": "TWO_HANDS",
       "element": null,
-      "rarity": "COMMON",
+      "rarity": "UNCOMMON",
       "resistances": [],
       "weaknesses": [],
       "modifiers": [
@@ -600,7 +600,7 @@
       "type": "WEAPON",
       "slot": "TWO_HANDS",
       "element": null,
-      "rarity": "COMMON",
+      "rarity": "UNCOMMON",
       "resistances": [],
       "weaknesses": [],
       "modifiers": [],
@@ -670,13 +670,13 @@
       "name_pt": "Lâmina de Fogo",
       "img": "item_blade_of_flames",
       "minDamage": 10,
-      "maxDamage": 14,
+      "maxDamage": 15,
       "critical": 15,
       "defense": 0,
       "type": "MAGICAL_WEAPON",
       "slot": "TWO_HANDS",
       "element": "FIRE",
-      "rarity": "COMMON",
+      "rarity": "UNCOMMON",
       "resistances": [],
       "weaknesses": [],
       "modifiers": [],
@@ -916,9 +916,9 @@
       "name_en": "Endless Wand",
       "name_pt": "Cajado Endless",
       "img": "item_endless_wand",
-      "minDamage": 10,
-      "maxDamage": 13,
-      "critical": 12,
+      "minDamage": 11,
+      "maxDamage": 14,
+      "critical": 14,
       "defense": 0,
       "type": "MAGICAL_WEAPON",
       "slot": "HAND_1",
@@ -1010,6 +1010,90 @@
       "desc_pt": "Um pequeno pedaço de madeira com um lenço embebido em líquido combustível. Usado para gerar luz e algum calor.",
       "classes": [],
       "weight": 0.4,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Dragon Wand",
+      "name_pt": "Cajado do Dragão",
+      "img": "item_dragon_wand",
+      "minDamage": 8,
+      "maxDamage": 14,
+      "critical": 17,
+      "defense": 0,
+      "type": "MAGICAL_WEAPON",
+      "slot": "HAND_1",
+      "element": null,
+      "rarity": "SPECIAL",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "MAGIC",
+          "value": 3,
+          "decrease": false
+        }
+      ],
+      "desc_en": "A wand with a dragon's eye at the tip. Increases magic significantly.",
+      "desc_pt": "Um cajado com um olho de dragão na ponta. Aumenta a magia significativamente.",
+      "classes": [
+        "DRUID",
+        "SORCERER"
+      ],
+      "weight": 0.7,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Mini Crossbow",
+      "name_pt": "Mini Besta",
+      "img": "item_mini_crossbow",
+      "minDamage": 2,
+      "maxDamage": 6,
+      "critical": 8,
+      "defense": 0,
+      "type": "WEAPON",
+      "slot": "HAND_1",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "A small but effective crossbow for quick shots.",
+      "desc_pt": "Uma besta pequena mas eficaz para disparos rápidos.",
+      "classes": [
+        "ARCHER",
+        "THIEF"
+      ],
+      "weight": 0.8,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Dragon Blade",
+      "name_pt": "Lâmina do Dragão",
+      "img": "item_dragon_blade",
+      "minDamage": 17,
+      "maxDamage": 22,
+      "critical": 18,
+      "defense": 0,
+      "type": "WEAPON",
+      "slot": "TWO_HANDS",
+      "element": null,
+      "rarity": "SPECIAL",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "STRENGTH",
+          "value": 1,
+          "decrease": false
+        }
+      ],
+      "desc_en": "A massive two-handed sword with a blade that glows like fire.",
+      "desc_pt": "Uma enorme espada de duas mãos com uma lâmina que brilha como fogo.",
+      "classes": [
+        "WARRIOR",
+        "THIEF"
+      ],
+      "weight": 3.2,
       "levelReq": 0
     }
   ],
@@ -1607,7 +1691,7 @@
       "type": "ARMOR",
       "slot": "CHEST",
       "element": null,
-      "rarity": "COMMON",
+      "rarity": "RARE",
       "resistances": [],
       "weaknesses": [],
       "modifiers": [
@@ -2017,6 +2101,33 @@
       "desc_pt": "Produzida magicamente para proteger contra escuro. (30% resistência a Escuridão)",
       "classes": [],
       "weight": 1.5,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Cloak of Alchemists",
+      "name_pt": "Manto dos Alquimistas",
+      "img": "item_cloak_of_alchemists",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 6,
+      "defense": 1,
+      "type": "ARMOR",
+      "slot": "CHEST",
+      "element": null,
+      "rarity": "COMMON",
+      "resistances": [],
+      "weaknesses": [],
+      "modifiers": [
+        {
+          "attr": "ALCHEMY",
+          "value": 10,
+          "decrease": false
+        }
+      ],
+      "desc_en": "A robust cloak resistant to chemical stains. Increase 10 levels of alchemy.",
+      "desc_pt": "Um manto robusto resistente a manchas químicas. Aumenta 10 níveis de alquimia.",
+      "classes": [],
+      "weight": 1,
       "levelReq": 0
     }
   ],
@@ -2517,7 +2628,7 @@
       "type": "BOOTS",
       "slot": "FEET",
       "element": null,
-      "rarity": "COMMON",
+      "rarity": "RARE",
       "resistances": [],
       "weaknesses": [],
       "modifiers": [
@@ -2847,13 +2958,13 @@
       "resistances": [
         {
           "element": "FIRE",
-          "value": 15
+          "value": 25
         }
       ],
       "weaknesses": [],
       "modifiers": [],
-      "desc_en": "A piece of jewelry that emits an orange light. (15% Fire resistance)",
-      "desc_pt": "Uma peça de joalheria que emite uma luz laranja. (15% de resistência ao fogo)",
+      "desc_en": "A piece of jewelry that emits an orange light. (25% Fire resistance)",
+      "desc_pt": "Uma peça de joalheria que emite uma luz laranja. (25% de resistência ao fogo)",
       "classes": [],
       "weight": 0.1,
       "levelReq": 0
@@ -2873,13 +2984,13 @@
       "resistances": [
         {
           "element": "WATER",
-          "value": 15
+          "value": 25
         }
       ],
       "weaknesses": [],
       "modifiers": [],
-      "desc_en": "A piece of jewelry that emits a cyan light. (15% Water resistance)",
-      "desc_pt": "Uma peça de joalheria que emite uma luz ciana. (15% de resistência à água)",
+      "desc_en": "A piece of jewelry that emits a cyan light. (25% Water resistance)",
+      "desc_pt": "Uma peça de joalheria que emite uma luz ciana. (25% de resistência à água)",
       "classes": [],
       "weight": 0.1,
       "levelReq": 0
@@ -2899,17 +3010,17 @@
       "resistances": [
         {
           "element": "WIND",
-          "value": 15
+          "value": 25
         },
         {
           "element": "EARTH",
-          "value": 15
+          "value": 25
         }
       ],
       "weaknesses": [],
       "modifiers": [],
-      "desc_en": "A piece of jewelry that emits a green light. (15% Wind resistance) (15% Earth resistance)",
-      "desc_pt": "Uma peça de joalheria que emite uma luz verde. (15% de resistência ao vento) (15% de resistência à terra)",
+      "desc_en": "A piece of jewelry that emits a green light. (25% Wind resistance) (25% Earth resistance)",
+      "desc_pt": "Uma peça de joalheria que emite uma luz verde. (25% de resistência ao vento) (25% de resistência à terra)",
       "classes": [],
       "weight": 0.1,
       "levelReq": 0
@@ -2929,18 +3040,18 @@
       "resistances": [
         {
           "element": "DARK",
-          "value": 15
+          "value": 25
         }
       ],
       "weaknesses": [
         {
           "element": "LIGHT",
-          "value": 15
+          "value": 25
         }
       ],
       "modifiers": [],
-      "desc_en": "Amulet of angels. (15% Dark resistance) (15% Light weakness)",
-      "desc_pt": "Amuleto dos anjos. (15% de resistência à escuridão) (15% de fraqueza à luz)",
+      "desc_en": "Amulet of angels. (25% Dark resistance) (25% Light weakness)",
+      "desc_pt": "Amuleto dos anjos. (25% de resistência à escuridão) (25% de fraqueza à luz)",
       "classes": [],
       "weight": 0.1,
       "levelReq": 0
@@ -2960,18 +3071,18 @@
       "resistances": [
         {
           "element": "LIGHT",
-          "value": 15
+          "value": 25
         }
       ],
       "weaknesses": [
         {
           "element": "DARK",
-          "value": 15
+          "value": 25
         }
       ],
       "modifiers": [],
-      "desc_en": "Amulet of devils. (15% Light resistance) (15% Dark weakness)",
-      "desc_pt": "Amuleto dos demônios. (15% de resistência à luz) (15% de fraqueza à escuridão)",
+      "desc_en": "Amulet of devils. (25% Light resistance) (25% Dark weakness)",
+      "desc_pt": "Amuleto dos demônios. (25% de resistência à luz) (25% de fraqueza à escuridão)",
       "classes": [],
       "weight": 0.1,
       "levelReq": 0
@@ -3125,7 +3236,7 @@
       "type": "JEWEL",
       "slot": "JEWEL",
       "element": null,
-      "rarity": "COMMON",
+      "rarity": "RARE",
       "resistances": [],
       "weaknesses": [],
       "modifiers": [
@@ -3163,7 +3274,7 @@
       "modifiers": [
         {
           "attr": "CRAFT",
-          "value": 100,
+          "value": 10,
           "decrease": false
         }
       ],
@@ -3190,7 +3301,7 @@
       "modifiers": [
         {
           "attr": "ALCHEMY",
-          "value": 100,
+          "value": 10,
           "decrease": false
         }
       ],
@@ -3328,7 +3439,7 @@
       "type": "BAG",
       "slot": "BAG",
       "element": null,
-      "rarity": "COMMON",
+      "rarity": "SPECIAL",
       "resistances": [],
       "weaknesses": [],
       "modifiers": [],
@@ -3349,7 +3460,7 @@
       "type": "JEWEL",
       "slot": "JEWEL",
       "element": null,
-      "rarity": "SPECIAL",
+      "rarity": "RARE",
       "resistances": [
         {
           "element": "DARK",

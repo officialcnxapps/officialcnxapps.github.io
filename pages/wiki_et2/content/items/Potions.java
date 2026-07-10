@@ -5,6 +5,7 @@ import com.cnx.endlesstalestwo.App;
 import com.cnx.endlesstalestwo.data.DataHelper;
 import com.cnx.endlesstalestwo.entities.AttributeModifierValue;
 import com.cnx.endlesstalestwo.entities.ConsumableItem;
+import com.cnx.endlesstalestwo.entities.StatusModifier;
 import com.cnx.endlesstalestwo.enums.Enums;
 
 public class Potions extends DataHelper {
@@ -185,10 +186,13 @@ public class Potions extends DataHelper {
         consumable.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Remove o status de envenenamento");
         consumable.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Elimina el estado de envenenamiento");
 
+        consumable.statusModifiers.add(new StatusModifier(Enums.StatusModifier.REMOVE, Enums.Status.POISONED,100,0));
+
         consumable.type = Enums.ItemType.POTION;
         consumable.weight = .1f;
         consumable.marketValue = 4;
         consumable.inBattleUsage = true;
+        consumable.outBattleUsage = true;
         consumable.usageSound = "potion_usage";
 
         return consumable;

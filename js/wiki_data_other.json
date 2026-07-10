@@ -104,21 +104,9 @@
       "weight": 0.3,
       "value": 32,
       "ingredient": false,
-      "rarity": "COMMON",
+      "rarity": "UNCOMMON",
       "desc_en": "A golden trophy earned from winning a contest.",
       "desc_pt": "Um troféu de ouro ganho ao vencer um torneio."
-    },
-    {
-      "name_en": "Silver Goblet",
-      "type": "VALUABLE",
-      "name_pt": "Taça de Prata",
-      "img": "item_silver_goblet",
-      "weight": 0.3,
-      "value": 24,
-      "ingredient": false,
-      "rarity": "COMMON",
-      "desc_en": "A silver trophy earned from winning a contest.",
-      "desc_pt": "Um troféu de prata ganho ao vencer um torneio."
     },
     {
       "name_en": "Bronze Goblet",
@@ -131,6 +119,18 @@
       "rarity": "COMMON",
       "desc_en": "A bronze trophy earned from winning a contest.",
       "desc_pt": "Um troféu de bronze ganho ao vencer um torneio."
+    },
+    {
+      "name_en": "Ruby Goblet",
+      "type": "VALUABLE",
+      "name_pt": "Taça de Rubi",
+      "img": "item_ruby_goblet",
+      "weight": 0.5,
+      "value": 48,
+      "ingredient": false,
+      "rarity": "SPECIAL",
+      "desc_en": "A magnificent goblet carved from a giant ruby, awarded only to the champions of the Frozen Arena.",
+      "desc_pt": "Uma magnífica taça esculpida em um rubi gigante, concedida apenas aos campeões da Arena Congelada."
     }
   ],
   "ores": [
@@ -241,19 +241,7 @@
       "rarity": "UNCOMMON",
       "desc_en": "Caltranium gold ready to be shaped into an armor, weapon, etc...",
       "desc_pt": "Caltranio fundido pronto para ser moldado como uma armadura, arma, etc..."
-    },
-    {
-      "name_en": "Gybralar Forest Map",
-      "type": "MISC",
-      "name_pt": "Mapa da Floresta Gybralar",
-      "img": "item_map",
-      "weight": 0.1,
-      "value": 8,
-      "ingredient": false,
-      "rarity": "COMMON",
-      "desc_en": "A map of Gybralar forest region.",
-      "desc_pt": "Um mapa da região florestal de Gybralar."
-    }
+    }    
   ],
   "tools": [
     {
@@ -377,6 +365,18 @@
       "rarity": "COMMON",
       "desc_en": "A simple tree branch.",
       "desc_pt": "Um simples galho de árvore."
+    },
+    {
+      "name_en": "Gybralar Forest Map",
+      "type": "MISC",
+      "name_pt": "Mapa da Floresta Gybralar",
+      "img": "item_map",
+      "weight": 0.1,
+      "value": 8,
+      "ingredient": false,
+      "rarity": "COMMON",
+      "desc_en": "A map of Gybralar forest region.",
+      "desc_pt": "Um mapa da região florestal de Gybralar."
     },
     {
       "name_en": "Log",
@@ -965,6 +965,18 @@
       "rarity": "COMMON",
       "desc_en": "A heavy crate packed with weapons destined for the Watch Tower. Careful with this one.",
       "desc_pt": "Um caixote pesado com armas destinadas à Torre de Guarda. Cuidado com este."
+    },
+    {
+      "name_en": "Contract of Cattle Negotiation",
+      "type": "MISC",
+      "name_pt": "Contrato de Negociação de Gado",
+      "img": "item_generic_letter",
+      "weight": 0.1,
+      "value": 0,
+      "ingredient": false,
+      "rarity": "COMMON",
+      "desc_en": "An official document for cattle trade between Lisport and Havarus.",
+      "desc_pt": "Um documento oficial para o comércio de gado entre Lisport e Havarus."
     }
   ]
 }

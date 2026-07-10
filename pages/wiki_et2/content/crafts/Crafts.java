@@ -101,6 +101,7 @@ public class Crafts extends DataHelper {
         App.DataManager.add(Enums.DataTypes.CRAFT_RECIPE, fireSword());
         App.DataManager.add(Enums.DataTypes.CRAFT_RECIPE, steelSpear());
         App.DataManager.add(Enums.DataTypes.CRAFT_RECIPE, knivesOfBreeze());
+        App.DataManager.add(Enums.DataTypes.CRAFT_RECIPE, miniCrossbow());
 
         if (App.getPlayerChar() != null
                 && (
@@ -803,6 +804,14 @@ public class Crafts extends DataHelper {
         CraftRecipe recipe = new CraftRecipe(50, ItemsIds.KNIVES_OF_BREEZE, ItemsIds.THROWING_KNIVES, ItemsIds.ASH, ItemsIds.WHITE_HERB);
         recipe.type = Enums.CraftTypes.ALCHEMY;
         recipe.successRate = 16;
+
+        return recipe;
+    }
+
+    public CraftRecipe miniCrossbow() {
+        CraftRecipe recipe = new CraftRecipe(50, ItemsIds.MINI_CROSSBOW, ItemsIds.BRANCH, ItemsIds.IRON_INGOT, ItemsIds.STRING);
+        recipe.type = Enums.CraftTypes.GENERAL;
+        recipe.successRate = 35;
 
         return recipe;
     }
