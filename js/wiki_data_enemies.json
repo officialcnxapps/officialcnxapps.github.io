@@ -1395,9 +1395,133 @@
           "chance": 38
         }
       ]
+    },
+    {
+      "name_en": "Wyvern",
+      "name_pt": "Wyvern",
+      "img": "enemy_wyvern",
+      "hp": 32,
+      "mp": 60,
+      "defense": 5,
+      "agility": 22,
+      "strength": 18,
+      "exp": 20,
+      "gold": 0,
+      "minDamage": 3,
+      "maxDamage": 7,
+      "weaknesses": [
+        {
+          "element": "LIGHT",
+          "value": 25
+        }
+      ],
+      "resistances": [
+        {
+          "element": "EARTH",
+          "value": 75
+        },
+        {
+          "element": "WIND",
+          "value": 25
+        }
+      ],
+      "skills": [
+        {
+          "name_en": "Poisonous Rain",
+          "name_pt": "Chuva Venenosa",
+          "chance": 40
+        },
+        {
+          "name_en": "Rock Rain",
+          "name_pt": "Chuva de Rochas",
+          "chance": 40
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Dragon Scale",
+          "name_pt": "Dragon Scale",
+          "qty": 1,
+          "chance": 100
+        },
+        {
+          "name_en": "Acid Blood",
+          "name_pt": "Acid Blood",
+          "qty": 1,
+          "chance": 100
+        },
+        {
+          "name_en": "Emerald",
+          "name_pt": "Esmeralda",
+          "qty": 1,
+          "chance": 3
+        }
+      ]
     }
   ],
   "fire": [
+    {
+      "name_en": "Fire Dragon",
+      "name_pt": "Dragão de Fogo",
+      "img": "enemy_fire_dragon",
+      "hp": 36,
+      "mp": 60,
+      "defense": 5,
+      "agility": 23,
+      "strength": 22,
+      "exp": 22,
+      "gold": 0,
+      "minDamage": 3,
+      "maxDamage": 8,
+      "weaknesses": [
+        {
+          "element": "WATER",
+          "value": 50
+        }
+      ],
+      "resistances": [
+        {
+          "element": "FIRE",
+          "value": 100
+        },
+        {
+          "element": "PHYSICAL",
+          "value": 25
+        }
+      ],
+      "skills": [
+        {
+          "name_en": "Fire Touch",
+          "name_pt": "Toque de Fogo",
+          "chance": 40
+        },
+        {
+          "name_en": "Fire Bomb",
+          "name_pt": "Bomba de Fogo",
+          "chance": 25
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Dragon Scale",
+          "name_pt": "Dragon Scale",
+          "qty": 1,
+          "chance": 100
+        },
+        {
+          "name_en": "Fire Blood",
+          "name_pt": "Fire Blood",
+          "qty": 1,
+          "chance": 100
+        },
+        {
+          "name_en": "Ruby",
+          "name_pt": "Rubi",
+          "qty": 1,
+          "chance": 3
+        }
+      ]
+    },
     {
       "name_en": "Infernal Hound",
       "name_pt": "Cão Infernal",
@@ -1594,6 +1718,68 @@
           "name_pt": "Cogumelo Branco",
           "qty": 1,
           "chance": 25
+        }
+      ]
+    },
+    {
+      "name_en": "Ice Dragon",
+      "name_pt": "Dragão de Gelo",
+      "img": "enemy_ice_dragon",
+      "hp": 30,
+      "mp": 52,
+      "defense": 4,
+      "agility": 18,
+      "strength": 18,
+      "exp": 17,
+      "gold": 0,
+      "minDamage": 3,
+      "maxDamage": 6,
+      "weaknesses": [
+        {
+          "element": "FIRE",
+          "value": 50
+        }
+      ],
+      "resistances": [
+        {
+          "element": "WATER",
+          "value": 100
+        },
+        {
+          "element": "PHYSICAL",
+          "value": 25
+        }
+      ],
+      "skills": [
+        {
+          "name_en": "Ice Ray",
+          "name_pt": "Raio Gelado",
+          "chance": 45
+        },
+        {
+          "name_en": "Magic Healing",
+          "name_pt": "Cura Mágica",
+          "chance": 25
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Dragon Scale",
+          "name_pt": "Dragon Scale",
+          "qty": 1,
+          "chance": 100
+        },
+        {
+          "name_en": "Ice Blood",
+          "name_pt": "Ice Blood",
+          "qty": 1,
+          "chance": 100
+        },
+        {
+          "name_en": "Sapphire",
+          "name_pt": "Safira",
+          "qty": 1,
+          "chance": 3
         }
       ]
     },
@@ -2242,6 +2428,86 @@
           "name_pt": "Poção Elixir",
           "qty": 2,
           "chance": 75
+        }
+      ]
+    },
+    {
+      "name_en": "Dragon King",
+      "name_pt": "Rei Dragão",
+      "img": "enemy_dragon_king",
+      "hp": 70,
+      "mp": 110,
+      "defense": 7,
+      "agility": 28,
+      "strength": 28,
+      "exp": 35,
+      "gold": 9,
+      "minDamage": 6,
+      "maxDamage": 11,
+      "weaknesses": [],
+      "resistances": [
+        {
+          "element": "FIRE",
+          "value": 50
+        },
+        {
+          "element": "WATER",
+          "value": 25
+        },
+        {
+          "element": "EARTH",
+          "value": 25
+        },
+        {
+          "element": "WIND",
+          "value": 25
+        },
+        {
+          "element": "DARK",
+          "value": 25
+        }
+      ],
+      "skills": [
+        {
+          "name_en": "Fire Bomb",
+          "name_pt": "Bomba de Fogo",
+          "chance": 47
+        },
+        {
+          "name_en": "Ice Ray",
+          "name_pt": "Raio Gelado",
+          "chance": 36
+        },
+        {
+          "name_en": "Avalanche",
+          "name_pt": "Avalanche",
+          "chance": 44
+        }
+      ],
+      "loot": [
+        {
+          "name_en": "Dragon Scale",
+          "name_pt": "Dragon Scale",
+          "qty": 1,
+          "chance": 100
+        },
+        {
+          "name_en": "Ruby",
+          "name_pt": "Rubi",
+          "qty": 1,
+          "chance": 40
+        },
+        {
+          "name_en": "Ash",
+          "name_pt": "Cinzas",
+          "qty": 2,
+          "chance": 45
+        },
+        {
+          "name_en": "Coal",
+          "name_pt": "Carvão",
+          "qty": 1,
+          "chance": 60
         }
       ]
     },

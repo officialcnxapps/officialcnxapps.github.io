@@ -21,9 +21,10 @@ public class July extends DataHelper {
         npc.age = 12;
         npc.job = Enums.NPCJobs.NONE;
         npc.gender = Enums.Gender.FEMALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A curious and clever child.\nShe enjoys being in nature.\nHer parents live in Apenna.\n\nHer physical characteristics: Short brown hair. An innocent and playful smile. Honey-colored eyes.");
+        npc.addDescriptionTranslation(ENGLISH, "A curious and clever child.\nShe enjoys being in nature.\nHer parents live in Apenna.\n\nHer physical characteristics: Short brown hair. An innocent and playful smile. Honey-colored eyes.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Uma criança curiosa e esperta.\nSe diverte na natureza.\nSeus pais moram em Apenna.\n\nSeus traços físicos: Cabelos castanhos e curtos. Sorriso inocente e divertido. Olhos cor de mel.");
+        npc.addDescriptionTranslation(SPANISH, "Una niña curiosa e inteligente.\nLe encanta estar en contacto con la naturaleza.\nSus padres viven en Apenna.\n\nCaracterísticas físicas: Cabello castaño corto. Sonrisa inocente y juguetona. Ojos color miel.");
 
         npc.generateRandomByes();
         npc.generateRandomGreetings();

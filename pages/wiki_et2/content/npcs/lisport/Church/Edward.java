@@ -35,6 +35,7 @@ public class Edward extends DataHelper {
         npc.addDescriptionTranslation(ENGLISH, "Serious, with a steady gaze. Not easily shaken and sometimes can even seem persuasive.\nLives by faith but seems to do so more out of work than love.\n\nPhysical traits: Grey hair combed to the side. Clear eyes with some dark circles. Well-groomed beard and mustache.");
         npc.addDescriptionTranslation(PORTUGUESE, "Sério, com olhor firme. Não se abala facilmente e por vezes pode até parecer persuasor.\nVive pela fé mas parece o fazer mais por trabalho do que por amor.\n\nSeus taços físicos: Cabelo grisalho penteado para o lado. Olhos claros com algumas olheiras. Barba e bigodes bem feitos.");
         npc.addDescriptionTranslation(SPANISH, "Serio, con una mirada fija. No se asusta fácilmente y a veces puede parecer persuasivo.\nVive por la fe pero parece hacerlo más por trabajo que por amor.\n\nTrasos físicos: Cabello gris peinado hacia un lado. Ojos claros con ojeras. Barba y bigote bien cuidados.");
+        npc.canBePickpocketed = true;
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Welcome to the house of our divinity, citizen."));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Bem-vindo à casa da nossa divindade."));

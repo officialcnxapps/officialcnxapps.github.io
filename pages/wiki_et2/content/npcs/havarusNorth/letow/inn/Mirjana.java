@@ -23,11 +23,12 @@ public class Mirjana extends DataHelper {
     Npc npc() {
         Npc npc = new Npc("Mirjana");
         npc.age = 26;
-        npc.job = Enums.NPCJobs.NONE;
+        npc.job = Enums.NPCJobs.FEMALE_COOK;
         npc.gender = Enums.Gender.FEMALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A calm and cheerful young woman. She carries out her activities always happy and at ease.\nShe seems to be afraid of what is uncommon to her daily life or knowledge.\n\nHer physical traits: Brown skin, light green eyes and a captivating smile. Dark hair with some golden highlights. Thin face.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Uma jovem calma e alegre. Realiza suas atividades sempre feliz e com tranquilidade.\nParece ter medo do que não é comum ao seu dia a dia ou ao seu conhecimento.\n\nSeus traços físicos: Pele morena, olhos verdes claros e sorriso cativante. Cabelos escuros com algumas mechas douradas. Rosto fino.");
+        npc.addDescriptionTranslation(SPANISH, "Una joven tranquila y alegre. Realiza sus actividades siempre feliz y con calma.\nParece tener miedo de lo que no es común en su vida cotidiana o en su conocimiento.\n\nSus rasgos físicos: Piel morena, ojos verdes claros y sonrisa cautivadora. Cabello oscuro con algunos mechones dorados. Rostro fino.");
+        npc.canBePickpocketed = true;
 
         npc.generateRandomGreetings();
         npc.generateRandomByes();
@@ -38,6 +39,12 @@ public class Mirjana extends DataHelper {
         cvRoleplay.addOptionText(PORTUGUESE, "Como é a vida em Letow?", "Tranquila, na maior parte. É uma vila pequena, nada como as grandes cidades. Temos nossos campos, nossa taverna, e uns aos outros. Às vezes é tudo que precisamos.");
         cvRoleplay.addOptionText(SPANISH, "¿Cómo es la vida en Letow?", "Tranquila, mayormente. Es una aldea pequeña, nada como las grandes ciudades. Tenemos nuestros campos, nuestra posada, y el uno al otro. A veces eso es todo lo que necesitas.");
         npc.conversationOptions.add(cvRoleplay);
+
+        ConversationOption cv0 = new ConversationOption(0, 0);
+        cv0.addOptionText(ENGLISH, "Someone interesting passed here?", "[GENDER_FORMAL_CALL], every day people come and go in this inn. But, recently, Martin, rented a bed here.\nHe is known for venturing to climb mountains and hills in the kingdom. When he left, he said he was going to Great Rock.");
+        cv0.addOptionText(PORTUGUESE, "Alguém interessante passou por aqui?", " [GENDER_FORMAL_CALL], todos os dias pessoas vem e vão nesta pousada. Mas, recentemente, Martin, esteve alugando uma cama aqui.\nEle é conhecido por se aventurar escalando morros e montanhas reino afora. Ao ir embora ele disse que ia para Great Rock.");
+        cv0.addOptionText(SPANISH, "¿Ha pasado por aquí alguien interesante?", "[GENDER_FORMAL_CALL], todos los días hay gente que entra y sale de esta posada. Pero hace poco, Martin se alojó aquí.\nEs conocido por sus excursiones por colinas y montañas de todo el reino. Al marcharse, dijo que iba a la Great Rock.");
+        npc.conversationOptions.add(cv0);
 
         // ===== QUEST START: Ghost & Bones =====
         ConversationOption cvQuestStart = new ConversationOption(0, 1);

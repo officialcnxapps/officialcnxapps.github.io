@@ -3,16 +3,30 @@ package com.cnx.endlesstalestwo.data.npcs.esperand.barbarianSettlement;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.ENGLISH;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.PORTUGUESE;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.SPANISH;
+import static com.cnx.endlesstalestwo.entities.Constants.SFX_QUEST_COMPLETED;
+
+import android.os.Handler;
+import android.os.Looper;
 
 import com.cnx.endlesstalestwo.App;
+import com.cnx.endlesstalestwo.GameEngine;
+import com.cnx.endlesstalestwo.activities.GameplayActivity;
 import com.cnx.endlesstalestwo.data.DataHelper;
+import com.cnx.endlesstalestwo.data.arenas.ArenasIds;
+import com.cnx.endlesstalestwo.data.battles.BattlesIds;
 import com.cnx.endlesstalestwo.data.items.ItemsIds;
 import com.cnx.endlesstalestwo.data.quests.QuestsIds;
+import com.cnx.endlesstalestwo.dialogs._CnxContentDialog;
+import com.cnx.endlesstalestwo.displayers.RecompenseDisplay;
+import com.cnx.endlesstalestwo.entities.Arena;
 import com.cnx.endlesstalestwo.entities.ConversationOption;
 import com.cnx.endlesstalestwo.entities.Npc;
+import com.cnx.endlesstalestwo.entities.Recompense;
 import com.cnx.endlesstalestwo.enums.Enums;
 import com.cnx.endlesstalestwo.libs.LibInventory;
+import com.cnx.endlesstalestwo.libs.LibNpc;
 import com.cnx.endlesstalestwo.libs.LibQuest;
+import com.cnx.endlesstalestwo.managers.AssetsManager;
 
 import java.util.Collections;
 
@@ -129,6 +143,141 @@ public class Cradul extends DataHelper {
             return Enums.RequirementVerification.NOT_OK;
         };
         npc.conversationOptions.add(cvContrabandPart1Reminder);
+
+        // ========================================
+        // ARENA: FROZEN ARENA MANAGEMENT
+        // ========================================
+
+        ConversationOption cvRules = new ConversationOption(0, 2);
+        cvRules.addOptionText(ENGLISH, "Tell me about the Frozen Arena.",
+                "Frozen Arena for real warriors. You face 5 battles. Each time, random enemy from stage list. You win all 5, you get Ruby Goblet. Very valuable. Very rare.\n*grins*\nBut if you fall once, you lose. Pay again, start from first stage. No weaklings allowed.");
+        cvRules.addOptionText(PORTUGUESE, "Me fale sobre a Arena Congelada.",
+                "Arena Congelada para guerreiros de verdade. Você enfrenta 5 batalhas. Cada vez, um inimigo aleatório da lista da fase. Se vencer as 5, ganha a Taça de Rubi. Muito valiosa. Muito rara.\n*sorri*\nMas se cair uma vez, perdeu. Pague de novo, comece da primeira fase. Fracos não entram.");
+        cvRules.addOptionText(SPANISH, "Háblame de la Arena Helada.",
+                "Arena Helada para guerreros de verdad. Te enfrentas a 5 batallas. Cada vez, un enemigo aleatorio de la lista de la etapa. Ganas las 5 y te llevas la Copa de Rubí. Muy valiosa. Muy rara.\n*sonríe*\nPero si caes una vez, pierdes. Paga de nuevo, empieza desde la primera etapa. No se admiten debiluchos.");
+        cvRules.requirementValidations = (chara, ctx) -> {
+            Arena arena = chara.storyInfo.arenaProgress.get(ArenasIds.FROZEN_ARENA);
+            if (arena != null) return Enums.RequirementVerification.NOT_OK;
+            return Enums.RequirementVerification.OK;
+        };
+        npc.conversationOptions.add(cvRules);
+
+        ConversationOption cvPrizes = new ConversationOption(2, 2);
+        cvPrizes.addOptionText(ENGLISH, "What are the prizes for winning?", "Check yourself...");
+        cvPrizes.addOptionText(PORTUGUESE, "Quais são os prêmios por vencer?", "Veja você mesmo...");
+        cvPrizes.addOptionText(SPANISH, "¿Cuáles son los premios por ganar?", "Compruébalo tú mismo...");
+        cvPrizes.npcAnswerProvider = LibNpc.buildArenaPrizesAnswerProvider(
+                ArenasIds.FROZEN_ARENA,
+                "Win and it's yours.",
+                "Vença e será seu.",
+                "Gana y será tuyo."
+        );
+        npc.conversationOptions.add(cvPrizes);
+
+        ConversationOption cvEnter = new ConversationOption(2, 3);
+        cvEnter.addOptionText(ENGLISH, "I want to enter the arena.",
+                "Thirty gold to enter. High price for high glory. You have gold, or you waste Cradul time?");
+        cvEnter.addOptionText(PORTUGUESE, "Quero entrar na arena.",
+                "Trinta ouros para entrar. Preço alto para glória alta. Tem o ouro ou está perdendo o tempo de Cradul?");
+        cvEnter.addOptionText(SPANISH, "Quiero entrar a la arena.",
+                "Treinta de oro para entrar. Precio alto para gran gloria. ¿Tienes el oro o estás perdiendo el tiempo de Cradul?");
+        cvEnter.showEvenWhenNotValid = true;
+        cvEnter.requirementValidations = (chara, ctx) -> {
+            Arena arena = chara.storyInfo.arenaProgress.get(ArenasIds.FROZEN_ARENA);
+            if (arena != null) return Enums.RequirementVerification.NOT_OK;
+            if (chara.checkHasGold(30)) return Enums.RequirementVerification.OK;
+            return Enums.RequirementVerification.NEED_GOLD;
+        };
+        npc.conversationOptions.add(cvEnter);
+
+        ConversationOption cvEnterConfirm = new ConversationOption(3, 0);
+        cvEnterConfirm.addOptionText(ENGLISH, "[Pay 30 gold and enter]",
+                "Good. Arena is open. Tell me when ready for first fight. Don't freeze.");
+        cvEnterConfirm.addOptionText(PORTUGUESE, "[Pagar 30 ouros e entrar]",
+                "Bom. Arena está aberta. Me diga quando estiver pronto para a primeira luta. Não congele.");
+        cvEnterConfirm.addOptionText(SPANISH, "[Pagar 30 de oro y entrar]",
+                "Bien. La arena está abierta. Dime cuando estés listo para la primera pelea. No te congeles.");
+        cvEnterConfirm.listeners = (ctx, currentFragment) -> {
+            App.getPlayerChar().removeGold(30);
+            Arena arena = App.Shell.flowManager.getActiveArena(ArenasIds.FROZEN_ARENA);
+            if (arena != null) {
+                arena.currentStage = 1;
+                arena.isCompleted = false;
+            }
+            App.getPlayerChar().storyInfo.arenaProgress.put(ArenasIds.FROZEN_ARENA, arena);
+            GameEngine.saveGame(ctx);
+        };
+        npc.conversationOptions.add(cvEnterConfirm);
+
+        ConversationOption cvStartBattle = new ConversationOption(0, 0);
+        cvStartBattle.addOptionText(ENGLISH, "I'm ready for my next fight in the Frozen Arena.",
+                "Fight begins now! *blows a frozen horn*");
+        cvStartBattle.addOptionText(PORTUGUESE, "Estou pronto para minha próxima luta na Arena Congelada.",
+                "A luta começa agora! *toca um berrante congelado*");
+        cvStartBattle.addOptionText(SPANISH, "Estoy listo para mi próxima pelea en la Arena Helada.",
+                "¡La lucha empieza ahora! *toca un cuerno helado*");
+        cvStartBattle.requirementValidations = (chara, ctx) -> {
+            Arena progress = chara.storyInfo.arenaProgress.get(ArenasIds.FROZEN_ARENA);
+            if (progress == null) return Enums.RequirementVerification.NOT_OK;
+            Arena a = App.Shell.flowManager.getActiveArena(ArenasIds.FROZEN_ARENA);
+            if (a != null && !a.isCompleted) return Enums.RequirementVerification.OK;
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        cvStartBattle.listeners = (ctx, currentFragment) -> {
+            Arena a = App.Shell.flowManager.getActiveArena(ArenasIds.FROZEN_ARENA);
+            if (a != null) {
+                a.defineNextBattle();
+                if (a.nextBattle != null && ctx instanceof GameplayActivity gameplayActivity) {
+                    if (currentFragment != null) currentFragment.setScreenTouchable(false);
+                    new Handler(Looper.getMainLooper()).postDelayed(() -> gameplayActivity.StartBattleScreen(a.nextBattle.uId), 2000);
+                }
+            }
+        };
+        npc.conversationOptions.add(cvStartBattle);
+
+        ConversationOption cvArenaProgress = new ConversationOption(0, 0);
+        cvArenaProgress.addOptionText(ENGLISH, "What stage of the Frozen Arena am I in?", "I check...");
+        cvArenaProgress.addOptionText(PORTUGUESE, "Em qual fase da Arena Congelada eu estou?", "Vou ver...");
+        cvArenaProgress.addOptionText(SPANISH, "¿En qué etapa de la Arena Helada estoy?", "Compruebo...");
+        cvArenaProgress.requirementValidations = (chara, ctx) -> {
+            Arena progress = chara.storyInfo.arenaProgress.get(ArenasIds.FROZEN_ARENA);
+            if (progress == null) return Enums.RequirementVerification.NOT_OK;
+            Arena a = App.Shell.flowManager.getActiveArena(ArenasIds.FROZEN_ARENA);
+            if (a != null && !a.isCompleted) return Enums.RequirementVerification.OK;
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        cvArenaProgress.npcAnswerProvider = LibNpc.buildArenaProgressAnswerProvider(ArenasIds.FROZEN_ARENA);
+        npc.conversationOptions.add(cvArenaProgress);
+
+        ConversationOption cvCollectPrize = new ConversationOption(0, 0);
+        cvCollectPrize.addOptionText(ENGLISH, "I've won! Give me the Ruby Goblet.",
+                "*grunts with rare respect*\nYou survived the ice. You are warrior. Take prize. Go now.");
+        cvCollectPrize.addOptionText(PORTUGUESE, "Eu venci! Me dê a Taça de Rubi.",
+                "*grunhe com um raro respeito*\nVocê sobreviveu ao gelo. Você é guerreiro. Pegue o prêmio. Vá agora.");
+        cvCollectPrize.addOptionText(SPANISH, "¡He ganado! Dame la Copa de Rubí.",
+                "*gruñe con un respeto poco común*\nSobreviviste al hielo. Eres un guerrero. Toma tu premio. Vete ya.");
+        cvCollectPrize.requirementValidations = (chara, ctx) -> {
+            Arena a = App.Shell.flowManager.getActiveArena(ArenasIds.FROZEN_ARENA);
+            if (a != null && a.isCompleted) return Enums.RequirementVerification.OK;
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        cvCollectPrize.listeners = (ctx, currentFragment) -> {
+            App.Shell.playSound(AssetsManager.getSoundAsPlayableFile(SFX_QUEST_COMPLETED, ctx), ctx);
+            Arena a = App.Shell.flowManager.getActiveArena(ArenasIds.FROZEN_ARENA);
+            if (a != null) {
+                Recompense recompense = a.onVictory();
+                if (recompense != null) {
+                    RecompenseDisplay display = new RecompenseDisplay(ctx, recompense, v -> {
+                        GameEngine.closeDialog();
+                        if (currentFragment != null) currentFragment.setScreenTouchable(true);
+                    });
+                    GameEngine.showDialog(new _CnxContentDialog().newInstance(display, false));
+                }
+            }
+            App.getPlayerChar().storyInfo.arenaProgress.remove(ArenasIds.FROZEN_ARENA);
+            GameEngine.saveGame(ctx);
+        };
+        npc.conversationOptions.add(cvCollectPrize);
 
         return npc;
     }

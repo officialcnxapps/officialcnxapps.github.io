@@ -169,7 +169,7 @@
       "name_pt": "Carne Assada",
       "img": "item_cooked_meat",
       "type": "FOOD",
-      "satiety": 240,
+      "satiety": 280,
       "weight": 0.2,
       "value": 2,
       "inBattle": false,

@@ -12,6 +12,7 @@ import com.cnx.endlesstalestwo.GameEngine;
 import com.cnx.endlesstalestwo.activities.GameplayActivity;
 import com.cnx.endlesstalestwo.data.DataHelper;
 import com.cnx.endlesstalestwo.data.events.EventsIds;
+import com.cnx.endlesstalestwo.data.items.ItemsIds;
 import com.cnx.endlesstalestwo.data.quests.QuestsIds;
 import com.cnx.endlesstalestwo.data.shops.ShopsIds;
 import com.cnx.endlesstalestwo.entities.ConversationOption;
@@ -19,10 +20,13 @@ import com.cnx.endlesstalestwo.entities.Event;
 import com.cnx.endlesstalestwo.entities.Npc;
 import com.cnx.endlesstalestwo.entities.Quest;
 import com.cnx.endlesstalestwo.enums.Enums;
+import com.cnx.endlesstalestwo.libs.LibInventory;
 import com.cnx.endlesstalestwo.libs.LibNpc;
 import com.cnx.endlesstalestwo.libs.LibQuest;
 
 import java.util.Collections;
+
+import static com.cnx.endlesstalestwo.data.quests.QuestsIds.STUDYING_FISH;
 
 public class Klaus extends DataHelper {
     @Override
@@ -38,6 +42,7 @@ public class Klaus extends DataHelper {
         npc.addDescriptionTranslation(ENGLISH, "A peaceful, calm and shrewd man.\nKnows various trades, from fishing to hunting. Self-taught, learned everything living on the streets of Lisport.\nSolitary, without family, but seems to truly enjoy his life this way.\n\nPhysical traits: His dark skin hides his age a bit, but the black beard with grey strands does not. Dark brown eyes.");
         npc.addDescriptionTranslation(PORTUGUESE, "Um homem pacífico, tranquilo e astuto.\nConhece diversos ofícios, da pesca à caça. Autodidata, aprendeu tudo vivendo nas ruas da Lisport.\nSolitário, sem família, mas parece mesmo gostar da sua vida assim.\n\nSeus taços físicos: Sua pele negra esconde um pouco sua idade, mas a barba preta com fios grisalhos não. Olhos castanhos escuros.");
         npc.addDescriptionTranslation(SPANISH, "Un hombre pacífico, tranquilo y astuto.\nConoce varios oficios, desde la pesca hasta la caza. Autodidacta, aprendió todo viviendo en las calles de Lisport.\nSolitario, sin familia, pero parece disfrutar realmente de su vida así.\n\nTrasos físicos: Su piel negra oculta un poco su edad, pero la barba negra con canas no. Ojos marrón oscuro.");
+        npc.canBePickpocketed = true;
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Hi, [PLAYERNAME]"));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Oi, [PLAYERNAME]"));
@@ -142,6 +147,30 @@ public class Klaus extends DataHelper {
             return Enums.RequirementVerification.NOT_OK;
         };
         npc.conversationOptions.add(cvRefuseHouse);
+
+        // ========================================
+        // QUEST: STUDYING FISH
+        // ========================================
+
+        // Part 2: Talk to Klaus
+        ConversationOption cvFishPart2 = new ConversationOption(0, 0);
+        cvFishPart2.addOptionText(ENGLISH, "Someone in Ayalon is studying fish and needs a sample from Lisport. Do you have anything interesting?",
+                "Someone in Ayalon, eh? The elven city? That's quite a way for a fish to travel. But Lisport's waters are unique — saltier, deeper than any river. \n\nI have just the thing. This Lisport fish is found only in our reefs. It should be perfect for their study. Here, take it with my compliments.");
+        cvFishPart2.addOptionText(PORTUGUESE, "Alguém em Ayalon está estudando peixes e precisa de uma amostra de Lisport. Você tem algo interessante?",
+                "Alguém em Ayalon, hein? A cidade élfica? É um longo caminho para um peixe viajar. Mas as águas de Lisport são únicas — mais salgadas e profundas que qualquer rio. \n\nTenho exatamente o que precisa. Este peixe de Lisport só é encontrado em nossos recifes. Deve ser perfeito para o estudo deles. Aqui, leve com meus cumprimentos.");
+        cvFishPart2.addOptionText(SPANISH, "Alguien en Ayalon está estudiando peces e necesita una muestra de Lisport. ¿Tienes algo interesante?",
+                "¿Alguien en Ayalon? ¿La ciudad élfica? Es un largo camino para que viaje un pez. Pero las aguas de Lisport son únicas: más saladas y profundas que cualquier río. \n\nTengo justo lo que necesitas. Este pez de Lisport solo se encuentra en nuestros arrecifes. Debería ser perfecto para su estudio. Ten, llévatelo con mis saludos.");
+        cvFishPart2.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isCharacterAtQuestPart(chara, STUDYING_FISH, 2)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        cvFishPart2.listeners = (ctx, currentFragment) -> {
+            LibInventory.addToInventory(ItemsIds.LISPORT_FISH, 1, App.getPlayerChar());
+            LibQuest.updateQuest(STUDYING_FISH, 3, App.getPlayerChar(), ctx);
+        };
+        npc.conversationOptions.add(cvFishPart2);
 
         return npc;
     }

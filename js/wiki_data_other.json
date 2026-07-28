@@ -107,7 +107,7 @@
       "rarity": "UNCOMMON",
       "desc_en": "A golden trophy earned from winning a contest.",
       "desc_pt": "Um troféu de ouro ganho ao vencer um torneio."
-    },
+    },    
     {
       "name_en": "Bronze Goblet",
       "type": "VALUABLE",
@@ -319,6 +319,18 @@
   ],
   "misc": [
     {
+      "name_en": "Gybralar Forest Map",
+      "type": "MISC",
+      "name_pt": "Mapa da Floresta Gybralar",
+      "img": "item_map",
+      "weight": 0.1,
+      "value": 8,
+      "ingredient": false,
+      "rarity": "COMMON",
+      "desc_en": "A map of Gybralar forest region.",
+      "desc_pt": "Um mapa da região florestal de Gybralar."
+    },
+    {
       "name_en": "Wheat",
       "type": "MISC",
       "name_pt": "Trigo",
@@ -365,18 +377,6 @@
       "rarity": "COMMON",
       "desc_en": "A simple tree branch.",
       "desc_pt": "Um simples galho de árvore."
-    },
-    {
-      "name_en": "Gybralar Forest Map",
-      "type": "MISC",
-      "name_pt": "Mapa da Floresta Gybralar",
-      "img": "item_map",
-      "weight": 0.1,
-      "value": 8,
-      "ingredient": false,
-      "rarity": "COMMON",
-      "desc_en": "A map of Gybralar forest region.",
-      "desc_pt": "Um mapa da região florestal de Gybralar."
     },
     {
       "name_en": "Log",
@@ -619,6 +619,18 @@
       "desc_pt": "Um mapa da região de Esperand."
     },
     {
+      "name_en": "Dragonland Map",
+      "type": "MISC",
+      "name_pt": "Mapa das Terras dos Dragões",
+      "img": "item_map",
+      "weight": 0.1,
+      "value": 10,
+      "ingredient": false,
+      "rarity": "COMMON",
+      "desc_en": "A map of Dragonland region.",
+      "desc_pt": "Um mapa da região da Terras dos Dragões."
+    },
+    {
       "name_en": "Wazel Map",
       "type": "MISC",
       "name_pt": "Mapa Wazel",
@@ -673,7 +685,7 @@
       "img": "item_ruby_ring",
       "weight": 0.1,
       "value": 45,
-      "ingredient": true,
+      "ingredient": false,
       "rarity": "RARE",
       "desc_en": "A magnificent ring adorned with a brilliant ruby gem.",
       "desc_pt": "Um magnífico anel adornado com uma brilhante gema de rubi."
@@ -963,8 +975,8 @@
       "value": 0,
       "ingredient": false,
       "rarity": "COMMON",
-      "desc_en": "A heavy crate packed with weapons destined for the Watch Tower. Careful with this one.",
-      "desc_pt": "Um caixote pesado com armas destinadas à Torre de Guarda. Cuidado com este."
+      "desc_en": "A heavy crate packed with weapons destined for someone. Careful with this one.",
+      "desc_pt": "Um caixote pesado com armas destinadas à alguém. Cuidado com este."
     },
     {
       "name_en": "Contract of Cattle Negotiation",
@@ -977,6 +989,114 @@
       "rarity": "COMMON",
       "desc_en": "An official document for cattle trade between Lisport and Havarus.",
       "desc_pt": "Um documento oficial para o comércio de gado entre Lisport e Havarus."
+    },
+    {
+      "name_en": "Fire Blood",
+      "type": "MISC",
+      "name_pt": "Sangue de Fogo",
+      "img": "item_fire_blood",
+      "weight": 0.5,
+      "value": 20,
+      "ingredient": true,
+      "rarity": "COMMON",
+      "desc_en": "Fire dragon blood.",
+      "desc_pt": "Sangue de dragão de fogo."
+    },
+    {
+      "name_en": "Ice Blood",
+      "type": "MISC",
+      "name_pt": "Sangue de Gelo",
+      "img": "item_ice_blood",
+      "weight": 0.5,
+      "value": 15,
+      "ingredient": true,
+      "rarity": "COMMON",
+      "desc_en": "Ice dragon blood.",
+      "desc_pt": "Sangue do dragão de gelo."
+    },
+    {
+      "name_en": "Acid Blood",
+      "type": "MISC",
+      "name_pt": "Sangue Ácido",
+      "img": "item_acid_blood",
+      "weight": 0.5,
+      "value": 18,
+      "ingredient": true,
+      "rarity": "COMMON",
+      "desc_en": "Wyvern blood.",
+      "desc_pt": "Sangue de Wyvern."
+    },
+    {
+      "name_en": "Dragon Scale",
+      "type": "MISC",
+      "name_pt": "Escamas de dragão",
+      "img": "item_dragon_scale",
+      "weight": 1,
+      "value": 14,
+      "ingredient": true,
+      "rarity": "COMMON",
+      "desc_en": "A shimmering, iron-hard scale from a dragon.",
+      "desc_pt": "Uma escama brilhante e dura como ferro de um dragão."
+    },
+    {
+      "name_en": "Blood Blade",
+      "type": "MISC",
+      "name_pt": "Lâmina de Sangue",
+      "img": "item_blood_blade",
+      "weight": 1.2,
+      "value": 0,
+      "ingredient": false,
+      "rarity": "COMMON",
+      "desc_en": "A tool used to scare dragons by scent, coated in the blood of their own.",
+      "desc_pt": "Uma ferramenta usada para assustar dragões pelo cheiro, revestida com o próprio sangue deles."
+    },
+    {
+      "name_en": "Potion of Nature",
+      "type": "MISC",
+      "name_pt": "Poção da Natureza",
+      "img": "item_potion_of_nature",
+      "weight": 0.2,
+      "value": 0,
+      "ingredient": false,
+      "rarity": "COMMON",
+      "desc_en": "A swirling, verdant elixir that smells of fresh rain and deep forest moss.",
+      "desc_pt": "Um elixir turbulento e verdejante que cheira a chuva fresca e musgo de floresta profunda."
+    },
+    {
+      "name_en": "Lisport Fish",
+      "type": "MISC",
+      "name_pt": "Peixe de Lisport",
+      "img": "item_lisport_fish",
+      "weight": 0.3,
+      "value": 0,
+      "ingredient": false,
+      "rarity": "COMMON",
+      "desc_en": "A rare azure-scaled fish found only in the deepest currents of Lisport.",
+      "desc_pt": "Um raro peixe de escamas azuladas encontrado apenas nas correntes mais profundas de Lisport."
+    },
+    {
+      "name_en": "Esperand Fish",
+      "type": "MISC",
+      "name_pt": "Peixe de Esperand",
+      "img": "item_esperand_fish",
+      "weight": 0.3,
+      "value": 0,
+      "ingredient": false,
+      "rarity": "COMMON",
+      "desc_en": "A hardy, crystalline fish that thrives in the sub-zero waters of Esperand.",
+      "desc_pt": "Um peixe resistente e cristalino que prospera nas águas abaixo de zero de Esperand."
+    },
+    {
+      "name_en": "Havarus Fish",
+      "type": "MISC",
+      "name_pt": "Peixe de Havarus",
+      "img": "item_havarus_fish",
+      "weight": 0.3,
+      "value": 0,
+      "ingredient": false,
+      "rarity": "COMMON",
+      "desc_en": "A magnificent golden-finned fish native to the royal lakes of Havarus.",
+      "desc_pt": "Um magnífico peixe de barbatanas douradas nativo dos lagos reais de Havarus."
     }
   ]
 }

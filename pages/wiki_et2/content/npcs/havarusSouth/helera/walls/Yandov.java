@@ -33,9 +33,9 @@ public class Yandov extends DataHelper {
         npc.age = 23;
         npc.job = Enums.NPCJobs.SOLDIER;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "Almost non-existent sense of humor.\nFocused on work, very serious.\nA solid warrior.\n\nHis physical traits: Tanned skin, weathered by work. Sparse stubble. Scar on his face.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Senso de humor quase inexistente.\nFocado no trabalho, muito sério.\nUm guerreiro sólido.\n\nSeus traços físicos: Pele bronzeada e sofrida pelo trabalho. Barba rala por fazer. Cicatriza no rosto.");
+        npc.addDescriptionTranslation(SPANISH, "Sentido del humor casi inexistente.\nCentrado en el trabajo, muy serio.\nUn guerrero sólido.\n\nSus rasgos físicos: Piel bronceada y castigada por el trabajo. Barba rala por afeitar. Cicatriz en el rostro.");
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Greetings. I'm on watch duty."));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Saudações. Estou de guarda."));

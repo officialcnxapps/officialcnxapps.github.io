@@ -6,14 +6,17 @@ import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.SPANISH;
 import static com.cnx.endlesstalestwo.data.quests.QuestsIds.REINFORCE_FARMLAND;
 import static com.cnx.endlesstalestwo.data.quests.QuestsIds.REINFORCE_HELERA;
 import static com.cnx.endlesstalestwo.data.quests.QuestsIds.REBUILD_HELERA;
+import static com.cnx.endlesstalestwo.data.quests.QuestsIds.NOBLES_BALL;
 import static com.cnx.endlesstalestwo.data.quests.QuestsIds.REBUILD_FARMLAND;
 
 import com.cnx.endlesstalestwo.App;
 import com.cnx.endlesstalestwo.data.DataHelper;
+import com.cnx.endlesstalestwo.data.items.ItemsIds;
 import com.cnx.endlesstalestwo.data.quests.QuestsIds;
 import com.cnx.endlesstalestwo.entities.ConversationOption;
 import com.cnx.endlesstalestwo.entities.Npc;
 import com.cnx.endlesstalestwo.enums.Enums;
+import com.cnx.endlesstalestwo.libs.LibInventory;
 import com.cnx.endlesstalestwo.libs.LibQuest;
 
 import java.util.Collections;
@@ -26,12 +29,12 @@ public class James extends DataHelper {
 
     Npc npc() {
         Npc npc = new Npc("James");
-        npc.age = 29;
+        npc.age = 34;
         npc.job = Enums.NPCJobs.SOLDIER;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A skilled soldier. Loyal to the kingdom and his duties.\nAgile and reactive. He shows the capacity to become an army captain.\nCalm, yet firm when necessary.\n\nHis physical traits: Fair skin and light eyes. Blonde mustache slightly curled upward. Metal helmet with flaps covering the top of his head.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Habilidoso soldado. Fiel ao reino e aos seus deveres.\nÁgil e reativo. Demonstra ter capacidade para se tornar um capitão do exército.\nCalmo, porém firme quando necessário.\n\nSeus traços físicos: Pele e olhos claros. Bigode loiro levemente curvado para cima. Elmo metálico com abas que cobre o topo da cabeça.");
+        npc.addDescriptionTranslation(SPANISH, "Un soldado habilidoso. Leal al reino y a sus deberes.\nÁgil y reactivo. Demuestra capacidad para convertirse en capitán del ejército.\nCalmado, pero firme cuando es necesario.\n\nSus rasgos físicos: Piel clara y ojos claros. Bigote rubio levemente curvado hacia arriba. Yelmo metálico con alas que cubre la parte superior de la cabeza.");
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Hail, soldier. What brings you here?"));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Saudações, soldado. O que o traz aqui?"));
@@ -150,6 +153,58 @@ public class James extends DataHelper {
         cv4.addOptionText(PORTUGUESE, "Você gerencia os estábulos também?", "Não diretamente, mas coordeno com o mestre dos estábulos. Cavalos são tão importantes quanto soldados na guerra - cargas de cavalaria, batedores, transporte de suprimentos. Mantemos cerca de cinquenta cavalos aqui nos portões, prontos para destacamento. O mestre dos estábulos cuida deles, eu cuido das ordens de destacamento.");
         cv4.addOptionText(SPANISH, "¿Gestionas los establos también?", "No directamente, pero coordino com el maestro de establos. Los caballos son tan importantes como los soldados en la guerra - cargas de caballería, exploradores, transporte de suministros. Mantenemos unos cincuenta caballos aquí en las puertas, listos para despliegue. El maestro de establos se encarga de su cuidado, yo me encargo de las órdenes de despliegue.");
         npc.conversationOptions.add(cv4);
+
+        // ========================================
+        // QUEST: NOBLE'S BALL
+        // ========================================
+
+        // Part 7: Talk to James
+        ConversationOption cvBallPart7 = new ConversationOption(0, 10);
+        cvBallPart7.addOptionText(ENGLISH, "Lady Jade sent me. I heard some carriages were damaged.",
+                "Hail! Yes, several of the royal carriages suffered damage during the recent transport from the outer provinces. The wheels and frames need urgent repair if they are to be ready for the ball. \n\nI have the workers ready, but we are short on materials. I need 8 high-quality planks to reinforce the frames. Can you procure them for us?");
+        cvBallPart7.addOptionText(PORTUGUESE, "Lady Jade me enviou. Ouvi dizer que algumas carruagens foram danificadas.",
+                "Saudações! Sim, várias das carruagens reais sofreram danos durante o transporte recente das províncias externas. As rodas e estruturas precisam de reparo urgente se quisermos que estejam prontas para o baile. \n\nTenho os trabalhadores prontos, mas estamos com falta de materiais. Preciso de 8 tábuas de alta qualidade para reforçar as estruturas. Você pode consegui-las para nós?");
+        cvBallPart7.addOptionText(SPANISH, "Lady Jade me envió. He oído que algunos carruajes resultaron dañados.",
+                "¡Salve! Sí, varios de los carruajes reales sufrieron daños durante el reciente transporte desde las provincias exteriores. Las ruedas y estructuras necesitan reparación urgente si queremos que estén listos para el baile. \n\nTengo a los trabajadores listos, pero nos faltan materiales. Necesito 8 tablones de alta calidad para reforzar las estructuras. ¿Puedes conseguirlos para nosotros?");
+        cvBallPart7.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isCharacterAtQuestPart(chara, NOBLES_BALL, 7)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        npc.conversationOptions.add(cvBallPart7);
+
+        ConversationOption cvBallAccept = new ConversationOption(10, 0);
+        cvBallAccept.addOptionText(ENGLISH, "I'll get the planks for you.",
+                "Good. Time is of the essence. The guests will be arriving soon, and we cannot have them traveling in unstable carriages. Return as soon as you have the 8 planks.");
+        cvBallAccept.addOptionText(PORTUGUESE, "Vou conseguir as tábuas para você.",
+                "Bom. O tempo é essencial. Os convidados chegarão em breve, e não podemos deixá-los viajando em carruagens instáveis. Volte assim que tiver as 8 tábuas.");
+        cvBallAccept.addOptionText(SPANISH, "Conseguiré los tablones para ti.",
+                "Bien. El tiempo apremia. Los invitados llegará pronto y no podemos permitir que viajen en carruajes inestables. Regresa tan pronto como tengas los 8 tablones.");
+        cvBallAccept.listeners = (ctx, currentFragment) -> {
+            LibQuest.updateQuest(NOBLES_BALL, 8, App.getPlayerChar(), ctx);
+        };
+        npc.conversationOptions.add(cvBallAccept);
+
+        // Part 8: Deliver 8 Planks
+        ConversationOption cvBallPart8 = new ConversationOption(0, 0);
+        cvBallPart8.addOptionText(ENGLISH, "I have the 8 planks for the carriage repairs.",
+                "Excellent work! These planks are perfect. My men will start the reinforcements immediately. \n\nYou've done your part, and just in time. Please, report back to Lady Jade. She will want to know that the transport is secured.");
+        cvBallPart8.addOptionText(PORTUGUESE, "Tenho as 8 tábuas para os reparos das carruagens.",
+                "Excelente trabalho! Estas tábuas são perfeitas. Meus homens começarão os reforços imediatamente. \n\nVocê fez sua parte, e bem na hora. Por favor, avise Lady Jade. Ela vai querer saber que o transporte está garantido.");
+        cvBallPart8.addOptionText(SPANISH, "Tengo los 8 tablones para las reparaciones de los carruajes.",
+                "¡Excelente trabajo! Estos tablones son perfectos. Mis hombres comenzarán los refuerzos de inmediato. \n\nHas hecho tu parte, y justo a tiempo. Por favor, informa a Lady Jade. Querrá saber que el transporte está asegurado.");
+        cvBallPart8.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isCharacterAtQuestPart(chara, NOBLES_BALL, 8) && LibInventory.checkHasItemAmount(ItemsIds.PLANK, 8, chara)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        cvBallPart8.listeners = (ctx, currentFragment) -> {
+            LibInventory.removeFromInventory(ItemsIds.PLANK, 8, App.getPlayerChar());
+            LibQuest.updateQuest(NOBLES_BALL, 9, App.getPlayerChar(), ctx);
+        };
+        npc.conversationOptions.add(cvBallPart8);
 
         return npc;
     }

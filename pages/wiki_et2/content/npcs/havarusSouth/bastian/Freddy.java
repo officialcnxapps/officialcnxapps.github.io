@@ -26,9 +26,9 @@ public class Freddy extends DataHelper {
         npc.age = 16;
         npc.job = Enums.NPCJobs.NONE;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A creative and fun-loving boy. Good-humored.\nVery active and friendly.\nHe will certainly be a loyal and honorable man if nothing corrupts him.\n\nHis physical traits: Short, curly brown hair. Dark skin. Brown eyes and a captivating smile.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Um garoto criativo e divertido.Bem humorado.\nMuito ativo e simpático.\nCertamente será um homem leal e de honra se nada o corromper.\n\nSeus traços físicos: Cabelos curtos encaracolados e castanhos. Pele negra. Olhos castanhos e sorriso cativante.");
+        npc.addDescriptionTranslation(SPANISH, "Un chico creativo y alegre. De buen humor.\nMuy activo y amigable.\nSin duda será un hombre leal y honorable si nada lo corrompe.\n\nSus rasgos físicos: Cabello castaño corto y rizado. Piel morena. Ojos marrones y una sonrisa cautivadora.");
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Hey! Nice to see you!"));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Ei! Que bom te ver!"));

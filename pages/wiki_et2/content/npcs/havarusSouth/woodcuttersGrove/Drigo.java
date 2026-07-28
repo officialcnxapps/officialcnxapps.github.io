@@ -21,9 +21,10 @@ public class Drigo extends DataHelper {
         npc.age = 26;
         npc.job = Enums.NPCJobs.WOODCUTTER;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A strong and serious young man.\nDue to his beauty, he is certainly a charmer.\nHe likes where he lives and what he does.\n\nHis physical traits: Straight blonde hair parted in the middle. Full and shiny light-colored beard. Slender face.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Um jovem forte e sério.\nDevido a sua beleza, é certamente galanteador.\nGosta de onde vive e do que faz.\n\nSeus traços físicos: Cabelos loiros e lisos repartidos ao meio. Barba clara preenchida e brilhante. Rosto esbelto.");
+        npc.addDescriptionTranslation(SPANISH, "Un joven fuerte y serio.\nDebido a su belleza, es ciertamente un galán.\nLe gusta donde vive y lo que hace.\n\nSus rasgos físicos: Cabello rubio y liso con raya al medio. Barba clara, poblada y brillante. Rostro esbelto.");
+        npc.canBePickpocketed = true;
 
         npc.generateRandomByes();
         npc.generateRandomGreetings();

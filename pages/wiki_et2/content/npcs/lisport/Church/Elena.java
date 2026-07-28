@@ -31,6 +31,7 @@ public class Elena extends DataHelper {
         npc.addDescriptionTranslation(ENGLISH, "A dreamy and loyal girl. It is easy to see that she wants to live a better life than Lisport can offer.\nShe is brave but still innocent.\nDaughter of Alden.\n\nPhysical traits: Short hair, thin face. Light brown eyes, thin nose and full lips.");
         npc.addDescriptionTranslation(PORTUGUESE, "Uma garota sonhadora e fiel. É fácil perceber que quer viver uma vida melhor do que Lisport pode oferecer.\nÉ corajosa mas também ainda inocente.\nFilha de Alden.\n\nSeus taços físicos: Cabelos curtos, rosto magro. Olhos castanhos claros, nariz fino e lábios grossos.");
         npc.addDescriptionTranslation(SPANISH, "Una chica soñadora y leal. Es fácil ver que quiere vivir una vida mejor de la que Lisport puede ofrecer.\nEs valiente pero aún inocente.\nHija de Alden.\n\nTrasos físicos: Cabello corto, cara delgada. Ojos castaño claro, nariz delgada y labios llenos.");
+        npc.canBePickpocketed = true;
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Good day."));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Bom dia."));

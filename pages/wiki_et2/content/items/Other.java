@@ -55,6 +55,7 @@ public final class Other extends DataHelper {
         App.DataManager.add(Enums.DataTypes.ITEM, havarusNorthMap());//
         App.DataManager.add(Enums.DataTypes.ITEM, havarusSouthMap());//
         App.DataManager.add(Enums.DataTypes.ITEM, esperandMap());//
+        App.DataManager.add(Enums.DataTypes.ITEM, dragonlandMap());//
         App.DataManager.add(Enums.DataTypes.ITEM, wazelMap());//
         App.DataManager.add(Enums.DataTypes.ITEM, ayalonMap());//
         App.DataManager.add(Enums.DataTypes.ITEM, growrocksMap());//
@@ -91,6 +92,17 @@ public final class Other extends DataHelper {
         App.DataManager.add(Enums.DataTypes.ITEM, goldenGoblet());
         App.DataManager.add(Enums.DataTypes.ITEM, rubyGoblet());
         App.DataManager.add(Enums.DataTypes.ITEM, contractOfCattleNegotiation());
+
+        // Dragons v2.0.0.0
+        App.DataManager.add(Enums.DataTypes.ITEM, fireBlood());
+        App.DataManager.add(Enums.DataTypes.ITEM, iceBlood());
+        App.DataManager.add(Enums.DataTypes.ITEM, acidBlood());
+        App.DataManager.add(Enums.DataTypes.ITEM, dragonScale());
+        App.DataManager.add(Enums.DataTypes.ITEM, bloodBlade());
+        App.DataManager.add(Enums.DataTypes.ITEM, potionOfNature());
+        App.DataManager.add(Enums.DataTypes.ITEM, lisportFish());
+        App.DataManager.add(Enums.DataTypes.ITEM, esperandFish());
+        App.DataManager.add(Enums.DataTypes.ITEM, havarusFish());
     }
 
     Item wheat() {
@@ -809,6 +821,25 @@ public final class Other extends DataHelper {
         return item;
     }
 
+    Item dragonlandMap() {
+        Item item = new Item("Dragonland Map", Enums.ItemType.MISC);
+        item.addNameTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Mapa das Terras dos Dragões");
+        item.addNameTranslation(CoreEnums.AvailableLanguages.SPANISH, "Mapa de Dragonland");
+
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "A map of Dragonland region.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Um mapa da região da Terras dos Dragões.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Un mapa de la región de Dragonland.");
+
+        item.weight = 0.1f;
+        item.marketValue = 10;
+        item.sellable = true;
+        item.discardable = true;
+        item.imgFile = "item_map";
+        item.canBeIngredient = false;
+
+        return item;
+    }
+
     Item wazelMap() {
         Item item = new Item("Wazel Map", Enums.ItemType.MISC);
         item.addNameTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Mapa Wazel");
@@ -1370,9 +1401,9 @@ public final class Other extends DataHelper {
         item.addNameTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Caixote de Armas");
         item.addNameTranslation(CoreEnums.AvailableLanguages.SPANISH, "Cajón de Armas");
 
-        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "A heavy crate packed with weapons destined for the Watch Tower. Careful with this one.");
-        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Um caixote pesado com armas destinadas à Torre de Guarda. Cuidado com este.");
-        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Un cajón pesado lleno de armas destinadas a la Torre de Guardia. Cuidado con este.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "A heavy crate packed with weapons destined for someone. Careful with this one.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Um caixote pesado com armas destinadas à alguém. Cuidado com este.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Un cajón pesado lleno de armas destinadas a alguien. Cuidado con este.");
 
         item.weight = 12.0f;
         item.marketValue = 0;
@@ -1466,8 +1497,140 @@ public final class Other extends DataHelper {
 
         return item;
     }
+
+    Item fireBlood() {
+        Item item = new Item("Fire Blood", Enums.ItemType.MISC);
+        item.addNameTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Sangue de Fogo");
+        item.addNameTranslation(CoreEnums.AvailableLanguages.SPANISH, "Sangre de Fuego");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "Fire dragon blood.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Sangue de dragão de fogo.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Sangre de dragón de fuego.");
+        item.weight = 0.5f;
+        item.marketValue = 20;
+        return item;
+    }
+
+    Item iceBlood() {
+        Item item = new Item("Ice Blood", Enums.ItemType.MISC);
+        item.addNameTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Sangue de Gelo");
+        item.addNameTranslation(CoreEnums.AvailableLanguages.SPANISH, "Sangre de Hielo");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "Ice dragon blood.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Sangue do dragão de gelo.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Sangre del dragón de hielo.");
+        item.weight = 0.5f;
+        item.marketValue = 15;
+        return item;
+    }
+
+    Item acidBlood() {
+        Item item = new Item("Acid Blood", Enums.ItemType.MISC);
+        item.addNameTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Sangue Ácido");
+        item.addNameTranslation(CoreEnums.AvailableLanguages.SPANISH, "Sangre Ácida");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "Wyvern blood.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Sangue de Wyvern.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Sangre de Wyvern.");
+        item.weight = 0.5f;
+        item.marketValue = 18;
+        return item;
+    }
+
+    Item dragonScale() {
+        Item item = new Item("Dragon Scale", Enums.ItemType.MISC);
+        item.addNameTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Escamas de dragão");
+        item.addNameTranslation(CoreEnums.AvailableLanguages.SPANISH, "Escamas de dragón");
+
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "A shimmering, iron-hard scale from a dragon.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Uma escama brilhante e dura como ferro de um dragão.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Una escama reluciente y dura como el hierro de un dragón.");
+        item.weight = 1.0f;
+        item.marketValue = 14;
+        return item;
+    }
+
+    Item bloodBlade() {
+        Item item = new Item("Blood Blade", Enums.ItemType.MISC);
+        item.addNameTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Lâmina de Sangue");
+        item.addNameTranslation(CoreEnums.AvailableLanguages.SPANISH, "Hoja de Sangre");
+
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "A tool used to scare dragons by scent, coated in the blood of their own.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Uma ferramenta usada para assustar dragões pelo cheiro, revestida com o próprio sangue deles.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Una herramienta que se utiliza para asustar a los dragones mediante el olor, recubierta con la misma sangre que más temen: la suya.");
+
+        item.weight = 1.2f;
+        item.marketValue = 0;
+        item.sellable = false;
+        item.buyable = false;
+        item.discardable = false;
+        item.canBeIngredient = false;
+        return item;
+    }
+
+    Item potionOfNature() {
+        Item item = new Item("Potion of Nature", Enums.ItemType.MISC);
+        item.addNameTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Poção da Natureza");
+        item.addNameTranslation(CoreEnums.AvailableLanguages.SPANISH, "Poción de la Naturaleza");
+
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "A swirling, verdant elixir that smells of fresh rain and deep forest moss.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Um elixir turbulento e verdejante que cheira a chuva fresca e musgo de floresta profunda.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Un elixir verde y arremolinado que huele a lluvia fresca y musgo de bosque profundo.");
+        item.weight = 0.2f;
+        item.marketValue = 0;
+        item.sellable = false;
+        item.buyable = false;
+        item.discardable = false;
+        item.canBeIngredient = false;
+        item.imgFile = "item_potion_nature";
+        return item;
+    }
+
+    Item lisportFish() {
+        Item item = new Item("Lisport Fish", Enums.ItemType.MISC);
+        item.addNameTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Peixe de Lisport");
+        item.addNameTranslation(CoreEnums.AvailableLanguages.SPANISH, "Pez de Lisport");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "A rare azure-scaled fish found only in the deepest currents of Lisport.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Um raro peixe de escamas azuladas encontrado apenas nas correntes mais profundas de Lisport.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Un raro pez de escamas azuladas que solo se encuentra en las corrientes más profundas de Lisport.");
+        item.weight = 0.3f;
+        item.marketValue = 0;
+        item.sellable = false;
+        item.buyable = false;
+        item.discardable = false;
+        item.canBeIngredient = false;
+        item.imgFile = "item_fish_lisport";
+        return item;
+    }
+
+    Item esperandFish() {
+        Item item = new Item("Esperand Fish", Enums.ItemType.MISC);
+        item.addNameTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Peixe de Esperand");
+        item.addNameTranslation(CoreEnums.AvailableLanguages.SPANISH, "Pez de Esperand");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "A hardy, crystalline fish that thrives in the sub-zero waters of Esperand.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Um peixe resistente e cristalino que prospera nas águas abaixo de zero de Esperand.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Un pez resistente y cristalino que prospera en las aguas bajo cero de Esperand.");
+        item.weight = 0.3f;
+        item.marketValue = 0;
+        item.sellable = false;
+        item.buyable = false;
+        item.discardable = false;
+        item.canBeIngredient = false;
+        item.imgFile = "item_fish_esperand";
+        return item;
+    }
+
+    Item havarusFish() {
+        Item item = new Item("Havarus Fish", Enums.ItemType.MISC);
+        item.addNameTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Peixe de Havarus");
+        item.addNameTranslation(CoreEnums.AvailableLanguages.SPANISH, "Pez de Havarus");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "A magnificent golden-finned fish native to the royal lakes of Havarus.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Um magnífico peixe de barbatanas douradas nativo dos lagos reais de Havarus.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Un magnífico pez de aletas doradas nativo de los lagos reales de Havarus.");
+        item.weight = 0.3f;
+        item.marketValue = 0;
+        item.sellable = false;
+        item.buyable = false;
+        item.discardable = false;
+        item.canBeIngredient = false;
+        item.imgFile = "item_fish_havarus";
+        return item;
+    }
 }
-
-
-
-

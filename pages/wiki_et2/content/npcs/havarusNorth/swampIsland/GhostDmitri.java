@@ -3,7 +3,6 @@ package com.cnx.endlesstalestwo.data.npcs.havarusNorth.swampIsland;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.ENGLISH;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.PORTUGUESE;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.SPANISH;
-import static com.cnx.endlesstalestwo.libs.Utils.isInsideAvailableHours;
 import static com.cnx.endlesstalestwo.libs.Utils.isInsideNightHoursForQuests;
 
 import com.cnx.endlesstalestwo.App;
@@ -26,12 +25,10 @@ public class GhostDmitri extends DataHelper {
         Npc npc = new Npc("Ghost Dmitri");
         npc.addNameTranslation(PORTUGUESE, "Fantasma Dmitri");
         npc.addNameTranslation(SPANISH, "Fantasma Dmitri");
-        npc.age = 0; // Ghost - ageless
+        npc.age = 0;
         npc.job = Enums.NPCJobs.NONE;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.allowTraitsAnalysis = false;
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("*A translucent figure appears in the mist*"));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("*Uma figura translúcida aparece na névoa*"));
@@ -45,13 +42,13 @@ public class GhostDmitri extends DataHelper {
         npc.requirementValidations = (chara, ctx) -> {
             // Must have the quest and not be completed
             if (!LibQuest.charHasQuest(QuestsIds.GHOST_BONES, chara) ||
-                LibQuest.isQuestComplete(chara, QuestsIds.GHOST_BONES)) {
+                    LibQuest.isQuestComplete(chara, QuestsIds.GHOST_BONES)) {
                 return Enums.RequirementVerification.NOT_OK;
             }
 
             // After part 6 (bones burned), ghost no longer exists
             if (LibQuest.isCharacterAtQuestPart(chara, QuestsIds.GHOST_BONES, 6) ||
-                LibQuest.isCharacterAtQuestPart(chara, QuestsIds.GHOST_BONES, 8)) {
+                    LibQuest.isCharacterAtQuestPart(chara, QuestsIds.GHOST_BONES, 8)) {
                 return Enums.RequirementVerification.NOT_OK;
             }
 

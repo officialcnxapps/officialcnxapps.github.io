@@ -24,6 +24,7 @@ public class Lauisy extends DataHelper {
         npc.addDescriptionTranslation(ENGLISH, "This girl is still learning about life. She only knows well what she does.\nShe is agile and very capable of learning new things. Curious.\n\nHer physical traits: Short hair, as black as her skin. Very beautiful light green eyes. Slightly rosy cheeks.");
         npc.addDescriptionTranslation(PORTUGUESE, "Essa garota ainda está aprendendo sobre a vida. Conhece bem apenas aquilo que faz.\nÉ ágil e muito capaz de aprender coisas novas. Curiosa.\n\nSeus traços físicos: Cabelos curtos e negros como sua pele. Olhos verdes claros muito bonitos. Bochechas levemente rosadas.");
         npc.addDescriptionTranslation(SPANISH, "Esta chica aún está aprendiendo sobre la vida. Solo conoce bien lo que hace.\nEs ágil y muy capaz de aprender cosas nuevas. Curiosa.\n\nSus rasgos físicos: Cabello corto y negro como su piel. Ojos verdes claros muy hermosos. Mejillas ligeramente sonrosadas.");
+        npc.canBePickpocketed = true;
 
         npc.generateRandomByes();
         npc.generateRandomGreetings();

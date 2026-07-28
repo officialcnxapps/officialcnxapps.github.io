@@ -25,9 +25,9 @@ public class HingusAtFarmland extends DataHelper {
         npc.age = 49;
         npc.job = Enums.NPCJobs.HANDYMAN;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A good-humored man, usually happy.\nVery creative and helpful, with a good sense of community.\nHe enjoys his work and hobbies more than he probably should.\n\nHis physical traits: Fat face with full cheeks. Gentle smile, well-kept graying beard matching his short hair. Wears a monocle.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Um senhor com bom humor, usualmente feliz.\nMuito criativo e prestativo, bom senso de comunidade.\nGosta do trabalho e do seus passatempos mais do que devia.\n\nSeus traços físicos: Rosto gordo, com bochechas cheias. Sorriso suave, barba bem cuidada de cor grisalha como seu curto cabelo. Usa um monóculo.");
+        npc.addDescriptionTranslation(SPANISH, "Un hombre de buen humor, usualmente feliz.\nMuy creativo y servicial, con buen sentido de comunidad.\nDisfruta de su trabajo y sus pasatiempos más de lo que debería.\n\nSus rasgos físicos: Rostro gordo con mejillas llenas. Sonrisa suave, barba canosa bien cuidada como su cabello corto. Usa un monóculo.");
 
         npc.requirementValidations = (chara, ctx) -> {
             if (LibQuest.isCharacterAtQuestPart(chara, REINFORCE_FARMLAND, 4)

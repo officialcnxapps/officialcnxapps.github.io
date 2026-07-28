@@ -31,6 +31,7 @@ public class ElvishMarket {
         // Equipment
         shop.addStockItem(ItemsIds.NATURE_SHIELD);
         shop.addStockItem(ItemsIds.NATURE_NECKLACE);
+        shop.addStockItem(ItemsIds.CLOAK_OF_ALCHEMISTS);
 
         // Magical Items
         shop.addStockItem(ItemsIds.ROD_OF_RIGHTEOUS);

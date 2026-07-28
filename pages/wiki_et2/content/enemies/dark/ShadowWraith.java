@@ -19,6 +19,7 @@ public class ShadowWraith {
         enemy.setDefense(2);
         enemy.setAgility(18);
         enemy.setStrength(11);
+        enemy.setMagic(12);
         enemy.minDamage = 3;
         enemy.maxDamage = 6;
         enemy.damageModifier = 2;

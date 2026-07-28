@@ -25,11 +25,12 @@ public class Elisa extends DataHelper {
     Npc npc() {
         Npc npc = new Npc("Elisa");
         npc.gender = Enums.Gender.FEMALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "Expressive, she lets her feelings of the moment shape her interactions.\nShe enjoys the simple life of her village but doesn't live on the bare minimum alone. Smart.\n\nHer physical traits: Fair, rosy skin. Golden blonde hair, straight and braided. Bluish eyes with an opinionated expression.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Expressiva, deixa seus sentimentos do momento envolver suas interações.\nGosta da vida simples da sua vila mas não vive apenas do básico. Esperta.\n\nSeus traços físicos: pele clara e rosada. Cabelos loiros dourados, lisos e trançados. Olhos azulados com expressão opinativa.");
+        npc.addDescriptionTranslation(SPANISH, "Expresiva, deja que sus sentimientos del momento envuelvan sus interacciones.\nDisfruta de la vida sencilla de su aldea pero no vive solo de lo básico. Inteligente.\n\nSus rasgos físicos: Piel clara y rosada. Cabello rubio dorado, liso y trenzado. Ojos azulados con expresión opinativa.");
         npc.age = 28;
         npc.job = Enums.NPCJobs.FEMALE_FARMER;
+        npc.canBePickpocketed = true;
 
         // Add greetings
         npc.greetingsMessages.put(ENGLISH, createList("Welcome to Letow, traveler! This village may be small, but it has its own charm.", "Hello there! Nice to see a new face in our little village."));

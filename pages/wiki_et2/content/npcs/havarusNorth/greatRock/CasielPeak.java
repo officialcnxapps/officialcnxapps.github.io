@@ -24,9 +24,7 @@ public class CasielPeak extends DataHelper {
         npc.age = 186;
         npc.job = Enums.NPCJobs.PRIEST;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.allowTraitsAnalysis= false;
 
         // Greetings vazias - vai direto para a conversa
         npc.greetingsMessages.put(ENGLISH, java.util.Collections.singletonList("You..."));

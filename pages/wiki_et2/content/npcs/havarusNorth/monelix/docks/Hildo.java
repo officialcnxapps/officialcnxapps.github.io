@@ -21,9 +21,10 @@ public class Hildo extends DataHelper {
         npc.age = 26;
         npc.job = Enums.NPCJobs.LONGSHOREMAN;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A hardworking laborer. He makes up for his low intellect with dedication and strength.\nHe enjoys his work and doesn't make much more of life than that.\n\nHis physical traits: Brown skin, thin face. Sparse beard and messy brown hair.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Trabalhador esforçado. Compensa o baixo intelecto com dedicação e força.\nGosta do trabalho e não faz muito mais da vida do que isso.\n\nSeus traços físicos: Pele morena, rosto magro. Barba rala e cabelo marrom despenteado.");
+        npc.addDescriptionTranslation(SPANISH, "Un trabajador esforzado. Compensa su bajo intelecto con dedicación y fuerza.\nDisfruta de su trabajo y no hace mucho más de la vida que eso.\n\nSus rasgos físicos: Piel morena, rostro delgado. Barba escasa y cabello marrón despeinado.");
+        npc.canBePickpocketed = true;
 
         npc.hasRandomizedConversations = true;
 

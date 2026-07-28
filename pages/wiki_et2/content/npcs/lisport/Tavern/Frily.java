@@ -31,6 +31,7 @@ public class Frily extends DataHelper {
         npc.addDescriptionTranslation(ENGLISH, "A kind lady. Always willing to work and care for those who frequent the tavern.\nAgile in everyday tasks. Focused on what she does.\n\nPhysical traits: Dark and smooth skin. Large brown eyes. Black hair, mouth and nose are prominent.");
         npc.addDescriptionTranslation(PORTUGUESE, "Uma bondosa senhora. Sempre disponível para trabalhar e cuidar dos que frequentam a taberna.\nÁgil nas tarefas do dia-a-dia. Focada no que faz.\n\nSeus taços físicos: Pele escura e lisa. Olhos grandes e castanhos. Cabelo negro, boca e nariz proeminentes.");
         npc.addDescriptionTranslation(SPANISH, "Una mujer amable. Siempre dispuesta a trabajar y cuidar a los que frecuentan la taberna.\nÁgil en tareas cotidianas. Enfocada en lo que hace.\n\nTrasos físicos: Piel oscura y suave. Ojos grandes y castaños. Cabello negro, boca y nariz prominentes.");
+        npc.canBePickpocketed = true;
 
         // Conversation options
         ConversationOption cv1 = new ConversationOption(0, 0);

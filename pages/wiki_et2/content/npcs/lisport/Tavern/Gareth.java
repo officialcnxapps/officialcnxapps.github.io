@@ -29,6 +29,7 @@ public class Gareth extends DataHelper {
         npc.addDescriptionTranslation(ENGLISH, "Solitary and quiet. A somewhat 'bland' man.\nDoesn't seem very satisfied with his life, but lives it one day at a time.\nA worker who knows his craft well.\n\nPhysical traits: Bald on the top of his head. Thin cheeks. Light green eyes and short beard and mustache.");
         npc.addDescriptionTranslation(PORTUGUESE, "Solitário e quieto. Um homem meio 'sem sal'.\nParece não estar muito satisfeito com sua vida, mas vai vivendo um dia de cada vez.\nTrabalhador que conhece bem seu ofício.\n\nSeus taços físicos: Calvo no topo da cabeça. bochechas magras. Olhos verdes claros e barba e bigode curtos.");
         npc.addDescriptionTranslation(SPANISH, "Solitario y callado. Un hombre algo 'soso'.\nNo parece muy satisfecho con su vida, pero la vive un día a la vez.\nUn trabajador que conoce bien su oficio.\n\nTrasos físicos: Calvo en la parte superior de la cabeza. Mejillas delgadas. Ojos verde claro y barba y bigote cortos.");
+        npc.canBePickpocketed = true;
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Hello there."));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Olá."));

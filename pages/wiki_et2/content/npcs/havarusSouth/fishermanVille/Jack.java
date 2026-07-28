@@ -3,6 +3,7 @@ package com.cnx.endlesstalestwo.data.npcs.havarusSouth.fishermanVille;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.ENGLISH;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.PORTUGUESE;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.SPANISH;
+import static com.cnx.endlesstalestwo.data.quests.QuestsIds.STUDYING_FISH;
 
 import com.cnx.endlesstalestwo.App;
 import com.cnx.endlesstalestwo.data.DataHelper;
@@ -23,12 +24,13 @@ public class Jack extends DataHelper {
 
     Npc npc() {
         Npc npc = new Npc("Jack");
-        npc.age = 44;
+        npc.age = 41;
         npc.job = Enums.NPCJobs.MALE_FISHERMAN;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A strong and hardworking man.\nHe seeks the best for the village and for his family. He is Dalia's son.\n\nHis physical traits: Sparse beard. Focused gaze with deep eyes. He uses a cloth to cover the top of his head.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Um homem forte e trabalhador.\nBusca o melhor para a vila e para sua família. É filho de Dalia.\n\nSeus traços físicos: Barba rala. Olhar compenetrado com olhos profundos. Utiliza um tecido para cobrir o topo da cabeça.");
+        npc.addDescriptionTranslation(SPANISH, "Un hombre fuerte y trabajador.\nBusca lo mejor para la aldea y para su familia. Es hijo de Dalia.\n\nSus rasgos físicos: Barba rala. Mirada concentrada con ojos profundos. Utiliza una tela para cubrir la parte superior de su cabeza.");
+        npc.canBePickpocketed = true;
 
         npc.hasRandomizedConversations = true;
 
@@ -138,6 +140,29 @@ public class Jack extends DataHelper {
         };
         npc.conversationOptions.add(cvRestart);
 
+        // ========================================
+        // QUEST: STUDYING FISH
+        // ========================================
+
+        // Part 1: Talk to Jack
+        ConversationOption cvFishPart1 = new ConversationOption(0, 0);
+        cvFishPart1.addOptionText(ENGLISH, "I'm helping an elven student. He needs a sample of Havarus fish for his research.",
+                "Elf? From Ayalon? Studying the waters, is he? That's a noble pursuit. \n\nI just pulled in a particularly fine specimen from the bay. Here, take this Havarus fish. It's as fresh as they come and should give him plenty to look at. One less fish will not be a be problem.");
+        cvFishPart1.addOptionText(PORTUGUESE, "Estou ajudando um estudante elfo. Ele precisa de uma amostra de peixe de Havarus para sua pesquisa.",
+                "Elfo? De Ayalon? Estudando as águas, não é? É uma busca nobre. \n\nAcabei de pescar um espécime particularmente bom na baía. Aqui, leve este peixe de Havarus. Está o mais fresco possível e deve dar muito o que pesquisar. Um peixe a menos não me trará problema algum.");
+        cvFishPart1.addOptionText(SPANISH, "Estoy ajudando a un estudiante elfo. Necesita una muestra de pez de Havarus para su investigación.",
+                "¿Elfo? ¿De Ayalon? ¿Estudiando las aguas, verdad? Es una noble búsqueda. \n\nAcabo de sacar un espécimen particularmente fino de la bahía. Toma, llévate este pez de Havarus. Está tan fresco como puede estarlo y debería darle mucho que investigar.");
+        cvFishPart1.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isCharacterAtQuestPart(chara, STUDYING_FISH, 1)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        cvFishPart1.listeners = (ctx, currentFragment) -> {
+            LibInventory.addToInventory(ItemsIds.HAVARUS_FISH, 1, App.getPlayerChar());
+            LibQuest.updateQuest(STUDYING_FISH, 2, App.getPlayerChar(), ctx);
+        };
+        npc.conversationOptions.add(cvFishPart1);
 
         return npc;
     }

@@ -256,6 +256,7 @@ public class EquippableJewelsAndBags extends DataHelper {
         equipItem.modifiers.add(new AttributeModifierValue(Enums.AttributeName.LUCK, 3));
         equipItem.modifiers.add(new AttributeModifierValue(Enums.AttributeName.AGILITY, 1));
         equipItem.canBeIngredient = false;
+        equipItem.rarity = Enums.Rarity.RARE;
 
         equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "The most noble gems mixed with magical powers made this a special piece of jewelry.");
         equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "As pedras preciosas mais nobres misturadas com poderes mágicos fizeram desta uma joia especial.");
@@ -415,6 +416,7 @@ public class EquippableJewelsAndBags extends DataHelper {
         equipItem.weight = .3f;
         equipItem.weightIncrease = 20;
         equipItem.canBeIngredient = false;
+        equipItem.rarity = Enums.Rarity.SPECIAL;
 
         equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "Allows you to carry 20kg (44lbs) more.");
         equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Permite carregar 20kg a mais.");
@@ -434,15 +436,13 @@ public class EquippableJewelsAndBags extends DataHelper {
         equipItem.weight = 0.3f;
         equipItem.canBeIngredient = false;
 
-        // 25% Dark resistance
         equipItem.resistancesModifiers.put(Enums.Elements.DARK, 25);
 
-        // Reduce LUCK by 1, increase MAGIC and STRENGTH by 1
         equipItem.modifiers.add(new AttributeModifierValue(Enums.AttributeName.LUCK, -1));
         equipItem.modifiers.add(new AttributeModifierValue(Enums.AttributeName.MAGIC, 1));
         equipItem.modifiers.add(new AttributeModifierValue(Enums.AttributeName.STRENGTH, 1));
 
-        equipItem.rarity = Enums.Rarity.SPECIAL;
+        equipItem.rarity = Enums.Rarity.RARE;
 
         equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "A cursed amulet glowing with dark energy. (25% Dark resistance)");
         equipItem.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Um amuleto amaldiçoado brilhando com energia sombria. (25% resistência Escuridão)");

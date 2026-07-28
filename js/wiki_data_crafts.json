@@ -1681,7 +1681,7 @@
     {
       "result": {
         "name_en": "Mini Crossbow",
-        "name_pt": "Mini Crossbow",
+        "name_pt": "Mini Besta",
         "img": "item_mini_crossbow"
       },
       "ingredients": [
@@ -1703,6 +1703,60 @@
       ],
       "time": 50,
       "successRate": 35,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Dragon Mail",
+        "name_pt": "Dragon Mail",
+        "img": "item_dragon_mail"
+      },
+      "ingredients": [
+        {
+          "name_en": "Armor Mold",
+          "name_pt": "Molde de Armadura",
+          "img": "item_armor_mold"
+        },
+        {
+          "name_en": "Dragon Scale",
+          "name_pt": "Dragon Scale",
+          "img": "item_dragon_scale"
+        },
+        {
+          "name_en": "Diamond",
+          "name_pt": "Diamante",
+          "img": "item_diamond"
+        }
+      ],
+      "time": 120,
+      "successRate": 4,
+      "type": "GENERAL"
+    },
+    {
+      "result": {
+        "name_en": "Dragon Shield",
+        "name_pt": "Dragon Shield",
+        "img": "item_dragon_shield"
+      },
+      "ingredients": [
+        {
+          "name_en": "Dragon Scale",
+          "name_pt": "Dragon Scale",
+          "img": "item_dragon_scale"
+        },
+        {
+          "name_en": "Acid Blood",
+          "name_pt": "Acid Blood",
+          "img": "item_acid_blood"
+        },
+        {
+          "name_en": "Steel Ingot",
+          "name_pt": "Lingote de Aço",
+          "img": "item_steel_ingot"
+        }
+      ],
+      "time": 100,
+      "successRate": 6,
       "type": "GENERAL"
     }
   ],

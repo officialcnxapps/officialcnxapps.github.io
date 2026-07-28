@@ -3,6 +3,7 @@ package com.cnx.endlesstalestwo.data.npcs.growrocks;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.ENGLISH;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.PORTUGUESE;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.SPANISH;
+import static com.cnx.endlesstalestwo.data.quests.QuestsIds.DRAGONS;
 
 import com.cnx.endlesstalestwo.App;
 import com.cnx.endlesstalestwo.data.DataHelper;
@@ -178,7 +179,78 @@ public class OlimanWisehead extends DataHelper {
         cvRoleplay1.addOptionText(ENGLISH, "Greetings.", "*Looks up from examining a stone tablet*\nAh, the surface dweller who gained entry. Our guard spoke of you. Welcome.");
         cvRoleplay1.addOptionText(PORTUGUESE, "Saudações.", "*Levanta o olhar de examinar uma tabuleta de pedra*\nAh, o habitante da superfície que ganhou entrada. Nosso guarda falou de você. Bem-vindo.");
         cvRoleplay1.addOptionText(SPANISH, "Saludos.", "*Levanta la mirada de una tableta de piedra*\nAh, el habitante de la superficie que ganó la entrada. Nuestro guardia habló de ti. Bienvenido.");
+        cvRoleplay1.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isQuestComplete(chara, QuestsIds.PEOPLE_OF_THE_DEPTHS)) {
+                return Enums.RequirementVerification.NOT_OK;
+            }
+            return Enums.RequirementVerification.OK;
+        };
         npc.conversationOptions.add(cvRoleplay1);
+
+        // ========================================
+        // QUEST: DRAGONS?
+        // ========================================
+
+        // Part 1: Talk to Oliman Wisehead
+        ConversationOption cvDragonsPart1 = new ConversationOption(0, 0);
+        cvDragonsPart1.addOptionText(ENGLISH, "Janusa mentioned ancient cycles and dragons seeking nests.",
+                "*His eyes narrow, and he leans in closer*\nAye, [GENDER_FORMAL_CALL], the history of my people is written in fire and shadow. My ancestor, Wisehead the First, guided us to these halls to escape the winged terrors of old. We found safety in the deep, but we never forgot. \n\nIf the dragons are returning, the surface kingdoms are in grave danger. You should seek out someone with experience in history and knowledge of ancient creatures. There are scholars who keep records of world legends and might have heard reports from other realms. If anyone knows the pattern of their migration, it's those who study the past.");
+        cvDragonsPart1.addOptionText(PORTUGUESE, "Janusa mencionou ciclos antigos e dragões procurando ninhos.",
+                "*Os olhos dele se estreitam e ele se inclina mais perto*\nSim, [GENDER_FORMAL_CALL], a história do meu povo é escrita em fogo e sombra. Meu ancestral, Wisehead o Primeiro, nos guiou para estes salões para escapar dos terrores alados de outrora. Encontramos segurança nas profundezas, mas nunca esquecemos. \n\nSe os dragões estão retornando, os reinos da superfície estão em grande perigo. Você deve procurar alguém com experiência em história e conhecimento de criaturas antigas. Existem estudiosos que mantêm registros das lendas do mundo e podem ter ouvido relatos de outros reinos. Se alguém conhece o padrão de sua migração, são aqueles que estudam o passado.");
+        cvDragonsPart1.addOptionText(SPANISH, "Janusa mencionó ciclos antiguos y dragones buscando nidos.",
+                "*Sus ojos se estrechan y se inclina más cerca*\nSí, [GENDER_FORMAL_CALL], la historia de mi pueblo está escrita en fuego y sombra. Mi ancestro, Wisehead Primero, nos guió a estos salones para escapar de los terrores alados de antaño. Encontramos seguridad en lo profundo, pero nunca olvidamos. \n\nSi los dragones están regresando, los reinos de la superficie están en grave peligro. Deberías buscar a alguien con experiencia en historia y conocimiento de criaturas antiguas. Hay eruditos que guardan registros de las leyendas del mundo y podrían haber oído informes de otros reinos. Si alguien conoce el patrón de su migración, son los que estudian el pasado.");
+        cvDragonsPart1.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isCharacterAtQuestPart(chara, DRAGONS, 1)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        cvDragonsPart1.listeners = (ctx, currentFragment) -> {
+            LibQuest.updateQuest(DRAGONS, 2, App.getPlayerChar(), ctx);
+        };
+        npc.conversationOptions.add(cvDragonsPart1);
+
+        // Part 7: Inform Oliman Wisehead (Final)
+        ConversationOption cvDragonsPart7 = new ConversationOption(0, 0);
+        cvDragonsPart7.addOptionText(ENGLISH, "Governor, I've confirmed it. I saw a dragon at the Ice Mountains. They are migrating.",
+                "*He slams a fist onto the table, his face pale*\nBy the ancestors... Growrocks is protected by layers of stone, but for the humans on the surface, the best course would be to ensure the presence of soldiers and mages on the mountains. You must prevent the dragons from completing their migration and making their nests. You have done a great service today, surface dweller. May our peoples stand strong against what is to come.");
+        cvDragonsPart7.addOptionText(PORTUGUESE, "Governador, eu confirmei. Vi um dragão nas Montanhas de Gelo. Eles estão migrando.",
+                "*Ele bate o punho na mesa, o rosto pálido*\nPelos ancestrais... Growrocks está protegida por camadas de pedra, mas para os humanos na superfície, o melhor seria garantir a presença de soldados e magos nas montanhas. Vocês devem evitar que os dragões completem sua migração e façam seus ninhos. Você prestou um grande serviço hoje, habitante da superfície. Que nossos povos permaneçam fortes contra o que está por vir.");
+        cvDragonsPart7.addOptionText(SPANISH, "Gobernador, lo he confirmado. Vi un dragón en las Montañas de Hielo. Están migrando.",
+                "*Golpea la mesa con el puño, con el rostro pálido*\nPor los ancestros... Growrocks está protegida por capas de piedra, pero para los humanos en la superficie, lo mejor sería asegurar la presencia de soldados y magos en las montañas. Useted debem evitar que los dragones completen su migración y hagan sus nidos. Has prestado un gran servicio hoy, habitante de la superficie. Que nuestros pueblos se mantengan fuertes ante lo que está por venir.");
+        cvDragonsPart7.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isCharacterAtQuestPart(chara, DRAGONS, 7)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        cvDragonsPart7.listeners = (ctx, currentFragment) -> {
+            LibQuest.completeQuest(DRAGONS, App.getPlayerChar(), 11, ctx);
+            LibQuest.includeQuestToQuestbook(QuestsIds.AWAITING_THE_DRAGONS, App.getPlayerChar(), ctx);
+        };
+        npc.conversationOptions.add(cvDragonsPart7);
+
+        // ========================================
+        // QUEST: TOO POWERFUL
+        // ========================================
+
+        // Part 2: Talk to Oliman Wisehead
+        ConversationOption cvTooPowerful2 = new ConversationOption(0, 0);
+        cvTooPowerful2.addOptionText(ENGLISH, "The dragons have coordinated their attacks. We need a way to drive them back.",
+                "*He grits his teeth, his hand tightening around the hilt of his ceremonial dagger*\nCoordinated? Then this is no mere migration. It is an invasion.\n\nHistorically, our ancestors used rituals and repellents to keep them at bay. Secrets belong to the families who tended the old ways. Fiola Brownhand's family was master of such things. She may still know the methods to make these beasts fear us again. Find her at the gardens.");
+        cvTooPowerful2.addOptionText(PORTUGUESE, "Os dragões coordenaram seus ataques. Precisamos de um jeito de expulsá-los.",
+                "*Ele range os dentes, sua mão apertando o cabo de sua adaga cerimonial*\nCoordenados? Então isso não é uma mera migração. É uma invasão.\n\nHistoricamente, nossos ancestrais usavam rituais e repelentes para mantê-los à distância. Segredos pertencem às famílias que guardavam os antigos costumes. A família de Fiola Brownhand era mestre em tais coisas. Ela ainda pode saber os métodos para fazer essas feras nos temerem novamente. Encontre-a nos jardins.");
+        cvTooPowerful2.addOptionText(SPANISH, "Los dragones han coordinado sus ataques. Necesitamos una forma de expulsarlos.",
+                "*Rechina los dientes, su mano apretando la empuñadura de su daga ceremonial*\n¿Coordinados? Entonces esto no es una mera migración. Es una invasión.\n\nHistóricamente, nuestros antepasados usaban rituales y repelentes para mantenerlos a raya. Los secretos pertenecen a las familias que guardaban las antiguas costumbres. La familia de Fiola Brownhand era maestra en tales cosas. Ella aún podría conocer los métodos para hacer que estas bestias vuelvan a temernos. Búscala en los jardines.");
+        cvTooPowerful2.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isCharacterAtQuestPart(chara, QuestsIds.TOO_POWERFUL, 2)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        cvTooPowerful2.listeners = (ctx, currentFragment) -> LibQuest.updateQuest(QuestsIds.TOO_POWERFUL, 3, App.getPlayerChar(), ctx);
+        npc.conversationOptions.add(cvTooPowerful2);
+
 
         // ===== ROLEPLAY 2: About leadership =====
         ConversationOption cvRoleplay2 = new ConversationOption(0, 0);

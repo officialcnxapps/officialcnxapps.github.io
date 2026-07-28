@@ -24,6 +24,7 @@ public class Laurias extends DataHelper {
         npc.addDescriptionTranslation(ENGLISH, "A young elf with a peaceful aura.\nNature scholar and likely a future druid.\nPeaceful, calm, and intelligent.\n\nHis physical traits: Straight, almost white blonde hair. Light gray eyes, square face without a beard.");
         npc.addDescriptionTranslation(PORTUGUESE, "Um jovem elfo com uma aura tranquila.\nEstudioso da natureza e provavelmente um futuro druida.\nPacífico, calmo e inteligente.\n\nSeus traços físicos: Cabelo loiro quase branco, liso. Olhos cinzas claros, rosto quadrado sem barba.");
         npc.addDescriptionTranslation(SPANISH, "Un joven elfo con un aura tranquila.\nEstudioso de la naturaleza y probablemente un futuro druida.\nPacífico, tranquilo e inteligente.\n\nSus rasgos físicos: Cabello rubio casi blanco, liso. Ojos grises claros, rostro cuadrado sin barba.");
+        npc.canBePickpocketed = true;
 
         // Conversation options
         ConversationOption cv1 = new ConversationOption(0, 0);

@@ -31,6 +31,10 @@ import com.cnx.endlesstalestwo.data.enemies.common.WildBoar;
 import com.cnx.endlesstalestwo.data.enemies.dark.DarkCultist;
 import com.cnx.endlesstalestwo.data.enemies.dark.DarkSpecter;
 import com.cnx.endlesstalestwo.data.enemies.dark.DesertGhoul;
+import com.cnx.endlesstalestwo.data.enemies.fire.FireDragon;
+import com.cnx.endlesstalestwo.data.enemies.waterIce.IceDragon;
+import com.cnx.endlesstalestwo.data.enemies.earth.Wyvern;
+import com.cnx.endlesstalestwo.data.enemies.bosses.DragonKing;
 import com.cnx.endlesstalestwo.data.enemies.fire.InfernalHound;
 import com.cnx.endlesstalestwo.data.enemies.earth.SandDemon;
 import com.cnx.endlesstalestwo.data.enemies.dark.ShadowWraith;
@@ -119,6 +123,12 @@ public class EnemiesDataManager extends DataHelper {
         App.DataManager.add(Enums.DataTypes.ENEMY, Targon.get());
         App.DataManager.add(Enums.DataTypes.ENEMY, CasielCorrupted.get());
         App.DataManager.add(Enums.DataTypes.ENEMY, CasielDeathKing.get());
+
+        // ===== DRAGONS =====
+        App.DataManager.add(Enums.DataTypes.ENEMY, FireDragon.get());
+        App.DataManager.add(Enums.DataTypes.ENEMY, IceDragon.get());
+        App.DataManager.add(Enums.DataTypes.ENEMY, Wyvern.get());
+        App.DataManager.add(Enums.DataTypes.ENEMY, DragonKing.get());
     }
 }
 

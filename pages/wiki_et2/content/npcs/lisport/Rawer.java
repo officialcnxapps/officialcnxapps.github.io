@@ -33,6 +33,7 @@ public class Rawer extends DataHelper {
         npc.addDescriptionTranslation(ENGLISH, "A well-known figure in Lisport who has helped many citizens. Calm, patient and attentive, but not naive.\nKnowledgeable and skilled in treatment techniques.\nNo known family members.\n\nPhysical traits: Fair skin with deep wrinkles. Gentle smile. Large ears that protrude from his blonde hair. Beard and mustache with a dark blonde tone.");
         npc.addDescriptionTranslation(PORTUGUESE, "Figura conhecida de Lisport, já ajudou muitos cidadãos. Calmo, paciente e atencioso, mas não bobo.\nInteligente e conhecedor de técnicas de tratamento.\nSem familiares conhecidos.\n\nSeus taços físicos: Pele clara e bem enrrugada. Sorriso suave. Orelhas grandes que sobressaem pelo cabelo loiro. Barba e bidoge com tom loiro escuro.");
         npc.addDescriptionTranslation(SPANISH, "Una figura bien conocida en Lisport que ha ayudado a muchos ciudadanos. Tranquilo, paciente y atento, pero no ingenuo.\nConocedor de técnicas de tratamiento.\nSin familiares conocidos.\n\nTrasos físicos: Piel clara con arrugas profundas. Sonrisa suave. Orejas grandes que sobresalen de su cabello rubio. Barba y bigote con tono rubio oscuro.");
+        npc.canBePickpocketed = true;
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Hello, [GENDER_FORMAL_CALL]"));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Olá, [GENDER_FORMAL_CALL]"));

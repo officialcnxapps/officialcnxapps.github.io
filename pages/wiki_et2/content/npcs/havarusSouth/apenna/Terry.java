@@ -26,12 +26,13 @@ public class Terry extends DataHelper {
 
     Npc npc() {
         Npc npc = new Npc("Terry");
-        npc.age = 49;
+        npc.age = 46;
         npc.job = Enums.NPCJobs.LANDLORD;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "He knows the value of his work and how to manage it.\nDirect in business and in his attitude.\nHe seems to have family living in the area.\n\nHis physical traits: Straight black hair, as well as his beard and mustache. A focused look with light brown eyes.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Sabe o valor do seu trabalho e como gerenciar isso.\nDireto nos negócios e nas suas atitudes.\nParece ter família morando pela região.\n\nSeus traços físicos: Cabelo liso e preto, assim como sua barba e bigode. Olhar compenetrado com seus olhos castanhos claros.");
+        npc.addDescriptionTranslation(SPANISH, "He knows the value of his work and how to manage it.\nDirect in business and in his attitude.\nHe seems to have family living in the area.\n\nHis physical traits: Straight black hair, as well as his beard and mustache. A focused look with light brown eyes.");
+        npc.canBePickpocketed = true;
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Hey ya. I am Terry, greetings to you."));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Olá. Eu sou o Terry, saudações a você."));
@@ -41,7 +42,7 @@ public class Terry extends DataHelper {
         // Conversation options
         ConversationOption cv1 = new ConversationOption(0, 0);
         cv1.addOptionText(ENGLISH, "You seem to be an important around here. What do you do?", "Important? One could say that. I am the landlord of many lands here, you see? A respectable position, I assure you. Good gold, calm work... what's not to like? Besides, someone has to keep this village in line.");
-        cv1.addOptionText(PORTUGUESE, "Você parece ser importante por aqui. O que você faz?", "Importante? Poder-se-ia dizer que sim. Eu sou  senhorio de muitas terras aqui, sabe? Uma posição respeitável, garanto-lhe. Bom ouro, trabalho calmo... o que há para não gostar? Além disso, alguém tem que manter essa vila na linha.");
+        cv1.addOptionText(PORTUGUESE, "Você parece ser importante por aqui. O que você faz?", "Importante? Poder-se-ia dizer que sim. Eu sou senhorio de muitas terras aqui, sabe? Uma posição respeitável, garanto-lhe. Bom ouro, trabalho calmo... o que há para não gostar? Além disso, alguém tem que manter essa vila na linha.");
         cv1.addOptionText(SPANISH, "Pareces ser importante por aquí. ¿A qué te dedicas?", "¿Importante? Se podría decir que sí. Soy el propietario de muchas tierras aquí, ¿sabes? Un puesto respetable, te lo aseguro. Buen oro, trabajo tranquilo... ¿qué es lo que no gusta? Además, alguien tiene que mantener esta aldea a raya.");
         npc.conversationOptions.add(cv1);
 

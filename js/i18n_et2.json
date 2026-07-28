@@ -77,6 +77,10 @@
     "changelog_1200": {
       "pt": ["1 nova Arena", "2 novas Quests", "2 novos eventos aleatórios", "Animação para habilidades e ataques em batalha","Novos itens e possibilidades de Crafts"],
       "en": ["1 new Arena", "2 new Quests", "2 new random events", "Animation for skills and attack on battle", "New items and Craft possibilities"]
+    },
+    "changelog_2000": {
+      "pt": ["Melhorias Visuais", "3 Novas Side-Quests", "Novas Missões de História", "Novos Itens", "4 Novas Criaturas", "Bestiário", "Novo Conhecimento - Mãos Leves", "Nova Região"],
+      "en": ["Visual Improvements", "3 New Side-Quests", "New Story Missions", "New Items", "4 New Creatures", "Bestiary", "New Knowledge - Pickpocket", "New Region"]
     }
   },
   "wiki": {

@@ -42,6 +42,7 @@ public class Alden extends DataHelper {
         npc.addDescriptionTranslation(ENGLISH, "A wise man who never stops working.\nRaised his daughter and now lives alone but is not unhappy.\nLoves to teach, is seriously curious and tends to be kind.\n\nPhysical traits: White beard and medium-length hair. Clear blue eyes and wrinkled skin from age.");
         npc.addDescriptionTranslation(PORTUGUESE, "Um sábio homem que não para de trabalhar nunca.\nCriou sua filha e hoje vive sozinho mas não é infeliz.\nGosta de ensinar, é curioso sério e costuma ser bondoso.\n\nSeus taços físicos: Barba e cabelos brancos de comprimento médio. Olhos azuis claros e pele enrugada pela idade.");
         npc.addDescriptionTranslation(SPANISH, "Un hombre sabio que nunca deja de trabajar.\nCrió a su hija y ahora vive solo pero no es infeliz.\nAma enseñar, es seriamente curioso y tiende a ser amable.\n\nTrasos físicos: Barba y cabello blanco de mediano largo. Ojos azul claros y piel arrugada por la edad.");
+        npc.canBePickpocketed = true;
 
         ConversationOption cv1 = new ConversationOption(0, 3);
         cv1.addOptionText(ENGLISH, "What do you do here?", LibNpc.getAboutJobMsg(npc));

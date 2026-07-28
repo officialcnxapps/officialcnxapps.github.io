@@ -31,6 +31,7 @@ public class PriestSariseus extends DataHelper {
         npc.addDescriptionTranslation(ENGLISH, "Very wise, he measures his words and speaks with harmony.\nHe runs the monastery with wisdom and knows both magic and theology.\n\nHis physical traits: Full white beard, slightly wavy graying hair beneath the hood, clear blue eyes, and skin that matches his age.");
         npc.addDescriptionTranslation(PORTUGUESE, "Muito sábio, mede suas palavras e fala com harmonia.\nAdministra o monastério com sabedoria e sabe tanto de magia quanto de teologia.\n\nSeus traços físicos: Barba branca e completa. Cabelos grisalhos levemente ondulados por baixo do capuz. Olhos azuis claros e pele que condiz com a idade.");
         npc.addDescriptionTranslation(SPANISH, "Muy sabio, mide sus palabras y habla con armonía.\nAdministra el monasterio con sabiduría y conoce tanto de magia como de teología.\n\nSus rasgos físicos: Barba blanca y completa, cabello canoso levemente ondulado bajo la capucha, ojos azules claros y piel acorde con su edad.");
+        npc.canBePickpocketed = true;
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Divine greetings to you, [GENDER_FORMAL_CALL]."));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Saudações divinas a você, [GENDER_FORMAL_CALL]."));

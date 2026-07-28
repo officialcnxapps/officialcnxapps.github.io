@@ -25,9 +25,10 @@ public class Helinda extends DataHelper {
         npc.age = 67;
         npc.job = Enums.NPCJobs.FEMALE_FARMER;
         npc.gender = Enums.Gender.FEMALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A firm and determined woman in her work.\nShe enjoys her work and does it well. She likes to help and be helped, a good member of the community.\n\n\nHer physical traits: Full face with wrinkles. Green eyes, white hair and clothes stained with food.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Uma senhora firme nas atitudes e decidida no trabalho.\nGosta do seu ofício e o faz bem feito. Gosta de ajudar e ser ajudada, uma boa membra da comunidade.\n\n\nSeus traços físicos: Rosto cheio, com rugas. Olhos verdes, cabelo branco e roupas sujas de comida.");
+        npc.addDescriptionTranslation(SPANISH, "Una mujer firme en sus actitudes y decidida en su trabajo.\nDisfruta de su oficio y lo hace bien. Le gusta ayudar y ser ayudada, una buena miembro de la comunidad.\n\n\nSus rasgos físicos: Rostro lleno con arrugas. Ojos verdes, cabello blanco y ropa manchada de comida.");
+        npc.canBePickpocketed = true;
 
         npc.generateRandomGreetings();
         npc.generateRandomByes();

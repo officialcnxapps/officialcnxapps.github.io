@@ -25,9 +25,7 @@ public class Korzk extends DataHelper {
         npc.age = 38;
         npc.job = Enums.NPCJobs.TRADER;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.allowTraitsAnalysis = false;
 
         npc.requirementValidations = (chara, ctx) -> {
             if (LibQuest.isCharacterAtQuestPart(chara, QuestsIds.CONTRABAND, 32)) {

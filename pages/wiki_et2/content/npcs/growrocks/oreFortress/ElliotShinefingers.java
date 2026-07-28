@@ -28,6 +28,7 @@ public class ElliotShinefingers extends DataHelper {
         npc.addDescriptionTranslation(ENGLISH, "He neither loves nor hates his work, but he is good at it.\nHe loves his family; he has two siblings, Traus and Kamala. He is loyal and has faith in his culture's deities.\nBrave, but aware of his limits.\n\nHis physical traits: Black hair, beard and mustache, brown eyes, fair bright skin, and large ears.");
         npc.addDescriptionTranslation(PORTUGUESE, "Não ama nem odeia seu trabalho, mas é bom no que faz.\nAma sua família, tem 2 irmãos, Traus e Kamala. É leal e tem fé nas divindades da sua cultura\nCorajoso, mas sabe o limite de suas capacidades.\n\nSeus traços físicos: Cabelo, barba e bigode pretos. Olhos castanhos e pele clara e brilhosa. Orelhas grandes.");
         npc.addDescriptionTranslation(SPANISH, "No ama ni odia su trabajo, pero es bueno en lo que hace.\nAma a su familia; tiene 2 hermanos, Traus y Kamala. Es leal y tiene fe en las divinidades de su cultura.\nValiente, pero conoce el límite de sus capacidades.\n\nSus rasgos físicos: Cabello, barba y bigote negros, ojos castaños, piel clara y brillante, y orejas grandes.");
+        npc.canBePickpocketed = true;
 
         //this NPC is brother of NPCs KamalaShinefingers and TrausShinefingers
 

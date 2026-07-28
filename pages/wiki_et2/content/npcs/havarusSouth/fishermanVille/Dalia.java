@@ -8,7 +8,6 @@ import static com.cnx.endlesstalestwo.data.quests.QuestsIds.WHO_IS_THE_ENEMY;
 
 import com.cnx.endlesstalestwo.App;
 import com.cnx.endlesstalestwo.data.DataHelper;
-import com.cnx.endlesstalestwo.data.quests.QuestsIds;
 import com.cnx.endlesstalestwo.entities.Character;
 import com.cnx.endlesstalestwo.entities.ConversationOption;
 import com.cnx.endlesstalestwo.entities.Npc;
@@ -24,12 +23,13 @@ public class Dalia extends DataHelper {
 
     Npc npc() {
         Npc npc = new Npc("Dalia");
-        npc.age = 53;
+        npc.age = 56;
         npc.job = Enums.NPCJobs.FEMALE_FISHERMAN;
         npc.gender = Enums.Gender.FEMALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A patient and calm lady.\nShe does her work with efficiency and tranquility.\nShe has lived her entire life in the same place.\n\nHer physical traits: Straight gray hair in a braid. Face slightly wrinkled with age. Light brown eyes.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Uma senhora paciente e calma.\nFaz seu trabalho com eficiência e tranquilidade.\nViveu sua vida toda no mesmo lugar.\n\nSeus traços físicos: Cabelos grisalhos e lisos com uma trança. Rosto levemente enrugado pela idade. Olhos castanhos claros.");
+        npc.addDescriptionTranslation(SPANISH, "Una señora paciente y tranquila.\nHace su trabajo con eficiencia y tranquilidad.\nVivió toda su vida en el mismo lugar.\n\nSus rasgos físicos: Cabello grisáceo y liso con una trenza. Rostro ligeramente arrugado por la edad. Ojos castaños claros.");
+        npc.canBePickpocketed = true;
 
         // Conversation options
         ConversationOption cv1 = new ConversationOption(0, 0);

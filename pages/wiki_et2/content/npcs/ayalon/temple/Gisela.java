@@ -30,6 +30,7 @@ public class Gisela extends DataHelper {
         npc.addDescriptionTranslation(ENGLISH, "As calm as she is wise.\nShe is always available to the people of Ayalon. She knows the power of faith for the elves well and is a master at guiding it.\n\nHer physical traits: Youthful appearance for her age. Thin face, short silver hair. Deep gaze with her brown eyes.");
         npc.addDescriptionTranslation(PORTUGUESE, "Tão calma quanto sábia.\nEstá sempre disponível para o povo de Ayalon. Sabe bem o poder da fé para os elfos e é mestra em conduzir isso.\n\nSeus traços físicos: Aparência jovem para a idade. Rosto magro, cabelos curtos e prateados. Olhar profundo com seus olhos castanhos.");
         npc.addDescriptionTranslation(SPANISH, "Tan tranquila como sabia.\nSiempre está disponible para el pueblo de Ayalon. Conoce bien el poder de la fe para los elfos y es una maestra en conducirlo.\n\nSus rasgos físicos: Apariencia juvenil para su edad. Rostro delgado, cabello corto y plateado. Mirada profunda con sus ojos marrones.");
+        npc.canBePickpocketed = true;
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Blessings of the temple upon you, traveler."));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Bênçãos do templo sobre você, viajante."));

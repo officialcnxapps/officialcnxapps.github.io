@@ -27,9 +27,9 @@ public class Galdor extends DataHelper {
         npc.age = 55;
         npc.job = Enums.NPCJobs.GUILD_LEADER;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A gang leader who speaks few words.\nFirm, serious, and gruff.\nHe knows how to lead, fight, and survive.\n\nHis physical traits: Dark skin, serious gaze, full, graying beard. Skin marked by weariness and scars.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Um líder de bandidagem que expressa poucas palavras.\nFirme, sério e grosseiro.\nSabe liderar, batalhar e sobreviver.\n\nSeus traços físicos: Pele morena, olhar sério, barba preenchida e grisalha. Pele sofrida e com cicatrizes.");
+        npc.addDescriptionTranslation(SPANISH, "Un líder de pandilla de pocas palabras.\nFirme, serio y brusco.\nSabe liderar, luchar y sobrevivir.\n\nSus rasgos físicos: piel oscura, mirada seria, barba tupida y canosa. Piel marcada por el cansancio y las cicatrices.");
 
         // Greetings
         npc.greetingsMessages.put(ENGLISH, Arrays.asList(

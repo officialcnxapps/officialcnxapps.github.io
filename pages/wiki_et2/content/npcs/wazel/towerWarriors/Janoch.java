@@ -33,9 +33,9 @@ public class Janoch extends DataHelper {
         npc.age = 62;
         npc.job = Enums.NPCJobs.ALCHEMIST;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A quiet and intelligent gentleman.\nHe likes to talk, but speaks slowly.\nHe serves the troops of Wazel.\n\nHis physical traits: Curly gray beard and hair. Distant gaze. Wrinkled skin from age and a long face.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Um senhor tranquilo e inteligente.\nGosta de conversar, mas fala com lentidão.\nServe as tropas de Wazel.\n\nSeus traços físicos: Barbas cacheadas e grisalhas tal como o cabelo. Olhar distante. Pele enrugada pela idade e rosto comprido.");
+        npc.addDescriptionTranslation(SPANISH, "Un señor tranquilo e inteligente.\nLe gusta conversar, pero habla con lentitud.\nSirve a las tropas de Wazel.\n\nSus rasgos físicos: Barba rizada y canosa al igual que el cabello. Mirada distante. Piel arrugada por la edad y rostro alargado.");
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Greetings, traveler. What brings you to my workshop?"));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Saudações, viajante. O que te traz à minha oficina?"));

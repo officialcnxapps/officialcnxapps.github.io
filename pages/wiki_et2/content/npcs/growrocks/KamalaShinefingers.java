@@ -31,6 +31,7 @@ public class KamalaShinefingers extends DataHelper {
         npc.addDescriptionTranslation(ENGLISH, "Detail-oriented and methodical.\nTogether with her two brothers, they form a very profitable work alliance.\nIntelligent and distrustful despite her young age.\n\nHer physical traits: Wavy black hair, thin eyebrows over light-brown eyes, and a small nose on a harmonious face.");
         npc.addDescriptionTranslation(PORTUGUESE, "Detalhista e metódica.\nJunto com seus 2 irmãos, formam uma aliança de trabalho muito rentável.\nÉ inteligente e desconfiada apesar da pouca idade.\n\nSeus traços físicos: Cabelos ondulados e pretos. Sobrancelhas finas sobre os olhos castanhos claro. Nariz pequeno no rosto harmonioso.");
         npc.addDescriptionTranslation(SPANISH, "Detallista y metódica.\nJunto con sus 2 hermanos, forman una alianza de trabajo muy rentable.\nEs inteligente y desconfiada a pesar de su corta edad.\n\nSus rasgos físicos: Cabello ondulado y negro, cejas finas sobre ojos castaño claros y nariz pequeña en un rostro armonioso.");
+        npc.canBePickpocketed = true;
 
         npc.generateRandomGreetings();
         npc.generateRandomByes();

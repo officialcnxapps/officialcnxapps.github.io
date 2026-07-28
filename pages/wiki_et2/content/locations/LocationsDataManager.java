@@ -37,5 +37,8 @@ public class LocationsDataManager {
         new com.cnx.endlesstalestwo.data.locations.growrocks.Places().generate();
         //Underworld
         new com.cnx.endlesstalestwo.data.locations.underworld.Others().generate();
+        //Dragonland
+        new com.cnx.endlesstalestwo.data.locations.dragonland.Other().generate();
+        new com.cnx.endlesstalestwo.data.locations.dragonland.Places().generate();
     }
 }

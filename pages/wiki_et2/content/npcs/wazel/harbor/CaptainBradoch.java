@@ -8,17 +8,19 @@ import static com.cnx.endlesstalestwo.data.quests.QuestsIds.THE_TALE_OF_A_GHOST_
 
 import android.os.Handler;
 
-import com.cnx.cnxgameengine.utils.LibUtils;
 import com.cnx.endlesstalestwo.App;
-import com.cnx.endlesstalestwo.activities.GameplayActivity;
 import com.cnx.endlesstalestwo.data.DataHelper;
 import com.cnx.endlesstalestwo.data.locations.LocationsIds;
+import com.cnx.endlesstalestwo.data.quests.QuestsIds;
 import com.cnx.endlesstalestwo.entities.Character;
 import com.cnx.endlesstalestwo.entities.ConversationOption;
+import com.cnx.endlesstalestwo.entities.LocationTravelReference;
 import com.cnx.endlesstalestwo.entities.Npc;
 import com.cnx.endlesstalestwo.enums.Enums;
 import com.cnx.endlesstalestwo.libs.LibQuest;
 import com.cnx.endlesstalestwo.libs.Utils;
+
+import java.util.ArrayList;
 
 public class CaptainBradoch extends DataHelper {
     @Override
@@ -33,9 +35,9 @@ public class CaptainBradoch extends DataHelper {
         npc.age = 47;
         npc.job = Enums.NPCJobs.SHIP_CAPTAIN;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "Great at his job, a good captain.\nHe believes everything he hears.\nHe likes adventures at sea, but can be lonely.\n\nHis physical traits: Dark hair and no beard. Fat face with large cheeks. Skin weathered from life at sea.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Ótimo no seu trabalho, um bom capitão.\nAcredita em tudo que ouve.\nGosta das aventuras do mar, mas pode ser solitário.\n\nSeus traços físicos: Cabelos escuros e sem barba. Rosto gordo com grandes bochechas. Pele marcada da vida no mar.");
+        npc.addDescriptionTranslation(SPANISH, "Excelente en su trabajo, un buen capitán.\nCree en todo lo que oye.\nLe gustan las aventuras del mar, pero puede ser solitario.\n\nSus rasgos físicos: Cabello oscuro y sin barba. Rostro gordo con mejillas grandes. Piel marcada por la vida en el mar.");
 
         npc.generateRandomByes();
 
@@ -165,142 +167,54 @@ public class CaptainBradoch extends DataHelper {
         npc.conversationOptions.add(cvQuestEvilFinish);
 
         ///TRAVEL OPTIONS
-        ConversationOption cvTravel = new ConversationOption(0, 100);
-        cvTravel.addOptionText(ENGLISH, "I need to sail.", "That's what I'm here for. We can go to Helera and Esperand");
-        cvTravel.addOptionText(PORTUGUESE, "Preciso velejar.", "É para isso que estou aqui. Podemos ir para Helera e Esperand.");
-        cvTravel.addOptionText(SPANISH, "Necesito navegar.", "Para eso estoy aquí. Podemos ir a Helera e Esperand.");
+        ConversationOption cvTravel = new ConversationOption(0, 0);
+        cvTravel.addOptionText(ENGLISH, "I need to sail.", "That's what I'm here for. Where to?");
+        cvTravel.addOptionText(PORTUGUESE, "Preciso velejar.", "É para isso que estou aqui. Para onde?");
+        cvTravel.addOptionText(SPANISH, "Necesito navegar.", "Para eso estoy aquí. ¿A dónde?");
+        cvTravel.listeners = (ctx, currentFragment) -> openTravelDialog(ctx);
         npc.conversationOptions.add(cvTravel);
 
-        // ===== TRAVEL OPTIONS: FREE (after good ending) =====
-        ConversationOption cvTravelFree1 = new ConversationOption(100, 999);
-        cvTravelFree1.addOptionText(ENGLISH, "Travel to Helera [FREE]", "For the hero who saved these waters? Always free! Let's go!");
-        cvTravelFree1.addOptionText(PORTUGUESE, "Viagem para Helera [GRÁTIS]", "Para o herói que salvou estas águas? Sempre grátis! Vamos lá!");
-        cvTravelFree1.addOptionText(SPANISH, "Viaje a Helera [GRATIS]", "¿Para el héroe que salvó estas aguas? ¡Siempre gratis! ¡Vamos!");
-        cvTravelFree1.requirementValidations = (chara, ctx) -> {
-            if (LibQuest.isQuestComplete(chara, THE_TALE_OF_A_GHOST_SHIP) &&
-                    LibQuest.isCharacterAtQuestPart(chara, THE_TALE_OF_A_GHOST_SHIP, 66)) {
-                return Enums.RequirementVerification.OK;
-            }
-            return Enums.RequirementVerification.NOT_OK;
-        };
-        cvTravelFree1.listeners = (ctx, fragment) -> {
-            if (App.getPlayerChar() != null && LibUtils.getActivityFromContext(ctx) instanceof GameplayActivity gPlayActivity) {
-                Utils.getCharToLocation(LocationsIds.HELERA_HARBOR, 0, gPlayActivity, App.getPlayerChar());
-            }
-        };
-        npc.conversationOptions.add(cvTravelFree1);
-
-        ConversationOption cvTravelFree2 = new ConversationOption(100, 999);
-        cvTravelFree2.addOptionText(ENGLISH, "Travel to Esperand [FREE]", "For the hero who saved these waters? Always free! Let's go!");
-        cvTravelFree2.addOptionText(PORTUGUESE, "Viagem para Esperand [GRÁTIS]", "Para o herói que salvou estas águas? Sempre grátis! Vamos lá!");
-        cvTravelFree2.addOptionText(SPANISH, "Viaje a Esperand [GRATIS]", "¿Para el héroe que salvó estas aguas? ¡Siempre gratis! ¡Vamos!");
-        cvTravelFree2.requirementValidations = (chara, ctx) -> {
-            if (LibQuest.isQuestComplete(chara, THE_TALE_OF_A_GHOST_SHIP) &&
-                    LibQuest.isCharacterAtQuestPart(chara, THE_TALE_OF_A_GHOST_SHIP, 66)) {
-                return Enums.RequirementVerification.OK;
-            }
-            return Enums.RequirementVerification.NOT_OK;
-        };
-        cvTravelFree2.listeners = (ctx, fragment) -> {
-            if (App.getPlayerChar() != null && LibUtils.getActivityFromContext(ctx) instanceof GameplayActivity gPlayActivity) {
-                Utils.getCharToLocation(LocationsIds.ESPERAND_HARBOR, 0, gPlayActivity, App.getPlayerChar());
-            }
-        };
-        npc.conversationOptions.add(cvTravelFree2);
-
-        // ===== TRAVEL OPTIONS: EXPENSIVE (after evil ending) =====
-        ConversationOption cvTravelExpensive1 = new ConversationOption(100, 999);
-        cvTravelExpensive1.addOptionText(ENGLISH, "Travel to Helera [11 gold]", "*Grunts* Fine. Pay up.");
-        cvTravelExpensive1.addOptionText(PORTUGUESE, "Viagem para Helera [11 ouro]", "*Resmunga* Tudo bem. Pague.");
-        cvTravelExpensive1.addOptionText(SPANISH, "Viaje a Helera [11 de oro]", "*Gruñe* Bien. Paga.");
-        cvTravelExpensive1.requirementValidations = (chara, ctx) -> {
-            if (LibQuest.isQuestComplete(chara, THE_TALE_OF_A_GHOST_SHIP) &&
-                    LibQuest.isCharacterAtQuestPart(chara, THE_TALE_OF_A_GHOST_SHIP, 77)) {
-                if (App.getPlayerChar() != null && App.getPlayerChar().checkHasGold(11)) {
-                    return Enums.RequirementVerification.OK;
-                }
-                return Enums.RequirementVerification.NEED_GOLD;
-            }
-            return Enums.RequirementVerification.NOT_OK;
-        };
-        cvTravelExpensive1.listeners = (ctx, fragment) -> {
-            if (App.getPlayerChar() != null && LibUtils.getActivityFromContext(ctx) instanceof GameplayActivity gPlayActivity) {
-                Utils.getCharToLocation(LocationsIds.HELERA_HARBOR, 11, gPlayActivity, App.getPlayerChar());
-            }
-        };
-        npc.conversationOptions.add(cvTravelExpensive1);
-
-        ConversationOption cvTravelExpensive2 = new ConversationOption(100, 999);
-        cvTravelExpensive2.addOptionText(ENGLISH, "Travel to Esperand [16 gold]", "*Grunts* Fine. Pay up.");
-        cvTravelExpensive2.addOptionText(PORTUGUESE, "Viagem para Esperand [16 ouro]", "*Resmunga* Tudo bem. Pague.");
-        cvTravelExpensive2.addOptionText(SPANISH, "Viaje a Esperand [16 de oro]", "*Gruñe* Bien. Paga.");
-        cvTravelExpensive2.requirementValidations = (chara, ctx) -> {
-            if (LibQuest.isQuestComplete(chara, THE_TALE_OF_A_GHOST_SHIP) &&
-                    LibQuest.isCharacterAtQuestPart(chara, THE_TALE_OF_A_GHOST_SHIP, 77)) {
-                if (App.getPlayerChar() != null && App.getPlayerChar().checkHasGold(16)) {
-                    return Enums.RequirementVerification.OK;
-                }
-                return Enums.RequirementVerification.NEED_GOLD;
-            }
-            return Enums.RequirementVerification.NOT_OK;
-        };
-        cvTravelExpensive2.listeners = (ctx, fragment) -> {
-            if (App.getPlayerChar() != null && LibUtils.getActivityFromContext(ctx) instanceof GameplayActivity gPlayActivity) {
-                Utils.getCharToLocation(LocationsIds.ESPERAND_HARBOR, 16, gPlayActivity, App.getPlayerChar());
-            }
-        };
-        npc.conversationOptions.add(cvTravelExpensive2);
-
-        // ===== TRAVEL OPTIONS: NORMAL (default, hidden after quest completion) =====
-        ConversationOption cvTravel1 = new ConversationOption(100, 999);
-        cvTravel1.addOptionText(ENGLISH, "Travel to Helera [8 gold]", "Ya! Let the winds of the sea take us!");
-        cvTravel1.addOptionText(PORTUGUESE, "Viagem para Helera [8 ouro]", "Ya! Deixe que os ventos do mar nos leve!");
-        cvTravel1.addOptionText(SPANISH, "Viaje a Helera [8 de oro]", "¡Ya! ¡Que los vientos del mar nos lleven!");
-        cvTravel1.requirementValidations = (chara, ctx) -> {
-            // Hidden after quest is completed
-            if (LibQuest.isQuestComplete(chara, THE_TALE_OF_A_GHOST_SHIP)) {
-                return Enums.RequirementVerification.NOT_OK;
-            }
-            if (App.getPlayerChar() != null && App.getPlayerChar().checkHasGold(8)) {
-                return Enums.RequirementVerification.OK;
-            }
-            return Enums.RequirementVerification.NEED_GOLD;
-        };
-        cvTravel1.listeners = (ctx, fragment) -> {
-            if (App.getPlayerChar() != null && LibUtils.getActivityFromContext(ctx) instanceof GameplayActivity gPlayActivity) {
-                Utils.getCharToLocation(LocationsIds.HELERA_HARBOR, 8, gPlayActivity, App.getPlayerChar());
-            }
-        };
-        npc.conversationOptions.add(cvTravel1);
-
-        ConversationOption cvTravel2 = new ConversationOption(100, 999);
-        cvTravel2.addOptionText(ENGLISH, "Travel to Esperand [13 gold]", "Ya! Let the winds of the sea take us!");
-        cvTravel2.addOptionText(PORTUGUESE, "Viagem para Esperand [13 ouro]", "Ya! Deixe que os ventos do mar nos leve!");
-        cvTravel2.addOptionText(SPANISH, "Viaje a Esperand [13 de oro]", "¡Ya! ¡Que los vientos del mar nos lleven!");
-        cvTravel2.requirementValidations = (chara, ctx) -> {
-            // Hidden after quest is completed
-            if (LibQuest.isQuestComplete(chara, THE_TALE_OF_A_GHOST_SHIP)) {
-                return Enums.RequirementVerification.NOT_OK;
-            }
-            if (App.getPlayerChar() != null && App.getPlayerChar().checkHasGold(13)) {
-                return Enums.RequirementVerification.OK;
-            }
-            return Enums.RequirementVerification.NEED_GOLD;
-        };
-        cvTravel2.listeners = (ctx, fragment) -> {
-            if (App.getPlayerChar() != null && LibUtils.getActivityFromContext(ctx) instanceof GameplayActivity gPlayActivity) {
-                Utils.getCharToLocation(LocationsIds.ESPERAND_HARBOR, 13, gPlayActivity, App.getPlayerChar());
-            }
-        };
-        npc.conversationOptions.add(cvTravel2);
-
-        ConversationOption cvTravelNo = new ConversationOption(100, 0);
-        cvTravelNo.addOptionText(ENGLISH, "Changed my mind...", "Ok...");
-        cvTravelNo.addOptionText(PORTUGUESE, "Mudei de ideia...", "Ok...");
-        cvTravelNo.addOptionText(SPANISH, "Cambié de opinión...", "Ok...");
-        npc.conversationOptions.add(cvTravelNo);
-
         return npc;
+    }
+
+    private void openTravelDialog(android.content.Context ctx) {
+        ArrayList<LocationTravelReference> destinations = new ArrayList<>();
+        Character chara = App.getPlayerChar();
+
+        int heleraCost = 8;
+        int esperandCost = 13;
+
+        boolean isGoodEnding = LibQuest.isQuestComplete(chara, THE_TALE_OF_A_GHOST_SHIP) &&
+                LibQuest.isCharacterAtQuestPart(chara, THE_TALE_OF_A_GHOST_SHIP, 66);
+        boolean isEvilEnding = LibQuest.isQuestComplete(chara, THE_TALE_OF_A_GHOST_SHIP) &&
+                LibQuest.isCharacterAtQuestPart(chara, THE_TALE_OF_A_GHOST_SHIP, 77);
+
+        if (isGoodEnding) {
+            heleraCost = 0;
+            esperandCost = 0;
+        } else if (isEvilEnding) {
+            heleraCost = 11;
+            esperandCost = 16;
+        }
+
+        LocationTravelReference helera = new LocationTravelReference(null, LocationsIds.HELERA_HARBOR, 180);
+        helera.destinationName = "Helera";
+        helera.travelCost = heleraCost;
+        destinations.add(helera);
+
+        LocationTravelReference esperand = new LocationTravelReference(null, LocationsIds.ESPERAND_HARBOR, 360);
+        esperand.destinationName = "Esperand";
+        esperand.travelCost = esperandCost;
+        destinations.add(esperand);
+
+        if (LibQuest.isQuestComplete(chara, QuestsIds.DRAGONLAND)) {
+            LocationTravelReference dragonland = new LocationTravelReference(null, LocationsIds.PLAINS_OF_DRAGONLAND, 480);
+            dragonland.destinationName = "Dragonland";
+            dragonland.travelCost = 16;
+            destinations.add(dragonland);
+        }
+
+        Utils.showTravelSelectionDialog(ctx, destinations);
     }
 }
 

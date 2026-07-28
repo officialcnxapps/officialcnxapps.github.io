@@ -27,9 +27,9 @@ public class Turwald extends DataHelper {
         npc.age = 45;
         npc.job = Enums.NPCJobs.MALE_COOK;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "Fun-loving, he doesn't usually take many things seriously.\nHe knows many stories and enjoys gossip.\nHe never turns down a moment of rest and drinks.\n\nHis physical traits: Bald, eccentric mustache. Mischievous smile. Large nose and ears. Dark eyes.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Divertido, não costuma levar muitas coisas a sério.\nConhece diversas histórias, gosta de fofocas.\nNão recusa um momento de descanso e bebidas.\n\nSeus traços físicos: Careca, bigode excêntrico. Sorriso maroto. Nariz e orelhas avantajados. Olhos escuros.");
+        npc.addDescriptionTranslation(SPANISH, "Divertido, no suele tomarse muchas cosas en serio.\nConoce diversas historias y le gustan los chismes.\nNunca rechaza un momento de descanso y bebidas.\n\nSus rasgos físicos: Calvo, bigote excéntrico. Sonrisa pilla. Nariz y orejas grandes. Ojos oscuros.");
 
         // Greetings messages
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Ah, [GENDER_SIMPLE_CALL]! Greetings!"));
@@ -53,6 +53,12 @@ public class Turwald extends DataHelper {
         cv3.addOptionText(PORTUGUESE, "Por que você ama tanto cerveja?", "Cerveja? É a alma da taverna! Ela une as pessoas, aquece a alma e faz até as histórias mais chatas parecerem interessantes. Além disso, é deliciosa!");
         cv3.addOptionText(SPANISH, "¿Por qué amas tanto la cerveza?", "¿Cerveza? ¡Es el alma de la taberna! Une a las personas, calienta el alma y hace que incluso las historias más aburridas suenen interesantes. ¡Además, es deliciosa!");
         npc.conversationOptions.add(cv3);
+
+        ConversationOption cv0 = new ConversationOption(0, 0);
+        cv0.addOptionText(ENGLISH, "Someone interesting passed here?", "My friend, [GENDER_SIMPLE_CALL], every day people come and go in this tavern. But, recently, that traveling and adventurous citizen, who would say, almost crazy, Martin, was drinking here.\nWell, he really likes climbing, and is good at what he does! I heard he teaches whoever wants to climb anything that is like a mountain. I don't want, imagine the danger!\nHe is now over at Great Rock.");
+        cv0.addOptionText(PORTUGUESE, "Alguém interessante passou por aqui?", "Meu caro, [GENDER_SIMPLE_CALL], todos os dias pessoas vem e vão nesta taberna. Mas, recentemente, aquele cidadão viajante e aventureiro, diria até meio louco, o tal de Martin, esteve bebendo aqui.\nSabe, ele gosta mesmo de escalar, e é bom no que faz! Ouvi dizer que ele ensina quem quiser a escalar tudo que é tipo de montanha. Eu não quero, imagina o perigo!\nEle está lá pros lados de Great Rock agora.");
+        cv0.addOptionText(SPANISH, "¿Ha pasado por aquí alguien interesante?", "Mi amigo, [GENDER_SIMPLE_CALL], todos los días las personas vienen y van en esta taberna. Pero, recientemente, ese ciudadano viajante y aventurero, diría hasta medio loco, Martin, estaba bebiendo aquí.\nBueno, él realmente le gusta escalar, y es bueno en lo que hace. Oí que enseña a quien quiera escalar todo lo que es tipo de montaña. No quiero, imagina el peligro.\nAhora está en el lado grande de Great Rock.");
+        npc.conversationOptions.add(cv0);
 
         // ===== ROLEPLAY: Brigas de bar — Famílias nobres (sem quest) =====
         ConversationOption cvBarBrawl = new ConversationOption(0, 0);

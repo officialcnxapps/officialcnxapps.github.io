@@ -5,6 +5,7 @@ import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.PORTUGUES
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.SPANISH;
 import static com.cnx.endlesstalestwo.data.quests.QuestsIds.DESTROY_THE_LAIR;
 import static com.cnx.endlesstalestwo.data.quests.QuestsIds.INVESTIGATE_THE_BEAST;
+import static com.cnx.endlesstalestwo.data.quests.QuestsIds.SEEDS_AND_HERBS;
 
 import android.os.Looper;
 
@@ -35,9 +36,10 @@ public class Griwalsh extends DataHelper {
         npc.age = 66;
         npc.job = Enums.NPCJobs.ALCHEMIST;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "Lover of nature and its creations.\nHe works hard.\nHe is generous and prefers a quiet and serene life.\n\nHis physical traits: Large and voluminous beard, all gray like his thin hair. Kind gaze. Cloth hat on his head.");
+        npc.addDescriptionTranslation(PORTUGUESE,  "Amante da natureza e de suas criações.\nTrabalha com afinco.\nÉ generoso e prefere a vida tranquila e serena.\n\nSeus traços físicos: Barba grande e volumosa, toda grisalha como seu fino cabelo. Olhar gentil. Chapéu de pano na cabeça.");
+        npc.addDescriptionTranslation(SPANISH, "Amante de la naturaleza y de sus creaciones.\nTrabaja con ahínco.\nEs generoso y prefiere la vida tranquila y serena.\n\nSus rasgos físicos: Barba grande y voluminosa, toda canosa como su fino cabello. Mirada gentil. Sombrero de tela en la cabeza.");
+        npc.canBePickpocketed = true;
 
         npc.generateRandomByes();
 
@@ -263,6 +265,38 @@ public class Griwalsh extends DataHelper {
             LibQuest.updateQuest(QuestsIds.POTIONS_FROM_EXTERIOR, 2, App.getPlayerChar(), ctx);
         };
         npc.conversationOptions.add(cvPFE1);
+
+        // ========================================
+        // QUEST: SEEDS AND HERBS
+        // ========================================
+
+        ConversationOption cvSeeds1 = new ConversationOption(0, 20);
+        cvSeeds1.addOptionText(ENGLISH, "An elf sent me. She needs more Black Oak Seeds.",
+                "An elf, you say? It's rare to see them so far from Ayalon. But if she's caring for a garden, I'm happy to help. I have some seeds ready right here.");
+        cvSeeds1.addOptionText(PORTUGUESE, "Uma elfa me enviou. Ela precisa de mais Sementes de Carvalho Negro.",
+                "Uma elfa, você diz? É raro vê-los tão longe de Ayalon. Mas se ela está cuidando de um jardim, fico feliz em ajudar. Tenho algumas sementes prontas bem aqui.");
+        cvSeeds1.addOptionText(SPANISH, "Una elfa me envió. Necesita más Semillas de Roble Negro.",
+                "¿Una elfa, dices? Es raro verlos tan lejos de Ayalon. Pero si ella está cuidando un jardín, me alegra ayudar. Tengo algunas semillas listas aquí mismo.");
+        cvSeeds1.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isCharacterAtQuestPart(chara, SEEDS_AND_HERBS, 1)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        npc.conversationOptions.add(cvSeeds1);
+
+        ConversationOption cvSeeds2 = new ConversationOption(20, 0);
+        cvSeeds2.addOptionText(ENGLISH, "Thank you, Griwalsh.",
+                "Don't mention it. Tell her I send my regards. And here, take these. They're strong and healthy seeds. They'll grow into magnificent oaks in elven soil, if they intend to plant them...");
+        cvSeeds2.addOptionText(PORTUGUESE, "Obrigado, Griwalsh.",
+                "Não por isso. Diga a ela que envio meus cumprimentos. E aqui, leve estas. São sementes fortes e saudáveis. Elas se tornarão carvalhos magníficos em solo élfico, se eles pretendem plantá-las...");
+        cvSeeds2.addOptionText(SPANISH, "Gracias, Griwalsh.",
+                "No hay de qué. Dile que le mando mis saludos. Y toma, llévate estas. Son semillas fuertes y sanas. Se convertirán en robles magníficos en suelo élfico.");
+        cvSeeds2.listeners = (ctx, currentFragment) -> {
+            LibInventory.addToInventory(ItemsIds.BLACK_OAK_SEEDS, 1, App.getPlayerChar());
+            LibQuest.updateQuest(SEEDS_AND_HERBS, 2, App.getPlayerChar(), ctx);
+        };
+        npc.conversationOptions.add(cvSeeds2);
 
         return npc;
     }

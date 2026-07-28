@@ -31,6 +31,7 @@ public class SpiritOfAir {
 
         enemy.weaknesses.put(Enums.Elements.EARTH, 50);
         enemy.resistances.put(Enums.Elements.WIND, 75);
+        enemy.resistances.put(Enums.Elements.PHYSICAL, 25);
 
         enemy.skills.put(SkillsIds.AIR_SPIKES, 42);
         enemy.skills.put(SkillsIds.CYCLONE, 37);

@@ -28,6 +28,7 @@ public class Salilas extends DataHelper {
         npc.addDescriptionTranslation(ENGLISH, "An experienced elf and an expert in his craft.\nRespectful and highly respected, he knows what he says and is a great connoisseur of his culture. Kind-hearted.\n\nHis physical traits: his fair skin is wrinkled. A well-defined face with a full gray beard, as well as his straight hair.");
         npc.addDescriptionTranslation(PORTUGUESE, "Um elfo experiente e especialista no que faz no seu ofício.\nRespeitoso e muito respeitado, sabe o que diz e é grande conhecedor da sua cultura. Bondoso.\n\nSeus traços físicos: sua pele clara está enrugada. Rosto bem definido com uma barba completa grisalha, assim como seu liso cabelo.");
         npc.addDescriptionTranslation(SPANISH, "Un elfo experimentado y experto en su oficio.\nRespetuoso y muy respetado, sabe lo que dice y es un gran conocedor de su cultura. Bondadoso.\n\nSus rasgos físicos: su piel clara está arrugada. Rostro bien definido con una barba completa canosa, al igual que su cabello liso.");
+        npc.canBePickpocketed = true;
 
         npc.generateRandomGreetings();
         npc.generateRandomByes();

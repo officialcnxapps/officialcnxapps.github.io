@@ -9,10 +9,12 @@ import com.cnx.endlesstalestwo.data.items.ItemsIds;
 import com.cnx.endlesstalestwo.data.knowledges.KnowledgesIds;
 import com.cnx.endlesstalestwo.data.locations.LocationsIds;
 import com.cnx.endlesstalestwo.data.npcs.NpcsIds;
+import com.cnx.endlesstalestwo.data.quests.QuestsIds;
 import com.cnx.endlesstalestwo.data.regions.RegionsIds;
 import com.cnx.endlesstalestwo.entities.Locale;
 import com.cnx.endlesstalestwo.enums.Enums;
 import com.cnx.endlesstalestwo.libs.LibInventory;
+import com.cnx.endlesstalestwo.libs.LibQuest;
 
 public class Others extends DataHelper {
 
@@ -235,10 +237,10 @@ public class Others extends DataHelper {
         locale.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "A esta altitud, es imposible quedarse quieto sin congelarse. El viento es fuerte y todo lo que se ve es nieve y hielo. Hay algunas pequeñas aberturas en las rocas de la montaña que probablemente sirven como nidos para las criaturas.");
 
         locale.type = Enums.LocationTypes.MOUNTAIN;
-        locale.possibleBattles.put(BattlesIds.ICE_GOLEM_1, 28);
-        locale.possibleBattles.put(BattlesIds.FROST_WRAITH_1, 16);
+
+        locale.possibleBattles.put(BattlesIds.ICE_GOLEM_1, 26);
+        locale.possibleBattles.put(BattlesIds.FROST_WRAITH_1, 18);
         locale.possibleBattles.put(BattlesIds.SPIRIT_OF_AIR_1, 15);
-        locale.possibleBattles.put(BattlesIds.SPIRIT_OF_LIGHT_1, 15);
 
         locale.requirementValidations = (chara, ctx) -> {
             if (chara.hasKnowledge(KnowledgesIds.CLIMBING) && LibInventory.checkHasItem(ItemsIds.ROPE, chara)) {
@@ -264,11 +266,15 @@ public class Others extends DataHelper {
         locale.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Chegar até o topo foi árduo. A vista poderia ser linda se não fosse a névoa e a neve atrapalhando. O ar é rarefeito e extremamente congelante. Há pouco espaço aqui, mas percebe-se que alguma criatura habita o lugar de vez em quando.");
         locale.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Llegar a la cima fue difícil. La vista habría sido hermosa si no fuera por la niebla y la nieve que se interponían en el camino. El aire es delgado y extremadamente helado. Hay muy poco espacio aquí, pero se puede ver que alguna criatura habita el lugar de vez en cuando.");
 
-        locale.possibleBattles.put(BattlesIds.FROST_WRAITH_1, 18);
+        locale.possibleBattles.put(BattlesIds.FROST_WRAITH_1, 22);
         locale.possibleBattles.put(BattlesIds.ICE_GOLEM_1, 18);
-        locale.possibleBattles.put(BattlesIds.MOUNTAIN_GOLEM_1, 18);
-        locale.possibleBattles.put(BattlesIds.SPIRIT_OF_AIR_1, 15);
-        locale.possibleBattles.put(BattlesIds.SPIRIT_OF_LIGHT_1, 15);
+        locale.possibleBattles.put(BattlesIds.SPIRIT_OF_AIR_1, 16);
+
+        if ((LibQuest.charHasQuest(QuestsIds.BLOOD_WITH_BLOOD, App.getPlayerChar())
+                || LibQuest.charHasQuest(QuestsIds.DRAGON_FEAR, App.getPlayerChar()))
+                && !LibQuest.isQuestComplete(App.getPlayerChar(), QuestsIds.DRAGON_FEAR)) {
+            locale.possibleBattles.put(BattlesIds.ICE_DRAGON_1, 20);
+        }
 
         locale.requirementValidations = (chara, ctx) -> {
             if (chara.hasKnowledge(KnowledgesIds.CLIMBING) && LibInventory.checkHasItem(ItemsIds.ROPE, chara)) {

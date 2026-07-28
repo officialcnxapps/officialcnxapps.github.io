@@ -544,6 +544,30 @@ public class Joggard extends DataHelper {
         npc.conversationOptions.add(cvFishing4);
         npc.conversationOptions.add(cvFishing5);
 
+        // ========================================
+        // QUEST: AWAITING THE DRAGONS
+        // ========================================
+
+        // Part 5: Talk to Joggard
+        ConversationOption cvAwaitingDragons5 = new ConversationOption(0, 0);
+        cvAwaitingDragons5.addOptionText(ENGLISH, "Murdag sent me to pick up a weapon shipment.",
+                "Ah, right. The counselor's message arrived just ahead of you. We've been holding this crate for the barracks. It's heavy, so watch your back. \n\n*He signals to his men to bring out a sturdy wooden crate*\n\nHere it is. Take this to Lenny at the barracks. He's expecting it.");
+        cvAwaitingDragons5.addOptionText(PORTUGUESE, "Murdag me enviou para buscar uma remessa de armas.",
+                "Ah, certo. A mensagem do conselheiro chegou logo antes de você. Estávamos guardando esta caixa para o quartel. É pesada, então cuidado com as costas. \n\n*Ele sinaliza para seus homens trazerem uma caixa de madeira resistente*\n\nAqui está. Leve isso para Lenny no quartel. Ele está esperando.");
+        cvAwaitingDragons5.addOptionText(SPANISH, "Murdag me envió a recoger un cargamento de armas.",
+                "Ah, cierto. El mensaje del consejero llegó justo antes que tú. Hemos estado guardando esta caja para el cuartel. Es pesada, así que cuida tu espalda. \n\n*Hace una señal a sus hombres para que saquen una robusta caja de madera*\n\nAquí tienes. Llévale esto a Lenny al cuartel. Él lo está esperando.");
+        cvAwaitingDragons5.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isCharacterAtQuestPart(chara, QuestsIds.AWAITING_THE_DRAGONS, 5)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        cvAwaitingDragons5.listeners = (ctx, currentFragment) -> {
+            LibInventory.addToInventory(ItemsIds.CRATE_OF_WEAPONS, 1, App.getPlayerChar());
+            LibQuest.updateQuest(QuestsIds.AWAITING_THE_DRAGONS, 6, App.getPlayerChar(), ctx);
+        };
+        npc.conversationOptions.add(cvAwaitingDragons5);
+
         return npc;
     }
 }

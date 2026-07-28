@@ -27,6 +27,8 @@ public class GriwalshProducts {
         // Antidote
         shop.addStockItem(ItemsIds.ANTIDOTE);
 
+        shop.addStockItem(ItemsIds.CLOAK_OF_ALCHEMISTS);
+
         shop.addStockItem(ItemsIds.GREEN_HERB);
         shop.addStockItem(ItemsIds.YELLOW_HERB);
         shop.addStockItem(ItemsIds.RED_HERB);

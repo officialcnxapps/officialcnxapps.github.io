@@ -3,9 +3,13 @@ package com.cnx.endlesstalestwo.data.npcs.growrocks.temple;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.ENGLISH;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.PORTUGUESE;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.SPANISH;
+import static com.cnx.endlesstalestwo.data.quests.QuestsIds.DRAGONS;
+import static com.cnx.endlesstalestwo.data.quests.QuestsIds.THE_DWARVEN_CITY;
+import static com.cnx.endlesstalestwo.data.quests.QuestsIds.WAZEL_BATTLE;
 
 import com.cnx.endlesstalestwo.App;
 import com.cnx.endlesstalestwo.data.DataHelper;
+import com.cnx.endlesstalestwo.data.quests.Dragons;
 import com.cnx.endlesstalestwo.data.quests.QuestsIds;
 import com.cnx.endlesstalestwo.entities.ConversationOption;
 import com.cnx.endlesstalestwo.entities.Npc;
@@ -28,6 +32,7 @@ public class JanusaGodhead extends DataHelper {
         npc.addDescriptionTranslation(ENGLISH, "Nothing matters more to her than her deities.\nAn older woman guided by her belief, and she could be easily influenced through it.\nGenerous and wise, she knows much about her culture.\n\nHer physical traits: Short, fine hair almost gray, green eyes, large ears, and a pleasant smile.");
         npc.addDescriptionTranslation(PORTUGUESE, "Nada para ela tem mais valor que suas divindades.\nUma senhora levada pela sua crença, poderia ser facilmente influenciada com isso.\nGenerosa e sábia, conhece muito da sua cultura..\n\nSeus traços físicos: Cabelo curto e fino, quase grisalha. Olhos verdes, orelhas grandes e sorriso agradável.");
         npc.addDescriptionTranslation(SPANISH, "Nada tiene más valor para ella que sus divinidades.\nUna mujer mayor guiada por su creencia; podría ser fácilmente influenciada por eso.\nGenerosa y sabia, conoce mucho de su cultura.\n\nSus rasgos físicos: Cabello corto y fino, casi canoso, ojos verdes, orejas grandes y sonrisa agradable.");
+        npc.canBePickpocketed = true;
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Stone guide you, child. Welcome to our sacred hall."));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Que a pedra guie você, criança. Bem-vindo ao nosso salão sagrado."));
@@ -51,6 +56,24 @@ public class JanusaGodhead extends DataHelper {
         cvRoleplay2.addOptionText(SPANISH, "¿Cuáles son las principales tradiciones enanas?", "Tenemos muchas. La Ceremonia de Forja cuando un enano crea su primer trabajo verdadero. El Juramento Profundo cuando mineros descienden a nuevas profundidades. El Matrimonio de Piedra cuando familias se unen. Pero todas comparten hilo común - conexión con la tierra, con el oficio, con la familia. Creemos que el trabajo mismo es sagrado. Una herramienta bien hecha, una veta adecuadamente minada, un muro resistente - estos honran al Padre de Piedra. Pereza, desperdicio, deshonra - estos lo ofenden. Por eso los enanos trabajan con tanta dedicación. Es oración en acción.");
         npc.conversationOptions.add(cvRoleplay2);
 
+        ConversationOption cv0 = new ConversationOption(0, 2);
+        cv0.addOptionText(ENGLISH, "Tell me a curiosity about your people.", "Interesting that you ask that.\n*She stops what she's doing and focuses on you*\nWe've lived in the depths for years; here our people found greater prosperity in ore, although it was harder to grow our food.\nBut, know that before we came here, we lived in more distant lands and on the surface. It was the sense of self-preservation that brought us down here.");
+        cv0.addOptionText(PORTUGUESE, "Me conte alguma curiosidade sobre seu povo.", "Interessante perguntar isso.\n*Ela para o que está fazendo e foca em você*\nHá anos que vivemos nas profundezas, aqui nosso povo encontrou maior prosperidade no minério, apesar que foi mais difícil cultivar nossos alimentos.\nMas, saiba que antes de virmos para cá, viviamos em terras mais distantes e na superfície. Foi o senso de auto preservação que nos trouxe aqui para baixo.");
+        cv0.addOptionText(SPANISH, "Cuéntame alguna curiosidad sobre tu pueblo.", "Es interesante que preguntes eso.\n*Deja lo que está haciendo y se enfoca en ti*\nHace años que vivimos en las profundidades; aquí nuestro pueblo encontró mayor prosperidad en el mineral, a pesar de que fue más difícil cultivar nuestros alimentos.\nPero, debes saber que antes de venir aquí, vivíamos en tierras más distantes y en la superficie. Fue el sentido de autopreservación lo que nos trajo aquí abajo.");
+        cv0.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.charHasQuest(DRAGONS, chara)) {
+                return Enums.RequirementVerification.NOT_OK;
+            }
+            return Enums.RequirementVerification.OK;
+        };
+        npc.conversationOptions.add(cv0);
+
+        ConversationOption cvAboutDragons = new ConversationOption(2, 0);
+        cvAboutDragons.addOptionText(ENGLISH, "What do you mean by that?", "I believe that was a divine sign... Our workers extracted ore from the mountains, but danger was always lurking... dragons!\n*She shows fear in her eyes*\nOne day, it was very rainy, and our miners didn't climb the mountain. Just on that day, two enormous dragons flew over the mountain and fought each other. Everything there was destroyed.\nIt was always dangerous; we had incidents where we had to flee. It was then that the leader of the dwarves at the time chose to guide the people into the depths...\nThanks to the gods, everything worked out. I believe the dragons still fly over some mountains.");
+        cvAboutDragons.addOptionText(PORTUGUESE, "O que quer dizer com isso?", "Creio que isso foi um sinal divino... Nossos trabalhadores extraíam minério das montanhas, mas o perigo rondava sempre... os dragões!\n*Ela demonstra medo no olhar*\nCerto dia, estava muito chuvoso, nossos mineradores não subiram a montanha. Justamente nesse dia, dois enormes dragões sobrevoaram a montanha e lutaram entre sí. Tudo ficou destruído por lá.\nSempre foi perigoso, tivemos incidentes que foi preciso fugir. Foi então que o líder dos anões na época optou por guiar o povo para as profundezas...\nGraças aos deuses, tudo deu certo. Acredito que os dragões ainda sobrevoam algumas montanhas.");
+        cvAboutDragons.addOptionText(SPANISH, "¿Qué quieres decir con eso?", "Creo que eso fue una señal divina... Nuestros trabajadores extraían mineral de las montañas, pero el peligro acechaba siempre... ¡los dragones!\n*Ella demuestra miedo en su mirada*\nCierto día, estaba muy lluvioso, nuestros mineros no subieron a la montaña. Justamente ese día, dos enormes dragones sobrevolaron la montaña y lucharon entre sí. Todo quedó destruido por allá.\nSiempre fue peligroso, tuvimos incidentes en los que fue necesario huir. Fue entonces cuando el líder de los enanos de la época optó por guiar al pueblo a las profundidades...\nGracias a los dioses, todo salió bien. Creo que los dragones aún sobrevuelan algunas montañas.");
+        npc.conversationOptions.add(cvAboutDragons);
+
         // ===== QUEST PART 4: Learn about culture =====
         ConversationOption cvQuest = new ConversationOption(0, 1);
         cvQuest.addOptionText(ENGLISH, "Fiola sent me to learn about dwarven beliefs.", "*Looks at you with wise, measuring eyes*\nDid she? Then Oliman truly considers accepting you. Very well, surface dweller. Sit. Listen.\n\n*Gestures to a stone bench*\n\nI will teach you what every dwarven child learns from birth.");
@@ -71,6 +94,55 @@ public class JanusaGodhead extends DataHelper {
             LibQuest.updateQuest(QuestsIds.THE_DWARVEN_CITY, 7, App.getPlayerChar(), ctx);
         };
         npc.conversationOptions.add(cvQuestTeach);
+
+        // ========================================
+        // QUEST: DRAGONS?
+        // ========================================
+
+        // Start branch from curiosity talk (Group 2 -> 10)
+        ConversationOption cvDragonsCuriosity = new ConversationOption(2, 10);
+        cvDragonsCuriosity.addOptionText(ENGLISH, "You mentioned dragons flying over mountains. Have there been any recent reports?",
+                "I've heard stories... ancient cycles shifting, migrations of old, and dragons seeking new nests in lands they haven't touched for centuries. \n\nIf you have curiosity and some fear of this, you should investigate more. If the dragons are moving, no mountain peak will be safe.");
+        cvDragonsCuriosity.addOptionText(PORTUGUESE, "Você mencionou dragões sobrevoando as montanhas. Houve algum relato recente?",
+                "Eu já ouvi falar de migrações e dragões procurando novos ninhos... ciclos antigos mudando em terras que eles não tocavam há séculos. \n\nSe você tem curiosidade e algum medo disso, deveria investigar mais... Se os dragões estão se movendo, nenhum pico de montanha estará seguro.");
+        cvDragonsCuriosity.addOptionText(SPANISH, "Mencionaste dragones sobrevolando las montañas. ¿Ha habido informes recientes?",
+                "He oído historias... ciclos antiguos cambiando, migraciones de antaño y dragones buscando nuevos nidos en tierras que no han tocado en siglos. \n\nSi tienes curiosidad y algún miedo de esto, deberías investigar más. Si los dragones se están moviendo, ninguna cima estará a salvo.");
+        cvDragonsCuriosity.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isQuestComplete(chara, THE_DWARVEN_CITY)
+                    && LibQuest.isQuestComplete(chara, WAZEL_BATTLE)
+                    && !LibQuest.charHasQuest(DRAGONS, chara)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        npc.conversationOptions.add(cvDragonsCuriosity);
+
+        ConversationOption cvDragonsOffer = new ConversationOption(10, 11);
+        cvDragonsOffer.addOptionText(ENGLISH, "I'm ready to investigate. Where should I start?",
+                "Speak with Oliman Wisehead. As our governor, he coordinates with the scouts and guards. He knows the history of our migration better than anyone and might have more specific information on where these creatures were last seen. \n\nGo, child. May the Stone Father protect you from the fire of the skies.");
+        cvDragonsOffer.addOptionText(PORTUGUESE, "Estou pronto para investigar. Por onde devo começar?",
+                "Fale com Oliman Wisehead. Como nosso governador, ele coordena os batedores e guardas. Ele conhece a história de nossa migração melhor do que ninguém e pode ter informações mais específicas sobre onde essas criaturas foram vistas pela última vez. \n\nVá, jovem. Que o Pai de Pedra proteja você do fogo dos céus.");
+        cvDragonsOffer.addOptionText(SPANISH, "Estoy listo para investigar. ¿Por dónde debo empezar?",
+                "Habla con Oliman Wisehead. Como nuestro gobernador, él coordina a los exploradores y guardias. Él conoce la historia de nuestra migración mejor que nadie y podría tener información más específica sobre dónde se vieron estas criaturas por última vez. \n\nVe, hijo. Que el Padre de Piedra te proteja del fuego de los cielos.");
+        npc.conversationOptions.add(cvDragonsOffer);
+
+        ConversationOption cvDragonsAccept = new ConversationOption(11, 0);
+        cvDragonsAccept.addOptionText(ENGLISH, "I will find Oliman and learn what I can.",
+                "Stone be with you.");
+        cvDragonsAccept.addOptionText(PORTUGUESE, "Vou encontrar Oliman e aprender o que puder.",
+                "Que a pedra esteja com você.");
+        cvDragonsAccept.addOptionText(SPANISH, "Buscaré a Oliman y aprenderé lo que pueda.",
+                "Que la piedra esté contigo.");
+        cvDragonsAccept.listeners = (ctx, currentFragment) -> {
+            LibQuest.includeQuestToQuestbook(Dragons.get(), App.getPlayerChar(), ctx);
+        };
+        npc.conversationOptions.add(cvDragonsAccept);
+
+        ConversationOption cvDragonsDecline = new ConversationOption(11, 0);
+        cvDragonsDecline.addOptionText(ENGLISH, "I'm not ready for such a dangerous task yet.", "I understand. The fire of the dragons is not to be faced lightly. Return if your resolve strengthens.");
+        cvDragonsDecline.addOptionText(PORTUGUESE, "Ainda não estou pronto para uma tarefa tão perigosa.", "Eu entendo. O fogo dos dragões não deve ser enfrentado levianamente. Volte se sua determinação se fortalecer.");
+        cvDragonsDecline.addOptionText(SPANISH, "Aún no estoy listo para una tarea tan peligrosa.", "Entiendo. El fuego de los dragones no debe enfrentarse a la ligera. Regresa si tu determinación se fortalece.");
+        npc.conversationOptions.add(cvDragonsDecline);
 
         return npc;
     }

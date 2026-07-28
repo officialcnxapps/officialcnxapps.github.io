@@ -6,7 +6,6 @@ import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.SPANISH;
 
 import com.cnx.endlesstalestwo.App;
 import com.cnx.endlesstalestwo.data.DataHelper;
-import com.cnx.endlesstalestwo.data.npcs.NpcsIds;
 import com.cnx.endlesstalestwo.data.quests.QuestsIds;
 import com.cnx.endlesstalestwo.entities.ConversationOption;
 import com.cnx.endlesstalestwo.entities.Npc;
@@ -29,6 +28,7 @@ public class TrausShinefingers extends DataHelper {
         npc.addDescriptionTranslation(ENGLISH, "A natural worker, very hardworking, perhaps even to excess.\nA grateful dwarf, faithful both to his deities and to those who help him.\nLoyal to his two siblings, Elliot and Kamala.\n\nHis physical traits: A full beard as black as his messy hair, and wide light-brown eyes.");
         npc.addDescriptionTranslation(PORTUGUESE, "Um trabalhador nato. Muito esforçado, talvez até com certos exageros.\nUm anão agradecido, tanto a suas divindades tanto aqueles que o ajudam.\nFiel a seus 2 irmãos, Elliot e Kamala.\n\nSeus traços físicos: Barba preenchida, tão preta quanto seu cabelo despenteado. Olhos arregalados de cor marrom claro.");
         npc.addDescriptionTranslation(SPANISH, "Un trabajador nato, muy esforzado, quizás incluso con ciertos excesos.\nUn enano agradecido, tanto a sus divinidades como a quienes lo ayudan.\nFiel a sus 2 hermanos, Elliot y Kamala.\n\nSus rasgos físicos: Barba poblada, tan negra como su cabello despeinado, y ojos muy abiertos de color marrón claro.");
+        npc.canBePickpocketed = true;
 
         // Unique uID to avoid conflict with Traus in oreFortress
         npc.resetId("TRAUS_AT_TEMPLE");

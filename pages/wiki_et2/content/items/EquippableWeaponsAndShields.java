@@ -67,6 +67,7 @@ public class EquippableWeaponsAndShields extends DataHelper {
         App.DataManager.add(Enums.DataTypes.ITEM, darknessShield());//
         App.DataManager.add(Enums.DataTypes.ITEM, celestialShield());//
         App.DataManager.add(Enums.DataTypes.ITEM, natureShield());//
+        App.DataManager.add(Enums.DataTypes.ITEM, dragonShield());
     }
 
     // ------------------ WEAPONS ----------------- \\
@@ -615,6 +616,7 @@ public class EquippableWeaponsAndShields extends DataHelper {
         equipItem.modifiers.add(new AttributeModifierValue(Enums.AttributeName.AGILITY, 1));
         equipItem.modifiers.add(new AttributeModifierValue(Enums.AttributeName.MAGIC, 1));
         equipItem.type = Enums.ItemType.MAGICAL_WEAPON;
+        equipItem.rarity = Enums.Rarity.UNCOMMON;
 
         equipItem.requirementValidations = (chara, ctx) -> {
             if (chara.level >= 8) {
@@ -676,6 +678,7 @@ public class EquippableWeaponsAndShields extends DataHelper {
         equipItem.weight = 1.2f;
         equipItem.classes.add(ClassesIds.ARCHER);
         equipItem.type = Enums.ItemType.WEAPON;
+        equipItem.rarity = Enums.Rarity.UNCOMMON;
 
         equipItem.requirementValidations = (chara, ctx) -> {
             if (chara.level >= 11) {
@@ -1454,6 +1457,28 @@ public class EquippableWeaponsAndShields extends DataHelper {
 
         item.classes.add(ClassesIds.WARRIOR);
         item.classes.add(ClassesIds.THIEF);
+
+        item.setupDefaultListeners();
+        return item;
+    }
+
+    EquippableItem dragonShield() {
+        EquippableItem item = new EquippableItem("Dragon Shield");
+        item.addNameTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Escudo de Dragão");
+        item.addNameTranslation(CoreEnums.AvailableLanguages.SPANISH, "Escudo de Dragón");
+
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "A shield made from tough dragon scales. Protects against fire.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Um escudo feito de escamas de dragão resistentes. Protege contra fogo.");
+        item.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Un escudo hecho con escamas de dragón resistentes. Protege contra fuego.");
+
+         item.slotPart = Enums.SlotPart.HAND_2;
+        item.type = Enums.ItemType.SHIELD;
+        item.defense = 4;
+        item.marketValue = 105;
+        item.weight = 2.8f;
+        item.rarity = Enums.Rarity.RARE;
+
+        item.resistancesModifiers.put(Enums.Elements.FIRE, 25);
 
         item.setupDefaultListeners();
         return item;

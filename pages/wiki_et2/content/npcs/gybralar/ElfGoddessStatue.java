@@ -33,9 +33,7 @@ public class ElfGoddessStatue extends DataHelper {
         npc.age = 0;
         npc.job = Enums.NPCJobs.NONE;
         npc.gender = Enums.Gender.FEMALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.allowTraitsAnalysis = false;
         npc.imgFile = "npc_statue_of_aelindra";
 
         npc.requirementValidations = (chara, ctx) -> {

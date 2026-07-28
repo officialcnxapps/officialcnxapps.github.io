@@ -26,6 +26,9 @@ public class JohannaGoods {
         shop.addStockItem(ItemsIds.WOOL);
         shop.addStockItem(ItemsIds.LEATHER);
 
+        shop.addStockItem(ItemsIds.RAW_MEAT);
+        shop.addStockItem(ItemsIds.CARROT);
+
         // Bags
         shop.addStockItem(ItemsIds.LEATHER_BAG);
 

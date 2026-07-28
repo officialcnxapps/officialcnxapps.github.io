@@ -7,8 +7,8 @@ import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.SPANISH;
 import com.cnx.endlesstalestwo.App;
 import com.cnx.endlesstalestwo.data.DataHelper;
 import com.cnx.endlesstalestwo.entities.ConversationOption;
-import com.cnx.endlesstalestwo.enums.Enums;
 import com.cnx.endlesstalestwo.entities.Npc;
+import com.cnx.endlesstalestwo.enums.Enums;
 
 public class ErinBarkskin extends DataHelper {
     @Override
@@ -24,6 +24,7 @@ public class ErinBarkskin extends DataHelper {
         npc.addDescriptionTranslation(ENGLISH, "A subtle and pleasant woman.\nVery experienced both in work and in life; she knows what she is doing.\nShe loves her husband, Pourin.\n\nHer physical traits: Long reddish hair, large rosy cheeks, clear eyes, and a friendly smile.");
         npc.addDescriptionTranslation(PORTUGUESE, "Uma mulher sútil e agradável.\nÉ muito experiente, tanto no seu trabalho quanto na vida, sabe o que faz.\nAma seu marido, Pourin.\n\nSeus traços físicos: Cabelos avermelhados e compridos. Bochechas rosadas e grandes. Olhos claros e sorriso amigável.");
         npc.addDescriptionTranslation(SPANISH, "Una mujer sutil y agradable.\nEs muy experimentada, tanto en su trabajo como en la vida; sabe lo que hace.\nAma a su esposo, Pourin.\n\nSus rasgos físicos: Cabello rojizo y largo, mejillas grandes y rosadas, ojos claros y sonrisa amigable.");
+        npc.canBePickpocketed = true;
 
         npc.generateRandomGreetings();
         npc.generateRandomByes();

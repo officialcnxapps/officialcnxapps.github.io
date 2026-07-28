@@ -28,9 +28,10 @@ public class Maximilian extends DataHelper {
         npc.age = 52;
         npc.job = Enums.NPCJobs.TRADER; // Wealthy collector/trader
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "Materialistic and greedy. He values his possessions more than anything else.\nHe is clever and doesn't let anyone tell him what to do.\nA kingdom noble that nobody knows where his wealth came from.\n\nHis physical traits: Full face, blue eyes and a wide forehead. No beard, short white hair. High-quality red and green garments.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Materialista e ganancioso. Dá mais valor a seus pertences do que para qualquer outra coisa.\nÉ esperto, não deixa ninguém lhe dizer o que fazer.\nUm nobre do reino que ninguém sabe de onde tirou sua riqueza.\n\nSeus traços físicos: Rosto preenchido, olhos azuis e testa larga. Sem barba, cabelo curto e branco. Vestes vermelhas e verdes de alta qualidade.");
+        npc.addDescriptionTranslation(SPANISH, "Materialista y codicioso. Valora sus posesiones más que cualquier otra cosa.\nEs listo y no deja que nadie le diga lo que tiene que hacer.\nUn noble del reino del que nadie sabe de dónde sacó su riqueza.\n\nSus rasgos físicos: Rostro lleno, ojos azules y frente ancha. Sin barba, cabello corto y blanco. Vestimentas rojas y verdes de alta calidad.");
+        npc.canBePickpocketed = true;
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Ah, welcome."));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Ah, bem-vindo."));

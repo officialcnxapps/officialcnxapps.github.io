@@ -25,9 +25,10 @@ public class Wella extends DataHelper {
         npc.age = 46;
         npc.job = Enums.NPCJobs.FEMALE_COOK;
         npc.gender = Enums.Gender.FEMALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A woman who seems to have suffered a lot in life.\nToday she does her job but without a sparkle in her eyes.\nShe seems to have no living relatives.\n\nHer physical features: Dry, weathered skin. Light green eyes. Short, straight black hair. Wide mouth.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Uma mulher que parece ter sofrido muito na vida.\nHoje faz seu trabalho mas sem brilho nos olhos.\nParece não ter familiares vivos.\n\nSeus traços físicos: Pele seca, sofrida. Olhos verdes claros. Cabelos pretos, lisos e curtos. Boca larga.");
+        npc.addDescriptionTranslation(SPANISH, "Una mujer que parece haber sufrido mucho en la vida.\nHoy trabaja, pero sin brillo en los ojos.\nParece no tener familiares vivos.\n\nSus rasgos físicos: piel seca y curtida, ojos verde claro, cabello negro corto y liso, boca ancha.");
+        npc.canBePickpocketed = true;
 
         npc.hasRandomizedConversations = true;
 

@@ -34,9 +34,10 @@ public class Johanna extends DataHelper {
         npc.age = 46;
         npc.job = Enums.NPCJobs.NEEDLEWOMAN;
         npc.gender = Enums.Gender.FEMALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A woman who knows every aspect of her trade and then some.\nShe needs attention and enjoys interacting frequently.\n\nHer physical traits: Tanned skin, graying hair covered by a cloth. Blue eyes and a gentle smile that reveal faint wrinkles on her face.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Uma mulher que conhece todas vias do seu trabalho e ainda mais.\nPrecisa de atenção e gosta de interagir com frequência.\n\nSeus traços físicos: Pele bronzeada, cabelos grisalhos e cobertos por um tecido. Olhos azuis e sorriso suave que exibem leves rugas no rosto.");
+        npc.addDescriptionTranslation(SPANISH, "Una mujer que conoce todos los aspectos de su oficio y más.\nNecesita atención y le gusta interactuar con frecuencia.\n\nSus rasgos físicos: Piel bronceada, cabello canoso cubierto por una tela. Ojos azules y sonrisa suave que revelan leves arrugas en el rostro.");
+        npc.canBePickpocketed = true;
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Hello to you."));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Olá para você."));

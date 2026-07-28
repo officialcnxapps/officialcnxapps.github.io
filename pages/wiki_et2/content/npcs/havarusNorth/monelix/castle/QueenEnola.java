@@ -4,6 +4,7 @@ import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.ENGLISH;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.PORTUGUESE;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.SPANISH;
 import static com.cnx.endlesstalestwo.data.quests.QuestsIds.A_QUEEN_MESSAGE;
+import static com.cnx.endlesstalestwo.data.quests.QuestsIds.NOBLES_BALL;
 import static com.cnx.endlesstalestwo.data.quests.QuestsIds.REBUILD_HELERA;
 
 import com.cnx.endlesstalestwo.App;
@@ -33,9 +34,9 @@ public class QueenEnola extends DataHelper {
         npc.age = 30;
         npc.job = Enums.NPCJobs.QUEEN;
         npc.gender = Enums.Gender.FEMALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "Despite being a young queen, she knows very well how to rule. Well taught by her mother.\nShe cares deeply for the kingdom and at times helps the people even more than she should.\nKind, but firm in her decisions.\n\nHer physical traits: Light brown, shoulder-length curly hair. Piercing green eyes, fair skin, thin nose and lips. Beautiful adornments on her garments and a diamond-studded crown.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Apesar de ser uma jovem rainha, sabe muito bem comandar. Bem ensinada por sua mãe.\nPreza muito pelo reino e por vezes ajuda o povo até mais do que devia.\nBondosa, mas firme nas seus decisões.\n\nSeus traços físicos: Cabelos castanhos claros e cacheados até o ombro. Olhos verdes penetrantes, pele clara, nariz e boca finos. Belos adornos na vestimenta e coroa cravejada de brilhantes.");
+        npc.addDescriptionTranslation(SPANISH, "A pesar de ser una reina joven, sabe muy bien cómo gobernar. Bien enseñada por su madre.\nValora mucho el reino y a veces ayuda al pueblo incluso más de lo que debería.\nBondadosa, pero firme en sus decisiones.\n\nSus rasgos físicos: Cabello castaño claro y rizado hasta el hombro. Ojos verdes penetrantes, piel clara, nariz y labios finos. Hermosos adornos en su vestimenta y corona engarzada de brillantes.");
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Be welcome. May I help you?"));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Seja bem-vindo. Posso ajudá-lo?"));
@@ -216,6 +217,29 @@ public class QueenEnola extends DataHelper {
             LibQuest.updateQuest(QuestsIds.THE_ELF_LIBRARY, 5, App.getPlayerChar(), ctx);
         };
         npc.conversationOptions.add(cvLibrary3);
+
+        // ========================================
+        // QUEST: NOBLE'S BALL
+        // ========================================
+
+        // Part 1: Talk to Queen Enola
+        ConversationOption cvBallPart1 = new ConversationOption(0, 0);
+        cvBallPart1.addOptionText(ENGLISH, "Lady Jade sent me. I'm here to help with the Noble's Ball invitations.",
+                "Ah, [PLAYERNAME], I'm glad you're assisting us. My mother has likely told you about the ball. I have here the guest list for the most important lords who haven't been notified yet. \n\nPlease, take these invitations and deliver them to Sir Jard Brant here in Monelix, Lord Den Falker in Letow, Lord Mathew Wintar in Helera, and finally, King Oliver in Lisport. They must all be personally invited.");
+        cvBallPart1.addOptionText(PORTUGUESE, "Lady Jade me enviou. Estou aqui para ajudar com os convites do Baile de Nobres.",
+                "Ah, [PLAYERNAME], fico feliz que esteja nos auxiliando. Minha mãe provavelmente já lhe falou sobre o baile. Tenho aqui a lista de convidados para os lordes mais importantes que ainda não foram notificados. \n\nPor favor, leve estes convites e entregue-os a Sir Jard Brant aqui em Monelix, Lorde Den Falker em Letow, Lorde Mathew Wintar em Helera e, finalmente, ao Rei Oliver em Lisport. Todos devem ser convidados pessoalmente.");
+        cvBallPart1.addOptionText(SPANISH, "Lady Jade me envió. Estoy aquí para ayudar con las invitaciones del Baile de Nobles.",
+                "Ah, [PLAYERNAME], me alegra que nos estés asistiendo. Mi mama probablemente ya te haya hablado del baile. Tengo aquí la lista de invitados para los lores más importantes que aún no han sido notificados. \n\nPor favor, toma estas invitaciones y entrégalas a Sir Jard Brant aquí en Monelix, a Lord Den Falker en Letow, a Lord Mathew Wintar en Helera y, finalmente, al Rey Oliver en Lisport. Todos deben ser invitados personalmente.");
+        cvBallPart1.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isCharacterAtQuestPart(chara, NOBLES_BALL, 1)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        cvBallPart1.listeners = (ctx, currentFragment) -> {
+            LibQuest.updateQuest(NOBLES_BALL, 2, App.getPlayerChar(), ctx);
+        };
+        npc.conversationOptions.add(cvBallPart1);
 
         return npc;
     }

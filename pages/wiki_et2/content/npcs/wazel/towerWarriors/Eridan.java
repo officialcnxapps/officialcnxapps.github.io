@@ -25,9 +25,9 @@ public class Eridan extends DataHelper {
         npc.age = 29;
         npc.job = Enums.NPCJobs.SOLDIER;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "Skilled warrior.\nHe likes his craft and hopes to grow in his career.\nCurious and fearless.\n\nHis physical traits: Dark eyes with Oriental features. Black hair as well as his goatee. Friendly expression.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Guerreiro habilidoso.\nGosta do seu ofício e espera crescer na carreira.\nCurioso e destemido.\n\nSeus traços físicos: Olhos escuros e com traços orientais. Cabelos pretos assim como o cavanhaque. Espressão amigável.");
+        npc.addDescriptionTranslation(SPANISH, "Guerrero habilidoso.\nLe gusta su oficio y espera crecer en su carrera.\nCurioso e intrépido.\n\nSus rasgos físicos: Ojos oscuros con rasgos orientales. Cabello negro al igual que su perilla. Expresión amigable.");
 
         // ===== ROLEPLAY CONVERSATIONS =====
 

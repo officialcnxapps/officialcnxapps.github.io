@@ -29,9 +29,9 @@ public class Brinn extends DataHelper {
         npc.age = 43;
         npc.job = Enums.NPCJobs.SOLDIER;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "He's not the most reliable type, but he knows how to make a good impression.\nHe does his job decently, but for a few coins he might make mistakes.\nStrong and clever, he likes to be in charge.\n\nHis physical traits: Dark skin, grayish beard. Brown eyes and cheeks as prominent as his chin.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Não é do tipo mais confiável, mas sabe passar uma boa impressão.\nFaz o seu trabalho decentemente, mas por umas moedas pode cometer deslizes.\nForte e esperto, gosta de mandar.\n\nSeus traços físicos: Pele morena, barba acinzentada. Olhos castanhos e bochechas tão marcadas quanto o queixo.");
+        npc.addDescriptionTranslation(SPANISH, "No es el más confiable, pero sabe cómo causar una buena impresión.\nCumple con su trabajo decentemente, pero por unas monedas podría cometer errores.\nFuerte e inteligente, le gusta tener el control.\n\nSus rasgos físicos: piel oscura, barba grisácea, ojos marrones y mejillas tan prominentes como su barbilla.");
 
         // Conversation options
         ConversationOption cv1 = new ConversationOption(0, 0);

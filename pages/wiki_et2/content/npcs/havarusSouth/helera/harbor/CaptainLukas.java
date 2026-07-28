@@ -20,12 +20,14 @@ import com.cnx.endlesstalestwo.data.items.ItemsIds;
 import com.cnx.endlesstalestwo.data.locations.LocationsIds;
 import com.cnx.endlesstalestwo.entities.Character;
 import com.cnx.endlesstalestwo.entities.ConversationOption;
+import com.cnx.endlesstalestwo.entities.LocationTravelReference;
 import com.cnx.endlesstalestwo.entities.Npc;
 import com.cnx.endlesstalestwo.enums.Enums;
 import com.cnx.endlesstalestwo.libs.LibInventory;
 import com.cnx.endlesstalestwo.libs.LibQuest;
 import com.cnx.endlesstalestwo.libs.Utils;
 
+import java.util.ArrayList;
 import java.util.Collections;
 
 public class CaptainLukas extends DataHelper {
@@ -41,9 +43,9 @@ public class CaptainLukas extends DataHelper {
         npc.age = 43;
         npc.job = Enums.NPCJobs.SHIP_CAPTAIN;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A clever man with strong social skills.\nHe leads his sailors calmly, but no one oversteps his authority.\n\nHis physical traits: Short beard and mustache, light brown hair, fair skin with a light tan.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Um homem esperto, com boas habilidades sociais.\nLidera seus marinheiros com tranquilidade, mas ninguém passa por cima de sua autoridade.\n\nSeus traços físicos: Barba e bigode curto. Cabelo castanho e claro. Pele clara mas com bronzeado leve.");
+        npc.addDescriptionTranslation(SPANISH, "Un hombre astuto, con buenas habilidades sociales.\nLidera a sus marineros con tranquilidad, pero nadie pasa por encima de su autoridad.\n\nSus rasgos físicos: Barba y bigote cortos, cabello castaño claro y piel clara con un leve bronceado.");
 
         npc.requirementValidations = (chara, ctx) -> {
             if (LibQuest.isCharacterAtQuestPart(chara, INVESTIGATE_THE_BEAST, 2)) {
@@ -240,78 +242,34 @@ public class CaptainLukas extends DataHelper {
         npc.conversationOptions.add(cv13);
 
         ///TRAVEL OPTIONS
-        ConversationOption cvTravel = new ConversationOption(0, 100);
-        cvTravel.addOptionText(ENGLISH, "I need to sail.", "That's what I'm here for. We can go to Esperand, Wazel, and Monelix.");
-        cvTravel.addOptionText(PORTUGUESE, "Preciso velejar.", "É para isso que estou aqui. Podemos ir para Esperand, Wazel e Monelix.");
-        cvTravel.addOptionText(SPANISH, "Necesito navegar.", "Para eso estoy aquí. Podemos ir a Esperand, Wazel y Monelix.");
+        ConversationOption cvTravel = new ConversationOption(0, 0);
+        cvTravel.addOptionText(ENGLISH, "I need to sail.", "That's what I'm here for. Where to?");
+        cvTravel.addOptionText(PORTUGUESE, "Preciso velejar.", "É para isso que estou aqui. Para onde?");
+        cvTravel.addOptionText(SPANISH, "Necesito navegar.", "Para eso estoy aquí. ¿A dónde?");
+        cvTravel.listeners = (ctx, currentFragment) -> openTravelDialog(ctx);
         npc.conversationOptions.add(cvTravel);
 
-        ConversationOption cvTravel1 = new ConversationOption(100, 999);
-        cvTravel1.addOptionText(ENGLISH, "Travel to Esperand [10 gold]", "Ya! Let the winds of the sea take us!");
-        cvTravel1.addOptionText(PORTUGUESE, "Viagem para Esperand [10 ouro]", "Ya! Deixe que os ventos do mar nos leve!");
-        cvTravel1.addOptionText(SPANISH, "Viaje a Esperand [10 de oro]", "¡Ya! ¡Que los vientos del mar nos lleven!");
-        cvTravel1.showEvenWhenNotValid = true;
-        cvTravel1.requirementValidations = (chara, ctx) -> {
-            if (App.getPlayerChar() != null && App.getPlayerChar().checkHasGold(10)) {
-                return Enums.RequirementVerification.OK;
-            }
-            return Enums.RequirementVerification.NEED_GOLD;
-        };
-        cvTravel1.listeners = (ctx, fragment) -> {
-            if (App.getPlayerChar() != null && LibUtils.getActivityFromContext(ctx) instanceof GameplayActivity gPlayActivity) {
-                Utils.getCharToLocation(LocationsIds.ESPERAND_HARBOR, 10, gPlayActivity, App.getPlayerChar());
-            }
-        };
-        npc.conversationOptions.add(cvTravel1);
-
-        ConversationOption cvTravel2 = new ConversationOption(100, 999);
-        cvTravel2.addOptionText(ENGLISH, "Travel to Wazel [8 gold]", "Ya! Let the winds of the sea take us!");
-        cvTravel2.addOptionText(PORTUGUESE, "Viagem para Wazel [8 ouro]", "Ya! Deixe que os ventos do mar nos leve!");
-        cvTravel2.addOptionText(SPANISH, "Viaje a Wazel [8 de oro]", "¡Ya! ¡Que los vientos del mar nos lleven!");
-        cvTravel2.showEvenWhenNotValid = true;
-        cvTravel2.requirementValidations = (chara, ctx) -> {
-            if (App.getPlayerChar() != null && App.getPlayerChar().checkHasGold(8)) {
-                return Enums.RequirementVerification.OK;
-            }
-            return Enums.RequirementVerification.NEED_GOLD;
-        };
-        cvTravel2.listeners = (ctx, fragment) -> {
-            if (App.getPlayerChar() != null && LibUtils.getActivityFromContext(ctx) instanceof GameplayActivity gPlayActivity) {
-                Utils.getCharToLocation(LocationsIds.WAZEL_DOCKS, 8, gPlayActivity, App.getPlayerChar());
-            }
-        };
-        npc.conversationOptions.add(cvTravel2);
-
-        ConversationOption cvTravel3 = new ConversationOption(100, 999);
-        cvTravel3.addOptionText(ENGLISH, "Travel to Monelix [5 gold]", "Ya! Let the winds of the sea take us!");
-        cvTravel3.addOptionText(PORTUGUESE, "Viagem para Monelix [5 ouro]", "Ya! Deixe que os ventos do mar nos leve!");
-        cvTravel3.addOptionText(SPANISH, "Viaje a Monelix [5 de oro]", "¡Ya! ¡Que los vientos del mar nos lleven!");
-        cvTravel3.showEvenWhenNotValid = true;
-        cvTravel3.requirementValidations = (chara, ctx) -> {
-            if (App.getPlayerChar() != null && App.getPlayerChar().checkHasGold(5)) {
-                return Enums.RequirementVerification.OK;
-            }
-            return Enums.RequirementVerification.NEED_GOLD;
-        };
-        cvTravel3.listeners = (ctx, fragment) -> {
-            if (App.getPlayerChar() != null && LibUtils.getActivityFromContext(ctx) instanceof GameplayActivity gPlayActivity) {
-                Utils.getCharToLocation(LocationsIds.MONELIX_DOCKS, 5, gPlayActivity, App.getPlayerChar());
-            }
-        };
-        npc.conversationOptions.add(cvTravel3);
-
-        ConversationOption cvTravelNo = new ConversationOption(100, 0);
-        cvTravelNo.addOptionText(ENGLISH, "Changed my mind...", "Ok...");
-        cvTravelNo.addOptionText(PORTUGUESE, "Mudei de ideia...", "Ok...");
-        cvTravelNo.addOptionText(SPANISH, "Cambié de opinión...", "Ok...");
-        npc.conversationOptions.add(cvTravelNo);
-
-        ConversationOption cv1 = new ConversationOption(0, 0);
-        cv1.addOptionText(ENGLISH, "Do you like life at sea?", "Yes, I really enjoy life at sea. I feel free, I go where the wind blows best, always accompanied by good sailors and good rum.");
-        cv1.addOptionText(PORTUGUESE, "Gosta da vida no mar?", "Sim, eu gosto muito da vida no mar. Me sinto livre, vou aonde o vento sopra melhor, sempre acompanhado de bons marujos e de um bom rum.");
-        cv1.addOptionText(SPANISH, "¿Te gusta la vida en el mar?", "Sí, disfruto mucho la vida en el mar. Me siento libre, voy donde el viento sopla mejor, siempre acompañado de buenos marineros y buen ron.");
-        npc.conversationOptions.add(cv1);
-
         return npc;
+    }
+
+    private void openTravelDialog(android.content.Context ctx) {
+        ArrayList<LocationTravelReference> destinations = new ArrayList<>();
+
+        LocationTravelReference esperand = new LocationTravelReference(null, LocationsIds.ESPERAND_HARBOR, 240);
+        esperand.destinationName = "Esperand";
+        esperand.travelCost = 10;
+        destinations.add(esperand);
+
+        LocationTravelReference wazel = new LocationTravelReference(null, LocationsIds.WAZEL_DOCKS, 180);
+        wazel.destinationName = "Wazel";
+        wazel.travelCost = 8;
+        destinations.add(wazel);
+
+        LocationTravelReference monelix = new LocationTravelReference(null, LocationsIds.MONELIX_DOCKS, 120);
+        monelix.destinationName = "Monelix";
+        monelix.travelCost = 5;
+        destinations.add(monelix);
+
+        Utils.showTravelSelectionDialog(ctx, destinations);
     }
 }

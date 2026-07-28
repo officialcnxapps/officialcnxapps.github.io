@@ -59,7 +59,7 @@ public class Cities extends DataHelper {
         locale.places.add(LocationsIds.WOODCUTTERS_WAREHOUSE);
 
         locale.shops.add(ShopsIds.APENNA_MEAD_ROOM);
-        locale.shops.add(ShopsIds.TOOLS_STORE);
+        locale.shops.add(ShopsIds.WOODCUTTERS_WAREHOUSE);
 
         locale.npcs.add(NpcsIds.TERRY);
 

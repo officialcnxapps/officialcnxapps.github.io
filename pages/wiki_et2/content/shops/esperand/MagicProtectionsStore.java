@@ -20,6 +20,7 @@ public class MagicProtectionsStore {
         // Magical Chest Armor
         shop.addStockItem(ItemsIds.BREASTPLATE_OF_SHADOWS);
         shop.addStockItem(ItemsIds.BREASTPLATE_OF_FIRE);
+        shop.addStockItem(ItemsIds.CLOAK_OF_ALCHEMISTS);
 
         // Magical Shields
         shop.addStockItem(ItemsIds.BLAZE_SHIELD);

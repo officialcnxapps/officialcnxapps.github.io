@@ -24,6 +24,7 @@ public class Malina extends DataHelper {
         npc.addDescriptionTranslation(ENGLISH, "A young woman with an innocent yet focused expression, always moving efficiently in the kitchen.\nShe seems deeply devoted to her craft, but also dreamy about a more exciting future.\n\nHer physical traits: Light hair tied back. Honey-colored eyes and pale skin. Hands that show the marks of hard work.");
         npc.addDescriptionTranslation(PORTUGUESE, "Uma jovem mulher com uma expressão focada e inocente, sempre se movendo com eficiência na cozinha.\nEla parece profundamente dedicada ao seu ofício, mas também sonhadora com um futuro mais emocionante.\n\nSeus traços físicos: Cabelos claros presos. OIlhos cor de mel e pele pálida. Mãos que mostram as marcas do trabalho duro.");
         npc.addDescriptionTranslation(SPANISH, "Una joven con una expresión enfocada e inocente, que siempre se mueve con eficiencia en la cocina.\nParece profundamente dedicada a su oficio, pero también soñadora con un futuro más emocionante.\n\nSus rasgos físicos: Cabello claro recogido. Ojos color miel y piel pálida. Manos que muestran las marcas del trabajo duro.");
+        npc.canBePickpocketed = true;
 
         npc.hasRandomizedConversations = true;
 

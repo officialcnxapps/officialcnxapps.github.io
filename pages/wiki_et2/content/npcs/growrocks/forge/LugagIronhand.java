@@ -4,8 +4,6 @@ import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.ENGLISH;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.PORTUGUESE;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.SPANISH;
 
-import android.content.Context;
-
 import com.cnx.endlesstalestwo.App;
 import com.cnx.endlesstalestwo.data.DataHelper;
 import com.cnx.endlesstalestwo.data.crafts.Crafts;
@@ -16,7 +14,6 @@ import com.cnx.endlesstalestwo.entities.Npc;
 import com.cnx.endlesstalestwo.enums.Enums;
 import com.cnx.endlesstalestwo.libs.LibInventory;
 import com.cnx.endlesstalestwo.libs.LibQuest;
-import com.cnx.endlesstalestwo.views.CnxFragmentImplementation;
 
 import java.util.Collections;
 
@@ -34,6 +31,7 @@ public class LugagIronhand extends DataHelper {
         npc.addDescriptionTranslation(ENGLISH, "This dwarf is very hardworking and loves manual craft, a perfectionist.\nGenerous but not naive, he knows the value of his work.\nOlder brother of Richard from the miners' guild.\n\nHis physical traits: A broad, marked face, deep light-brown eyes, mixed brown-red beard, and short hair.");
         npc.addDescriptionTranslation(PORTUGUESE, "Este anão é muito esforçado e amante do seu trabalho manual, perfeccionista.\nGeneroso mas não inocente, sabe o valor do seu trabalho.\nIrmão mais velho de Richard, da guilda dos mineradores.\n\nSeus traços físicos: Rosto gordo e marcado. Olhos castanho claros, profundos. Barba mista entre castanho e ruivo e cabelo curto.");
         npc.addDescriptionTranslation(SPANISH, "Este enano es muy esforzado y amante del trabajo manual, perfeccionista.\nGeneroso pero no ingenuo, conoce el valor de su trabajo.\nHermano mayor de Richard, de la asociación de mineros.\n\nSus rasgos físicos: Rostro ancho y marcado, ojos castaño claros y profundos, barba mezclada entre castaño y rojizo, y cabello corto.");
+        npc.canBePickpocketed = true;
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("The forge calls. What do you need?"));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("A forja chama. O que precisa?"));
@@ -68,7 +66,7 @@ public class LugagIronhand extends DataHelper {
         };
         cvRoleplayPickaxe.listeners = (ctx, currentFragment) -> {
             if (App.DataManager != null && App.DataManager.getCraft("CRAFT_RECIPE|DWARVENS_PICKAXE-STEEL_INGOT-GOLD_INGOT-LOG") == null){
-                App.DataManager.add(Enums.DataTypes.CRAFT_RECIPE, new Crafts().dwarvenPickaxe());
+                App.DataManager.add(Enums.DataTypes.CRAFT_RECIPE, new Crafts().craftDwarvenPickaxe());
             }
         };
         npc.conversationOptions.add(cvRoleplayPickaxe);

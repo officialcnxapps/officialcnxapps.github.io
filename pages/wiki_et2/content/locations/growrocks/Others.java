@@ -170,7 +170,7 @@ public class Others extends DataHelper {
         locale.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Depois de um corredor relativamente comprido, você chega a uma câmara ampla e alta com paredes de pedras marrom e cinzentas. O ambiente é organizado, com caixas e ferramentas de mineração bem empilhadas e guardadas. Há trilhos estreitos para carrinhos de mineração que seguem para dentro de corredores. Alguns anões trabalham e outros fazem guarda.");
         locale.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Después de un corredor relativamente largo, llegas a una cámara amplia y alta con paredes de piedras marrones y grises. El ambiente está organizado, con cajas y herramientas de minería bien apiladas y guardadas. Hay rieles estrechos para carretas de minería que van hacia corredores. Algunos enanos trabajan y otros hacen guardia.");
 
-        locale.actions.add(ActionsIds.MINING_BASIC);
+        locale.actions.add(ActionsIds.MINING_EXTRA);
 
         locale.possibleBattles.put(BattlesIds.CAVE_BAT_2, 30);
         locale.possibleBattles.put(BattlesIds.CRAWLING_WORM_1, 16);
@@ -199,7 +199,7 @@ public class Others extends DataHelper {
         locale.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Seguindo um dos trilhos, você chegou a uma escada longa de madeira que lhe levou ao piso inferior. Aqui ainda há alguns anões trabalhando e fazendo guarda, mas é perceptível que o ambiente é mais fechado, escuro e perigoso. Somente um pequeno trilho de minério corre de um lado a outro da enorme câmara que forma este andar.");
         locale.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Siguiendo uno de los rieles, llegaste a una larga escalera de madera que te llevó al piso inferior. Aquí todavía hay algunos enanos trabajando y haciendo guardia, pero es perceptible que el ambiente es más cerrado, oscuro y peligroso. Solo un pequeño riel de mineral corre de un lado a otro de la enorme cámara que forma este piso.");
 
-        locale.actions.add(ActionsIds.MINING_EXTRA);
+        locale.actions.add(ActionsIds.MINING_RARE);
 
         locale.possibleBattles.put(BattlesIds.CAVE_BAT_2, 22);
         locale.possibleBattles.put(BattlesIds.CRAWLING_WORM_2, 20);

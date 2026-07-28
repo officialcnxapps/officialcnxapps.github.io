@@ -28,6 +28,7 @@ public class Barolas extends DataHelper {
         npc.addDescriptionTranslation(ENGLISH, "Serious and focused. This half-elf is very intelligent, but prefers to keep a mystery about his knowledge and attitudes.\nHe likes to leave everything well explained, always demonstrating wisdom.\n\nHis physical traits: Brown skin, green eyes. Long, straight, light brown hair.");
         npc.addDescriptionTranslation(PORTUGUESE, "Sério e compenetrado. Este elfo mestiço é muito inteligente, porém prefere manter mistério sobre seus conhecimentos e atitudes.\nGosta de deixar tudo bem explicado, demonstrando sempre sabedoria.\n\nSeus traços físicos: Pele morena, olhos verdes. Cabelo castanho claro, liso e comprido.");
         npc.addDescriptionTranslation(SPANISH, "Serio y concentrado. Este elfo mestizo es muy inteligente, pero prefiere mantener el misterio sobre sus conocimientos y actitudes.\nLe gusta dejar todo bien explicado, demostrando siempre sabiduría.\n\nSus rasgos físicos: Piel morena, ojos verdes. Cabello castaño claro, liso y largo.");
+        npc.canBePickpocketed = true;
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Welcome to the Great Library of Ayalon, scholar."));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Bem-vindo à Grande Biblioteca de Ayalon, erudito."));

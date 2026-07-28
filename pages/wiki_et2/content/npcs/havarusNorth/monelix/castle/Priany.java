@@ -7,8 +7,8 @@ import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.SPANISH;
 import com.cnx.endlesstalestwo.App;
 import com.cnx.endlesstalestwo.data.DataHelper;
 import com.cnx.endlesstalestwo.entities.ConversationOption;
-import com.cnx.endlesstalestwo.enums.Enums;
 import com.cnx.endlesstalestwo.entities.Npc;
+import com.cnx.endlesstalestwo.enums.Enums;
 
 public class Priany extends DataHelper {
     @Override
@@ -21,9 +21,10 @@ public class Priany extends DataHelper {
         npc.age = 50;
         npc.job = Enums.NPCJobs.FEMALE_COOK;
         npc.gender = Enums.Gender.FEMALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "Experienced in the work she does, but slightly naive about life.\nDedicated and loyal to the nobility, who has always treated her well.\n\nHer physical traits: Slightly graying hair, prominent rosy cheeks. Warm smile and green eyes.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Experiente no trabalho que realiza, mas levemente inocente na vida.\nDedicada e leal a nobreza, que sempre lhe tratou bem.\n\nSeus traços físicos: Cabelos levemente grisalhos, bochechas salientes e rosadas. Sorriso caloroso e olhos verdes.");
+        npc.addDescriptionTranslation(SPANISH, "Experimentada en el trabajo que realiza, pero levemente inocente en la vida.\nDedicada y leal a la nobleza, que siempre la ha tratado bien.\n\nSus rasgos físicos: Cabello levemente canoso, mejillas prominentes y rosadas. Sonrisa cálida y ojos verdes.");
+        npc.canBePickpocketed = true;
 
         npc.generateRandomGreetings();
         npc.generateRandomByes();

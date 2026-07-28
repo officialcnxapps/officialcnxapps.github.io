@@ -4,9 +4,13 @@ import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.ENGLISH;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.PORTUGUESE;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.SPANISH;
 
+import static com.cnx.endlesstalestwo.data.quests.QuestsIds.NOBLES_BALL;
+import static com.cnx.endlesstalestwo.data.quests.QuestsIds.THE_FINAL_BATTLE;
+
 import com.cnx.endlesstalestwo.App;
 import com.cnx.endlesstalestwo.data.DataHelper;
 import com.cnx.endlesstalestwo.data.items.ItemsIds;
+import com.cnx.endlesstalestwo.data.quests.NoblesBall;
 import com.cnx.endlesstalestwo.data.quests.QuestsIds;
 import com.cnx.endlesstalestwo.entities.ConversationOption;
 import com.cnx.endlesstalestwo.entities.Npc;
@@ -27,9 +31,9 @@ public class LadyJade extends DataHelper {
         npc.age = 68;
         npc.job = Enums.NPCJobs.COUNSELOR;
         npc.gender = Enums.Gender.FEMALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "Calm, efficient and wise are some of her main traits.\nShe trusts in justice.\nDespite not ruling, she knows very well how to do so and how to influence.\n\nHer physical traits: Long graying hair, well-kept and tied back. Bright blue eyes, expression of wisdom and serenity. Fine, fair skin and face.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Tranquila, eficiente e sábia são alguns de seus principais traços.\nConfia na justiça.\nApesar de não governar, sabe muito bem como fazer isso e como influenciar.\n\nSeus traços físicos: Cabelo grisalho comprido, bem arrumado e amarrado. Olhos azuis brilhantes, expressão de sabedoria e serenidade. Rosto e pele fina e clara.");
+        npc.addDescriptionTranslation(SPANISH, "Tranquila, eficiente y sabia son algunos de sus principales rasgos.\nConfía en la justicia.\nA pesar de no gobernar, sabe muy bien cómo hacerlo y cómo influir.\n\nSus rasgos físicos: Cabello largo y canoso, bien arreglado y recogido. Ojos azules brillantes, expresión de sabiduría y serenidad. Piel y rostro finos y claros.");
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Greetins, [GENDER_FORMAL_CALL], be welcome."));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Saudações, [GENDER_FORMAL_CALL], seja bem-vindo."));
@@ -143,6 +147,139 @@ public class LadyJade extends DataHelper {
         };
         npc.conversationOptions.add(cvBrF6b);
 
+        // ========================================
+        // QUEST: NOBLE'S BALL
+        // ========================================
+
+        // Start quest
+        ConversationOption cvBallStart = new ConversationOption(0, 10);
+        cvBallStart.addOptionText(ENGLISH, "What are all these preparations for?",
+                "Ah, [GENDER_FORMAL_CALL], we are preparing for the grand Noble's Ball. It is a tradition in Monelix to gather the lords and allies to celebrate the kingdom's prosperity. \n\nThere is much to be done, and the Queen is quite busy. Would you be willing to assist us with the invitations and logistics?");
+        cvBallStart.addOptionText(PORTUGUESE, "Para que são todos estes preparativos?",
+                "Ah, [GENDER_FORMAL_CALL], estamos nos preparando para o grande Baile de Nobres. É uma tradição em Monelix reunir os lordes e aliados para celebrar a prosperidade do reino. \n\nHá muito o que fazer, e a Rainha está bastante ocupada. Você estaria disposto a nos ajudar com os convites e a logística?");
+        cvBallStart.addOptionText(SPANISH, "¿Para qué son todos estos preparativos?",
+                "Ah, [GENDER_FORMAL_CALL], nos estamos preparando para el gran Baile de Nobles. Es una tradición en Monelix reunir a los lores y aliados para celebrar la prosperidad del reino. \n\nHay mucho por hacer, y la Reina está muy ocupada. ¿Estarías dispuesto a asistirnos con las invitaciones y la logística?");
+        cvBallStart.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isQuestComplete(chara, THE_FINAL_BATTLE) && !LibQuest.charHasQuest(NOBLES_BALL, chara)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        npc.conversationOptions.add(cvBallStart);
+
+        ConversationOption cvBallAccept = new ConversationOption(10, 0);
+        cvBallAccept.addOptionText(ENGLISH, "I'll be happy to help. What do I do?",
+                "Excellent. First, please speak with Queen Enola in the Throne Room. She has already defined the guest list, but some invitations still need to be delivered personally. She will give you the details.");
+        cvBallAccept.addOptionText(PORTUGUESE, "Ficarei feliz em ajudar. O que eu faço?",
+                "Excelente. Primeiro, por favor, fale com a Rainha Enola na Sala do Trono. Ela já definiu a lista de convidados, mas alguns convites ainda precisam ser entregues pessoalmente. Ela lhe dará os detalhes.");
+        cvBallAccept.addOptionText(SPANISH, "Estaré encantado de ayudar. ¿Qué hago?",
+                "Excelente. Primero, por favor habla con la Reina Enola en el Salón del Trono. Ella ya ha definido la lista de invitados, pero algunas invitaciones aún deben entregarse personalmente. Ella te dará los detalles.");
+        cvBallAccept.listeners = (ctx, currentFragment) -> {
+            LibQuest.includeQuestToQuestbook(NoblesBall.get(), App.getPlayerChar(), ctx);
+        };
+        npc.conversationOptions.add(cvBallAccept);
+
+        ConversationOption cvBallDecline = new ConversationOption(10, 0);
+        cvBallDecline.addOptionText(ENGLISH, "Not right now.", "As you wish. We will continue the preparations nonetheless.");
+        cvBallDecline.addOptionText(PORTUGUESE, "Agora não.", "Como desejar. Continuaremos os preparativos de qualquer forma.");
+        cvBallDecline.addOptionText(SPANISH, "Ahora no.", "Como desees. Continuaremos los preparativos de todos modos.");
+        npc.conversationOptions.add(cvBallDecline);
+
+        // Part 6: Invitations delivered
+        ConversationOption cvBallPart6 = new ConversationOption(0, 0);
+        cvBallPart6.addOptionText(ENGLISH, "All invitations have been delivered, Lady Jade.",
+                "Well done! The lords have been informed. However, we have another urgent matter. Some of the royal carriages were damaged during transport. These carriages are necessary to assist in the transport of the lords during the ball. James, at the city gates, is overseeing the repairs. Please speak with him to see if he needs any materials.");
+        cvBallPart6.addOptionText(PORTUGUESE, "Todos os convites foram entregues, Lady Jade.",
+                "Muito bem! Os lordes foram informados. No entanto, temos outro assunto urgente. Algumas das carruagens reais foram danificadas durante o transporte. Estas carruagens são necessárias para auxiliar no transporte dos lordes durante o baile. James, nos portões da cidade, está supervisionando os reparos. Por favor, fale com ele para ver se ele precisa de algum material.");
+        cvBallPart6.addOptionText(SPANISH, "Todas las invitaciones han sido entregadas, Lady Jade.",
+                "¡Bien hecho! Los lores han sido informados. Sin embargo, tenemos otro asunto urgente. Algunos de los carruajes reales resultaron dañados durante el transporte. Estos carruajes son necesarios para asistir en el transporte de los lores durante el baile. James, en las puertas de la ciudad, está supervisando las reparaciones. Por favor, habla con él para ver si necesita algún material.");
+        cvBallPart6.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isCharacterAtQuestPart(chara, NOBLES_BALL, 6)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        cvBallPart6.listeners = (ctx, currentFragment) -> {
+            LibQuest.updateQuest(NOBLES_BALL, 7, App.getPlayerChar(), ctx);
+        };
+        npc.conversationOptions.add(cvBallPart6);
+
+        // Part 9: Preparations complete
+        ConversationOption cvBallPart9 = new ConversationOption(0, 0);
+        cvBallPart9.addOptionText(ENGLISH, "James said everything is ready with the carriages.",
+                "Marvelous. Everything is set for the celebration. And here, I have something for you — your own invitation to the ball. You have been a great help to the crown. Go now to the grand hall, the guests are starting to arrive.");
+        cvBallPart9.addOptionText(PORTUGUESE, "James disse que está tudo pronto com as carruagens.",
+                "Maravilhoso. Tudo está pronto para a celebração. E aqui, tenho algo para você — seu próprio convite para o baile. Você tem sido de grande ajuda para a coroa. Vá agora para o salão principal, os convidados estão começando a chegar.");
+        cvBallPart9.addOptionText(SPANISH, "James dijo que todo está listo con los carruajes.",
+                "Maravilloso. Todo está listo para la celebración. Y aquí, tengo algo para ti: tu propia invitación al baile. Has sido de gran ayuda para la corona. Ve ahora al gran salón, los invitados están comenzando a llegar.");
+        cvBallPart9.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isCharacterAtQuestPart(chara, NOBLES_BALL, 9)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        cvBallPart9.listeners = (ctx, currentFragment) -> {
+            LibQuest.updateQuest(NOBLES_BALL, 10, App.getPlayerChar(), ctx);
+        };
+        npc.conversationOptions.add(cvBallPart9);
+
+        // ========================================
+        // QUEST: AWAITING THE DRAGONS
+        // ========================================
+
+        // Part 2: Talk to Lady Jade (Initial Warning)
+        ConversationOption cvAwaitingDragons2Start = new ConversationOption(0, 100);
+        cvAwaitingDragons2Start.addOptionText(ENGLISH, "Lady Jade, I bring urgent news. Dragons have been spotted migrating towards our lands.",
+                "*She stands perfectly still, her calm expression momentarily broken by a flash of genuine worry*\nDragons... many thought them a legend of the past, but a shadow that crosses the sea cannot be ignored. If they seek nests in our mountains, the kingdom faces a threat we haven't seen in generations.");
+        cvAwaitingDragons2Start.addOptionText(PORTUGUESE, "Lady Jade, trago notícias urgentes. Dragões foram avistados migrando para nossas terras.",
+                "*Ela permanece perfeitamente imóvel, sua expressão calma momentaneamente quebrada por um flash de preocupação genuína*\nDragões... muitos os consideravam uma lenda do passado, mas uma sombra que cruza o mar não pode ser ignorada. Se eles buscam ninhos em nossas montanhas, o reino enfrenta uma ameaça que não vemos há gerações.");
+        cvAwaitingDragons2Start.addOptionText(SPANISH, "Lady Jade, traigo noticias urgentes. Se han avistado dragones migrando hacia nuestras tierras.",
+                "*Se queda perfectamente inmóvil, su expresión tranquila rota momentáneamente por un destello de preocupación genuina*\nDragones... muchos los consideraban una leyenda del pasado, pero una sombra que cruza el mar no puede ignorarse. Si buscan nidos en nuestras montañas, el reino se enfrenta a una amenaza que no hemos visto en generaciones.");
+        cvAwaitingDragons2Start.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isCharacterAtQuestPart(chara, QuestsIds.AWAITING_THE_DRAGONS, 2)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        npc.conversationOptions.add(cvAwaitingDragons2Start);
+
+        ConversationOption cvAwaitingDragons2Plan = new ConversationOption(100, 0);
+        cvAwaitingDragons2Plan.addOptionText(ENGLISH, "What should we do?",
+                "I must inform Queen Enola immediately and send messengers to every village, especially those near Great Rock. But we cannot stand alone in this. \n\nYou must inform our allies as well. Travel to Esperand and speak with Lord Mukas Wintar, and then to Lisport to warn Murdag. They must secure their mountain peaks before these creatures begin to nest. Go, [GENDER_FORMAL_CALL], time is of the essence.");
+        cvAwaitingDragons2Plan.addOptionText(PORTUGUESE, "O que devemos fazer?",
+                "Devo informar a Rainha Enola imediatamente e mandar mensageiros para todas as vilas, especialmente as próximas de Great Rock. Mas não podemos estar sozinhos nisso. \n\nVocê deve informar nossos aliados também. Viaje para Esperand e fale com Lord Mukas Wintar, e depois para Lisport para avisar Murdag. Eles devem proteger seus picos de montanha antes que essas criaturas comecem a fazer ninhos. Vá, [GENDER_FORMAL_CALL], o tempo é essencial.");
+        cvAwaitingDragons2Plan.addOptionText(SPANISH, "¿Qué debemos hacer?",
+                "Debo informar a la Reina Enola de inmediato y enviar mensajeros a cada aldea, especialmente a las cercanas a Great Rock. Pero no podemos estar solos en esto. \n\nDebes informar a nuestros aliados también. Viaja a Esperand y habla con Lord Mukas Wintar, y luego a Lisport para avisar a Murdag. Deben asegurar sus cimas de montaña antes de que estas criaturas comiencen a anidar. Ve, [GENDER_FORMAL_CALL], el tiempo es esencial.");
+        cvAwaitingDragons2Plan.listeners = (ctx, currentFragment) -> LibQuest.updateQuest(QuestsIds.AWAITING_THE_DRAGONS, 3, App.getPlayerChar(), ctx);
+        npc.conversationOptions.add(cvAwaitingDragons2Plan);
+
+        // ========================================
+        // QUEST: DRAGONLAND
+        // ========================================
+
+        // Part 5: Report return
+        ConversationOption cvDragonland5 = new ConversationOption(0, 60);
+        cvDragonland5.addOptionText(ENGLISH, "I've been in Dragonland. The biggest threat was neutralized.",
+                "*She gasps, her eyes widening in disbelief*\n[PLAYERNAME]! You were there? We feared you were lost forever after that monster took you, but you found a way back from those cursed lands... it is a miracle. \n\nBut tell me, how did you return? If there is a route, we must ensure it is charted and protected.");
+        cvDragonland5.addOptionText(PORTUGUESE, "Estive em Dragonland. A maior ameaça foi neutralizada.",
+                "*Ela arfa, os olhos arregalados em descrença*\n[PLAYERNAME]! Você esteve lá? Temíamos que você estivesse perdido para sempre depois que aquele monstro te levou, mas encontrou um caminho de volta daquelas terras amaldiçoadas... é um milagre. \n\nBut tell me, how did you return? If there is a route, we must ensure it is charted and protected.");
+        cvDragonland5.addOptionText(SPANISH, "He estado en Dragonland. La mayor amenaza fue neutralizada.",
+                "*Ella jadea, con los ojos muy abiertos por la incredulidad*\n¡[PLAYERNAME]! ¿Estuviste allí? Temíamos que te hubieras perdido para siempre después de que ese monstruo te atrapara, pero encontraste el camino de regreso de esas tierras malditas... es un milagro. \n\nPero dime, ¿cómo regresaste? Si hay una ruta, debemos asegurarnos de que esté trazada y protegida.");
+        cvDragonland5.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isCharacterAtQuestPart(chara, QuestsIds.DRAGONLAND, 5)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        npc.conversationOptions.add(cvDragonland5);
+
+        ConversationOption cvDragonland51 = new ConversationOption(60, 0);
+        cvDragonland51.addOptionText(ENGLISH, "I believe I've mapped a new sea route.", "*She shows a certain amazement*\nInteresting, [GENDER_FORMAL_CALL]... You are truly tough and brave.\nWell, I think this route can be useful, talk to Captain Norman, mapping this sea route may bring some benefit in the future, who knows...");
+        cvDragonland51.addOptionText(PORTUGUESE, "Creio que tracei uma nova rota naval.", "*Ela demonstra um certo espanto*\nInteressante, [GENDER_FORMAL_CALL]... Você é realmente duro e corajoso.\nBem, acho que essa rota pode ser útil, fale com o Capitão Norman, traçar essa rota naval pode trazer algum benefício futuramente, quem sabe...");
+        cvDragonland51.addOptionText(SPANISH, "Creo que he trazado una nueva ruta marítima.", "*Ella muestra cierto asombro*\nInteresante, [GENDER_FORMAL_CALL]... Eres realmente duro y valiente.\nBueno, creo que esta ruta puede ser útil, habla con el Capitán Norman, trazar esta ruta marítima puede traer algún beneficio en el futuro, quién sabe...");
+        cvDragonland51.listeners = (ctx, currentFragment) -> LibQuest.updateQuest(QuestsIds.DRAGONLAND, 6, App.getPlayerChar(), ctx);
+        npc.conversationOptions.add(cvDragonland51);
+
         ConversationOption cv1 = new ConversationOption(0, 0);
         cv1.addOptionText(ENGLISH, "Who are you?", "I am Jade Wintar, counselor of the kingdom, sister of the honorable lords Markus, Mukas and Mathew Wintar.");
         cv1.addOptionText(PORTUGUESE, "Quem é você?", "Eu sou Jade Wintar, conselheira do reino, irmã dos honoráveis senhores Markus, Mukas e Mathew Wintar.");
@@ -161,7 +298,7 @@ public class LadyJade extends DataHelper {
         cv2.addOptionText(SPANISH, "¿Cuál es su trabajo?", "Soy consejera de Su Majestad, la reina Enola. Escucho al pueblo y a la reina, y a partir de eso, pienso y aconsejo las mejores soluciones para nuestro reino.");
         npc.conversationOptions.add(cv2);
 
+
         return npc;
     }
 }
-

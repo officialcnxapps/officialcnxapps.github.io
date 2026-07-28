@@ -22,9 +22,10 @@ public class Brianne extends DataHelper {
         npc.age = 68;
         npc.job = Enums.NPCJobs.NONE;
         npc.gender = Enums.Gender.FEMALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "She appears sad, longing for times gone by. Her life is nearing its end and she seems not to care.\nCalm, she no longer fears or worries about anything.\n\nHer physical traits: Short, graying hair. An aged face, sad expression and tired brown eyes.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Aparenta tristeza, saudade de tempos antigos. Sua vida já está perto do fim e ela parece não se importar.\nCalma, não teme nem se preocupa mais com nada.\n\nSeus traços físicos: Cabelo curto, grisalho. Rosto envelhecido, expressão triste e olhos castanhos com visão cansada.");
+        npc.addDescriptionTranslation(SPANISH, "Aparenta tristeza, añorando tiempos pasados. Su vida está cerca del final y parece no importarle.\nCalmada, ya no teme ni se preocupa por nada.\n\nSus rasgos físicos: Cabello corto y canoso. Rostro envejecido, expresión triste y ojos marrones con mirada cansada.");
+        npc.canBePickpocketed = true;
 
         npc.generateRandomGreetings();
         npc.generateRandomByes();

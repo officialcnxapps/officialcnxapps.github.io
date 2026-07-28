@@ -3,6 +3,7 @@ package com.cnx.endlesstalestwo.data.npcs.havarusNorth.monelix;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.ENGLISH;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.PORTUGUESE;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.SPANISH;
+import static com.cnx.endlesstalestwo.data.quests.QuestsIds.NOBLES_BALL;
 
 import com.cnx.cnxgameengine.utils.CoreEnums;
 import com.cnx.cnxgameengine.utils.LibUtils;
@@ -31,9 +32,10 @@ public class SirJardBrant extends DataHelper {
         npc.age = 37;
         npc.job = Enums.NPCJobs.LANDLORD;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "He speaks with superiority, at times arrogant. Little empathy.\nIntelligent and clever, he knows shortcuts to get what he needs.\nHe values his name and his family greatly, despite actively seeking marriage.\n\nHis physical traits: Silky light brown hair. Neatly trimmed beard and mustache. Judging look in his light eyes. Square face.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Fala com superioridade, por vezes arrogante. Pouco empático\nInteligente e esperto, conhece atalhos para conseguir o que precisa.\nValoriza muito seu nome e sua família, apesar de estar buscando casamento.\n\nSeus traços físicos: Cabelos sedosos de cor castanho claro. Barba e bigode bem aparados. Olhar de julgamento em seus olhos claros. Rosto quadrado.");
+        npc.addDescriptionTranslation(SPANISH, "Habla con superioridad, a veces arrogante. Poco empático.\nInteligente y listo, conoce atajos para conseguir lo que necesita.\nValora mucho su nombre y su familia, a pesar de estar buscando matrimonio.\n\nSus rasgos físicos: Cabello sedoso de color castaño claro. Barba y bigote bien recortados. Mirada de juicio en sus ojos claros. Rostro cuadrado.");
+        npc.canBePickpocketed = true;
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("You'd better have a reason for bothering me."));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Você deve ter um bom motivo para me incomodar."));
@@ -271,8 +273,7 @@ public class SirJardBrant extends DataHelper {
         ConversationOption cvHouseNoMoney = new ConversationOption(20, 0);
         cvHouseNoMoney.addOptionText(ENGLISH, "I still lack the price.", "Then do not waste my time. Return when you have the full amount.");
         cvHouseNoMoney.addOptionText(PORTUGUESE, "Ainda me falta o valor.", "Então não desperdice meu tempo. Retorne quando tiver a quantia completa.");
-        cvHouseNoMoney.addOptionText(SPANISH, "Aún me falta el valor.", "Entonces no desperdicies mi tiempo. Regresa quando tengas la cantidad completa.");
-        cvHouseNoMoney.addOptionText(SPANISH, "Aun me falta el valor.", "Entonces no desperdicies mi tiempo. Regresa cuando tengas la quantidade completa.");
+        cvHouseNoMoney.addOptionText(SPANISH, "Aún me falta el valor.", "Entonces no desperdicies mi tiempo. Regresa cuando tengas la cantidad completa.");
         cvHouseNoMoney.requirementValidations = (chara, ctx) -> {
             if (!chara.ownsHouse(HousesIds.HOME_MONELIX_MANOR)
                     && (!chara.checkHasGold(60) || App.Shell.getAccount().getGems() < 8)) {
@@ -319,6 +320,28 @@ public class SirJardBrant extends DataHelper {
         cvNobleClose.addOptionText(SPANISH, "Entiendo. Gracias por compartir eso.", "No lo confundas con calidez. Simplemente no escondo lo que soy.");
         npc.conversationOptions.add(cvNobleClose);
 
+        // ========================================
+        // QUEST: NOBLE'S BALL
+        // ========================================
+
+        // Part 2: Invite Sir Jard Brant
+        ConversationOption cvBallPart2 = new ConversationOption(0, 0);
+        cvBallPart2.addOptionText(ENGLISH, "Sir Jard, I have an invitation for you for the Noble's Ball at the castle.",
+                "*He takes the invitation with a satisfied look*\nA ball? About time the crown showed some class. I shall attend, of course. A Brant's presence is essential for such an event. \n\nI only hope the organizers had the sense not to invite any of those... Falker. Their presence would surely dampen the evening's elegance.");
+        cvBallPart2.addOptionText(PORTUGUESE, "Sir Jard, tenho um convite para você para o Baile de Nobres no castelo.",
+                "*Ele pega o convite com um olhar satisfeito*\nUm baile? Já era hora da coroa mostrar alguma classe. Eu comparecerei, é claro. A presença de um Brant é essencial para tal evento. \n\nSó espero que os organizadores tenham tido o bom senso de não convidar nenhum daqueles... Falker. A presença deles certamente diminuiria a elegância da noite.");
+        cvBallPart2.addOptionText(SPANISH, "Sir Jard, tengo una invitación para usted para el Baile de Nobles en el castillo.",
+                "*Toma la invitación con una mirada satisfecha*\n¿Un baile? Ya era hora de que la corona mostrara algo de clase. Asistiré, por supuesto. La presencia de un Brant es esencial para tal evento. \n\nSolo espero que los organizadores hayan tenido el sentido común de no invitar a ninguno de esos... Falker. Su presencia seguramente empañaría la elegancia de la noche.");
+        cvBallPart2.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isCharacterAtQuestPart(chara, NOBLES_BALL, 2)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        cvBallPart2.listeners = (ctx, currentFragment) -> {
+            LibQuest.updateQuest(NOBLES_BALL, 3, App.getPlayerChar(), ctx);
+        };
+        npc.conversationOptions.add(cvBallPart2);
 
         return npc;
     }

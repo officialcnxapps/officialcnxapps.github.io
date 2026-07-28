@@ -33,9 +33,10 @@ public class Eldrin extends DataHelper {
         npc.age = 56;
         npc.job = Enums.NPCJobs.MALE_BLACKSMITH;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A skilled and dedicated craftsman.\nHe works for the village and by the village.\nHe is nostalgic, yet knows how to live well in the present.\n\nHis physical traits: Green eyes, dark hair. Well-groomed beard. Pointed ears. Defined and square face.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Um artesão habilidoso e dedicado.\nTrabalha para a vila e pela vila.\nÉ nostálgico, porém sabe viver bem o presente.\n\nSeus traços físicos: Olhos verdes, cabelos escuros. Barba bem feita. Orelhas pontiagudas. Rosto definido e quadrado.");
+        npc.addDescriptionTranslation(SPANISH, "Un artesano habilidoso y dedicado.\nTrabaja por la aldea y para la aldea.\nEs nostálgico, pero sabe vivir bien el presente.\n\nSus rasgos físicos: Ojos verdes, cabello oscuro. Barba bien cuidada. Orejas puntiagudas. Rostro definido y cuadrado.");
+        npc.canBePickpocketed = true;
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Ah, greetings traveler!"));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Ah, saudações, viajante!"));

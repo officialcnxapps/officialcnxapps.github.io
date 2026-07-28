@@ -28,6 +28,7 @@ public class PriestAlec extends DataHelper {
         npc.addDescriptionTranslation(ENGLISH, "A typical priest, calm and devoted to his faith.\nHe seems kind and helpful. He listens more than he speaks.\nHe has a twin brother.\n\nHis physical traits: Almost bald, with a thin gray beard. Light eyes and bright fair skin.");
         npc.addDescriptionTranslation(PORTUGUESE, "Um típico padre, calmo e adepto a sua fé.\nParece bondoso e prestativo. Ouve mais do que fala.\nTem um irmão gêmeo.\n\nSeus traços físicos: Quase careca, barba rala e grisalha. Olhos claros e pele clara brilhosa.");
         npc.addDescriptionTranslation(SPANISH, "Un sacerdote típico, calmado y devoto de su fe.\nParece bondadoso y servicial. Escucha más de lo que habla.\nTiene un hermano gemelo.\n\nSus rasgos físicos: Casi calvo, barba fina y canosa. Ojos claros y piel clara brillante.");
+        npc.canBePickpocketed = true;
 
         // ===== ROLEPLAY CONVERSATION =====
         ConversationOption cv1 = new ConversationOption(0, 0);

@@ -130,5 +130,8 @@ public enum NpcsIds {
     GARETH,
     ELENA,
     KORZK,
-    FARGUS
+    FARGUS,
+    MURDAG,
+    AFFRONIS,
+    MESSENGER
 }

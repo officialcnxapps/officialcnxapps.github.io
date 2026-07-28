@@ -28,6 +28,7 @@ public class Targon {
         enemy.maxDamage = 9;
         enemy.damageModifier = 3;
         enemy.levelToDynamicBalance = 25;
+        enemy.attributesManager.set(Enums.AttributeName.CRITICAL_CHANCE, 11);
 
         enemy.resistances.put(Enums.Elements.FIRE, 25);
         enemy.resistances.put(Enums.Elements.DARK, 75);

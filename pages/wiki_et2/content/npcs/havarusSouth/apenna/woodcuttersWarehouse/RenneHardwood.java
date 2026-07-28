@@ -30,9 +30,10 @@ public class RenneHardwood extends DataHelper {
         npc.age = 42;
         npc.job = Enums.NPCJobs.WOODCUTTER;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A man consistent in his words and firm in his work.\nHe values justice and honor.\nHe enjoys his profession and the village where he lives.\n\nHis physical features: Square face. Gray hair, beard, and mustache. Pointed nose and serious brown eyes. He wears a leather beret.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Um homem coerente no que diz e firme no seu trabalho.\nValoriza a justiça e a honra.\nGosta do seu ofício e da vila onde reside.\n\nSeus traços físicos: Rosto quadrado. Cabelos, barba e bigode grisalhos. Nariz pontudo e olhos castanhos e sérios. Usa uma boina de couro.");
+        npc.addDescriptionTranslation(SPANISH, "Un hombre coherente en sus palabras y firme en su trabajo.\nValora la justicia y el honor.\nDisfruta de su profesión y del pueblo donde vive.\nSus rasgos físicos: Rostro cuadrado. Cabello, barba y bigote grises. Nariz puntiaguda y ojos marrones serios. Lleva una boina de cuero.");
+        npc.canBePickpocketed = true;
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Hey, welcome."));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Hei, bem-vindo."));

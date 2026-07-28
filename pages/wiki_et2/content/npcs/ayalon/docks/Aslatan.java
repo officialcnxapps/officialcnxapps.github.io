@@ -3,15 +3,22 @@ package com.cnx.endlesstalestwo.data.npcs.ayalon.docks;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.ENGLISH;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.PORTUGUESE;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.SPANISH;
+import static com.cnx.endlesstalestwo.data.quests.QuestsIds.SEEDS_AND_HERBS;
 
 import com.cnx.endlesstalestwo.App;
 import com.cnx.endlesstalestwo.data.DataHelper;
+import com.cnx.endlesstalestwo.data.items.ItemsIds;
 import com.cnx.endlesstalestwo.data.locations.LocationsIds;
 import com.cnx.endlesstalestwo.data.quests.QuestsIds;
 import com.cnx.endlesstalestwo.entities.ConversationOption;
+import com.cnx.endlesstalestwo.entities.LocationTravelReference;
 import com.cnx.endlesstalestwo.entities.Npc;
 import com.cnx.endlesstalestwo.enums.Enums;
+import com.cnx.endlesstalestwo.libs.LibInventory;
 import com.cnx.endlesstalestwo.libs.LibQuest;
+import com.cnx.endlesstalestwo.libs.Utils;
+
+import java.util.ArrayList;
 
 public class Aslatan extends DataHelper {
     @Override
@@ -27,14 +34,6 @@ public class Aslatan extends DataHelper {
         npc.addDescriptionTranslation(ENGLISH, "This middle-aged elf conveys calm and precision in his movements, and for good reason: he is a lead sailor.\nHe reflects a lot on life and work.\nHe is married to Flaviae, and they seem to have a strong lasting relationship.\n\nHis physical traits: He looks older than he is, with graying hair and beard, deep eyes, and leather clothes with a leather beret.");
         npc.addDescriptionTranslation(PORTUGUESE, "Este elfo de meia idade transparece calma e precisão em seus movimentos, não pra menos que é um líder marinheiro.\nPensa muito na vida e no trabalho.\nÉ casado com Flaviae, parecem ter uma boa relação duradoura.\n\nSeus taços físicos: Parece mais velho do que é, cabelos e barbas grisalhas, Olhos profundos. Roupas e boina de couro.");
         npc.addDescriptionTranslation(SPANISH, "Este elfo de mediana edad transmite calma y precisión en sus movimientos; no es de extrañar, ya que es un líder marinero.\nPiensa mucho en la vida y en el trabajo.\nEstá casado con Flaviea, y parecen tener una buena relación duradera.\n\nSus rasgos físicos: Parece mayor de lo que es, con cabello y barba canosos, y ojos profundos. Ropa y boina de cuero.");
-
-        //Description:
-        /*
-         * Este elfo de meia idade transparece calma e precisão em seus movimentos,
-         * não pra menos que é um líder marinheiro. Pensa muito na vida e no trabalho.
-         * É casado com Flaviae, parecem ter uma boa relação duradoura.
-         * Seus traços físicos: Parece mais velho do que é, cabelos e barbas grisalhas, Olhos profundos. Roupas e boina de couro.
-         * */
 
         npc.generateRandomGreetings();
         npc.generateRandomByes();
@@ -167,24 +166,53 @@ public class Aslatan extends DataHelper {
 
         // ===== TRAVEL OPTION: After quest completion (cheap travel to Monelix) =====
         ConversationOption cvTravel = new ConversationOption(0, 0);
-        cvTravel.addOptionText(ENGLISH, "Let's travel to Monelix (5 gold)", "*Nods with a knowing smile*\nOf course, friend. I'll arrange your passage right away. Safe travels!");
-        cvTravel.addOptionText(PORTUGUESE, "Vamos viajar para Monelix (5 ouros)", "*Acena com um sorriso conhecedor*\nClaro, amigo. Vou arranjar sua passagem agora mesmo. Boa viagem!");
-        cvTravel.addOptionText(SPANISH, "Vamos viajar a Monelix (5 oros)", "*Asiente con una sonrisa conocedora*\n¡Por supuesto, amigo! Arreglaré tu pasaje de inmediato. ¡Buen viaje!");
+        cvTravel.addOptionText(ENGLISH, "I need to sail.", "*Nods with a knowing smile*\nOf course, friend. I'll arrange your passage right away. Where to?");
+        cvTravel.addOptionText(PORTUGUESE, "Preciso velejar.", "*Acena com um sorriso conhecedor*\nClaro, amigo. Vou arranjar sua passagem agora mesmo. Para onde?");
+        cvTravel.addOptionText(SPANISH, "Necesito navegar.", "*Asiente con una sonrisa conocedora*\n¡Por supuesto, amigo! Arreglaré tu pasaje de inmediato. ¿A dónde?");
         cvTravel.requirementValidations = (chara, ctx) -> {
-            if (LibQuest.isQuestComplete(chara, QuestsIds.SEEKING_WISDOM) && chara.checkHasGold(5)) {
+            if (LibQuest.isQuestComplete(chara, QuestsIds.SEEKING_WISDOM)) {
                 return Enums.RequirementVerification.OK;
-            } else if (LibQuest.isQuestComplete(chara, QuestsIds.SEEKING_WISDOM)) {
-                return Enums.RequirementVerification.NEED_GOLD;
             }
             return Enums.RequirementVerification.NOT_OK;
         };
-        cvTravel.listeners = (ctx, fragment) -> {
-            App.getPlayerChar().removeGold(5);
-            App.Shell.flowManager.updateGameplayFlow(LocationsIds.MONELIX_DOCKS, ctx);
-        };
+        cvTravel.listeners = (ctx, currentFragment) -> openTravelDialog(ctx);
         npc.conversationOptions.add(cvTravel);
 
+        // ========================================
+        // QUEST: SEEDS AND HERBS
+        // ========================================
+
+        ConversationOption cvSeeds40 = new ConversationOption(0, 0);
+        cvSeeds40.addOptionText(ENGLISH, "Flaviae sent this Potion of Nature for you.",
+                "*His eyes soften*\nAh, my dear Flaviae. She always worries about me and my long voyages. This potion is a blessing from nature itself. Thank you for bringing it all this way.");
+        cvSeeds40.addOptionText(PORTUGUESE, "Flaviae enviou esta Poção da Natureza para você.",
+                "*Seus olhos se suavizam*\nAh, minha querida Flaviae. Ela sempre se preocupa comigo e minhas longas viagens. Esta poção é uma bênção da própria natureza. Obrigado por trazê-la até aqui.");
+        cvSeeds40.addOptionText(SPANISH, "Flaviea envió esta Poción de la Naturaleza para ti.",
+                "*Sus ojos se suavizan*\nAh, mi querida Flaviea. Siempre se preocupa por mí y por mis largos viajes. Esta poción es una bendición de la naturaleza misma. Gracias por traerla hasta aquí.");
+        cvSeeds40.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isCharacterAtQuestPart(chara, SEEDS_AND_HERBS, 40) && LibInventory.checkHasItem(ItemsIds.POTION_OF_NATURE, chara)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        cvSeeds40.listeners = (ctx, currentFragment) -> {
+            LibInventory.removeFromInventory(ItemsIds.POTION_OF_NATURE, 1, App.getPlayerChar());
+            LibQuest.updateQuest(SEEDS_AND_HERBS, 50, App.getPlayerChar(), ctx);
+        };
+        npc.conversationOptions.add(cvSeeds40);
+
         return npc;
+    }
+
+    private void openTravelDialog(android.content.Context ctx) {
+        ArrayList<LocationTravelReference> destinations = new ArrayList<>();
+
+        LocationTravelReference monelix = new LocationTravelReference(null, LocationsIds.MONELIX_DOCKS, 180);
+        monelix.destinationName = "Monelix";
+        monelix.travelCost = 5;
+        destinations.add(monelix);
+
+        Utils.showTravelSelectionDialog(ctx, destinations);
     }
 }
 

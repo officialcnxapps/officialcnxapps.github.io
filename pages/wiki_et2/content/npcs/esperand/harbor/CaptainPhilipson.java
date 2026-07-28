@@ -4,20 +4,22 @@ import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.ENGLISH;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.PORTUGUESE;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.SPANISH;
 import static com.cnx.endlesstalestwo.data.quests.QuestsIds.INVESTIGATE_THE_BEAST;
+import static com.cnx.endlesstalestwo.data.quests.QuestsIds.STUDYING_FISH;
 
-import com.cnx.cnxgameengine.utils.LibUtils;
 import com.cnx.endlesstalestwo.App;
-import com.cnx.endlesstalestwo.activities.GameplayActivity;
 import com.cnx.endlesstalestwo.data.DataHelper;
 import com.cnx.endlesstalestwo.data.items.ItemsIds;
 import com.cnx.endlesstalestwo.data.locations.LocationsIds;
 import com.cnx.endlesstalestwo.data.quests.QuestsIds;
 import com.cnx.endlesstalestwo.entities.ConversationOption;
+import com.cnx.endlesstalestwo.entities.LocationTravelReference;
 import com.cnx.endlesstalestwo.entities.Npc;
 import com.cnx.endlesstalestwo.enums.Enums;
 import com.cnx.endlesstalestwo.libs.LibInventory;
 import com.cnx.endlesstalestwo.libs.LibQuest;
 import com.cnx.endlesstalestwo.libs.Utils;
+
+import java.util.ArrayList;
 
 public class CaptainPhilipson extends DataHelper {
     @Override
@@ -81,54 +83,53 @@ public class CaptainPhilipson extends DataHelper {
         npc.conversationOptions.add(cvPatrolmanPart4);
 
         ///TRAVEL OPTIONS
-        ConversationOption cvTravel = new ConversationOption(0, 100);
-        cvTravel.addOptionText(ENGLISH, "I need to sail.", "That's what I'm here for. We can go to Helera and Wazel");
-        cvTravel.addOptionText(PORTUGUESE, "Preciso velejar.", "É para isso que estou aqui. Podemos ir para Helera e Wazel.");
-        cvTravel.addOptionText(SPANISH, "Necesito navegar.", "Para eso estoy aquí. Podemos ir a Helera e Wazel.");
+        ConversationOption cvTravel = new ConversationOption(0, 0);
+        cvTravel.addOptionText(ENGLISH, "I need to sail.", "That's what I'm here for. Where to?");
+        cvTravel.addOptionText(PORTUGUESE, "Preciso velejar.", "É para isso que estou aqui. Para onde?");
+        cvTravel.addOptionText(SPANISH, "Necesito navegar.", "Para eso estoy aquí. ¿A dónde?");
+        cvTravel.listeners = (ctx, currentFragment) -> openTravelDialog(ctx);
         npc.conversationOptions.add(cvTravel);
 
-        ConversationOption cvTravel1 = new ConversationOption(100, 999);
-        cvTravel1.addOptionText(ENGLISH, "Travel to Helera [10 gold]", "Ya! Let the winds of the sea take us!");
-        cvTravel1.addOptionText(PORTUGUESE, "Viagem para Helera [10 ouro]", "Ya! Deixe que os ventos do mar nos leve!");
-        cvTravel1.addOptionText(SPANISH, "Viaje a Helera [10 de oro]", "¡Ya! ¡Que los vientos del mar nos lleven!");
-        cvTravel1.showEvenWhenNotValid = true;
-        cvTravel1.requirementValidations = (chara, ctx) -> {
-            if (App.getPlayerChar() != null && App.getPlayerChar().checkHasGold(10)) {
+        // ========================================
+        // QUEST: STUDYING FISH
+        // ========================================
+
+        // Part 3: Talk to Captain Philipson
+        ConversationOption cvFishPart3 = new ConversationOption(0, 0);
+        cvFishPart3.addOptionText(ENGLISH, "An elven student in Ayalon is studying fish. He needs a sample from Esperand's cold waters.",
+                "An elven student, eh? From Ayalon? Don't see many of their kind around these parts. Ay, the waters here are icy, and the fish that live in 'em are a hardy bunch. \n\nI've got a specimen here that should interest 'em. This Esperand fish was caught just off the ice floes this morning. Tell 'em Philipson sends his regards.");
+        cvFishPart3.addOptionText(PORTUGUESE, "Um estudante elfo em Ayalon está estudando peixes. Ele precisa de uma amostra das águas geladas de Esperand.",
+                "Um estudante elfo, hein? De Ayalon? Não vemos muitos da espécie deles por aqui. Sim, as águas aqui são geladas, e os peixes que vivem nelas são resistentes. \n\nTenho um espécime aqui que deve interessá-los. Este peixe de Esperand foi pescado perto das placas de gelo esta manhã. Diga a eles que Philipson manda lembranças.");
+        cvFishPart3.addOptionText(SPANISH, "Un estudiante elfo en Ayalon está estudiando peces. Necesita una muestra de las frías aguas de Esperand.",
+                "¿Un estudiante elfo? ¿De Ayalon? No se ven muchos de los suyos por aquí. Sí, las aguas aquí son gélidas, y los peces que viven en ellas son una especie resistente. \n\nTengo un espécimen aquí que debería interesarles. Este pez de Esperand fue capturado justo al lado de los témpanos de hielo esta mañana. Dile que Philipson le manda saludos.");
+        cvFishPart3.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isCharacterAtQuestPart(chara, STUDYING_FISH, 3)) {
                 return Enums.RequirementVerification.OK;
             }
-            return Enums.RequirementVerification.NEED_GOLD;
+            return Enums.RequirementVerification.NOT_OK;
         };
-        cvTravel1.listeners = (ctx, fragment) -> {
-            if (App.getPlayerChar() != null && LibUtils.getActivityFromContext(ctx) instanceof GameplayActivity gPlayActivity) {
-                Utils.getCharToLocation(LocationsIds.HELERA_HARBOR, 10, gPlayActivity, App.getPlayerChar());
-            }
+        cvFishPart3.listeners = (ctx, currentFragment) -> {
+            LibInventory.addToInventory(ItemsIds.ESPERAND_FISH, 1, App.getPlayerChar());
+            LibQuest.updateQuest(STUDYING_FISH, 4, App.getPlayerChar(), ctx);
         };
-        npc.conversationOptions.add(cvTravel1);
-
-        ConversationOption cvTravel2 = new ConversationOption(100, 999);
-        cvTravel2.addOptionText(ENGLISH, "Travel to Wazel [13 gold]", "Ya! Let the winds of the sea take us!");
-        cvTravel2.addOptionText(PORTUGUESE, "Viagem para Wazel [13 ouro]", "Ya! Deixe que os ventos do mar nos leve!");
-        cvTravel2.addOptionText(SPANISH, "Viaje a Wazel [13 de oro]", "¡Ya! ¡Que los vientos del mar nos lleven!");
-        cvTravel2.showEvenWhenNotValid = true;
-        cvTravel2.requirementValidations = (chara, ctx) -> {
-            if (App.getPlayerChar() != null && App.getPlayerChar().checkHasGold(13)) {
-                return Enums.RequirementVerification.OK;
-            }
-            return Enums.RequirementVerification.NEED_GOLD;
-        };
-        cvTravel2.listeners = (ctx, fragment) -> {
-            if (App.getPlayerChar() != null && LibUtils.getActivityFromContext(ctx) instanceof GameplayActivity gPlayActivity) {
-                Utils.getCharToLocation(LocationsIds.WAZEL_DOCKS, 13, gPlayActivity, App.getPlayerChar());
-            }
-        };
-        npc.conversationOptions.add(cvTravel2);
-
-        ConversationOption cvTravelNo = new ConversationOption(100, 0);
-        cvTravelNo.addOptionText(ENGLISH, "Changed my mind...", "Ok...");
-        cvTravelNo.addOptionText(PORTUGUESE, "Mudei de ideia...", "Ok...");
-        cvTravelNo.addOptionText(SPANISH, "Cambié de opinión...", "Ok...");
-        npc.conversationOptions.add(cvTravelNo);
+        npc.conversationOptions.add(cvFishPart3);
 
         return npc;
+    }
+
+    private void openTravelDialog(android.content.Context ctx) {
+        ArrayList<LocationTravelReference> destinations = new ArrayList<>();
+
+        LocationTravelReference helera = new LocationTravelReference(null, LocationsIds.HELERA_HARBOR, 240);
+        helera.destinationName = "Helera";
+        helera.travelCost = 10;
+        destinations.add(helera);
+
+        LocationTravelReference wazel = new LocationTravelReference(null, LocationsIds.WAZEL_DOCKS, 360);
+        wazel.destinationName = "Wazel";
+        wazel.travelCost = 13;
+        destinations.add(wazel);
+
+        Utils.showTravelSelectionDialog(ctx, destinations);
     }
 }

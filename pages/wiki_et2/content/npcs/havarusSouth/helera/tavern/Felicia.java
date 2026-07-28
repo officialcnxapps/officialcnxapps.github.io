@@ -25,9 +25,10 @@ public class Felicia extends DataHelper {
         npc.age = 39;
         npc.job = Enums.NPCJobs.FEMALE_TAVERN_KEEPER;
         npc.gender = Enums.Gender.FEMALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A fun and dedicated tavern keeper.\nHer good humor ensures customers and good stories.\nShe is looking for a love in her life.\n\nHer physical traits: Fair skin and rosy cheeks. Very light hair and honey-colored eyes. Chubby face.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Uma taberneira divertida e dedicada.\nSeu bom humor garante clientes e boas histórias.\nBusca por um amor na vida.\n\nSeus traços físicos: Pele clara e bochecas rosadas. Cabelo bem claro e olhos cor de mel. Rosto gordo.");
+        npc.addDescriptionTranslation(SPANISH, "Una tabernera divertida y dedicada.\nSu buen humor garantiza clientes y buenas historias.\nBusca un amor en su vida.\n\nSus rasgos físicos: Piel clara y mejillas rosadas. Cabello muy claro y ojos color miel. Rostro redondo.");
+        npc.canBePickpocketed = true;
 
         npc.generateRandomByes();
         npc.generateRandomGreetings();

@@ -27,9 +27,10 @@ public class Perseus extends DataHelper {
         npc.age = 47;
         npc.job = Enums.NPCJobs.MALE_BLACKSMITH;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "Works with precision. Prefers quality over quantity.\nHe is highly renowned within the blacksmiths' guild.\n\nHis physical traits: Mustache parted in the middle and a white beard. Light-colored eyes. He wears a large beret.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Trabalha com precisão. Prefere qualidade do que quantidade.\nTem grande renome entre a guilda dos ferreiros.\n\nSeus traços físicos: Bigode dividido ao meio e barba branca. Olhos claros. Utiliza uma grande boina.");
+        npc.addDescriptionTranslation(SPANISH, "Trabaja con precisión. Prefiere la calidad a la cantidad.\nTiene gran renombre entre el gremio de herreros.\n\nSus rasgos físicos: Bigote dividido al medio y barba blanca. Ojos claros. Utiliza una gran boina.");
+        npc.canBePickpocketed = true;
 
         npc.generateRandomByes();
         npc.generateRandomGreetings();

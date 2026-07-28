@@ -3,13 +3,16 @@ package com.cnx.endlesstalestwo.data.npcs.havarusSouth.bastian.market;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.ENGLISH;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.PORTUGUESE;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.SPANISH;
+import static com.cnx.endlesstalestwo.data.knowledges.KnowledgesIds.PICKPOCKET;
 
 import android.content.Context;
 import android.os.Looper;
 
+import com.cnx.cnxgameengine.utils.CoreEnums;
 import com.cnx.cnxgameengine.utils.LibUtils;
 import com.cnx.endlesstalestwo.App;
 import com.cnx.endlesstalestwo.GameEngine;
+import com.cnx.endlesstalestwo.R;
 import com.cnx.endlesstalestwo.activities.GameplayActivity;
 import com.cnx.endlesstalestwo.data.DataHelper;
 import com.cnx.endlesstalestwo.data.items.ItemsIds;
@@ -19,6 +22,7 @@ import com.cnx.endlesstalestwo.data.quests.QuestsIds;
 import com.cnx.endlesstalestwo.entities.Character;
 import com.cnx.endlesstalestwo.entities.ConversationOption;
 import com.cnx.endlesstalestwo.entities.GameplayCoreEntity;
+import com.cnx.endlesstalestwo.entities.Knowledge;
 import com.cnx.endlesstalestwo.entities.Npc;
 import com.cnx.endlesstalestwo.enums.Enums;
 import com.cnx.endlesstalestwo.libs.LibInventory;
@@ -35,12 +39,9 @@ public class Zilays extends DataHelper {
         npc.age = 31;
         npc.job = Enums.NPCJobs.NONE;
         npc.gender = Enums.Gender.FEMALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
-
-        //This NPC lives in a narrow alley, she is kid of a bandit/smuggler, she may give player a quest if player has a bad alignment.
-        //Also, she produces clandestine potions in a makeshift alchemy table.
+        npc.addDescriptionTranslation(ENGLISH, "Clever, agile, and stealthy.\nShe performs clandestine jobs without raising suspicion.\nShe is courageous and lively.\n\nHer physical features: Dark skin, shoulder-length curly black hair. Full lips and brown eyes.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Esperta, ágil e sorrateira.\nFaz trabalhos clandestinos sem levantar suspeitas.\nÉ corajosa e animada.\n\nSeus traços físicos: Pele morena, cabelos negros cacheados até o ombro. Lábios grandes e olhos castanhos.");
+        npc.addDescriptionTranslation(SPANISH, "Inteligente, ágil y sigilosa.\nRealiza trabajos clandestinos sin levantar sospechas.\nEs valiente y vivaz.\n\nCaracterísticas físicas: Piel morena, cabello negro rizado hasta los hombros, labios carnosos y ojos marrones.");
 
         // Conversation options
         ConversationOption cv1 = new ConversationOption(0, 0);
@@ -173,6 +174,51 @@ public class Zilays extends DataHelper {
             LibQuest.completeQuest(QuestsIds.POTIONS_FROM_EXTERIOR, App.getPlayerChar(), 5, ctx);
         };
         npc.conversationOptions.add(cvPFEPart4);
+
+        // ========================================
+        // KNOWLEDGE: PICKPOCKET
+        // ========================================
+        ConversationOption cvPickpocket1 = new ConversationOption(0, 20);
+        cvPickpocket1.addOptionText(ENGLISH, "Can you teach me some of your stealthy tricks?", "*Smirks and lowers her voice*\nStealthy tricks? You mean the art of taking without asking? It's not for the faint of heart or the righteous. Are you sure you're ready to get your hands dirty?\nBut, hey... it is not free.");
+        cvPickpocket1.addOptionText(PORTUGUESE, "Você pode me ensinar alguns de seus truques furtivos?", "*Sorri de lado e baixa a voz*\nTruques furtivos? Você quer dizer a arte de pegar sem pedir? Não é para os fracos de coração ou para os justos. Tem certeza de que está pronto para sujar as mãos?\nMas, hey... isso não será de graça.");
+        cvPickpocket1.addOptionText(SPANISH, "¿Puedes enseñarme algunos de tus trucos sigilosos?", "*Sonríe de lado y baja la voz*\n¿Trucos sigilosos? ¿Te refieres al arte de tomar sin preguntar? No es para los débiles de corazón ni para los rectos. ¿Estás seguro de que estás listo para ensuciarte las manos?\nPero, mira... esto no será gratis.");
+        cvPickpocket1.requirementValidations = (chara, ctx) -> {
+            if (chara.hasKnowledge(KnowledgesIds.PICKPOCKET)) {
+                return Enums.RequirementVerification.NOT_OK;
+            }
+            if (chara.attributesManager.getCurrent(Enums.AttributeName.ALIGNMENT) > 20) {
+                return Enums.RequirementVerification.NEED_ALIGNMENT;
+            }
+            return Enums.RequirementVerification.OK;
+        };
+        npc.conversationOptions.add(cvPickpocket1);
+
+        ConversationOption cvPickpocketAccept = new ConversationOption(20, 0);
+        cvPickpocketAccept.addOptionText(ENGLISH, "I am ready. [8 Gold]", "Very well. Watch closely, then. It's all in the wrist and the timing...");
+        cvPickpocketAccept.addOptionText(PORTUGUESE, "Estou pronto. [8 de Ouro]", "Muito bem. Observe atentamente, então. Está tudo no pulso e no tempo...");
+        cvPickpocketAccept.addOptionText(SPANISH, "Estoy listo. [8 de Oro]", "Muy bien. Observa de cerca, entonces. Todo está en la muñeca y el tiempo...");
+        cvPickpocketAccept.requirementValidations = (chara, ctx) -> {
+            if (chara.checkHasGold(8)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NEED_GOLD;
+        };
+        cvPickpocketAccept.listeners = (ctx, frag) -> {
+            App.getPlayerChar().removeGold(8);
+            App.getPlayerChar().addKnowledge(App.DataManager.getKnowledge(KnowledgesIds.PICKPOCKET));
+
+            Knowledge knowledge = App.DataManager.getKnowledge(PICKPOCKET);
+            String knowledgeName = knowledge.getName(App.CURRENT_LANGUAGE);
+            new android.os.Handler(android.os.Looper.getMainLooper()).postDelayed(() ->
+                    LibUtils.showToast(LibUtils.getString(R.string.YouLearnedKnowledge, knowledgeName, ctx), 0, CoreEnums.MessageType.INFO, ctx), 400);
+        };
+        npc.conversationOptions.add(cvPickpocketAccept);
+
+        ConversationOption cvPickpocketDecline = new ConversationOption(20, 0);
+        cvPickpocketDecline.addOptionText(ENGLISH, "Maybe not yet.", "Wise choice. Once you start down this path, there's no turning back for your soul.");
+        cvPickpocketDecline.addOptionText(PORTUGUESE, "Talvez ainda não.", "Escolha sábia. Uma vez que você começa por este caminho, não há volta para sua alma.");
+        cvPickpocketDecline.addOptionText(SPANISH, "Tal vez todavía no.", "Sabia elección. Una vez que comienzas por este camino, no hay vuelta atrás para tu alma.");
+        npc.conversationOptions.add(cvPickpocketDecline);
 
         return npc;
     }

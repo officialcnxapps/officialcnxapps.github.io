@@ -10,5 +10,6 @@ public enum RegionsIds {
     WAZEL,
     AYALON,
     GYBRALAR_FOREST,
-    UNDERWORLD
+    UNDERWORLD,
+    DRAGONLAND
 }

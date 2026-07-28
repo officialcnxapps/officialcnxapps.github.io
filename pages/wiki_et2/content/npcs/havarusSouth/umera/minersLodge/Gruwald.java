@@ -23,9 +23,10 @@ public class Gruwald extends DataHelper {
         npc.age = 54;
         npc.job = Enums.NPCJobs.GUILD_LEADER;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A leader who isn't very charismatic, but knows what he's doing and how to do it.\nHe worked as a miner before becoming the village leader.\nSerious and calm.\n\nHis physical traits: Messy blonde hair. Sparse stubble. Thin face and fair skin.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Um líder não muito carismático, mas sabe o que faz e como fazer.\nTrabalhu como minerador antes de se tornar líder da vila.\nSério e calmo.\n\nSeus traços físicos: Cabelos loiros despenteados. Barba rala por fazer. Rosto magro e pele clara.");
+        npc.addDescriptionTranslation(SPANISH, "Un líder no muy carismático, pero sabe lo que hace y cómo hacerlo.\nTrabajó como minero antes de convertirse en líder de la aldea.\nSerio y tranquilo.\n\nSus rasgos físicos: Cabello rubio despeinado. Barba rala por afeitar. Rostro delgado y piel clara.");
+        npc.canBePickpocketed = true;
 
         // Conversation options
         ConversationOption cv1 = new ConversationOption(0, 0);

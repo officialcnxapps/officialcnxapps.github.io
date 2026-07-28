@@ -28,9 +28,9 @@ public class NeleraMonelixLibrary extends DataHelper {
         npc.age = 36;
         npc.job = Enums.NPCJobs.STUDENT;
         npc.gender = Enums.Gender.FEMALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "Dreamy, dedicated and lively.\nA young spirit, ambitious and intelligent, very proactive. Sometimes she can also be innocent about life.\n\nHer physical traits: fair skin and a youthful face. light brown, curly hair. Brown eyes with a bright gaze.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Sonhadora, dedicada e animada.\nEspírito jovem, ambiciosa e inteligente, muito proativa. As vezes pode ser também inocente em relação a vida.\n\nSeus traços físicos: pele clara e um rosto jovial. cabelo castanho claro, cacheado. Olhos castanhos com olhar brilhante.");
+        npc.addDescriptionTranslation(SPANISH, "Soñadora, dedicada y animada.\nEspíritu joven, ambiciosa e inteligente, muy proactiva. A veces también puede ser inocente respecto a la vida.\n\nSus rasgos físicos: piel clara y un rostro juvenil. cabello castaño claro, rizado. Ojos marrones con una mirada brillante.");
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Ah, [PLAYERNAME]! Welcome to the Royal Library!"));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Ah, [PLAYERNAME]! Seja bem-vindo à Biblioteca Real!"));

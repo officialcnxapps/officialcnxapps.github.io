@@ -22,12 +22,12 @@ public class Katiusca extends DataHelper {
 
     Npc npc() {
         Npc npc = new Npc("Katiusca");
-        npc.age = 30;
+        npc.age = 34;
         npc.job = Enums.NPCJobs.SOLDIER;
         npc.gender = Enums.Gender.FEMALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A determined woman with a strong pulse.\nShe never turns down a battle or an adventure.\nDeep down, she feels she's getting old and needs a family.\n\nHer physical traits: Wide, light-colored eyes. Hair covered by a metal helmet. Sun-dried face and fair skin.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Uma mulher determinada de pulso forte.\nNão nega uma batalha ou uma aventura.\nNo fundo, sente que está ficando velha e precisa de uma família.\n\nSeus traços físicos: Olhos arregalados e claros. Cabelos cobertos pelo capacete de metal. Rosto ressecado do sol e pele clara.");
+        npc.addDescriptionTranslation(SPANISH, "Una mujer decidida de pulso firme.\nNo rehúye una batalla o una aventura.\nEn el fondo, siente que está envejeciendo y necesita una familia.\n\nSus rasgos físicos: Ojos grandes y claros. Cabello cubierto por el casco de metal. Rostro reseco por el sol y piel clara.");
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Eyes on the horizon, always."));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Olhos no horizonte, sempre."));

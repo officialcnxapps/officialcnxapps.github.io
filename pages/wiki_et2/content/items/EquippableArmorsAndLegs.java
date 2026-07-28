@@ -38,6 +38,7 @@ public class EquippableArmorsAndLegs extends DataHelper {
         App.DataManager.add(Enums.DataTypes.ITEM, breastplateOfFire());//
         App.DataManager.add(Enums.DataTypes.ITEM, breastplateOfShadows());//
         App.DataManager.add(Enums.DataTypes.ITEM, cloakOfAlchemists());
+        App.DataManager.add(Enums.DataTypes.ITEM, dragonMail());
 
         App.DataManager.add(Enums.DataTypes.ITEM, peasantTrousers());//
         App.DataManager.add(Enums.DataTypes.ITEM, reinforcedTrousers());//
@@ -267,6 +268,7 @@ public class EquippableArmorsAndLegs extends DataHelper {
         equipItem.modifiers.add(new AttributeModifierValue(Enums.AttributeName.STRENGTH, 1));
         equipItem.modifiers.add(new AttributeModifierValue(Enums.AttributeName.MAGIC, 1));
         equipItem.modifiers.add(new AttributeModifierValue(Enums.AttributeName.AGILITY, 1));
+        equipItem.rarity = Enums.Rarity.RARE;
 
         equipItem.requirementValidations = (chara, ctx) -> {
             if (chara.level >= 3) {
@@ -802,6 +804,28 @@ public class EquippableArmorsAndLegs extends DataHelper {
         equipItem.addDescriptionTranslation(ENGLISH, "A robust cloak resistant to chemical stains. Increase 10 levels of alchemy.");
         equipItem.addDescriptionTranslation(PORTUGUESE, "Um manto robusto resistente a manchas químicas. Aumenta 10 níveis de alquimia.");
         equipItem.addDescriptionTranslation(SPANISH, "Una capa robusta y resistente a las manchas químicas. Aumenta 10 niveles de alquimia.");
+
+        equipItem.setupDefaultListeners();
+        return equipItem;
+    }
+
+    EquippableItem dragonMail() {
+        EquippableItem equipItem = new EquippableItem("Dragon Mail");
+        equipItem.addNameTranslation(PORTUGUESE, "Cota de Dragão");
+        equipItem.addNameTranslation(SPANISH, "Cota de Dragón");
+
+        equipItem.slotPart = Enums.SlotPart.CHEST;
+        equipItem.type = Enums.ItemType.ARMOR;
+        equipItem.defense = 5;
+        equipItem.marketValue = 110;
+        equipItem.weight = 4.5f;
+        equipItem.rarity = Enums.Rarity.RARE;
+
+        equipItem.addDescriptionTranslation(ENGLISH, "Woven from dragon scales, this mail provides legendary protection against fire.");
+        equipItem.addDescriptionTranslation(PORTUGUESE, "Tecida a partir de escamas de dragão, esta cota oferece proteção lendária contra fogo.");
+        equipItem.addDescriptionTranslation(SPANISH, "Tejida con escamas de dragón, esta cota proporciona una protección legendaria contra fuego.");
+
+        equipItem.resistancesModifiers.put(Enums.Elements.FIRE, 50);
 
         equipItem.setupDefaultListeners();
         return equipItem;

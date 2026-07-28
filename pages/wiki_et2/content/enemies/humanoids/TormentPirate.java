@@ -25,6 +25,7 @@ public class TormentPirate {
         enemy.setVitalities(27, 35);
         enemy.setDefense(4);
         enemy.setAgility(15);
+        enemy.setMagic(12);
         enemy.setStrength(9);
         enemy.givenExperience = 13;
         enemy.givenGold = 3;

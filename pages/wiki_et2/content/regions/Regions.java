@@ -19,6 +19,7 @@ public class Regions extends DataHelper {
         App.DataManager.add(Enums.DataTypes.REGION, growrocks());
         App.DataManager.add(Enums.DataTypes.REGION, ayalon());
         App.DataManager.add(Enums.DataTypes.REGION, underworld());
+        App.DataManager.add(Enums.DataTypes.REGION, dragonland());
     }
 
     Region lisport() {
@@ -317,6 +318,24 @@ public class Regions extends DataHelper {
         Region region = new Region("Underworld");
         region.addNameTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Submundo");
         region.addNameTranslation(CoreEnums.AvailableLanguages.SPANISH, "Inframundo");
+
+        return region;
+    }
+
+    Region dragonland() {
+        Region region = new Region("Dragonland");
+        region.addNameTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Terra dos Dragões");
+        region.addNameTranslation(CoreEnums.AvailableLanguages.SPANISH, "Tierra de Dragones");
+        region.mapItemUid = ItemsIds.DRAGONLAND_MAP;
+
+        region.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH,
+                "Dragonland is a remote, arid island with dark soil, dominated by a massive mountain that occupies almost the entire island. It is the legendary home of dragons.");
+
+        region.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE,
+                "Dragonland é uma ilha remota, árida e com terra escura, onde uma montanha ocupa quase toda a ilha. É o lar lendário dos dragões.");
+
+        region.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH,
+                "Dragonland es una isla remota y árida con tierra oscura, donde una montaña ocupa casi toda la isla. Es el hogar legendario de los dragones.");
 
         return region;
     }

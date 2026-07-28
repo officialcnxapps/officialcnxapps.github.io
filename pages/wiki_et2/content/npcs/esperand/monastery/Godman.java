@@ -26,6 +26,7 @@ public class Godman extends DataHelper {
         npc.addDescriptionTranslation(ENGLISH, "A calm and thoughtful young man.\nHe knows well how much he knows and how much he still needs to learn.\nDevoted to his faith and peaceful in his attitude.\n\nHis physical traits: Youthful appearance, well-kept brown hair and beard, and a friendly gaze.");
         npc.addDescriptionTranslation(PORTUGUESE, "Um rapaz sereno, pensativo.\nSabe bem o quanto conhece e o quanto precisa conhecer.\nDevoto a sua fé e tranquilo nas suas atitudes.\n\nSeus traços físicos: Aspecto jovem. Cabelo e barba bem cuidados e de tom castanho. Olhar amigável.");
         npc.addDescriptionTranslation(SPANISH, "Un joven sereno y pensativo.\nSabe bien cuánto conoce y cuánto necesita conocer todavía.\nDevoto a su fe y tranquilo en sus actitudes.\n\nSus rasgos físicos: Aspecto juvenil, cabello y barba bien cuidados de tono castaño, y mirada amigable.");
+        npc.canBePickpocketed = true;
 
         npc.generateRandomGreetings();
         npc.generateRandomByes();

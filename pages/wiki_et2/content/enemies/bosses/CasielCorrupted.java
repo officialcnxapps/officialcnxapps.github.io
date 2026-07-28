@@ -28,6 +28,7 @@ public class CasielCorrupted {
         enemy.maxDamage = 8;
         enemy.damageModifier = 2;
         enemy.levelToDynamicBalance = 20;
+        enemy.attributesManager.set(Enums.AttributeName.CRITICAL_CHANCE, 9);
 
         enemy.resistances.put(Enums.Elements.DARK, 25);
         enemy.resistances.put(Enums.Elements.EARTH, 25);

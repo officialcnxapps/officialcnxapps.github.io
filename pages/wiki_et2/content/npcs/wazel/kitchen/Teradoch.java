@@ -24,9 +24,10 @@ public class Teradoch extends DataHelper {
         npc.age = 60;
         npc.job = Enums.NPCJobs.MALE_TAVERN_KEEPER;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "He lives his life serving meals in the kitchen with agility.\nVery calm, he never loses his composure.\nWhalika's father.\n\nHis physical traits: Bloated appearance, large nose, and prominent eyes. Black skin and graying beard. He wears a kind of turban.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Vive sua vida servindo refeições na cozinha com agilidade.\nMuito calmo, não perde a compostura.\nPai de Whalika.\n\nSeus traços físicos: Aprência inchada, nariz grande e olhos proeminentes. Pele negra e barba grisalha. Utiliza uma espécie de turbante.");
+        npc.addDescriptionTranslation(SPANISH, "Vive su vida sirviendo comidas en la cocina con agilidad.\nMuy tranquilo, nunca pierde la compostura.\nPadre de Whalika.\n\nSus rasgos físicos: Apariencia hinchada, nariz grande y ojos prominentes. Piel negra y barba entrecana. Utiliza una especie de turbante.");
+        npc.canBePickpocketed = true;
 
         // ===== ROLEPLAY: About the tavern - BEFORE Wazel Battle =====
         ConversationOption cvRoleplay1 = new ConversationOption(0, 0);

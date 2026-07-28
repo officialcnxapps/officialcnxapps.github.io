@@ -29,9 +29,10 @@ public class LadyLara extends DataHelper {
         npc.age = 36;
         npc.job = Enums.NPCJobs.NONE;
         npc.gender = Enums.Gender.FEMALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A very elegant and refined woman.\nShe is the daughter of Lord Den Falker of Letow.\nDetermined and wise.\n\nHer physical traits: Long blonde hair. Crystal blue eyes. Fair, thin skin.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Uma mulher muito elegante e refinada.\nÉ filha de Lord Den Falker de Letow.\nDeterminada e sábia.\n\nSeus traços físicos: Cabelos loiros compridos. Olhos azuis cristalinos. Pele fina clara.");
+        npc.addDescriptionTranslation(SPANISH, "Una mujer muy elegante y refinada.\nEs hija de Lord Den Falker de Letow.\nDeterminada y sabia.\n\nSus rasgos físicos: Cabello rubio y largo. Ojos azules cristalinos. Piel fina y clara.");
+        npc.canBePickpocketed = true;
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Good day to you. The gardens are peaceful today, aren't they?"));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Bom dia. Os jardins estão calmos hoje, não estão?"));

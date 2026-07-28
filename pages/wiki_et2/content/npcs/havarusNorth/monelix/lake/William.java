@@ -22,9 +22,10 @@ public class William extends DataHelper {
         npc.age = 51;
         npc.job = Enums.NPCJobs.MALE_FISHERMAN;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A man of few words, but when he speaks, he knows what to say.\nPleasant and easygoing character.\n\nHis physical traits: Slightly sun-tanned skin, thin face. Beard and hair with graying streaks. Friendly smile.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Homem de poucas palavras, mas quando fala, sabe o que dizer.\nCaráter agradável e leve.\n\nSeus traços físicos: Pele levemente bronzeada do sol, rosto magro. Barba e cabelo com mechas grisalhas. Sorriso amigável.");
+        npc.addDescriptionTranslation(SPANISH, "Un hombre de pocas palabras, pero cuando habla, sabe lo que dice.\nCarácter agradable y ligero.\n\nSus rasgos físicos: Piel levemente bronceada por el sol, rostro delgado. Barba y cabello con mechones canosos. Sonrisa amigable.");
+        npc.canBePickpocketed = true;
 
         npc.generateRandomByes();
 

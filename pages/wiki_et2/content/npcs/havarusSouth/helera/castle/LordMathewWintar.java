@@ -4,6 +4,7 @@ import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.ENGLISH;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.PORTUGUESE;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.SPANISH;
 import static com.cnx.endlesstalestwo.data.quests.QuestsIds.KINGDOMS_CUP;
+import static com.cnx.endlesstalestwo.data.quests.QuestsIds.NOBLES_BALL;
 import static com.cnx.endlesstalestwo.data.quests.QuestsIds.REBUILD_HELERA;
 
 import com.cnx.endlesstalestwo.App;
@@ -29,9 +30,10 @@ public class LordMathewWintar extends DataHelper {
         npc.age = 55;
         npc.job = Enums.NPCJobs.GOVERNOR;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A very efficient leader, he is appreciated by the people.\nHe acts with seriousness but has moments of good humor.\nHe highly values family.\n\nHis physical traits: Well-groomed beard and mustache with some white hairs. Serious gaze. Light brown hair and blue eyes. Skin showing some age.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Líder muito eficiente, tem o apreço do povo.\nAtua com seriedade mas tem momentos de bom humor.\nValoriza muito a família.\n\nSeus traços físicos: Barba e bigode bem feitos com alguns fios brancos. Olhar sério. Cabelos castanho claros e olhos azuis. Pele já com alguma idade.");
+        npc.addDescriptionTranslation(SPANISH, "Líder muy eficiente, cuenta con el aprecio del pueblo.\nActúa con seriedad pero tiene momentos de buen humor.\nValora mucho a la familia.\n\nSus rasgos físicos: Barba y bigote bien cuidados con algunas canas. Mirada seria. Cabello castaño claro y ojos azules. Piel que ya muestra cierta edad.");
+        npc.canBePickpocketed = true;
 
         npc.requirementValidations = (chara, ctx) -> {
             if (LibQuest.isCharacterAtQuestPart(chara, REBUILD_HELERA, 2)) {
@@ -159,7 +161,7 @@ public class LordMathewWintar extends DataHelper {
         npc.conversationOptions.add(cvRebuild5);
 
         // ===== QUEST: Kingdoms Cup - Part 4 =====
-        ConversationOption cvKingdomsCup1 = new ConversationOption(0, 10);
+        ConversationOption cvKingdomsCup1 = new ConversationOption(0, 50);
         cvKingdomsCup1.addOptionText(ENGLISH, "A young man is organizing a sporting tournament between all cities and kingdoms.", "A sporting tournament? That's quite ambitious.\n\n*Looks interested but cautious*\n\nWhat sport are we discussing? And tell me - who else has already committed to this venture?");
         cvKingdomsCup1.addOptionText(PORTUGUESE, "Um jovem está organizando um torneio esportivo entre todas as cidades e reinos.", "Um torneio esportivo? Isso é bastante ambicioso.\n\n*Parece interessado mas cauteloso*\n\nQue esporte estamos discutindo? E conte-me - quem mais já se comprometeu com este empreendimento?");
         cvKingdomsCup1.addOptionText(SPANISH, "Un joven está organizando un torneo deportivo entre todas las ciudades y reinos.", "¿Un torneo deportivo? Eso es bastante ambicioso.\n\n*Parece interesado pero cauteloso*\n\n¿De qué deporte estamos hablando? Y cuéntame: ¿quién más ya se ha comprometido con este emprendimiento?");
@@ -171,7 +173,7 @@ public class LordMathewWintar extends DataHelper {
         };
         npc.conversationOptions.add(cvKingdomsCup1);
 
-        ConversationOption cvKingdomsCup2 = new ConversationOption(10, 0);
+        ConversationOption cvKingdomsCup2 = new ConversationOption(50, 0);
         cvKingdomsCup2.addOptionText(ENGLISH, "Mob Ball! Lord Markus, Lady Jade, and King Oliver have all accepted.", "*Stands up with enthusiasm*\n\nMob Ball! That's perfect - passionate, physical, uniting! And Markus, Jade, and even King Oliver agreed? If all of them see the value in this, then it must be truly worthwhile!\n\n*Nods decisively*\n\nA sporting competition bringing all cities and kingdoms together would boost morale tremendously and show our resilience to the world. Helera accepts! Tell the organizer that Lord Mathew Wintar gives his full support!");
         cvKingdomsCup2.addOptionText(PORTUGUESE, "Mob Ball! Lorde Markus, Lady Jade e Rei Oliver aceitaram.", "*Levanta-se com entusiasmo*\n\nMob Ball! Isso é perfeito - apaixonado, físico, unificador! E Markus, Jade e até o Rei Oliver concordaram? Se todos eles veem o valor nisso, então deve realmente valer a pena!\n\n*Acena decisivamente*\n\nUma competição esportiva unindo todas as cidades e reinos elevaria o moral tremendamente e mostraria nossa resiliência ao mundo. Helera aceita! Diga ao organizador que Lorde Mathew Wintar dá seu total apoio!");
         cvKingdomsCup2.addOptionText(SPANISH, "¡Mob Ball! Lord Markus, Lady Jade y el Rey Oliver han aceptado.", "*Se levanta con entusiasmo*\n\n¡Mob Ball! Eso es perfecto: apasionado, físico, unificador. ¿Y Markus, Jade e incluso el Rey Oliver aceptaron? ¡Si todos ellos ven el valor en esto, entonces debe valer realmente la pena!\n\n*Asiente con decisión*\n\nUna competición deportiva uniendo todas las ciudades y reinos elevaría la moral tremendamente y mostraría nuestra resiliencia al mundo. ¡Helera acepta! ¡Dile al organizador que Lord Mathew Wintar da su total apoyo!");
@@ -179,6 +181,29 @@ public class LordMathewWintar extends DataHelper {
             LibQuest.updateQuest(KINGDOMS_CUP, 5, App.getPlayerChar(), ctx);
         };
         npc.conversationOptions.add(cvKingdomsCup2);
+
+        // ========================================
+        // QUEST: NOBLE'S BALL
+        // ========================================
+
+        // Part 4: Invite Lord Mathew Wintar
+        ConversationOption cvBallPart4 = new ConversationOption(0, 0);
+        cvBallPart4.addOptionText(ENGLISH, "Lord Mathew, I have an invitation for the Noble's Ball at Monelix Castle.",
+                "*He smiles warmly*\nA ball! My sister Jade always did have a flair for organizing these grand events. It will be good to see the family gathered in Monelix. \n\nI will certainly attend, and I'll make sure to notify my brothers, Markus and Mukas, as well. We Wintars wouldn't miss such a celebration for anything. Thank you for bringing this personally.");
+        cvBallPart4.addOptionText(PORTUGUESE, "Lorde Mathew, tenho um convite para o Baile de Nobres no Castelo de Monelix.",
+                "*Ele sorri calorosamente*\nUm baile! Minha irmã Jade sempre teve um talento especial para organizar esses grandes eventos. Será bom ver a família reunida em Monelix. \n\nEu certamente comparecerei, e farei questão de avisar meus irmãos, Markus e Mukas, também. Nós, os Wintar, não perderíamos tal celebração por nada. Obrigado por trazer isso pessoalmente.");
+        cvBallPart4.addOptionText(SPANISH, "Lord Mathew, tengo una invitación para el Baile de Nobles en el Castillo de Monelix.",
+                "*Sonríe con calidez*\n¡Un baile! Mi hermana Jade siempre tuvo un don para organizar estos grandes eventos. Será bueno ver a la familia reunida en Monelix. \n\nCiertamente asistiré, y me aseguraré de notificar a mis hermanos, Markus y Mukas, también. Los Wintar no nos perderíamos una celebración así por nada. Gracias por traer esto personalmente.");
+        cvBallPart4.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isCharacterAtQuestPart(chara, NOBLES_BALL, 4)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        cvBallPart4.listeners = (ctx, currentFragment) -> {
+            LibQuest.updateQuest(NOBLES_BALL, 5, App.getPlayerChar(), ctx);
+        };
+        npc.conversationOptions.add(cvBallPart4);
 
         return npc;
     }

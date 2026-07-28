@@ -33,9 +33,7 @@ public class MysticRock extends DataHelper {
         npc.age = 900;
         npc.job = Enums.NPCJobs.NONE;
         npc.gender = Enums.Gender.UNKNOWN;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.allowTraitsAnalysis = false;
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("A mortal..."));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Um mortal..."));

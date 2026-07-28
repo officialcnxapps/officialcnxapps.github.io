@@ -3,13 +3,16 @@ package com.cnx.endlesstalestwo.data.npcs.ayalon.bridge;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.ENGLISH;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.PORTUGUESE;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.SPANISH;
+import static com.cnx.endlesstalestwo.data.quests.QuestsIds.STUDYING_FISH;
 
 import com.cnx.endlesstalestwo.App;
 import com.cnx.endlesstalestwo.data.DataHelper;
+import com.cnx.endlesstalestwo.data.items.ItemsIds;
 import com.cnx.endlesstalestwo.data.quests.QuestsIds;
 import com.cnx.endlesstalestwo.entities.ConversationOption;
 import com.cnx.endlesstalestwo.entities.Npc;
 import com.cnx.endlesstalestwo.enums.Enums;
+import com.cnx.endlesstalestwo.libs.LibInventory;
 import com.cnx.endlesstalestwo.libs.LibQuest;
 
 public class Haluren extends DataHelper {
@@ -26,12 +29,13 @@ public class Haluren extends DataHelper {
         npc.addDescriptionTranslation(ENGLISH, "A young elf, enchanted by the world he lives in and by his own culture.\nA nature enthusiast. No known relatives.\nHe usually spends his days wandering around the outskirts of the city.\n\nHis physical traits: Long blond hair, a square face with well-defined lines. Very fair skin.");
         npc.addDescriptionTranslation(PORTUGUESE, "Um jovem elfo. Encantado com o mundo onde vive e com a sua própria cultura.\nEntusiasta da natureza. Nenhum familiar conhecido.\nPassa seus dias costumeiramente a andar pelos arredores da cidade.\n\nSeus taços físicos: Cabelos longos e loiros, rosto quadrado e com linhas bem definidas. Pele bem clara.");
         npc.addDescriptionTranslation(SPANISH, "Un joven elfo, encantado con el mundo en el que vive y con su propia cultura.\nEntusiasta de la naturaleza. No tiene familiares conocidos.\nSuele pasar sus días caminando por los alrededores de la ciudad.\n\nSus rasgos físicos: Cabello largo y rubio, rostro cuadrado con líneas bien definidas. Piel muy clara.");
+        npc.canBePickpocketed = true;
 
         npc.generateRandomGreetings();
         npc.generateRandomByes();
 
         // Roleplay conversations
-        ConversationOption cvRoleplay1 = new ConversationOption(0, 0);
+        ConversationOption cvRoleplay1 = new ConversationOption(0, 3);
         cvRoleplay1.addOptionText(ENGLISH, "What do you study, Haluren?", "I study the ancient paths, mortal. The Blue River has been a boundary between worlds for millennia - not just between Ayalon and the outer forests, but between the known and the mystical. This bridge... it sings with old magic. I listen, I observe, I record. Perhaps one day I will understand why the waters here run so blue, or why the stars reflect differently in this river than in any other.");
         cvRoleplay1.addOptionText(PORTUGUESE, "O que você estuda, Haluren?", "Estudo os caminhos ancestrais, mortal. O Rio Azul tem sido uma fronteira entre mundos por milênios - não apenas entre Ayalon e as florestas externas, mas entre o conhecido e o místico. Esta ponte... canta com magia antiga. Eu escuto, observo, registro. Talvez um dia eu entenda por que as águas aqui correm tão azuis, ou por que as estrelas se refletem de forma diferente neste rio do que em qualquer outro.");
         cvRoleplay1.addOptionText(SPANISH, "¿Qué estudias, Haluren?", "Estudio los caminos ancestrales, mortal. El Río Azul ha sido una frontera entre mundos durante milenios - no solo entre Ayalon y los bosques exteriores, sino entre lo conocido y lo místico. Este puente... canta con magia antigua. Escucho, observo, registro. Quizás algún día entienda por qué las aguas aquí corren tan azules, o por qué las estrelas se reflejan de manera diferente en este río que en cualquier otro.");
@@ -58,6 +62,69 @@ public class Haluren extends DataHelper {
             LibQuest.updateQuest(QuestsIds.TRAITOR, 3, App.getPlayerChar(), ctx);
         };
         npc.conversationOptions.add(cvTraitor1);
+
+        // ========================================
+        // QUEST: STUDYING FISH
+        // ========================================
+
+        // Start quest
+        ConversationOption cvFishStart = new ConversationOption(3, 10);
+        cvFishStart.addOptionText(ENGLISH, "You seem interested in the river. What are you looking for?",
+                "I am also studying the aquatic life here in Ayalon, traveler. I believe the fish in these mystical waters hold secrets to healing and vitality. However, my research is limited to this region. I often wonder... do fish in other lands possess similar properties?");
+        cvFishStart.addOptionText(PORTUGUESE, "Você parece interessado no rio. O que está procurando?",
+                "Estou também estudando a vida aquática aqui em Ayalon, viajante. Acredito que os peixes nestas águas místicas guardam segredos de cura e vitalidade. No entanto, minha pesquisa limita-se a esta região. Muitas vezes me pergunto... os peixes em outras terras possuem propriedades semelhantes?");
+        cvFishStart.addOptionText(SPANISH, "Pareces interesado en el río. ¿Qué buscas?",
+                "Estoy tambiém estudiando la vida acuática aquí en Ayalon, viajero. Creo que los peces en estas aguas místicas guardan secretos de curación y vitalidad. Sin embargo, mi investigación se limita a esta región. A menudo me pregunto... ¿tendrán los peces de otras tierras propiedades similares?");
+        cvFishStart.requirementValidations = (chara, ctx) -> {
+            if (!LibQuest.charHasQuest(STUDYING_FISH, chara)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        npc.conversationOptions.add(cvFishStart);
+
+        ConversationOption cvFishAccept = new ConversationOption(10, 0);
+        cvFishAccept.addOptionText(ENGLISH, "I can help you gather samples from other kingdoms.",
+                "Would you really? That would be a tremendous help! I need samples from three distinct regions: Havarus, Lisport, and Esperand. \n\nTalk to Jack in Fisherman Ville, Klaus in Lisport Shores, and Captain Philipson in Esperand Harbor. They are all experienced with the local waters and might be able to provide the samples I need.");
+        cvFishAccept.addOptionText(PORTUGUESE, "Posso ajudar você a coletar amostras de outros reinos.",
+                "Sério? Isso seria uma ajuda tremenda! Preciso de amostras de três regiões distintas: Havarus, Lisport e Esperand. \n\nFale com Jack em Fisherman Ville, Klaus em Lisport Shores e o Capitão Philipson no Porto de Esperand. Todos eles têm experiência com as águas locais e podem fornecer as amostras que preciso.");
+        cvFishAccept.addOptionText(SPANISH, "Puedo ayudarte a recolectar muestras de otros reinos.",
+                "¿De verdad? ¡Eso seria de gran ajuda! Necesito muestras de tres regiones distintas: Havarus, Lisport y Esperand. \n\nHabla con Jack in Fisherman Ville, Klaus en las Playas de Lisport y el Capitán Philipson en el Puerto de Esperand. Todos ellos tienen experiencia con las aguas locales y podrían proporcionar las muestras que necesito.");
+        cvFishAccept.listeners = (ctx, currentFragment) -> {
+            LibQuest.includeQuestToQuestbook(STUDYING_FISH, App.getPlayerChar(), ctx);
+        };
+        npc.conversationOptions.add(cvFishAccept);
+
+        ConversationOption cvFishDecline = new ConversationOption(10, 0);
+        cvFishDecline.addOptionText(ENGLISH, "Maybe another time.", "I understand. The river's secrets will wait for a patient observer.");
+        cvFishDecline.addOptionText(PORTUGUESE, "Talvez outra hora.", "Eu entendo. Os segredos do rio esperarão por um observador paciente.");
+        cvFishDecline.addOptionText(SPANISH, "Tal vez en otro momento.", "Entiendo. Los secretos del río esperarán a un observador paciente.");
+        npc.conversationOptions.add(cvFishDecline);
+
+        // Part 4: Complete quest
+        ConversationOption cvFishComplete = new ConversationOption(0, 0);
+        cvFishComplete.addOptionText(ENGLISH, "I have the fish samples from Havarus, Lisport, and Esperand.",
+                "Incredible! You actually gathered them all. Let me see... \n\n*He examines the samples with excitement*\n\nYes, these are perfect! The differences are fascinating. This will keep me busy for months. Thank you, traveler. Please, take this Nature Necklace as a token of my gratitude. It is a symbol of the harmony I seek to understand.");
+        cvFishComplete.addOptionText(PORTUGUESE, "Tenho as amostras de peixe de Havarus, Lisport e Esperand.",
+                "Incrível! Você realmente coletou todas elas. Deixe-me ver... \n\n*Ele examina as amostras com entusiasmo*\n\nSim, estas são perfeitas! As diferenças são fascinantes. Isso me manterá ocupado por meses. Obrigado, viajante. Por favor, aceite este Colar da Natureza como um símbolo da minha gratidão. É um símbolo da harmonia que busco compreender.");
+        cvFishComplete.addOptionText(SPANISH, "Tengo las muestras de peces de Havarus, Lisport y Esperand.",
+                "¡Increíble! Realmente las recolectaste todas. Déjame ver... \n\n*Examina las muestras con entusiasmo*\n\n¡Sí, son perfectas! Las diferencias son fascinantes. Esto me mantendrá ocupado durante meses. Gracias, viajero. Por favor, toma este Collar de la Naturaleza como muestra de mi gratitud. Es un símbolo de la armonía que busco comprender.");
+        cvFishComplete.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isCharacterAtQuestPart(chara, STUDYING_FISH, 4)
+                    && LibInventory.checkHasItem(ItemsIds.HAVARUS_FISH, chara)
+                    && LibInventory.checkHasItem(ItemsIds.LISPORT_FISH, chara)
+                    && LibInventory.checkHasItem(ItemsIds.ESPERAND_FISH, chara)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        cvFishComplete.listeners = (ctx, currentFragment) -> {
+            LibInventory.removeFromInventory(ItemsIds.HAVARUS_FISH, 1, App.getPlayerChar());
+            LibInventory.removeFromInventory(ItemsIds.LISPORT_FISH, 1, App.getPlayerChar());
+            LibInventory.removeFromInventory(ItemsIds.ESPERAND_FISH, 1, App.getPlayerChar());
+            LibQuest.completeQuest(STUDYING_FISH, App.getPlayerChar(), 11, ctx);
+        };
+        npc.conversationOptions.add(cvFishComplete);
 
         return npc;
     }

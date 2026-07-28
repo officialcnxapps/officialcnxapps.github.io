@@ -32,9 +32,10 @@ public class Larien extends DataHelper {
         npc.age = 28;
         npc.job = Enums.NPCJobs.FEMALE_FARMER;
         npc.gender = Enums.Gender.FEMALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "This young woman is firmer and more serious than her innocent appearance suggests.\nShe works hard and manages the crops very well.\nLively, dedicated and calm.\nHer physical traits: Pale skin, brown hair and thin eyebrows. Thin nose, blue eyes with a serene expression.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Essa moça é mais firme e séria do que sua aparência inocente sugere.\nTrabalha com afinco e comanda muito bem as lavouras.\nAnimada, dedicada e tranquila.\nSeus traços físicos: Pele pálida, cabelos castanhos e sobrancelha fina. Nariz fino, olhos azuis com expressão serena.");
+        npc.addDescriptionTranslation(SPANISH, "Esta joven es más firme y seria de lo que su apariencia inocente sugiere.\nTrabaja con ahínco y gestiona muy bien los cultivos.\nAnimada, dedicada y tranquila.\nSus rasgos físicos: Piel pálida, cabello castaño y cejas finas. Nariz fina, ojos azules con expresión serena.");
+        npc.canBePickpocketed = true;
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Hello there! Welcome to Farmland."));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Olá! Bem-vindo a Farmland."));
@@ -193,7 +194,7 @@ public class Larien extends DataHelper {
         ConversationOption cvRoleplayFarmlife = new ConversationOption(0, 7);
         cvRoleplayFarmlife.addOptionText(ENGLISH, "What's life like here in Farmland?", "It's a simple life, but rewarding. We wake before dawn, work the fields until dusk, and fall asleep exhausted. But there's something beautiful about growing food that feeds the entire kingdom. The seasons change, the crops grow, and we feel connected to something greater than ourselves. Of course, it wasn't always peaceful - now with the attacks, things are harder.");
         cvRoleplayFarmlife.addOptionText(PORTUGUESE, "Como é a vida aqui em Farmland?", "É uma vida simples, mas gratificante. Acordamos antes do amanhecer, trabalhamos nos campos até o anoitecer, e dormimos exaustos. Mas há algo lindo em cultivar comida que alimenta o reino inteiro. As estações mudam, as colheitas crescem, e nos sentimos conectados a algo maior que nós mesmos. Claro, nem sempre foi pacífico - agora com os ataques, as coisas ficaram mais difíceis.");
-        cvRoleplayFarmlife.addOptionText(SPANISH, "¿Cómo es la vida aquí en Farmland?", "Es una vida simple, pero gratificante. Nos despertamos antes del amanecer, trabajamos en los campos hasta el anochecer, y nos dormimos agotados. Pero hay algo hermoso en cultivar comida que alimenta el reino entero. Las estaciones cambian, las cosechas crecen, y nos sentimos conectados a algo mayor que nosotros mismos. Por supuesto, no siempre fue pacífico - ahora con los ataques, las cosas son más difíciles.");
+        cvRoleplayFarmlife.addOptionText(SPANISH, "¿Como es la vida aquí en Farmland?", "Es una vida simple, pero gratificante. Nos despertamos antes del amanecer, trabajamos en los campos hasta el anochecer, y nos dormimos agotados. Pero hay algo hermoso en cultivar comida que alimenta el reino entero. Las estaciones cambian, las cosechas crecen, y nos sentimos conectados a algo mayor que nosotros mismos. Por supuesto, no siempre fue pacífico - ahora con los ataques, las cosas son más difíciles.");
         cvRoleplayFarmlife.requirementValidations = (chara, ctx) -> {
             if (LibQuest.charHasQuest(DEFEND_FARMLAND, chara) || LibQuest.charHasQuest(REBUILD_FARMLAND, chara)) {
                 return Enums.RequirementVerification.NOT_OK;
@@ -330,7 +331,49 @@ public class Larien extends DataHelper {
         cv1.addOptionText(SPANISH, "¿Qué puedes decirme sobre Farmland?", "Farmland es el corazón de la producción de alimentos para todo el reino. Cultivamos trigo, verduras y criamos ganado. Sin nosotros, las ciudades morirían de hambre. Es trabajo duro, pero es honesto y esencial.");
         npc.conversationOptions.add(cv1);
 
+        // ========================================
+        // QUEST: CATTLE BUSINESS
+        // ========================================
+
+        // Success Path (Part 33 -> 40)
+        ConversationOption cvCattleSuccess = new ConversationOption(0, 21);
+        cvCattleSuccess.addOptionText(ENGLISH, "I represent Councilor Murdag of Lisport. I have a contract for cattle trade.", "Lisport? That's an interesting offer. Our livestock is doing well this season, and a new market would be beneficial. Let me see those terms.");
+        cvCattleSuccess.addOptionText(PORTUGUESE, "Eu represento o Conselheiro Murdag de Lisport. Tenho um contrato para o comércio de gado.", "Lisport? Essa é uma oferta interessante. Nosso gado está indo bem esta temporada, e um novo mercado seria benéfico. Deixe-me ver esses termos.");
+        cvCattleSuccess.addOptionText(SPANISH, "Represento al consejero Murdag de Lisport. Tengo un contrato para el comercio de ganado.", "¿Lisport? Es una oferta interesante. Nuestro ganado va bien esta temporada, y un nuevo mercado sería beneficioso. Déjame ver esas condiciones.");
+        cvCattleSuccess.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isCharacterAtQuestPart(chara, QuestsIds.CATTLE_BUSINESS, 33)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        npc.conversationOptions.add(cvCattleSuccess);
+
+        ConversationOption cvCattleSign = new ConversationOption(21, 0);
+        cvCattleSign.addOptionText(ENGLISH, "The terms are right here.", "Everything looks in order. I'll sign it. We'll start preparing the first herd for transport. Tell Murdag it's a deal.");
+        cvCattleSign.addOptionText(PORTUGUESE, "Os termos estão aqui.", "Tudo parece em ordem. Eu assino. Começaremos a preparar o primeiro rebanho para o transporte. Diga a Murdag que está fechado.");
+        cvCattleSign.addOptionText(SPANISH, "Las condiciones están aquí.", "Todo parece estar en orden. Lo firmaré. Empezaremos a preparar la primera manada para el transporte. Dile a Murdag que acepto.");
+        cvCattleSign.listeners = (ctx, currentFragment) -> {
+            LibInventory.addToInventory(ItemsIds.CONTRACT_OF_CATTLE_NEGOTIATION, 1, App.getPlayerChar());
+            LibQuest.updateQuest(QuestsIds.CATTLE_BUSINESS, 40, App.getPlayerChar(), ctx);
+        };
+        npc.conversationOptions.add(cvCattleSign);
+
+        // Failure Path (Part 22 -> 30)
+        ConversationOption cvCattleFail = new ConversationOption(0, 0);
+        cvCattleFail.addOptionText(ENGLISH, "I represent Councilor Murdag of Lisport. I have a contract for cattle trade.", "Trade with Lisport? My hands are full with the local demand and the recent attacks. I can't commit to a long-distance contract right now. You'll have to look elsewhere.");
+        cvCattleFail.addOptionText(PORTUGUESE, "Eu represento o Conselheiro Murdag de Lisport. Tenho um contrato para o comércio de gado.", "Comércio com Lisport? Minhas mãos estão cheias com a demanda local e os recentes ataques. Não posso me comprometer com um contrato de longa distância agora. Você terá que procurar em outro lugar.");
+        cvCattleFail.addOptionText(SPANISH, "Represento al consejero Murdag de Lisport. Tengo un contrato para el comercio de ganado.", "¿Comerciar con Lisport? Tengo mucho trabajo con la demanda local y los ataques recientes. No puedo comprometerme con un contrato a larga distancia ahora mismo. Tendrás que buscar en otra parte.");
+        cvCattleFail.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isCharacterAtQuestPart(chara, QuestsIds.CATTLE_BUSINESS, 22)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        cvCattleFail.listeners = (ctx, currentFragment) -> {
+            LibQuest.updateQuest(QuestsIds.CATTLE_BUSINESS, 30, App.getPlayerChar(), ctx);
+        };
+        npc.conversationOptions.add(cvCattleFail);
+
         return npc;
     }
 }
-

@@ -41,9 +41,9 @@ public class Danjor extends DataHelper {
         npc.age = 34;
         npc.job = Enums.NPCJobs.GUILD_LEADER;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A man firm in his decisions and skilled in his tasks.\nA strong leader who even commands a certain fear.\nLoyal to his purpose.\n\nHis physical traits: Long dark hair. Full beard with gray hairs. Serious gaze in his dark eyes. Thin face.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Um homem firme nas decisões e ábil nas tarefas.\nLíder forte e que passa até certo temor.\nLeal ao seu propósito.\n\nSeus traços físicos: Cabelos escuros e compridos. Barba completa com fios grisalhos. Olhar sério em seus olhos escuros. Rosto magro.");
+        npc.addDescriptionTranslation(SPANISH, "Un hombre firme en sus decisiones y hábil en sus tareas.\nLíder fuerte que llega a infundir cierto temor.\nLeal a su propósito.\n\nSus rasgos físicos: Cabello oscuro y largo. Barba completa con canas. Mirada seria en sus ojos oscuros. Rostro delgado.");
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Welcome to the Tower of Warriors."));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Bem-vindo à Torre dos Guerreiros."));
@@ -87,23 +87,6 @@ public class Danjor extends DataHelper {
         };
         npc.conversationOptions.add(cvImmediately);
 
-        // ===== ROLEPLAY: Soldiers sent to Monelix =====
-        ConversationOption cvRoleplaySoldiers = new ConversationOption(0, 0);
-        cvRoleplaySoldiers.addOptionText(ENGLISH, "Your soldiers were very useful in the defense.", "*Nods with satisfaction*\nI'm glad to hear that. My warriors are among the finest in the eastern lands - trained, disciplined, and battle-ready. They know how to follow orders and adapt to any situation. \n*crosses arms proudly*\nAnd I must say, the relations with Monelix continue strong. The gold coins have already arrived as payment - fair and prompt, as always. The kingdom honors its agreements, which is why we're always willing to answer their call.");
-        cvRoleplaySoldiers.addOptionText(PORTUGUESE, "Seus soldados foram muito úteis na defesa.", "*Acena com satisfação*\nFico feliz em ouvir isso. Meus guerreiros estão entre os melhores das terras orientais - treinados, disciplinados e prontos para batalha. Eles sabem como seguir ordens e se adaptar a qualquer situação. \n*cruza os braços com orgulho*\nE devo dizer, as relações com Monelix continuam fortes. As moedas de ouro já chegaram como pagamento - justo e pontual, como sempre. O reino honra seus acordos, por isso estamos sempre dispostos a atender seu chamado.");
-        cvRoleplaySoldiers.addOptionText(SPANISH, "Tus soldados fueron muy útiles en la defensa.", "*Asiente con satisfacción*\nMe alegra oír eso. Mis guerreros están entre los mejores de las tierras orientales - entrenados, disciplinados y listos para la batalla. Saben cómo seguir órdenes y adaptarse a cualquier situación. \n*cruza los brazos con orgullo*\nY debo decir, las relaciones con Monelix continúan fuertes. Las monedas de oro ya han llegado como pago - justo y puntual, como siempre. El reino honra sus acuerdos, por eso siempre estamos dispuestos a responder a su llamado.");
-        cvRoleplaySoldiers.requirementValidations = (chara, ctx) -> {
-            boolean soldiersSent = LibQuest.isQuestComplete(chara, REINFORCE_HELERA) || LibQuest.isQuestComplete(chara, REINFORCE_FARMLAND);
-            boolean queenMessageStarted = LibQuest.charHasQuest(QuestsIds.A_QUEEN_MESSAGE, chara);
-            boolean wazelNotComplete = !LibQuest.isQuestComplete(chara, QuestsIds.WAZEL_BATTLE);
-
-            if (soldiersSent && queenMessageStarted && wazelNotComplete) {
-                return Enums.RequirementVerification.OK;
-            }
-            return Enums.RequirementVerification.NOT_OK;
-        };
-        npc.conversationOptions.add(cvRoleplaySoldiers);
-
         // ===== QUEST 22: WAZEL BATTLE - PART 2 =====
         ConversationOption cvWazel2 = new ConversationOption(0, 3);
         cvWazel2.addOptionText(ENGLISH, "Katiusca sent me. What's the situation?", "The situation is grim. Dark creatures are converging on Wazel from multiple directions. Katiusca has spotted activity from the sea, but intelligence suggests they're also approaching from the desert - specifically from the cave to the east. My scouts report a large horde gathering there. That's where we'll make our first stand.");
@@ -137,6 +120,27 @@ public class Danjor extends DataHelper {
         };
         npc.conversationOptions.add(cvWazel6);
 
+        // ========================================
+        // QUEST: AWAITING THE DRAGONS
+        // ========================================
+
+        // Part 1: Talk to Danjor
+        ConversationOption cvAwaitingDragons1 = new ConversationOption(0, 0);
+        cvAwaitingDragons1.addOptionText(ENGLISH, "Danjor, I've seen dragons migrating towards our lands. The threat is real.",
+                "*He uncrosses his arms, his expression sharpening as he looks towards the distant horizon*\nDragons? So the rumors weren't just tavern talk after all. Wazel may not have the high peaks that those beasts prefer for their nests, but a shadow over the kingdom is a shadow over us all. \n\nI'll put my warriors on high alert. We'll watch the skies and ensure the local outposts are ready for anything. A dragon's presence doesn't just mean fire; it means ruined trade and mass panic. We must remain vigilant. You should continue and warn the others — the higher the mountain, the greater the danger.");
+        cvAwaitingDragons1.addOptionText(PORTUGUESE, "Danjor, eu vi dragões migrando para nossas terras. A ameaça é real.",
+                "*Ele descruza os braços, sua expressão ficando mais aguçada enquanto olha para o horizonte distante*\nDragões? Então os rumores não eram apenas conversa de taverna, afinal. Wazel pode não ter os picos altos que essas feras preferem para seus ninhos, mas uma sombra sobre o reino é uma sombra sobre todos nós. \n\nVou colocar meus guerreiros em alerta máximo. Vigiaremos os céus e garantiremos que os postos avançados locais estejam prontos para qualquer coisa. A presença de um dragão não significa apenas fogo; significa comércio arruinado e pânico em massa. Devemos permanecer vigilantes. Você deve continuar e avisar os outros — quanto mais alta a montanha, maior o perigo.");
+        cvAwaitingDragons1.addOptionText(SPANISH, "Danjor, he visto dragones migrando hacia nuestras tierras. La amenaza es real.",
+                "*Descruza los brazos, su expresión se agudiza mientras mira hacia el lejano horizonte*\n¿Dragones? Así que los rumores no eran solo charlas de taberna después de todo. Puede que Wazel no tenga las altas cimas que esas bestias prefieren para sus nidos, pero una sombra sobre el reino es una sombra sobre todos nosotros. \n\nPondré a mis guerreros en alerta máxima. Vigilaremos los cielos y nos aseguraremos de que los puestos locales estén listos para cualquier cosa. La presencia de un dragón no solo significa fuego; significa comercio arruinado y pánico masivo. Debemos permanecer vigilantes. Debes continuar y avisar a los demás: cuanto más alta sea la montaña, mayor será el peligro.");
+        cvAwaitingDragons1.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isCharacterAtQuestPart(chara, QuestsIds.AWAITING_THE_DRAGONS, 1)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        cvAwaitingDragons1.listeners = (ctx, currentFragment) -> LibQuest.updateQuest(QuestsIds.AWAITING_THE_DRAGONS, 2, App.getPlayerChar(), ctx);
+        npc.conversationOptions.add(cvAwaitingDragons1);
+
 
         // ===== GENERAL CONVERSATION =====
         ConversationOption cv1 = new ConversationOption(0, 0);
@@ -144,6 +148,23 @@ public class Danjor extends DataHelper {
         cv1.addOptionText(PORTUGUESE, "Quem é você?", "Sou Danjor Raujo, líder dos guerreiros de Wazel. Somos mercenários e soldados de aluguel. Nos especializamos em combate e defesa. Se você precisa de lutadores treinados, veio ao lugar certo.");
         cv1.addOptionText(SPANISH, "¿Quién eres?", "Soy Danjor Raujo, líder de los guerreros de Wazel. Somos mercenarios y soldados de alquiler. Nos especializamos en combate y defensa. Si necesitas guerreros entrenados, has venido al lugar correcto.");
         npc.conversationOptions.add(cv1);
+
+        // ===== ROLEPLAY: Soldiers sent to Monelix =====
+        ConversationOption cvRoleplaySoldiers = new ConversationOption(0, 0);
+        cvRoleplaySoldiers.addOptionText(ENGLISH, "Your soldiers were very useful in the defense.", "*Nods with satisfaction*\nI'm glad to hear that. My warriors are among the finest in the eastern lands - trained, disciplined, and battle-ready. They know how to follow orders and adapt to any situation. \n*crosses arms proudly*\nAnd I must say, the relations with Monelix continue strong. The gold coins have already arrived as payment - fair and prompt, as always. The kingdom honors its agreements, which is why we're always willing to answer their call.");
+        cvRoleplaySoldiers.addOptionText(PORTUGUESE, "Seus soldados foram muito úteis na defesa.", "*Acena com satisfação*\nFico feliz em ouvir isso. Meus guerreiros estão entre os melhores das terras orientais - treinados, disciplinados e prontos para batalha. Eles sabem como seguir ordens e se adaptar a qualquer situação. \n*cruza os braços com orgulho*\nE devo dizer, as relações com Monelix continuam fortes. As moedas de ouro já chegaram como pagamento - justo e pontual, como sempre. O reino honra seus acordos, por isso estamos sempre dispostos a atender seu chamado.");
+        cvRoleplaySoldiers.addOptionText(SPANISH, "Tus soldados fueron muy útiles en la defensa.", "*Asiente con satisfacción*\nMe alegra oír eso. Mis guerreros están entre los mejores de las tierras orientales - entrenados, disciplinados y listos para la batalla. Saben cómo seguir órdenes y adaptarse a cualquier situación. \n*cruza los brazos con orgullo*\nY debo decir, las relaciones con Monelix continúan fuertes. Las monedas de oro ya han llegado como pago - justo y puntual, como siempre. El reino honra sus acuerdos, por eso siempre estamos dispuestos a responder a su llamado.");
+        cvRoleplaySoldiers.requirementValidations = (chara, ctx) -> {
+            boolean soldiersSent = LibQuest.isQuestComplete(chara, REINFORCE_HELERA) || LibQuest.isQuestComplete(chara, REINFORCE_FARMLAND);
+            boolean queenMessageStarted = LibQuest.charHasQuest(QuestsIds.A_QUEEN_MESSAGE, chara);
+            boolean wazelNotComplete = !LibQuest.isQuestComplete(chara, QuestsIds.WAZEL_BATTLE);
+
+            if (soldiersSent && queenMessageStarted && wazelNotComplete) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        npc.conversationOptions.add(cvRoleplaySoldiers);
 
         // ========================================
         // WAZEL TOWER ARENA
@@ -291,6 +312,7 @@ public class Danjor extends DataHelper {
             GameEngine.saveGame(ctx);
         };
         npc.conversationOptions.add(cvArenaCollect);
+
 
         return npc;
     }

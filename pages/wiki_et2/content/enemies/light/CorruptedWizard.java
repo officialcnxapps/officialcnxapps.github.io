@@ -32,6 +32,7 @@ public class CorruptedWizard {
         enemy.setDefense(4);
         enemy.setAgility(12);
         enemy.setStrength(6);
+        enemy.setMagic(20);
         enemy.givenExperience = 16;
         enemy.givenGold = 3;
         enemy.levelToDynamicBalance = 8;

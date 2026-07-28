@@ -21,5 +21,7 @@ public class NpcsDataManager extends DataHelper {
         new NpcsGrowrocks().generate();
         new NpcsGybralar().generate();
         new NpcsWazel().generate();
+        new com.cnx.endlesstalestwo.data.npcs.dragonland.Affronis().generate();
+        new com.cnx.endlesstalestwo.data.npcs.havarusNorth.monelix.docks.Messenger().generate();
     }
 }

@@ -89,6 +89,8 @@ public class Places extends DataHelper {
         place.resetId("LISPORT_CASTLE");
         place.setLocale(LocationsIds.LISPORT);
 
+        place.npcs.add(NpcsIds.MURDAG);
+
         place.type = Enums.LocationTypes.CASTLE;
         return place;
     }

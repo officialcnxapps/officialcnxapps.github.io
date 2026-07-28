@@ -33,6 +33,7 @@ public class Other extends DataHelper {
         App.DataManager.add(Enums.DataTypes.LOCALE, lisportWestGrove());//
         App.DataManager.add(Enums.DataTypes.LOCALE, orcHamlet());//
         App.DataManager.add(Enums.DataTypes.LOCALE, lisportMountains());//
+        App.DataManager.add(Enums.DataTypes.LOCALE, lisportMountainPeak());
     }
 
     Locale lisportFarms() {
@@ -256,6 +257,40 @@ public class Other extends DataHelper {
         locale.actions.add(ActionsIds.MINING_EXTRA);
         locale.type = Enums.LocationTypes.MOUNTAIN;
 
+        return locale;
+    }
+
+    Locale lisportMountainPeak() {
+        Locale locale = new Locale("Lisport Mountains Peak", RegionsIds.LISPORT);
+        locale.resetId(LocationsIds.LISPORT_MOUNTAIN_PEAK.name());
+        locale.addNameTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "Montanhas de Lisport - Pico");
+        locale.addNameTranslation(CoreEnums.AvailableLanguages.SPANISH, "Pico de la Montañas de Lisport");
+
+        locale.addDescriptionTranslation(CoreEnums.AvailableLanguages.ENGLISH, "The absolute summit of the Lisport mountains. The air is thin and the wind carries the screeching of winged predators.");
+        locale.addDescriptionTranslation(CoreEnums.AvailableLanguages.PORTUGUESE, "O cume absoluto das montanhas de Lisport. O ar é rarefeito e o vento carrega o guincho de predadores alados.");
+        locale.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "La cima absoluta de las montañas de Lisport. El aire es ralo y el viento trae el chillido de depredadores alados.");
+
+        locale.requirementValidations = (chara, ctx) -> {
+            if (LibInventory.checkHasItemAmount(ItemsIds.ROPE, 1, chara)
+                    && chara.hasKnowledge(KnowledgesIds.CLIMBING)) {
+                return Enums.RequirementVerification.OK;
+            } else if (!chara.hasKnowledge(KnowledgesIds.CLIMBING)) {
+                return Enums.RequirementVerification.NEED_KNOWLEDGES;
+            }
+
+            return Enums.RequirementVerification.NEED_ITEMS;
+        };
+
+        locale.possibleBattles.put(BattlesIds.MOUNTAIN_GOLEM_1, 12);
+        locale.possibleBattles.put(BattlesIds.MOUNTAIN_TROLL_1, 14);
+
+        if ((LibQuest.charHasQuest(QuestsIds.BLOOD_WITH_BLOOD, App.getPlayerChar())
+                || LibQuest.charHasQuest(QuestsIds.DRAGON_FEAR, App.getPlayerChar()))
+                && !LibQuest.isQuestComplete(App.getPlayerChar(), QuestsIds.DRAGON_FEAR)) {
+            locale.possibleBattles.put(BattlesIds.WYVERN_1, 20);
+        }
+
+        locale.type = Enums.LocationTypes.MOUNTAIN;
 
         return locale;
     }

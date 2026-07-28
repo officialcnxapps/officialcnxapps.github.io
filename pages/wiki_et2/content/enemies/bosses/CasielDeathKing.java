@@ -30,6 +30,7 @@ public class CasielDeathKing {
         enemy.maxDamage = 11;
         enemy.damageModifier = 5;
         enemy.levelToDynamicBalance = 25;
+        enemy.attributesManager.set(Enums.AttributeName.CRITICAL_CHANCE, 14);
 
         // Resistances fitting Death King
         enemy.resistances.put(Enums.Elements.DARK, 50);

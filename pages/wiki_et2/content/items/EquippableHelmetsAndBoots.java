@@ -529,6 +529,7 @@ public class EquippableHelmetsAndBoots extends DataHelper {
         equipItem.modifiers.add(new AttributeModifierValue(Enums.AttributeName.STRENGTH, 1));
         equipItem.modifiers.add(new AttributeModifierValue(Enums.AttributeName.MAGIC, 1));
         equipItem.modifiers.add(new AttributeModifierValue(Enums.AttributeName.AGILITY, 1));
+        equipItem.rarity = Enums.Rarity.RARE;
 
         equipItem.requirementValidations = (chara, ctx) -> {
             if (chara.level >= 5) {

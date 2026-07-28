@@ -35,9 +35,9 @@ public class Fargus extends DataHelper {
         npc.age = 52;
         npc.job = Enums.NPCJobs.GUARD;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A classic, unpleasant, and malicious bandit.\nHis intellect is weak, but he is nonetheless clever.\nCrude and sloppy.\n\nHis physical traits: Pale skin from lack of sun, thin cheeks, deep dark circles under his eyes. Light brown hair and a gray beard from dirt.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Um bandido clássico, desagradável e malicioso.\nSeu intelecto é fraco, mas não deixa de ser esperto.\nGrosso e desleixado.\n\nSeus traços físicos: Pele pálida pela falta de sol, bochechas magras, olheiras profundas. Cabelo castanho claro e barba cinza de sujeira.");
+        npc.addDescriptionTranslation(SPANISH, "Un bandido clásico, desagradable y malicioso.\nSu intelecto es débil, pero aun así es astuto.\nGrosero y desaliñado.\n\nSus rasgos físicos: piel pálida por falta de sol, mejillas delgadas, ojeras profundas. Cabello castaño claro y barba gris por la suciedad.");
 
         npc.generateRandomGreetings();
         npc.generateRandomByes();
@@ -171,7 +171,7 @@ public class Fargus extends DataHelper {
                 a.defineNextBattle();
                 if (a.nextBattle != null && ctx instanceof GameplayActivity gameplayActivity) {
                     if (currentFragment != null) currentFragment.setScreenTouchable(false);
-                    new Handler(Looper.getMainLooper()).postDelayed(                            () -> gameplayActivity.StartBattleScreen(a.nextBattle.uId), 2200);
+                    new Handler(Looper.getMainLooper()).postDelayed(() -> gameplayActivity.StartBattleScreen(a.nextBattle.uId), 2200);
                 }
             }
         };

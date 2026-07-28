@@ -4,6 +4,7 @@ import com.cnx.endlesstalestwo.data.items.ItemsIds;
 import com.cnx.endlesstalestwo.data.skills.SkillsIds;
 import com.cnx.endlesstalestwo.entities.Enemy;
 import com.cnx.endlesstalestwo.entities.ItemReference;
+import com.cnx.endlesstalestwo.enums.Enums;
 
 public class Octuman {
 
@@ -17,6 +18,9 @@ public class Octuman {
         enemy.setDefense(3);
         enemy.setAgility(15);
         enemy.setStrength(11);
+        enemy.setMagic(9);
+        enemy.attributesManager.set(Enums.AttributeName.CRITICAL_CHANCE, 10);
+
         enemy.givenExperience = 16;
         enemy.givenGold = 0;
         enemy.levelToDynamicBalance = 8;

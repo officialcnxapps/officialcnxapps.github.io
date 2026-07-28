@@ -24,9 +24,9 @@ public class Zanica extends DataHelper {
         npc.age = 15;
         npc.job = Enums.NPCJobs.NONE;
         npc.gender = Enums.Gender.FEMALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A curious and adventurous girl.\nDespite being young, she knows how to look for what she needs.\nSometimes, she seems to think too much.\n\nHer physical traits: Large light brown eyes. Curly hair. Tanned skin and rosy cheeks.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Uma menina curiosa e aventureira.\nApesar de jovem, sabe se virar buscar o que precisa.\nPor vezes, parece pensar demais.\n\nSeus traços físicos: Olhos grandes de cor castanho claro. Cabelos cacheados. Pele bonzeada e bochecas rosadas.");
+        npc.addDescriptionTranslation(SPANISH, "Una niña curiosa y aventurera.\nA pesar de su juventud, sabe cómo buscar lo que necesita.\nA veces, parece pensar demasiado.\n\nSus rasgos físicos: Ojos grandes de color castaño claro. Cabello rizado. Piel bronceada y mejillas rosadas.");
 
         // Conversation options
         ConversationOption cv1 = new ConversationOption(0, 0);

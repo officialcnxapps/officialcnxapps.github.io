@@ -5,6 +5,9 @@ import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.PORTUGUES
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.SPANISH;
 import static com.cnx.endlesstalestwo.data.quests.QuestsIds.KILL_OCTUMAN;
 import static com.cnx.endlesstalestwo.data.quests.QuestsIds.SEA_VERIFICATION;
+
+import android.content.Context;
+
 import com.cnx.cnxgameengine.utils.LibUtils;
 import com.cnx.endlesstalestwo.App;
 import com.cnx.endlesstalestwo.activities.GameplayActivity;
@@ -13,10 +16,13 @@ import com.cnx.endlesstalestwo.data.locations.LocationsIds;
 import com.cnx.endlesstalestwo.data.quests.QuestsIds;
 import com.cnx.endlesstalestwo.entities.Character;
 import com.cnx.endlesstalestwo.entities.ConversationOption;
+import com.cnx.endlesstalestwo.entities.LocationTravelReference;
 import com.cnx.endlesstalestwo.entities.Npc;
 import com.cnx.endlesstalestwo.enums.Enums;
 import com.cnx.endlesstalestwo.libs.LibQuest;
 import com.cnx.endlesstalestwo.libs.Utils;
+
+import java.util.ArrayList;
 
 public class CaptainNorman extends DataHelper {
     @Override
@@ -28,12 +34,12 @@ public class CaptainNorman extends DataHelper {
         Npc npc = new Npc("Captain Norman");
         npc.addNameTranslation(PORTUGUESE, "Capitão Norman");
         npc.addNameTranslation(SPANISH, "Capitán Norman");
-        npc.age = 40;
+        npc.age = 42;
         npc.job = Enums.NPCJobs.SHIP_CAPTAIN;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A ship captain who knows the sea and his craft well. He doesn't like to stay still, he likes movement.\nGood leadership, but with some moments of hesitation in his decisions.\n\nHis physical traits: Golden hair combed to the side. Thin, well-kept beard. Piercing blue eyes. Sun-tanned skin.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Um capitão de navio que conhece bem o mar e o ofício. Não gosta muito de estar parado, gosta de movimento.\nBoa liderança, mas com alguns momentos de medo nas decisões.\n\nSeus traços físicos: Cabelos dourados penteados para o lado. Barba fina e bem cuidada. Olhos azuis penetrantes. Pele bronzeada pelo sol.");
+        npc.addDescriptionTranslation(SPANISH, "Un capitán de barco que conoce bien el mar y su oficio. No le gusta estar quieto, le gusta el movimiento.\nBuena liderazgo, pero con algunos momentos de duda en sus decisiones.\n\nSus rasgos físicos: Cabello dorado peinado hacia un lado. Barba fina y bien cuidada. Ojos azules penetrantes. Piel bronceada por el sol.");
 
         npc.generateRandomGreetings();
         npc.generateRandomByes();
@@ -96,47 +102,12 @@ public class CaptainNorman extends DataHelper {
 
 
         ///TRAVEL OPTIONS
-        ConversationOption cvTravel = new ConversationOption(0, 2);
-        cvTravel.addOptionText(ENGLISH, "I want to travel.", "As you wish, to Lisport or to Helera?");
-        cvTravel.addOptionText(PORTUGUESE, "Quero viajar.", "Como desejar, para Lisport ou para Helera?");
-        cvTravel.addOptionText(SPANISH, "Quiero viajar.", "¿Como desees, a Lisport o a Helera?");
+        ConversationOption cvTravel = new ConversationOption(0, 0);
+        cvTravel.addOptionText(ENGLISH, "I want to travel.", "Aye! Where to?");
+        cvTravel.addOptionText(PORTUGUESE, "Quero viajar.", "Sim! Para onde?");
+        cvTravel.addOptionText(SPANISH, "Quiero viajar.", "¡Sí! ¿A dónde?");
+        cvTravel.listeners = (ctx, currentFragment) -> openTravelDialog(ctx);
         npc.conversationOptions.add(cvTravel);
-
-        ConversationOption cvTravel1 = new ConversationOption(2, 999);
-        cvTravel1.addOptionText(ENGLISH, "Travel to Lisport [12 gold]", "Alright, let's set the sails!");
-        cvTravel1.addOptionText(PORTUGUESE, "Viagem para Lisport [12 ouro]", "Certo, vamos içar as velas!");
-        cvTravel1.addOptionText(SPANISH, "Viaje a Lisport [12 de oro]", "¡Muy bien, icemos las velas!");
-        cvTravel1.showEvenWhenNotValid = true;
-        cvTravel1.requirementValidations = (chara, ctx) -> {
-            if (App.getPlayerChar() != null && App.getPlayerChar().checkHasGold(12)) {
-                return Enums.RequirementVerification.OK;
-            }
-            return Enums.RequirementVerification.NEED_GOLD;
-        };
-        cvTravel1.listeners = (ctx, fragment) -> {
-            if (App.getPlayerChar() != null && LibUtils.getActivityFromContext(ctx) instanceof GameplayActivity gPlayActivity) {
-                Utils.getCharToLocation(LocationsIds.LISPORT_HARBOR, 12, gPlayActivity, App.getPlayerChar());
-            }
-        };
-        npc.conversationOptions.add(cvTravel1);
-
-        ConversationOption cvTravel2 = new ConversationOption(2, 999);
-        cvTravel2.addOptionText(ENGLISH, "Travel to Helera [5 gold]", "Alright, let's set the sails!");
-        cvTravel2.addOptionText(PORTUGUESE, "Viagem para Helera [5 ouro]", "Certo, vamos içar as velas!");
-        cvTravel2.addOptionText(SPANISH, "Viaje a Helera [5 de oro]", "¡Muy bien, icemos las velas!");
-        cvTravel2.showEvenWhenNotValid = true;
-        cvTravel2.requirementValidations = (chara, ctx) -> {
-            if (App.getPlayerChar() != null && App.getPlayerChar().checkHasGold(5)) {
-                return Enums.RequirementVerification.OK;
-            }
-            return Enums.RequirementVerification.NEED_GOLD;
-        };
-        cvTravel2.listeners = (ctx, fragment) -> {
-            if (App.getPlayerChar() != null && LibUtils.getActivityFromContext(ctx) instanceof GameplayActivity gPlayActivity) {
-                Utils.getCharToLocation(LocationsIds.HELERA_HARBOR, 5, gPlayActivity, App.getPlayerChar());
-            }
-        };
-        npc.conversationOptions.add(cvTravel2);
 
         // ===== QUEST: Swamp Club - Part 1 =====
 
@@ -198,13 +169,14 @@ public class CaptainNorman extends DataHelper {
                 Utils.getCharToLocation(LocationsIds.AYALON_DOCKS, 6, gPlayActivity, App.getPlayerChar());
             }
         };
-        npc.conversationOptions.add(cvTravelAyalon);
+        // Removed Ayalon direct option, will be in dialog
+        // npc.conversationOptions.add(cvTravelAyalon);
 
         ConversationOption cvTravelNo = new ConversationOption(2, 0);
         cvTravelNo.addOptionText(ENGLISH, "Changed my mind...", "Ok...");
         cvTravelNo.addOptionText(PORTUGUESE, "Mudei de ideia...", "Ok...");
         cvTravelNo.addOptionText(SPANISH, "Cambié de opinión...", "Ok...");
-        npc.conversationOptions.add(cvTravelNo);
+        // npc.conversationOptions.add(cvTravelNo);
 
         ConversationOption cv1 = new ConversationOption(0, 0);
         cv1.addOptionText(ENGLISH, "What is it like to be a ship captain?", "I would say it's challenging. You need to love life at sea, understand the tides, and know how to lead a crew. The oceans hide dangers, secrets, and good stories.");
@@ -214,6 +186,80 @@ public class CaptainNorman extends DataHelper {
 
         npc.hasRandomizedConversations = true;
 
+        // ========================================
+        // QUEST: DRAGONLAND
+        // ========================================
+
+        // Part 6: Propose route
+        ConversationOption cvDragonland6 = new ConversationOption(0, 0);
+        cvDragonland6.addOptionText(ENGLISH, "I've been in Dragonland. Lady Jade thinks we should establish a route.",
+                "*His eyes widen as he lets out a long whistle*\nDragonland? So the myths were true... and you actually came back from there? That's a feat worth a dozen bags of gold. \n\nIf Lady Jade says so, then mapping a route there is a business opportunity I can't ignore. I'll speak with the other captains — Palmer and Bradoch. If we coordinate, we can make this a standard run. It won't be cheap, mind you — the waters are treacherous — but we'll make it happen. Thank you, [PLAYERNAME]. You've opened a new path for us. Who knows what resources a land so mystical might have?");
+        cvDragonland6.addOptionText(PORTUGUESE, "Estive em Dragonland. Lady Jade acha que devemos estabelecer uma rota.",
+                "*Os olhos dele se arregalam enquanto ele solta um assobio longo*\nDragonland? Então os mitos eram verdadeiros... e você realmente voltou de lá? Esse é um feito que vale uma dúzia de sacos de ouro. \n\nSe lady Jade diz, então mapear uma rota para lá é uma oportunidade de negócio que não posso ignorar. Vou falar com os outros capitães — Palmer e Bradoch. Se nos coordenarmos, podemos tornar isso uma rota padrão. Não será barato, veja bem — as águas são traiçoeiras — mas faremos acontecer. Obrigado, [PLAYERNAME]. Você abriu uma nova para nós. Quem sabe o que poderá ter de recursos em uma terra tão mística?");
+        cvDragonland6.addOptionText(SPANISH, "He estado en Dragonland. Lady Jade cree que deberíamos establecer una ruta.",
+                "*Sus ojos se agrandan mientras deja escapar un largo silbido*\n¿Dragonland? Así que los mitos eran ciertos... ¿y realmente regresaste de allí? Esa es una hazaña que vale una docena de sacos de oro. \n\nSi Lady Jade lo dice, entonces trazar una ruta hacia allí es una oportunidad de negocio que no puedo ignorar. Hablaré con los otros capitanes: Palmer y Bradoch. Si nos coordinamos, podemos convertir esto en una ruta estándar. No será barato, fíjate —as aguas son traicioneras— pero lo haremos realidad. Gracias, [PLAYERNAME]. Has abierto un nuevo camino para nosotros. ¿Quién sabe qué recursos podría tener una tierra tan mística?");
+        cvDragonland6.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isCharacterAtQuestPart(chara, QuestsIds.DRAGONLAND, 6)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        cvDragonland6.listeners = (ctx, currentFragment) -> LibQuest.completeQuest(QuestsIds.DRAGONLAND, App.getPlayerChar(), 7, ctx);
+        npc.conversationOptions.add(cvDragonland6);
+
+        // PERMANENT ROUTE
+        ConversationOption cvTravelDragonland = new ConversationOption(2, 999);
+        cvTravelDragonland.addOptionText(ENGLISH, "Travel to Dragonland [16 gold]", "Aye! To the land of dragons.");
+        cvTravelDragonland.addOptionText(PORTUGUESE, "Viagem para Dragonland [16 ouro]", "Sim! Para a terra dos dragões.");
+        cvTravelDragonland.addOptionText(SPANISH, "Viaje a Dragonland [16 de oro]", "¡Sí! A la tierra de los dragones.");
+        cvTravelDragonland.showEvenWhenNotValid = false;
+        cvTravelDragonland.requirementValidations = (chara, ctx) -> {
+            if (!LibQuest.isQuestComplete(chara, QuestsIds.DRAGONLAND)) {
+                return Enums.RequirementVerification.NOT_OK;
+            }
+            if (App.getPlayerChar() != null && App.getPlayerChar().checkHasGold(16)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NEED_GOLD;
+        };
+        cvTravelDragonland.listeners = (ctx, fragment) -> {
+            if (App.getPlayerChar() != null && LibUtils.getActivityFromContext(ctx) instanceof GameplayActivity gPlayActivity) {
+                com.cnx.endlesstalestwo.libs.Utils.getCharToLocation(LocationsIds.PLAINS_OF_DRAGONLAND, 16, gPlayActivity, App.getPlayerChar());
+            }
+        };
+        // Removed Dragonland direct option, will be in dialog
+        // npc.conversationOptions.add(cvTravelDragonland);
+
         return npc;
+    }
+
+    private void openTravelDialog(Context ctx) {
+        ArrayList<LocationTravelReference> destinations = new ArrayList<>();
+
+        LocationTravelReference helera = new LocationTravelReference(null, LocationsIds.HELERA_HARBOR, 120);
+        helera.destinationName = "Helera";
+        helera.travelCost = 5;
+        destinations.add(helera);
+
+        LocationTravelReference lisport = new LocationTravelReference(null, LocationsIds.LISPORT_HARBOR, 300);
+        lisport.destinationName = "Lisport";
+        lisport.travelCost = 12;
+        destinations.add(lisport);
+
+        if (LibQuest.isQuestComplete(App.getPlayerChar(), QuestsIds.ELFS_AND_HUMANS)) {
+            LocationTravelReference ayalon = new LocationTravelReference(null, LocationsIds.AYALON_DOCKS, 180);
+            ayalon.destinationName = "Ayalon";
+            ayalon.travelCost = 6;
+            destinations.add(ayalon);
+        }
+
+        if (LibQuest.isQuestComplete(App.getPlayerChar(), QuestsIds.DRAGONLAND)) {
+            LocationTravelReference dragonland = new LocationTravelReference(null, LocationsIds.PLAINS_OF_DRAGONLAND, 480);
+            dragonland.destinationName = "Dragonland";
+            dragonland.travelCost = 16;
+            destinations.add(dragonland);
+        }
+
+        Utils.showTravelSelectionDialog(ctx, destinations);
     }
 }

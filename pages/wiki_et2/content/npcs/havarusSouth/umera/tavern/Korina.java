@@ -25,9 +25,10 @@ public class Korina extends DataHelper {
         npc.age = 30;
         npc.job = Enums.NPCJobs.NEEDLEWOMAN;
         npc.gender = Enums.Gender.FEMALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "Young in spirit and intelligent.\nShe does her job well.\nShe is calm and friendly.\n\nHer physical traits: Round face with a large mouth and nose. Black skin and curly black hair.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Jovem de espírito e inteligente.\nRealiza bem seu trabalho.\nÉ tranquila e simpática.\n\nSeus traços físicos: Rosto redondo com boca e nariz grandes. Pele negra e cabelos pretos encaracolados.");
+        npc.addDescriptionTranslation(SPANISH, "Joven de espíritu e inteligente.\nRealiza bien su trabajo.\nEs tranquila y simpática.\n\nSus rasgos físicos: Rostro redondo con boca y nariz grandes. Piel negra y cabello negro rizado.");
+        npc.canBePickpocketed = true;
 
         npc.generateRandomGreetings();
         npc.generateRandomByes();

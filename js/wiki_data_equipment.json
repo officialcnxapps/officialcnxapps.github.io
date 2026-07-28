@@ -1466,6 +1466,32 @@
       "classes": [],
       "weight": 1.5,
       "levelReq": 0
+    },
+    {
+      "name_en": "Dragon Shield",
+      "name_pt": "Escudo de Dragão",
+      "img": "item_dragon_shield",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 4,
+      "type": "SHIELD",
+      "slot": "HAND_2",
+      "element": null,
+      "rarity": "RARE",
+      "resistances": [
+        {
+          "element": "FIRE",
+          "value": 25
+        }
+      ],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "A shield made from tough dragon scales. Protects against fire.",
+      "desc_pt": "Um escudo feito de escamas de dragão resistentes. Protege contra fogo.",
+      "classes": [],
+      "weight": 2.8,
+      "levelReq": 0
     }
   ],
   "armors": [
@@ -2120,7 +2146,7 @@
       "modifiers": [
         {
           "attr": "ALCHEMY",
-          "value": 10,
+          "value": 100,
           "decrease": false
         }
       ],
@@ -2128,6 +2154,32 @@
       "desc_pt": "Um manto robusto resistente a manchas químicas. Aumenta 10 níveis de alquimia.",
       "classes": [],
       "weight": 1,
+      "levelReq": 0
+    },
+    {
+      "name_en": "Dragon Mail",
+      "name_pt": "Cota de Dragão",
+      "img": "item_dragon_mail",
+      "minDamage": 0,
+      "maxDamage": 0,
+      "critical": 0,
+      "defense": 5,
+      "type": "ARMOR",
+      "slot": "CHEST",
+      "element": null,
+      "rarity": "RARE",
+      "resistances": [
+        {
+          "element": "FIRE",
+          "value": 50
+        }
+      ],
+      "weaknesses": [],
+      "modifiers": [],
+      "desc_en": "Woven from dragon scales, this mail provides legendary protection against fire.",
+      "desc_pt": "Tecida a partir de escamas de dragão, esta cota oferece proteção lendária contra fogo.",
+      "classes": [],
+      "weight": 4.5,
       "levelReq": 0
     }
   ],
@@ -3274,7 +3326,7 @@
       "modifiers": [
         {
           "attr": "CRAFT",
-          "value": 10,
+          "value": 100,
           "decrease": false
         }
       ],
@@ -3301,7 +3353,7 @@
       "modifiers": [
         {
           "attr": "ALCHEMY",
-          "value": 10,
+          "value": 100,
           "decrease": false
         }
       ],

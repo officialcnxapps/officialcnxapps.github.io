@@ -37,12 +37,12 @@ public class Guzar extends DataHelper {
     //TRADUZIR
     Npc npc() {
         Npc npc = new Npc("Guzar");
-        npc.age = 37;
+        npc.age = 39;
         npc.job = Enums.NPCJobs.GUILD_LEADER;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "An experienced leader, he commands his armies and does his job very well.\nLoyal and honorable, he does not tolerate failures of that kind.\nAlways ready to help the people, in a firm and serious manner. No time for unfounded talk.\n\nHis physical traits: Dark skin, bald with a full black beard. His brown eyes express firmness and seriousness.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Um líder experiente, comanda seus exércitos e faz seu trabalho muito bem.\nLeal e honrado, não permite falhas desse tipo.\nEstá pronto para ajudar o povo, sempre de forma firme e séria. Sem tempo para conversas infundadas.\n\nSeus traços físicos: Pele negra, careca e com barba preenchida de cor preta. Seus olhos castanhos expressam firmeza e seriedade.");
+        npc.addDescriptionTranslation(SPANISH, "Un líder experimentado, comanda sus ejércitos y hace su trabajo muy bien.\nLeal y honrado, no permite fallos de ese tipo.\nSiempre listo para ayudar al pueblo, siempre de forma firme y seria. Sin tiempo para conversaciones infundadas.\n\nSus rasgos físicos: Piel negra, calvo y con barba poblada de color negro. Sus ojos marrones expresan firmeza y seriedad.");
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Greetins, [GENDER_FORMAL_CALL]."));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Saudações, [GENDER_FORMAL_CALL]."));

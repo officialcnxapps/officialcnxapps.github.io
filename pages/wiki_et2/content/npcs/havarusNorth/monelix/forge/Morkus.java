@@ -29,9 +29,10 @@ public class Morkus extends DataHelper {
         npc.age = 32;
         npc.job = Enums.NPCJobs.MALE_BLACKSMITH;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "Proud and skilled in his work.\nHe never misses an opportunity to talk about his creations and his craft.\nA good member of the community. He wants to start a family.\n\nHis physical traits: Curly brown hair. Square face with a defined jaw. Fair skin and brown eyes.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Orgulhoso e ábil com seu trabalho.\nNão perde uma oportunidade de falar sobre suas criações e sobre trabalho.\nBom membro da comunidade. Quer montar uma família.\n\nSeus traços físicos: Cabelos castanhos encaracolados. Rosto quadrado com queixo marcado. Pele clara e colhos castanhos.");
+        npc.addDescriptionTranslation(SPANISH, "Orgulloso y habilidoso en su trabajo.\nNo pierde una oportunidad de hablar sobre sus creaciones y su oficio.\nBuen miembro de la comunidad. Quiere formar una familia.\n\nSus rasgos físicos: Cabello castaño rizado. Rostro cuadrado con mandíbula marcada. Piel clara y ojos marrones.");
+        npc.canBePickpocketed = true;
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Hello, [GENDER_FORMAL_CALL]. What brings you to my forge?"));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Olá, [GENDER_FORMAL_CALL]. O que o traz à minha forja?"));

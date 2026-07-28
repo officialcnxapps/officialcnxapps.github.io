@@ -25,6 +25,7 @@ public class Valanya extends DataHelper {
         npc.addDescriptionTranslation(ENGLISH, "This woman likes her routine. Focused on work and attentive to details.\nImpressionable, but not naive. She knows every corner of Esperand well.\n\nHer physical traits: Short hair already almost gray. Honey-colored eyes and reddish cheeks.");
         npc.addDescriptionTranslation(PORTUGUESE, "Esta mulher gosta da sua rotina. Focada no trabalho e atenciosa aos detalhes.\nImpressionável, mas não inocente. Conhece bem todos os cantos de Esperand.\n\nSeus traços físicos: Cabelo curto já quase grisalho. Olhos cor de mel e bochechas avermelhadas.");
         npc.addDescriptionTranslation(SPANISH, "Esta mujer disfruta su rutina. Enfocada en el trabajo y atenta a los detalles.\nImpresionable, pero no ingenua. Conoce bien todos los rincones de Esperand.\n\nSus rasgos físicos: Cabello corto ya casi canoso. Ojos color miel y mejillas enrojecidas.");
+        npc.canBePickpocketed = true;
 
         // Conversation options
         ConversationOption cv1 = new ConversationOption(0, 0);

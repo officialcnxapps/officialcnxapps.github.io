@@ -25,9 +25,9 @@ public class LordMarkusWintar extends DataHelper {
         npc.age = 53;
         npc.job = Enums.NPCJobs.GOVERNOR;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A charismatic leader. Easy to talk to.\nHe likes to create and invent ideas, and is usually innovative.\nHe honors his family name whenever he can.\n\nHis physical traits: Fair skin, blue eyes, straight pointed nose. Shoulder-length blond hair and a light goatee.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Um líder carismático. Fácil de conversar.\nGosta de criar e inventar ideias, costuma ser inovador.\nHonra o nome de sua família sempre que pode.\n\nSeus traços físicos: Pele clara, olhos azuis, nariz reto pontudo. Cabelos loiros até os ombros e cavanhaque claro.");
+        npc.addDescriptionTranslation(SPANISH, "A charismatic leader. Easy to talk to.\nHe likes to create and invent ideas, and is usually innovative.\nHe honors his family name whenever he can.\n\nHis physical traits: Fair skin, blue eyes, straight pointed nose. Shoulder-length blond hair and a light goatee.");
 
         // ===== QUEST: Like a Landlord =====
 

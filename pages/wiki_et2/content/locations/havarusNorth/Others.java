@@ -599,6 +599,15 @@ public class Others extends DataHelper {
 
         locale.npcs.add(CASIEL_PEAK);
 
+        locale.possibleBattles.put(BattlesIds.MOUNTAIN_GOLEM_1, 16);
+        locale.possibleBattles.put(BattlesIds.MOUNTAIN_TROLL_1, 16);
+
+        if ((LibQuest.charHasQuest(QuestsIds.BLOOD_WITH_BLOOD, App.getPlayerChar())
+                || LibQuest.charHasQuest(QuestsIds.DRAGON_FEAR, App.getPlayerChar()))
+                && !LibQuest.isQuestComplete(App.getPlayerChar(), QuestsIds.DRAGON_FEAR)) {
+            locale.possibleBattles.put(BattlesIds.FIRE_DRAGON_1, 20);
+        }
+
         locale.actions.add(ActionsIds.MINING_EXTRA);
 
         locale.type = Enums.LocationTypes.MOUNTAIN;

@@ -5,6 +5,7 @@ import com.cnx.endlesstalestwo.data.npcs.lisport.Barracks.John;
 import com.cnx.endlesstalestwo.data.npcs.lisport.Barracks.Lenny;
 import com.cnx.endlesstalestwo.data.npcs.lisport.BreedersUnion.Alden;
 import com.cnx.endlesstalestwo.data.npcs.lisport.Castle.KingOliver;
+import com.cnx.endlesstalestwo.data.npcs.lisport.Castle.Murdag;
 import com.cnx.endlesstalestwo.data.npcs.lisport.Church.Edward;
 import com.cnx.endlesstalestwo.data.npcs.lisport.Church.Elena;
 import com.cnx.endlesstalestwo.data.npcs.lisport.Farms.Herald;
@@ -25,6 +26,7 @@ public class NpcsLisport extends DataHelper {
         new Erino().generate();
         new Herald().generate();
         new KingOliver().generate();
+        new Murdag().generate();
         new Klaus().generate();
         new Lenny().generate();
         new Madelaine().generate();

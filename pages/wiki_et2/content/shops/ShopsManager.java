@@ -3,9 +3,11 @@ package com.cnx.endlesstalestwo.data.shops;
 import com.cnx.endlesstalestwo.App;
 import com.cnx.endlesstalestwo.data.DataHelper;
 import com.cnx.endlesstalestwo.data.shops.apenna.ApennaMeadRoom;
+import com.cnx.endlesstalestwo.data.shops.apenna.WoodcuttersWarehouse;
 import com.cnx.endlesstalestwo.data.shops.ayalon.ElvishMarket;
 import com.cnx.endlesstalestwo.data.shops.bastian.BastianCentralMarket;
 import com.cnx.endlesstalestwo.data.shops.bastian.Jewelry;
+import com.cnx.endlesstalestwo.data.shops.dragonland.AffronisProductions;
 import com.cnx.endlesstalestwo.data.shops.esperand.ColdBattler;
 import com.cnx.endlesstalestwo.data.shops.esperand.MagicProtectionsStore;
 import com.cnx.endlesstalestwo.data.shops.esperand.NotFrozenFoods;
@@ -19,7 +21,7 @@ import com.cnx.endlesstalestwo.data.shops.global.GriwalshProducts;
 import com.cnx.endlesstalestwo.data.shops.global.PotionsMarket;
 import com.cnx.endlesstalestwo.data.shops.global.ProtectionShop;
 import com.cnx.endlesstalestwo.data.shops.global.TheHumanFortress;
-import com.cnx.endlesstalestwo.data.shops.global.ToolsShop;
+import com.cnx.endlesstalestwo.data.shops.global.ToolsStore;
 import com.cnx.endlesstalestwo.data.shops.global.WeaponMarket;
 import com.cnx.endlesstalestwo.data.shops.growrocks.DwarvenMarket;
 import com.cnx.endlesstalestwo.data.shops.growrocks.KamalaJewelry;
@@ -52,11 +54,13 @@ public class ShopsManager extends DataHelper {
         App.DataManager.add(Enums.DataTypes.SHOP, new ApennaMeadRoom().create());
 
         // General Shops
-        App.DataManager.add(Enums.DataTypes.SHOP, new ToolsShop().create());
+        App.DataManager.add(Enums.DataTypes.SHOP, new ToolsStore().create());
         App.DataManager.add(Enums.DataTypes.SHOP, new MinersWarehouse().create());
         App.DataManager.add(Enums.DataTypes.SHOP, new KlausThings().create());
         App.DataManager.add(Enums.DataTypes.SHOP, new FishermanStore().create());
         App.DataManager.add(Enums.DataTypes.SHOP, new JohannaGoods().create());
+        App.DataManager.add(Enums.DataTypes.SHOP, new AffronisProductions().create());
+        App.DataManager.add(Enums.DataTypes.SHOP, new WoodcuttersWarehouse().create());
 
         // Potions Shops
         App.DataManager.add(Enums.DataTypes.SHOP, new CrafterPoint().create());

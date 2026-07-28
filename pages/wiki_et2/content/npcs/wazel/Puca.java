@@ -25,9 +25,9 @@ public class Puca extends DataHelper {
         npc.age = 19;
         npc.job = Enums.NPCJobs.FEMALE_HUNTER;
         npc.gender = Enums.Gender.FEMALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A young woman enthusiastic about life.\nFriendly and talkative.\nShe learned her craft early from her father.\n\nHer physical traits: Large blue eyes. Wide mouth. Fair skin and a reddish, pointed nose. Blonde hair.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Uma jovem estusiasmada com a vida.\nSimpática e conversadora.\nAprendeu seu ofício cedo, com seu pai.\n\nSeus traços físicos: Grandes olhos azuis. Boca larga. Pele clara e nariz avermelhado e pontudo. Cabelos loiros.");
+        npc.addDescriptionTranslation(SPANISH, "Una joven entusiasta de la vida.\nSimpática y conversadora.\nAprendió su oficio pronto con su padre.\n\nSus rasgos físicos: Grandes ojos azules. Boca ancha. Piel clara y nariz rojiza y puntiaguda. Cabello rubio.");
 
         if (App.getPlayerChar() != null && LibQuest.isQuestComplete(App.getPlayerChar(), WAZEL_BATTLE)) {
             npc.imgFile = "npc_puca_sad";

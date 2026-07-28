@@ -20,6 +20,7 @@ public class InfernalHound {
         enemy.setDefense(2);
         enemy.setAgility(20);
         enemy.setStrength(12);
+        enemy.attributesManager.set(Enums.AttributeName.CRITICAL_CHANCE, 8);
 
         enemy.resistances.put(Enums.Elements.FIRE, 50);
         enemy.resistances.put(Enums.Elements.DARK, 25);

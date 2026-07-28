@@ -187,7 +187,7 @@ public class Consumables extends DataHelper {
         consumable.addDescriptionTranslation(CoreEnums.AvailableLanguages.SPANISH, "Un trozo de carne de animal asado. muy apetecible.");
 
         consumable.type = Enums.ItemType.FOOD;
-        consumable.hungryTimeRecover = 240;
+        consumable.hungryTimeRecover = 280;
         consumable.weight = .2f;
         consumable.marketValue = 2;
         consumable.modifiers.add(new AttributeModifierValue(Enums.AttributeName.HP, 3));

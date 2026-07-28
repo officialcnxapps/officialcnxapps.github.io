@@ -26,6 +26,7 @@ public class Nariv extends DataHelper {
         npc.addDescriptionTranslation(ENGLISH, "A young elven girl. Still seeking to know more about life, almost too innocent.\nStudious and passionate about freedom.\n\nHer physical traits: Beautiful medium-length golden hair, fair skin, and well-defined lips.");
         npc.addDescriptionTranslation(PORTUGUESE, "Uma jovem garota elfa. Ainda em busca de saber mais sobre a vida, quase inocente demais.\nEstudiosa e apaixonada pela liberdade.\n\nSeus taços físicos: Belos cabelos dourados de comprimento médio, pele clara e boca bem marcada no rosto.");
         npc.addDescriptionTranslation(SPANISH, "Una joven chica elfa. Todavía busca saber más sobre la vida, casi demasiado inocente.\nEstudiosa y apasionada por la libertad.\n\nSus rasgos físicos: Hermoso cabello dorado de longitud media, piel clara y labios bien definidos.");
+        npc.canBePickpocketed = true;
 
         npc.generateRandomByes();
         npc.generateRandomGreetings();

@@ -388,6 +388,32 @@ public class Lenny extends DataHelper {
         npc.conversationOptions.add(cv1);
         npc.conversationOptions.add(cv2);
 
+        // ========================================
+        // QUEST: AWAITING THE DRAGONS
+        // ========================================
+
+        // Part 6: Talk to Lenny
+        ConversationOption cvAwaitingDragons6 = new ConversationOption(0, 0);
+        cvAwaitingDragons6.addOptionText(ENGLISH, "Lenny, Murdag sent me with this weapon crate from the harbor.",
+                "*He looks at the crate, then at you, with a broad, appreciative smile*\nAh, just what we needed! The armory was starting to look a bit sparse, and with these rumors of winged shadows in the north, we can't afford to be ill-equipped. \n\n*He directs a few soldiers to take the crate*\n\nThank you, [PLAYERNAME]. Here is a little something for your trouble — and for your service to Lisport. Take care of yourself out there.");
+        cvAwaitingDragons6.addOptionText(PORTUGUESE, "Lenny, Murdag me enviou com esta caixa de armas do porto.",
+                "*Ele olha para a caixa, depois para você, com um sorriso largo e apreciativo*\nAh, exatamente o que precisávamos! O arsenal estava começando a parecer um pouco vazio, e com esses rumores de sombras aladas no norte, não podemos nos dar ao luxo de estar mal equipados. \n\n*Ele orienta alguns soldados a levar a caixa*\n\nObrigado, [PLAYERNAME]. Aqui está um agrado pelo seu trabalho — e pelo seu serviço a Lisport. Cuide-se lá fora.");
+        cvAwaitingDragons6.addOptionText(SPANISH, "Lenny, Murdag me envió con esta caja de armas del puerto.",
+                "*Mira la caja, luego a ti, con una amplia sonrisa de agradecimiento*\n¡Ah, justo lo que necesitábamos! El arsenal empezaba a parecer un poco escaso, y con esos rumores de sombras aladas en el norte, no podemos permitirnos estar mal equipados. \n\n*Ordena a unos soldados que se lleven la caja*\n\nGracias, [PLAYERNAME]. Aquí tienes algo por las molestias y por tu servicio a Lisport. Cuídate ahí fuera.");
+        cvAwaitingDragons6.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isCharacterAtQuestPart(chara, QuestsIds.AWAITING_THE_DRAGONS, 6) && LibInventory.checkHasItem(ItemsIds.CRATE_OF_WEAPONS, chara)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        cvAwaitingDragons6.listeners = (ctx, currentFragment) -> {
+            LibInventory.removeFromInventory(ItemsIds.CRATE_OF_WEAPONS, 1, App.getPlayerChar());
+            App.getPlayerChar().addGold(5);
+            App.getPlayerChar().attributesManager.increase(Enums.AttributeName.ALIGNMENT, 3);
+            LibQuest.completeQuest(QuestsIds.AWAITING_THE_DRAGONS, App.getPlayerChar(), 7, ctx);
+        };
+        npc.conversationOptions.add(cvAwaitingDragons6);
+
         return npc;
     }
 }

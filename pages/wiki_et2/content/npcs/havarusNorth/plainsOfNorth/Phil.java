@@ -21,9 +21,10 @@ public class Phil extends DataHelper {
         npc.age = 38;
         npc.job = Enums.NPCJobs.MALE_HUNTER;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A solitary man, but one who enjoys it.\nHe wanders the lands in search of the best game. He loves what he does.\nShrewd and calm.\n\nHis physical characteristics: Long hair, beard with a gray goatee. Thin face and brown eyes.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Um homem solitário, mas que gosta disso.\nVive perambulando pelas terras em busca das melhores caças. Ama o que faz.\nSagaz e tranquilo.\n\nSeus traços físicos: Cabelos longos, barba com cavanhaque grisalho. Rosto magro e olhos castanhos.");
+        npc.addDescriptionTranslation(SPANISH, "Un hombre solitario, pero que disfruta de su soledad.\nRecorre las tierras en busca de la mejor caza. Le apasiona lo que hace.\nAstuto y sereno.\n\nSus características físicas: Cabello largo, barba con perilla gris. Rostro delgado y ojos marrones.");
+        npc.canBePickpocketed = true;
 
         npc.hasRandomizedConversations = true;
 

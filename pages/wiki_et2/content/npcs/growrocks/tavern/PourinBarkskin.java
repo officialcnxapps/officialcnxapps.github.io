@@ -24,6 +24,7 @@ public class PourinBarkskin extends DataHelper {
         npc.addDescriptionTranslation(ENGLISH, "He highly values honor and loyalty. He would never abandon his own.\nHe works with pleasure and does it skillfully.\nHe deeply loves his wife, Erin. He is a good man.\n\nHis physical traits: Red braided-back hair matching his large beard, broad face, clear small eyes, large ears, and fair skin.");
         npc.addDescriptionTranslation(PORTUGUESE, "Dá muito valor a honra e a lealdade. Nunca abandonaria os seus.\nTrabalho com gosto e o faz com habilidade.\nTem grande amor por sua esposa, Erin. É um bom homem.\n\nSeus traços físicos: Cabelos trançados para trás de cor ruiva assim como sua vasta barba. Rosto largo, olhos claros e pequenos. Orelhas grandes e pele clara.");
         npc.addDescriptionTranslation(SPANISH, "Valora mucho el honor y la lealtad. Nunca abandonaría a los suyos.\nTrabaja con gusto y lo hace con habilidad.\nSiente un gran amor por su esposa, Erin. Es un buen hombre.\n\nSus rasgos físicos: Cabello rojizo trenzado hacia atrás, al igual que su amplia barba. Rostro ancho, ojos claros y pequeños, orejas grandes y piel clara.");
+        npc.canBePickpocketed = true;
 
         npc.generateRandomGreetings();
         npc.generateRandomByes();

@@ -3,6 +3,7 @@ package com.cnx.endlesstalestwo.data.npcs.havarusNorth.letow;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.ENGLISH;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.PORTUGUESE;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.SPANISH;
+import static com.cnx.endlesstalestwo.data.quests.QuestsIds.NOBLES_BALL;
 import static com.cnx.endlesstalestwo.data.quests.QuestsIds.REBUILD_FARMLAND;
 
 import com.cnx.endlesstalestwo.App;
@@ -29,9 +30,10 @@ public class LordDenFalker extends DataHelper {
         npc.age = 77;
         npc.job = Enums.NPCJobs.LANDLORD;
         npc.gender = Enums.Gender.MALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A lord already weary of life, he has lived through everything and is very experienced.\nA shrewd and decisive leader in his choices. He values honor.\nHis daughter, Lara, lives in Helera.\n\nHis physical traits: Face wrinkled with age, tired look in his light blue eyes. Beard, mustache and combed, straight white hair.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Um senhor já cansado da vida, já viveu de tudo e é muito experiente.\nUm líder esperto e decidido em suas escolhas. Dá valor a honra.\nSua filha, Lara, vive em Helera.\n\nSeus traços físicos: Rosto enrugado pela idade, olhar cansado em seus olhos azuis claros. Barba, bigode e cabelos penteados, lisos e brancos.");
+        npc.addDescriptionTranslation(SPANISH, "Un señor ya cansado de la vida, ha vivido de todo y es muy experimentado.\nUn líder astuto y decidido en sus elecciones. Valora el honor.\nSu hija, Lara, vive en Helera.\n\nSus rasgos físicos: Rostro arrugado por la edad, mirada cansada en sus ojos azules claros. Barba, bigote y cabello blanco peinado y liso.");
+        npc.canBePickpocketed = true;
 
         npc.greetingsMessages.put(ENGLISH, Collections.singletonList("Welcome to Letow, traveler."));
         npc.greetingsMessages.put(PORTUGUESE, Collections.singletonList("Bem-vindo a Letow, viajante."));
@@ -226,6 +228,81 @@ public class LordDenFalker extends DataHelper {
             return Enums.RequirementVerification.OK;
         };
         npc.conversationOptions.add(cvRoleplay);
+
+        // ========================================
+        // QUEST: CATTLE BUSINESS
+        // ========================================
+
+        // Success Path (Part 31 -> 40)
+        ConversationOption cvCattleSuccess = new ConversationOption(0, 10);
+        cvCattleSuccess.addOptionText(ENGLISH, "I represent Councilor Murdag of Lisport. I have a contract for cattle trade.", "Lisport, you say? It's been a while since I've dealt with the islanders. Murdag is a sharp man. These terms are... acceptable. Our Letow herds are hardy and would do well in the island climate.");
+        cvCattleSuccess.addOptionText(PORTUGUESE, "Eu represento o Conselheiro Murdag de Lisport. Tenho um contrato para o comércio de gado.", "Lisport, você diz? Faz tempo que não lido com os ilhéus. Murdag é um homem esperto. Estes termos são... aceitáveis. Nossos rebanhos de Letow são resistentes e se sairiam bem no clima da ilha.");
+        cvCattleSuccess.addOptionText(SPANISH, "Represento al consejero Murdag de Lisport. Tengo un contrato para el comercio de ganado.", "¿Lisport, dices? Hace tiempo que no trato con los isleños. Murdag es un hombre agudo. Estos términos son... aceptables. Nuestros rebaños de Letow son resistentes y les iría bien el clima de la isla.");
+        cvCattleSuccess.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isCharacterAtQuestPart(chara, QuestsIds.CATTLE_BUSINESS, 31)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        npc.conversationOptions.add(cvCattleSuccess);
+
+        ConversationOption cvCattleSign = new ConversationOption(10, 0);
+        cvCattleSign.addOptionText(ENGLISH, "Then we have an agreement?", "We do. Hand me the contract. I'll sign it and notify the handlers. Tell Murdag the cattle will arrive soon.");
+        cvCattleSign.addOptionText(PORTUGUESE, "Então temos um acordo?", "Temos. Entregue-me o contrato. Vou assiná-lo e notificar os manejadores. Diga a Murdag que o gado chegará em breve.");
+        cvCattleSign.addOptionText(SPANISH, "¿Entonces tenemos un acordo?", "Así es. Entrégame el contrato. Lo firmaré y avisaré a los encargados. Dile a Murdag que el ganado llegará pronto.");
+        cvCattleSign.listeners = (ctx, currentFragment) -> {
+            LibInventory.addToInventory(ItemsIds.CONTRACT_OF_CATTLE_NEGOTIATION, 1, App.getPlayerChar());
+            LibQuest.updateQuest(QuestsIds.CATTLE_BUSINESS, 40, App.getPlayerChar(), ctx);
+        };
+        npc.conversationOptions.add(cvCattleSign);
+
+        // Failure Path (Part 21 -> 30)
+        ConversationOption cvCattleFail = new ConversationOption(0, 0);
+        cvCattleFail.addOptionText(ENGLISH, "I represent Councilor Murdag of Lisport. I have a contract for cattle trade.", "Trade with the islands? At my age, I prefer stable, local business. The logistical nightmare of shipping cattle across those waters... no, it's not for us.");
+        cvCattleFail.addOptionText(PORTUGUESE, "Eu represento o Conselheiro Murdag de Lisport. Tenho um contrato para o comércio de gado.", "Comércio com as ilhas? Na minha idade, prefiro negócios locais estáveis. O pesadelo logístico de enviar gado por aquelas águas... não, não é para nós.");
+        cvCattleFail.addOptionText(SPANISH, "Represento al consejero Murdag de Lisport. Tengo un contrato para el comercio de ganado.", "¿Comerciar con las islas? A mi edad, prefiero los negocios locales estables. La pesadilla logística de enviar ganado por esas aguas... no, no es para nosotros.");
+        cvCattleFail.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isCharacterAtQuestPart(chara, QuestsIds.CATTLE_BUSINESS, 21)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        cvCattleFail.listeners = (ctx, currentFragment) -> {
+            LibQuest.updateQuest(QuestsIds.CATTLE_BUSINESS, 30, App.getPlayerChar(), ctx);
+        };
+        npc.conversationOptions.add(cvCattleFail);
+
+        // ========================================
+        // QUEST: NOBLE'S BALL
+        // ========================================
+
+        // Part 3: Invite Lord Den Falker
+        ConversationOption cvBallPart3 = new ConversationOption(0, 15);
+        cvBallPart3.addOptionText(ENGLISH, "Lord Den, I have an invitation for you for the Noble's Ball at Monelix Castle.",
+                "*He accepts the invitation with a polite nod, then pauses*\nA ball at the castle... a gracious invitation from the Queen. I am honored. However... tell me, do you know if Sir Jard Brant will also be attending?");
+        cvBallPart3.addOptionText(PORTUGUESE, "Lorde Den, tenho um convite para você para o Baile de Nobres no Castelo de Monelix.",
+                "*Ele aceita o convite com um aceno educado, depois pausa*\nUm baile no castelo... um convite gracioso da Rainha. Estou honrado. No entanto... Saberia me dizer se Sir Jard Brant irá ao baile?");
+        cvBallPart3.addOptionText(SPANISH, "Lord Den, tengo una invitación para usted para el Baile de Nobles en el Castillo de Monelix.",
+                "*Acepta la invitación con un gesto cortés, luego hace una pausa*\nUn baile en el castillo... una graciosa invitación de la Reina. Me siento honrado. Sin embargo... dígame, ¿sabe si Sir Jard Brant también asistirá?");
+        cvBallPart3.requirementValidations = (chara, ctx) -> {
+            if (LibQuest.isCharacterAtQuestPart(chara, NOBLES_BALL, 3)) {
+                return Enums.RequirementVerification.OK;
+            }
+            return Enums.RequirementVerification.NOT_OK;
+        };
+        npc.conversationOptions.add(cvBallPart3);
+
+        ConversationOption cvBallPart3b = new ConversationOption(15, 0);
+        cvBallPart3b.addOptionText(ENGLISH, "Yes, he will be there.",
+                "*A shadow crosses his face*\nIn that case, I must humbly decline. I have no wish to cross paths with any Brant. My presence would only create unnecessary tension on what should be a celebratory night. Please, convey my gratitude to the Queen for the honor.");
+        cvBallPart3b.addOptionText(PORTUGUESE, "Sim, ele comparecerá.",
+                "*Uma sombra cruza seu rosto*\nNesse caso, devo declinar humildemente. Não desejo cruzar o caminho de nenhum Brant. Minha presença apenas criaria uma tensão desnecessária em que deveria ser uma noite de celebração. Por favor, transmita minha gratidão à Rainha pela honra.");
+        cvBallPart3b.addOptionText(SPANISH, "Sí, él estará allí.",
+                "*Una sombra cruza su rostro*\nEn ese caso, debo declinar humildemente. No deseo cruzarme con ningún Brant. Mi presencia solo crearía una tensión innecesaria en lo que debería ser una noche de celebración. Por favor, transmita mi gratitud a la Reina por el honor.");
+        cvBallPart3b.listeners = (ctx, currentFragment) -> {
+            LibQuest.updateQuest(NOBLES_BALL, 4, App.getPlayerChar(), ctx);
+        };
+        npc.conversationOptions.add(cvBallPart3b);
 
         return npc;
     }

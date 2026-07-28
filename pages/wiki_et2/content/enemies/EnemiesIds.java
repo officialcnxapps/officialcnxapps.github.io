@@ -52,5 +52,9 @@ public enum EnemiesIds {
     SPIRIT_OF_LIGHT,
     SPIRIT_OF_AIR,
     CORRUPTED_WIZARD,
-    MEDUSA
+    MEDUSA,
+    FIRE_DRAGON,
+    ICE_DRAGON,
+    WYVERN,
+    DRAGON_KING
 }

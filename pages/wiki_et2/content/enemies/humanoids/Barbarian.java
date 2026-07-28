@@ -23,6 +23,7 @@ public class Barbarian {
         enemy.damageModifier = 2;
         enemy.setVitalities(22, 25);
         enemy.setDefense(3);
+        enemy.setMagic(5);
         enemy.setAgility(16);
         enemy.setStrength(10);
         enemy.givenExperience = 8;

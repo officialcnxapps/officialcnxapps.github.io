@@ -4,7 +4,6 @@ import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.ENGLISH;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.PORTUGUESE;
 import static com.cnx.cnxgameengine.utils.CoreEnums.AvailableLanguages.SPANISH;
 import static com.cnx.endlesstalestwo.data.quests.QuestsIds.INVESTIGATE_THE_BEAST;
-import static com.cnx.endlesstalestwo.data.quests.QuestsIds.SEA_VERIFICATION;
 
 import com.cnx.endlesstalestwo.App;
 import com.cnx.endlesstalestwo.data.DataHelper;
@@ -24,9 +23,10 @@ public class Verona extends DataHelper {
         npc.age = 40;
         npc.job = Enums.NPCJobs.COUNSELOR;
         npc.gender = Enums.Gender.FEMALE;
-        npc.addDescriptionTranslation(ENGLISH, "");
-        npc.addDescriptionTranslation(PORTUGUESE, "");
-        npc.addDescriptionTranslation(SPANISH, "");
+        npc.addDescriptionTranslation(ENGLISH, "A lady with great wisdom.\nShe does not allow herself to be manipulated and acts with class.\nShe has a taste for magic but does not practice it.\n\nHer physical traits: Thick lips, dark and serious eyes. Black skin and hair covered by a blue veil.");
+        npc.addDescriptionTranslation(PORTUGUESE, "Uma senhora com grande sabedoria.\nNão permite ser manipulada e age com classe.\nTem gosto por magia mas não atua com isso.\n\nSeus traços físicos: Lábios grossos, olhos escuros e sérios. Pele negra e cabelos tapados por um véu azul.");
+        npc.addDescriptionTranslation(SPANISH, "Una señora con gran sabiduría.\nNo permite ser manipulada y actúa con clase.\nTiene gusto por la magia pero no la practica.\n\nSus rasgos físicos: Labios gruesos, ojos oscuros y serios. Piel negra y cabello cubierto por un velo azul.");
+        npc.canBePickpocketed = true;
 
         npc.generateRandomByes();
         npc.generateRandomGreetings();
